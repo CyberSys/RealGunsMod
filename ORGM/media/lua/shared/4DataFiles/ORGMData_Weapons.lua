@@ -226,6 +226,7 @@ FirearmGroup:new("Group_Walther_PP_Series",         { Groups = { Group_Walther_P
 -- Machine Pistols
 FirearmGroup:new("Group_Beretta_93R",               { Groups = { Group_Beretta_MachinePistols           = 1, } })
 FirearmGroup:new("Group_Glock_18",                  { Groups = { Group_Glock_MachinePistols             = 1, } })
+FirearmGroup:new("Group_CZUB_Skorpion",             { Groups = { Group_CZUB_MachinePistols               = 1, } })
 
 -- SubMachine Guns
 FirearmGroup:new("Group_AmericanArms_AM180",        { Groups = { Group_AmericanArms_SubMachineGuns      = 1, } })
@@ -237,6 +238,7 @@ FirearmGroup:new("Group_AutoOrdnance_Thompson",     { Groups = { Group_AutoOrdna
 FirearmGroup:new("Group_MAC_Mac10",                 { Groups = { Group_MAC_SubMachineGuns               = 1, } })
 FirearmGroup:new("Group_MAC_Mac11",                 { Groups = { Group_MAC_SubMachineGuns               = 1, } })
 FirearmGroup:new("Group_IMI_Uzi",                   { Groups = { Group_MAC_SubMachineGuns               = 1, } })
+
 
 
 FirearmGroup:new("Group_Armalite_AR10",             { Groups = { Group_Armalite_Rifles = 1, } })
@@ -2291,6 +2293,29 @@ FirearmType:newCollection("Glock_18", {
 
         },
 })
+FirearmType:newCollection("CZUB_Skorpion", {
+        category = ORGM.MACHINEPISTOL,
+        soundProfile = "Pistol",
+
+        ammoType = "MagGroup_Skorpion_vz61_32ACP",
+        Weight = 1.3,
+        barrelLength = 4.5,
+        WeaponSprite = 'skorpion',
+        Icon = 'Item_CZUB_Skorpion',
+        
+        classification = "IGUI_Firearm_MachinePistol",
+        year = 1961,
+        country = "IGUI_Firearm_Country_CZ",
+        --manufacturer = "Česká zbrojovka Uherský Brod",
+        manufacturer = "IGUI_Firearm_Manuf_CZUB",
+        description = "IGUI_Firearm_Desc_Skorpion",
+        
+        features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+        feedSystem = Flags.AUTO + Flags.BLOWBACK,
+        Groups = { Group_CZUB_Skorpion = 1, },
+    }, {
+})
+
 
 --************************************************************************--
 -- SubMachine Guns
@@ -2575,28 +2600,6 @@ FirearmType:newCollection("IMI_Uzi", {
 })
 
 
-FirearmType:newCollection("CZUB_Skorpion", {
-        category = ORGM.SUBMACHINEGUN,
-        soundProfile = "Pistol",
-
-        ammoType = "MagGroup_Skorpion_vz61_32ACP",
-        Weight = 1.3,
-        barrelLength = 4.5,
-        WeaponSprite = 'skorpion',
-        Icon = 'Item_CZUB_Skorpion',
-        
-        classification = "IGUI_Firearm_MachinePistol",
-        year = 1961,
-        country = "IGUI_Firearm_Country_CZ",
-        --manufacturer = "Česká zbrojovka Uherský Brod",
-        manufacturer = "IGUI_Firearm_Manuf_CZUB",
-        description = "IGUI_Firearm_Desc_Skorpion",
-        
-        features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
-        feedSystem = Flags.AUTO + Flags.BLOWBACK,
-    }, {
-})
-
 --************************************************************************--
 -- rifles
 --************************************************************************--
@@ -2769,24 +2772,6 @@ FirearmType:newCollection("Colt_CAR15", {
             addFeatures = Flags.BURST3,
         },
 })
---[[
-    register("BBPistol", {
-        features = Flags.DOUBLEACTION + Flags.SAFETY,
-        feedSystem = Flags.AUTO + Flags.SHORTGAS,
-
-        lastChanged = 24,
-        category = ORGM.PISTOL,
-        barrelLength = 8,
-        isCivilian = ORGM.COMMON,
-        soundProfile = "Pistol",
-
-        classification = "IGUI_Firearm_AirPistol",
-        year = 2007, -- unknown, earliest reference i can find for this model dates to 2008
-        country = "IGUI_Firearm_Country_US",
-        manufacturer = "IGUI_Firearm_Manuf_Daisy",
-        description = "IGUI_Firearm_Desc_BBPistol",
-    })
-]]
 
 --[[
     --************************************************************************--
