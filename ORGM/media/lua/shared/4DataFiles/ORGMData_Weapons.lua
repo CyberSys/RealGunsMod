@@ -2302,6 +2302,7 @@ FirearmType:newCollection("CZUB_Skorpion", {
         barrelLength = 4.5,
         WeaponSprite = 'skorpion',
         Icon = 'Item_CZUB_Skorpion',
+        maxCapacity = 20,
         
         classification = "IGUI_Firearm_MachinePistol",
         year = 1961,
@@ -2604,6 +2605,49 @@ FirearmType:newCollection("IMI_Uzi", {
 -- rifles
 --************************************************************************--
 
+FirearmType:newCollection("AccuracyIntl_ArcticWarfare", {
+
+        category = ORGM.RIFLE,
+        soundProfile = "Rifle-Bolt",
+
+        ammoType = "MagGroup_ArcticWarfare",
+        Weight = 6.5,
+        barrelLength = 26,
+        WeaponSprite = "aiaw308",
+        Icon = "Item_AccuracyIntl_AW",
+        maxCapacity = 5,
+
+        classification = "IGUI_Firearm_BoltRifle",
+        year = 1983,
+        country = "IGUI_Firearm_Country_GB",
+        manufacturer = "IGUI_Firearm_Manuf_AI",
+        description = "IGUI_Firearm_Desc_AIAW308",
+
+        features = Flags.SINGLEACTION + Flags.SAFETY + Flags.FREEFLOAT,
+        feedSystem = Flags.BOLT,
+        Groups = { Group_AccuracyIntl_ArcticWarfare = 1, },
+    },{ -- variants should include both AIAW308 and L96
+})
+--[[
+
+register("L96", {
+    features = Flags.SINGLEACTION + Flags.SAFETY + Flags.FREEFLOAT,
+    feedSystem = Flags.BOLT,
+
+    lastChanged = 24,
+    category = ORGM.RIFLE,
+    barrelLength = 26,
+    isCivilian = ORGM.COMMON,
+    soundProfile = "Rifle-Bolt",
+
+    classification = "IGUI_Firearm_BoltRifle",
+    year = 1982,
+    country = "IGUI_Firearm_Country_GB",
+    manufacturer = "IGUI_Firearm_Manuf_AI",
+    description = "IGUI_Firearm_Desc_L96",
+})
+]]
+
 FirearmType:newCollection("Armalite_AR10", {
         -- sources:
         -- https://en.wikipedia.org/wiki/AR-10
@@ -2777,24 +2821,6 @@ FirearmType:newCollection("Colt_CAR15", {
     --************************************************************************--
     -- rifles
     --************************************************************************--
-register("AIAW308", {
-    features = Flags.SINGLEACTION + Flags.SAFETY + Flags.FREEFLOAT,
-    feedSystem = Flags.BOLT,
-
-    lastChanged = 24,
-    category = ORGM.RIFLE,
-    barrelLength = 26,
-    isCivilian = ORGM.RARE,
-    isPolice = ORGM.RARE,
-    isMilitary = ORGM.RARE,
-    soundProfile = "Rifle-Bolt",
-
-    classification = "IGUI_Firearm_BoltRifle",
-    year = 1983,
-    country = "IGUI_Firearm_Country_GB",
-    manufacturer = "IGUI_Firearm_Manuf_AI",
-    description = "IGUI_Firearm_Desc_AIAW308",
-})
 register("AKM", {
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
     feedSystem = Flags.AUTO + Flags.LONGGAS,
@@ -2975,22 +3001,6 @@ register("HKSL8", {
     country = "IGUI_Firearm_Country_DE",
     manufacturer = "IGUI_Firearm_Manuf_HK",
     description = "IGUI_Firearm_Desc_HKSL8",
-})
-register("L96", {
-    features = Flags.SINGLEACTION + Flags.SAFETY + Flags.FREEFLOAT,
-    feedSystem = Flags.BOLT,
-
-    lastChanged = 24,
-    category = ORGM.RIFLE,
-    barrelLength = 26,
-    isCivilian = ORGM.COMMON,
-    soundProfile = "Rifle-Bolt",
-
-    classification = "IGUI_Firearm_BoltRifle",
-    year = 1982,
-    country = "IGUI_Firearm_Country_GB",
-    manufacturer = "IGUI_Firearm_Manuf_AI",
-    description = "IGUI_Firearm_Desc_L96",
 })
 register("LENo4", {
     features = Flags.SINGLEACTION + Flags.SAFETY,

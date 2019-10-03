@@ -63,6 +63,7 @@ MagazineGroup:new("MagGroup_Uzi_9x19mm",            { Groups = { MagGroup_SubMac
 MagazineGroup:new("MagGroup_Skorpion_vz61_32ACP",   { Groups = { MagGroup_SubMachineGuns = 1 }, ammoType = 'AmmoGroup_32ACP' })
 
 
+MagazineGroup:new("MagGroup_ArcticWarfare",         { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_308Winchester' })
 MagazineGroup:new("MagGroup_AR10",                  { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_762x51mm' })
 MagazineGroup:new("MagGroup_AR10_762x39mm",         { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_762x39mm' })
 MagazineGroup:new("MagGroup_STANAG",                { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_556x45mm' })
@@ -383,9 +384,23 @@ MagazineType:newCollection("Mag_Skorpion_vz61_32ACP", {
             features = Flags.BOX,
             maxCapacity = 20,
             Weight = 0.2,
-            Groups = { MagGroup_Skorpion_vz61_32ACP = 10 },
+            Groups = { MagGroup_Skorpion_vz61_32ACP = 1 },
         },
-}
+    }
+)
+
+MagazineType:newCollection("Mag_ArcticWarfare", {
+        ammoType = 'AmmoGroup_308Winchester',
+        Icon = "Item_Mag_AIAW",
+    },{
+        x5 = {
+            features = Flags.BOX,
+            maxCapacity = 5,
+            Weight = 0.2,
+            Groups = { MagGroup_ArcticWarfare = 1 },
+        },
+    }
+)
 
 MagazineType:newCollection("Mag_AR10", {
         ammoType = 'AmmoGroup_762x51mm',
