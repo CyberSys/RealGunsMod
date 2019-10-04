@@ -67,6 +67,7 @@ MagazineGroup:new("MagGroup_ArcticWarfare",         { Groups = { MagGroup_Rifles
 MagazineGroup:new("MagGroup_AR10",                  { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_762x51mm' })
 MagazineGroup:new("MagGroup_AR10_762x39mm",         { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_762x39mm' })
 MagazineGroup:new("MagGroup_STANAG",                { Groups = { MagGroup_Rifles = 1 }, ammoType = 'AmmoGroup_556x45mm' })
+MagazineGroup:new("MagGroup_BLR",                   { Groups = { MagGroup_Rifles = 1 } })
 
 
 MagazineType:new("Mag_AutomagV_x5", {
@@ -485,10 +486,6 @@ MagazineType:newCollection("Mag_STANAG", {
 
 --[[
 
-
-register("AIAW308Mag",
-    { ammoType = 'AmmoGroup_308Winchester', maxCapacity = 5, }
-)
 register("AKMMag",
     { ammoType = 'AmmoGroup_762x39mm', maxCapacity = 30, }
 )

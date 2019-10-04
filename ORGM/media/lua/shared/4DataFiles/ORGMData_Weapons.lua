@@ -239,10 +239,13 @@ FirearmGroup:new("Group_MAC_Mac10",                 { Groups = { Group_MAC_SubMa
 FirearmGroup:new("Group_MAC_Mac11",                 { Groups = { Group_MAC_SubMachineGuns               = 1, } })
 FirearmGroup:new("Group_IMI_Uzi",                   { Groups = { Group_MAC_SubMachineGuns               = 1, } })
 
+-- Rifles
+FirearmGroup:new("Group_AccuracyIntl_ArcticWarfare",    { Groups = { Group_AccuracyIntl_Rifles = 1, } })
+FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armalite_Rifles = 1, } })
+FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles = 1, } })
+FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles = 3, } })
 
-
-FirearmGroup:new("Group_Armalite_AR10",             { Groups = { Group_Armalite_Rifles = 1, } })
-FirearmGroup:new("Group_Colt_CAR15",                { Groups = { Group_Colt_Rifles = 1, } })
+FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles = 1, } })
 
 --************************************************************************--
 -- Revolvers
@@ -2817,6 +2820,53 @@ FirearmType:newCollection("Colt_CAR15", {
         },
 })
 
+FirearmType:newCollection("Colt_AR15", { -- civilian variants
+    category = ORGM.RIFLE,
+    soundProfile = "Rifle-AR",
+
+    ammoType = "MagGroup_STANAG",
+    Weight = 3.3,
+    barrelLength = 20,  -- 16 (carbine), 20 (standard), 24 (target)
+    WeaponSprite = "m16",
+    Icon = "Colt_CAR15",
+    maxCapacity = 30,
+
+    classification = "IGUI_Firearm_SemiRifle",
+    year = 1963,
+    country = "IGUI_Firearm_Country_US",
+    manufacturer = "IGUI_Firearm_Manuf_Colt",
+    description = "IGUI_Firearm_Desc_AR15",
+
+    feedSystem = Flags.AUTO + Flags.DIRECTGAS,
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+    Groups = { Group_Colt_AR15 = 1 },
+    }, {
+
+})
+
+FirearmType:newCollection("Browning_BLR", {
+    category = ORGM.RIFLE,
+    soundProfile = "Rifle-Lever",
+
+    ammoType = "MagGroup_BLR",
+    barrelLength = 22, -- 16, 18, 18.5, 20, 22, 24
+    WeaponSprite = "blr",
+    Icon = "Browning_BLR",
+    maxCapacity = 4,
+
+    classification = "IGUI_Firearm_LeverRifle",
+    year = 1969,
+    country = "IGUI_Firearm_Country_US",
+    manufacturer = "IGUI_Firearm_Manuf_Browning",
+    description = "IGUI_Firearm_Desc_BLR",
+
+    features = Flags.SINGLEACTION + Flags.SAFETY,
+    feedSystem = Flags.LEVER,
+    Groups = { Group_Browning_BLR = 1 }, 
+    },{
+})
+
+
 --[[
     --************************************************************************--
     -- rifles
@@ -2854,41 +2904,7 @@ register("AKMA", {
     manufacturer = "IGUI_Firearm_Manuf_Kal",
     description = "IGUI_Firearm_Desc_AKMA",
 })
-register("AR15", {
-    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
-    feedSystem = Flags.AUTO + Flags.DIRECTGAS,
 
-    lastChanged = 24,
-    category = ORGM.RIFLE,
-    barrelLength = 20, -- 16 (carbine), 20 (standard), 24 (target)
-    barrelLengthOpt = { 16, 20, 24 },
-    isCivilian = ORGM.COMMON,
-    isPolice = ORGM.COMMON,
-    soundProfile = "Rifle-AR",
-
-    classification = "IGUI_Firearm_SemiRifle",
-    year = 1963,
-    country = "IGUI_Firearm_Country_US",
-    manufacturer = "IGUI_Firearm_Manuf_Colt",
-    description = "IGUI_Firearm_Desc_AR15",
-})
-register("BLR", {
-    features = Flags.SINGLEACTION + Flags.SAFETY,
-    feedSystem = Flags.LEVER,
-
-    lastChanged = 24,
-    category = ORGM.RIFLE,
-    barrelLength = 22, -- 16, 18, 18.5, 20, 22, 24
-    barrelLengthOpt = { 16, 18, 18.5, 20, 22, 24 },
-    isCivilian = ORGM.COMMON,
-    soundProfile = "Rifle-Lever",
-
-    classification = "IGUI_Firearm_LeverRifle",
-    year = 1969,
-    country = "IGUI_Firearm_Country_US",
-    manufacturer = "IGUI_Firearm_Manuf_Browning",
-    description = "IGUI_Firearm_Desc_BLR",
-})
 register("FNFAL", {
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
     feedSystem = Flags.AUTO + Flags.SHORTGAS,
