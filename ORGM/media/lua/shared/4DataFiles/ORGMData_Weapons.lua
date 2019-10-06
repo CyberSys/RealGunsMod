@@ -244,6 +244,7 @@ FirearmGroup:new("Group_AccuracyIntl_ArcticWarfare",    { Groups = { Group_Accur
 FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armalite_Rifles = 1, } })
 FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles = 1, } })
 FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles = 3, } })
+FirearmGroup:new("Group_Norinco_Type56",                { Groups = { Group_Norinco_Rifles = 1, } })
 
 FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles = 1, } })
 
@@ -2866,26 +2867,68 @@ FirearmType:newCollection("Browning_BLR", {
     },{
 })
 
+FirearmType:newCollection("Norinco_Type56", {
+	--sources:
+	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
+	category = ORGM.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	ammoType = "MagGroup_AK",
+	Weight = 3.8,
+	barrelLength = 16.3,
+	WeaponSprite = "akm",
+	Icon = "Norinco_AKM",
+	maxCapacity = 30,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1956,
+	country = "IGUI_Firearm_Country_CN",
+    manufacturer = "IGUI_Firearm_Manuf_NORINCO",
+    description = "IGUI_Firearm_Desc_Type56",
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+    feedSystem = Flags.AUTO + Flags.LONGGAS,
+    Groups = { Group_Norinco_Type56 = 1 },
+	
+	--other stats
+	--RoF 650 rpm
+	--Milled receiver, in 1960 switched to stamped
+	--differentiated from the AKm with the fully enclosed front sight
+	--No threaded barrel, can't use AK compensator (commercial variants might)
+	--Doesn't have a rate reducer so higher Rof than RU AKs
+	--Blued
+	--Most variants lack the side mount plate for the russian style sights
+	--Wooden furniture
+	--has a spike bayonet
+	
+	}, {
+        Type56-I = { -- Type 56-I
+			Weight = 3.7,
+			--Icon = "Norinco_AKMS"
+			--no bayonet, underfolding metal stock for easy carrying
+        },
+        Type56S-I = { -- Type 56 Sporter I
+			Weight = 3.7,
+			--Icon = "Norinco_AKMS"
+			--no bayonet, underfolding metal stock for easy carrying
+        },
+		{
+        Type56-II = { -- Type 56-II
+			Weight = 3.7,
+			--Icon = "Norinco_AKMS"
+        },
+		
+})
 
 --[[
     --************************************************************************--
     -- rifles
     --************************************************************************--
 register("AKM", {
-    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
-    feedSystem = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
-    barrelLength = 16.3,
     isCivilian = ORGM.RARE,
-    soundProfile = "Rifle-AR",
 
-    classification = "IGUI_Firearm_AssaultRifle",
-    year = 1982,
-    country = "IGUI_Firearm_Country_CN",
-    manufacturer = "IGUI_Firearm_Manuf_NORINCO",
-    description = "IGUI_Firearm_Desc_AKM",
 
 })
 register("AKMA", {
