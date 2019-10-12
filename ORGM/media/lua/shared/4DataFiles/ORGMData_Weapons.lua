@@ -1410,6 +1410,7 @@ FirearmType:new("AMT_AutomagV", {
     category = ORGM.PISTOL,
     soundProfile = "Pistol-Large",
 
+    ammo_group = "AmmoGroup_50AE",
     magazine_group = "MagGroup_AutomagV",
     weight = 1.3,
     barrel_length = 6.5,
@@ -1436,6 +1437,7 @@ FirearmType:newCollection("Beretta_92", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_9x19mm",
         magazine_group = "MagGroup_Beretta_92",
         weight = 0.8,
         barrel_length = 4.9,
@@ -1487,6 +1489,7 @@ FirearmType:new("DornausDixon_BrenTen", {
     category = ORGM.PISTOL,
     soundProfile = "Pistol",
 
+    ammo_group = "AmmoGroup_10x25mm",
     magazine_group = "MagGroup_BrenTen",
     weight = 1.1,
     barrel_length = 5,
@@ -1509,6 +1512,7 @@ FirearmType:newCollection("Browning_HiPower", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_9x19mm",
         magazine_group = "MagGroup_Browning_HiPower",
         weight = 1,
         barrel_length = 4.7,
@@ -1535,6 +1539,7 @@ FirearmType:newCollection("Colt_1911", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_45ACP",
         magazine_group = "MagGroup_1911",
         weight = 1.1,
         barrel_length = 5.03,
@@ -1566,6 +1571,7 @@ FirearmType:newCollection("Colt_1911_Officers", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_45ACP",
         magazine_group = "MagGroup_1911",
         weight = 0.96,
         barrel_length = 3.5,
@@ -1593,6 +1599,7 @@ FirearmType:newCollection("Colt_1911_Commander", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_38Super",
         magazine_group = "MagGroup_1911_38Super",
         weight = 1,
         barrel_length = 4.25,
@@ -1617,6 +1624,7 @@ FirearmType:newCollection("Colt_1911_DeltaElite", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_10x25mm",
         magazine_group = "MagGroup_1911_10x25mm",
         weight = 1.1,
         barrel_length = 5.03,
@@ -1641,6 +1649,7 @@ FirearmType:newCollection("CZUB_CZ75", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_9x19mm",
         magazine_group = "Mag_CZ75_9x19mm",
         weight = 1.1,
         barrel_length = 4.7,
@@ -1665,6 +1674,7 @@ FirearmType:newCollection("IMI_DesertEagle", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol-Large",
 
+        ammo_group = "AmmoGroup_44Magnum",
         magazine_group = "MagGroup_DesertEagle_44Magnum",
         weight = 1.89,
         barrel_length = 10,
@@ -1683,6 +1693,7 @@ FirearmType:newCollection("IMI_DesertEagle", {
         Groups = { Group_IMI_DesertEagle = 1, }, -- TODO: Move to variants
     },{
         VII = { -- 44 mag
+            ammo_group = "AmmoGroup_44Magnum",
             magazine_group = "MagGroup_DesertEagle_44Magnum",
             weight = 1.89,
             barrel_length = 10,
@@ -1691,6 +1702,7 @@ FirearmType:newCollection("IMI_DesertEagle", {
             max_capacity = 8,
         },
         XIX = {
+            ammo_group = "AmmoGroup_50AE",
             magazine_group = "MagGroup_DesertEagle_50AE",
             weight = 2.0,
             barrel_length = 10,
@@ -1711,6 +1723,7 @@ FirearmType:newCollection("FNHerstal_FN57", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_57x28mm",
         magazine_group = "MagGroup_FN57",
         weight = 0.6,
         barrel_length = 4.8,
@@ -1736,6 +1749,7 @@ FirearmType:newCollection("Glock_17", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_9x19mm",
         magazine_group = "MagGroup_Glock_9x19mm",
         weight = 0.7,
         barrel_length = 4.48,
@@ -1764,6 +1778,7 @@ FirearmType:newCollection("Glock_20", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_10x25mm",
         magazine_group = "MagGroup_Glock_10x25mm",
         weight = 0.9,
         barrel_length = 4.48,
@@ -1792,6 +1807,7 @@ FirearmType:newCollection("Glock_21", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_45ACP",
         magazine_group = "MagGroup_Glock_45ACP",
         weight = 0.8,
         barrel_length = 4.48,
@@ -1820,6 +1836,7 @@ FirearmType:newCollection("Glock_22", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_40SW",
         magazine_group = "MagGroup_Glock_40SW",
         weight = 0.7,
         barrel_length = 4.48,
@@ -1848,6 +1865,7 @@ FirearmType:newCollection("HecklerKoch_Mark23", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
+        ammo_group = "AmmoGroup_45ACP",
         magazine_group = "MagGroup_Mark23",
         weight = 1.2,
         barrel_length = 5.87,
@@ -1875,7 +1893,7 @@ FirearmType:newCollection("Kahr_CT_Series", {
         category = ORGM.PISTOL,
         soundProfile = "Pistol",
 
-        magazine_group = "MagGroup_Kahr_CT_Series",
+        --magazine_group = "MagGroup_Kahr_CT_Series",
         weight = 0.6,
         barrel_length = 4,
         model = "kahrct40",
@@ -1893,23 +1911,27 @@ FirearmType:newCollection("Kahr_CT_Series", {
         Groups = { Group_Kahr_CT_Series = 1, }, -- TODO: Move to variants
     },{
         CT3833 = { -- CT380 (CT3833) 3.0" Barrel 7 round, 11.44oz
+            ammo_group = 'AmmoGroup_380ACP',
             magazine_group = "MagGroup_CT380",
             weight = 0.32,
             barrel_length = 3,
         },
         CT9093BCF = {
             --  CT9, Black Carbon Fiber, 8 shot, 3.965", 18.5oz (2.1oz mag)
+            ammo_group = 'AmmoGroup_9x19mm',
             magazine_group = "MagGroup_CT9",
             max_capacity = 8,
             weight = 0.52,
             barrel_length = 3.965,
         },
         CT4043 = { -- CT40 () 4.0", 7 round 21.8oz
+            ammo_group = 'AmmoGroup_40SW',
             magazine_group = "MagGroup_CT40",
             weight = 0.618,
             barrel_length = 4,
         },
         CT4543 = { --CT4543 4.04" Barrel, 7 round, 24.7 oz,
+            ammo_group = 'AmmoGroup_45ACP',
             magazine_group = "MagGroup_CT45",
             weight = 0.7,
             barrel_length = 4.04,
