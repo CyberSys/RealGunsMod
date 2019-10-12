@@ -15,7 +15,7 @@ may have bugs.
 The [Realistic Firearm Framework](https://github.com/FWolfe/RealisticFirearmFramework)
 
 #### Downloads
-To get the latest stable version, visit [ORGM homepage](https://zomboid.tekagis.ca/mods/orgm.php() or use this direct [download link](https://downloads.tekagis.ca/ProjectZomboidMods/ORGM.zip)
+To get the latest stable version, visit [ORGM homepage](https://zomboid.tekagis.ca/mods/orgm.php) or use this direct [download link](https://downloads.tekagis.ca/ProjectZomboidMods/ORGM.zip)
 
 #### Support
 [HTML documentation for ORGM's lua API](https://zomboid.tekagis.ca/api/index.html)
