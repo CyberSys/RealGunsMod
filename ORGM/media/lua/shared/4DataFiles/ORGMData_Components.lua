@@ -10,7 +10,9 @@ All calls made by this script are to `ORGM.Component.register`. See the document
 ]]
 local CompGroup = ORGM.Component.CompGroup
 local CompType = ORGM.Component.CompType
+local Flags = ORGM.Component.Flags
 
+--[[
 
 CompGroup:new("CompGroup_Stocks")
 CompGroup:new("CompGroup_Sights")
@@ -19,19 +21,46 @@ CompGroup:new("CompGroup_Scopes")
 CompGroup:new("CompGroup_Slings")
 CompGroup:new("CompGroup_Chokes")
 CompGroup:new("CompGroup_Barrels")
-
 CompGroup:new("CompGroup_Suppressors")
 
 
-CompGroup:new("CompGroup_Colt_Anaconda")
-CompGroup:new("CompGroup_Colt_Anaconda_Grips")
+CompGroup:new("CompGroup_Picatinny_Top")
+CompGroup:new("CompGroup_Picatinny_Left")
+CompGroup:new("CompGroup_Picatinny_Right")
+CompGroup:new("CompGroup_Picatinny_Bottom")
+
+
+CompGroup:new("CompGroup_Colt_MM_Frame") --
+
+CompGroup:new("CompGroup_Colt_MM_Frame_Barrel") --
+CompGroup:new("CompGroup_Colt_MM_Frame_Grips") -- anaconda
+CompGroup:new("CompGroup_Colt_I_Frame_Grips") -- python
+CompGroup:new("CompGroup_Revolver_Mount_Rings")
 
 CompType:newCollection('Comp_Scope', {
-    Weight = 0.2, Groups = { },
+    Weight = 0.2,
+    Groups = { CompGroup_Picatinny_Top = 1, CompGroup_Revolver_Mount_Rings },
     }, {
         x2 = { },
         x4 = { },
         x8 = { },
+    }
+)
+CompType:newCollection('Comp_Colt_MM_Frame_Barrel', {
+    Groups = { CompGroup_Colt_MM_Frame = 1 },
+    }, {
+        x4 = {
+            Weight = 0.4,
+        },
+        x5 = {
+            Weight = 0.5,
+        },
+        x6 = {
+            Weight = 0.6,
+        },
+        x8 = {
+            Weight = 0.8,
+        },
     }
 )
 
@@ -55,5 +84,5 @@ register('Rifsling', { lastChanged = 22,} )
 register('SkeletalStock', { lastChanged = 22,} )
 register('CollapsingStock', { lastChanged = 22,} )
 
-]]
 ORGM.log(ORGM.INFO, "All default components/upgrades registered.")
+]]
