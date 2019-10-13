@@ -8,11 +8,11 @@ All calls made by this script are to `ORGM.Component.register`. See the document
 @copyright 2018 **File:** shared/4DataFiles/ORGMData_Components.lua
 
 ]]
+--[[
 local CompGroup = ORGM.Component.CompGroup
 local CompType = ORGM.Component.CompType
 local Flags = ORGM.Component.Flags
 
---[[
 
 CompGroup:new("CompGroup_Stocks")
 CompGroup:new("CompGroup_Sights")
