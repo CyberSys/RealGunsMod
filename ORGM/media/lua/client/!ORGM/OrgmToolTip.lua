@@ -7,24 +7,14 @@
     ORGM overwrites ISToolTipInv:render() and bypasses the call to item:DoTooltip() allowing for
     completely moddable tooltips. Our new
 
-    File: client/1LoadOrder/ISORGMToolTipInv.lua
     @classmod ISToolTipInv
     @author Fenris_Wolf
-    @release 3.10
+    @release 4.0-alpha
 
 ]]
 
 require 'ISUI/ISToolTipInv'
 
-local ORGM = ORGM
-local Firearm = ORGM.Firearm
-local Component = ORGM.Component
-local Ammo = ORGM.Ammo
-local Magazine = ORGM.Magazine
-local Settings = ORGM.Settings
-local Reloadable = ORGM.ReloadableWeapon
-local Flags = Firearm.Flags
-local Status = Firearm.Status
 
 local getMouseX = getMouseX
 local getMouseY = getMouseY
@@ -65,6 +55,7 @@ local function setLayoutItem(layout, label, value, color, asProgress)
         --layoutItem:setValue(round(damage, roundPrecision), color.r, color.g, color.b, 1)
     end
 end
+--[[
 
 local function initializeStyle(toolTipStyle, aimingPerk)
     local noColor = (aimingPerk <= 3 and toolTipStyle ~= ORGM.TIPFULL)
@@ -476,11 +467,11 @@ TipHandler[ORGM.FIREARM] = function(self)
     finalizeTip(self, layout, y, i)
 end
 
+]]
 
 --[[- This modifies firearm and magazine tooltips to show what the item is currently loaded with.
 This renders the 'classic' ORGM tooltips (v3.09.1 and lower)
 
-]]
 function ISToolTipInv:renderClassic()
     -- TODO: this should actually check the ORGM tables to see
     if self.item:getModule() ~= "ORGM" then
@@ -514,11 +505,11 @@ function ISToolTipInv:renderClassic()
     render(self)
     self.item:setTooltip(old)
 end
+]]
 
 --[[- Overwrites the base game's ISToolTipInv:render() method. This checks our TipHandler table looking
 for a function to design the ORGM tooltips,
 
-]]
 function ISToolTipInv:renderORGM()
     if Settings.ToolTipStyle == ORGM.TIPCLASSIC then
         self:renderClassic()
@@ -590,3 +581,4 @@ function ISToolTipInv:renderORGM()
     tipHandler(self) -- self.item:DoTooltip(self.tooltip);
 end
 ISToolTipInv.render = ISToolTipInv.renderORGM
+]]

@@ -12,13 +12,9 @@ It is unlikely that you will need to call any of these functions manually.
 
 ]]
 
+local Logger = require(ENV_RFF_PATH .. "interface/logger") 
 
-
-local ORGM = ORGM
-local Settings = ORGM.Settings
-local Client = ORGM.Client
-local Callbacks = ORGM.Client.Callbacks
-local CommandHandler = ORGM.Client.CommandHandler
+local CommandHandler = {}
 
 local pairs = pairs
 local tostring = tostring
@@ -30,6 +26,8 @@ local tostring = tostring
 ]]
 
 CommandHandler.updateSettings = function(args)
+    --[[
+    
     if not Client.PreviousSettings then
         Client.PreviousSettings = {}
         for key, value in pairs(Settings) do Client.PreviousSettings[key] = value end
@@ -42,4 +40,16 @@ CommandHandler.updateSettings = function(args)
 
     Events.OnMainMenuEnter.Remove(Callbacks.restoreSettings)
     Events.OnMainMenuEnter.Add(Callbacks.restoreSettings)
+    ]]
 end
+
+
+Events.OnServerCommand.Add(function(module, command, args)
+    --print("client got command: "..tostring(module)..":"..tostring(command).." - " ..tostring(isClient()))
+    if not isClient() then return end
+    if module ~= 'orgm' then return end
+    Logger.info("Client got ServerCommand "..tostring(command))
+    if CommandHandler[command] then CommandHandler[command](args) end
+end)
+
+return CommandHandler

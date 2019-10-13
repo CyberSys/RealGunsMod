@@ -5,6 +5,8 @@
 
 ]]
 
+
+local Config = require(ENV_RFF_PATH .. "config")
 -- Setup hotkey bindings
 -- We need to use the global keyBinding table, this stores all our binding values
 local index = nil -- index will be the position we want to insert into the table
@@ -115,12 +117,14 @@ local function addBoolOption(self, splitpoint, width, title, settingKey)
         end
     end
     function gameOption.toUI(self)
-    self.control.selected = ORGM.Settings[settingKey] and 1 or 2
+    self.control.selected = Config.get(settingKey) and 1 or 2
     end
     function gameOption.apply(self)
-        ORGM.Settings[settingKey] = self.control.selected == 1 and true or false
-        ORGM.validateSettingKey(settingKey)
-        ORGM.writeSettingsFile()
+        Config.set(settingKey, self.control.selected == 1 and true or false)
+        Config.writeFile()
+        --ORGM.Settings[settingKey] = self.control.selected == 1 and true or false
+        --ORGM.validateSettingKey(settingKey)
+        --ORGM.writeSettingsFile()
     end
     self.gameOptions:add(gameOption)
     return opt
@@ -159,15 +163,17 @@ local function addNumericOption(self, splitpoint, width, title, settingKey, asFl
             opt:setEditable(true)
         end
         if asFloat then
-            self.control:setText(string.format("%f", ORGM.Settings[settingKey]))
+            self.control:setText(string.format("%f", Config.get(settingKey)))
         else
-            self.control:setText(tostring(ORGM.Settings[settingKey]))
+            self.control:setText(tostring(Config.get(settingKey)))
         end
     end
     function gameOption.apply(self)
-        ORGM.Settings[settingKey] = tonumber(self.control:getText())
-        ORGM.validateSettingKey(settingKey)
-        ORGM.writeSettingsFile()
+        Config.set(settingKey, tonumber(self.control:getText()))
+        Config.writeFile()
+        --ORGM.Settings[settingKey] = tonumber(self.control:getText())
+        --ORGM.validateSettingKey(settingKey)
+        --ORGM.writeSettingsFile()
         gameOption:toUI()
 
     end
@@ -214,12 +220,13 @@ function MainOptions:create()
     opt:setToolTipMap({defaultTooltip = getText("UI_optionscreen_orgm_loglevel_tooltip")})
     local gameOption = GameOption:new('orgm_loglevel', opt)
     function gameOption.toUI(self)
-    self.control.selected = ORGM.Settings.LogLevel +1
+    self.control.selected = Config.get("LogLevel") +1
     end
     function gameOption.apply(self)
-        ORGM.Settings.LogLevel = self.control.selected - 1
-        ORGM.validateSettingKey('LogLevel')
-        ORGM.writeSettingsFile()
+        Config.set("LogLevel",  self.control.selected - 1)
+        --ORGM.Settings.LogLevel = self.control.selected - 1
+        --ORGM.validateSettingKey('LogLevel')
+        Config.writeFile()
     end
     self.gameOptions:add(gameOption)
 
@@ -233,15 +240,17 @@ function MainOptions:create()
     opt:setToolTipMap({defaultTooltip = getText("UI_optionscreen_orgm_tiplevel_tooltip")})
     local gameOption = GameOption:new('orgm_tiplevel', opt)
     function gameOption.toUI(self)
-    self.control.selected = ORGM.Settings.ToolTipStyle
+        self.control.selected = Config.get("ToolTipStyle")
     end
     function gameOption.apply(self)
-        ORGM.Settings.ToolTipStyle = self.control.selected
-        ORGM.validateSettingKey('ToolTipStyle')
-        ORGM.writeSettingsFile()
+        Config.set('ToolTipStyle', self.control.selected)
+        --ORGM.Settings.ToolTipStyle = self.control.selected
+        --ORGM.validateSettingKey('ToolTipStyle')
+        Config.writeFile()
     end
     self.gameOptions:add(gameOption)
 
+    --[[
 
     addBoolOption(self, splitpoint, comboWidth, "orgm_jamming", "JammingEnabled")
     addBoolOption(self, splitpoint, comboWidth, "orgm_usecases", "CasesEnabled")
@@ -287,7 +296,16 @@ function MainOptions:create()
 
     --self.addY = self.addY + 10
     --addSectionLabel(self, splitpoint, comboWidth, "orgm_section_advanced")
+    ]]
 
     self.mainPanel:setScrollHeight(self.addY + 40)
     self.addY = 0
 end
+
+
+
+
+
+
+
+
