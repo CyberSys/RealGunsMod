@@ -3012,34 +3012,34 @@ FirearmType:newCollection("Norinco_Type56", {
         Type84 = { -- Type 84
 			Weight = 4.0,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56
         },			
         Type84-1 = { -- Type 84-1
 			Weight = 3.7,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			--Icon = "Norinco_AKMS"
 			--5.56 copy of the T56-I
         },		
         Type84-2 = { -- Type 84-2
 			Weight = 3.7,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			--Icon = "Norinco_AKMS"
 			--5.56 copy of the T56-II
         },	
         Type84-3 = { -- Type 84-3
 			Weight = 3.7,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56
 			--Synthetic Furniture
         },
         Type84-4 = { -- Type 84-4
 			Weight = 3.7,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56-I
 			--Icon = "Norinco_AKMS"
 			--Synthetic Furniture, copy of the Type 56-I
@@ -3047,7 +3047,7 @@ FirearmType:newCollection("Norinco_Type56", {
         Type84-5 = { -- Type 84-5
 			Weight = 3.9,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56-II
 			--Icon = "Norinco_AKMS"
 			--Synthetic Furniture, copy of the Type 56-II
@@ -3055,7 +3055,7 @@ FirearmType:newCollection("Norinco_Type56", {
         Type84S = { -- Type 84 Sporter
 			Weight = 4.0,
 			year = 1984,
-			ammoType = "MagGroup_AK556",
+			magazine_group = "MagGroup_AK556",
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--5.56 copy of the T56 Sporter
 			--AKA AKS-223
@@ -3070,12 +3070,12 @@ FirearmType:newCollection("DIO_KL-7.62", {
 	category = ORGM.RIFLE,
 	soundProfile = "Rifle-AR",
 	
-	ammoType = "MagGroup_AK",
-	Weight = 4.0, --per military.wikia.org
-	barrelLength = 16.3,
-	WeaponSprite = "akm",
-	Icon = "Norinco_AKM",
-	maxCapacity = 30,
+	magazine_group = "MagGroup_AK",
+	weight = 4.0, --per military.wikia.org
+	barrel_length = 16.3,
+	model = "akm",
+	image = "Norinco_AKM",
+	max_capacity = 30,
 	
 	classification = "IGUI_Firearm_AssaultRifle",
 	year = 1990, -- Difficult to pin down but by my research it is after 1988.
@@ -3084,7 +3084,7 @@ FirearmType:newCollection("DIO_KL-7.62", {
     description = "IGUI_Firearm_Desc_KL762",
 	
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
-    feedSystem = Flags.AUTO + Flags.LONGGAS,
+    feed_system = Flags.AUTO + Flags.LONGGAS,
     Groups = { Group_KL_762 = 1 },
 	
 	--other stats
