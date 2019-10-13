@@ -18,11 +18,10 @@ https://www.genitron.com
 https://www.impactguns.com/
 https://modernfirearms.net/en
 ]]
-local Firearm = ORGM.Firearm
-local FirearmGroup = Firearm.FirearmGroup
-local FirearmType = Firearm.FirearmType
-local Flags = Firearm.Flags
-
+local FirearmGroup =require(ENV_RFF_PATH .. 'firearm/group')
+local FirearmType = require(ENV_RFF_PATH .. 'firearm/type')
+local Flags = require(ENV_RFF_PATH .. 'firearm/flags')
+local Logger = require(ENV_RFF_PATH .. 'interface/logger')
 --[[
     FirearmGroups are used to organize weapons. They are a branching tree structure
     (groups can contain groups), where branches and leaves can belong to multiple trees
@@ -3768,4 +3767,4 @@ register("Win1887SO", {
 })
 ]]
 -- ORGM[15] = "138363034"
-ORGM.log(ORGM.INFO, "All default firearms registered.")
+Logger.info("All default firearms registered.")
