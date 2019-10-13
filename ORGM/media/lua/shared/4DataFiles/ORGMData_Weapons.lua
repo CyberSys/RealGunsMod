@@ -2933,7 +2933,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--no bayonet, underfolding metal stock for easy carrying
         },
         Type56S-I = { -- Type 56 Sporter I
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1990,
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--Icon = "Norinco_AKMS"
@@ -2941,24 +2941,24 @@ FirearmType:newCollection("Norinco_Type56", {
         },
 		{
         Type56-II = { -- Type 56-II
-			Weight = 3.9,
+			weight = 3.9,
 			year = 1980,
 			--Icon = "Norinco_AKMS2" (need new icon for this)
 			--Bakelite Furniture, sidefolding stock, cleaning kit inside of the stock
         },
         Type56-3 = { -- Type 56-3
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1980,
 			--Bakelite Furniture, cleaning kit inside of the stock, copy of type 56
         },
         Type56-4 = { -- Type 56-4
-			Weight = 3.9,
+			weight = 3.9,
 			year = 1980,
 			--Icon = "Norinco_AKMS"
 			--Bakelite Furniture, cleaning kit inside of the stock, copy of type 56-I
         },
         Type56C = { -- Type 56C
-			Weight = 2.9,
+			weight = 2.9,
 			barrelLength = 11
 			year = 1991,
 			--AKA QBZ-56C
@@ -2966,7 +2966,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--no bayonet lug
         },
         Type56S = { -- Type 56 Sporter
-			Weight = 4.0,
+			weight = 4.0,
 			year = 1990,
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--semi-auto, civilian
@@ -2974,7 +2974,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--need new icon for thumbhole stock version
         },	
         Type56SGalil = { -- Type 56 Sporter Galil Sidefolder
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1990, -- can't verify this date definitively
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--semi-auto, civilian
@@ -2982,19 +2982,19 @@ FirearmType:newCollection("Norinco_Type56", {
 			--need new icon
         },		
         Type56TheLegend = { -- Type 56 The Legend
-			Weight = 4.0,
+			weight = 4.0,
 			year = 1990, -- can't verify this date definitively
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--semi-auto, civilian
 			--A Type 56 Sporter made to look like the Type-3 AK-47
         },		
         Type56M = { -- Type 56M
-			Weight = 4.8, --weight taken from the RPK it is patterned after
+			weight = 4.8, --weight taken from the RPK it is patterned after
 			year = 1980, -- can't verify this date definitively
 			--comes with a RPD style bipod
         },		
         Type87S = { -- Type 87 Sporter
-			Weight = 4.8, --weight taken from the RPK it is patterned after
+			weight = 4.8, --weight taken from the RPK it is patterned after
 			year = 1987,
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--comes with a RPD style bipod
@@ -3002,7 +3002,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--AKA Type 86S-7 or NHM91
         },	
         Type87SNM = { -- Type 87 Sporter National Match
-			Weight = 4.8, --weight taken from the RPK it is patterned after
+			weight = 4.8, --weight taken from the RPK it is patterned after
 			year = 1991,
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--comes with a RPD style bipod
@@ -3010,34 +3010,34 @@ FirearmType:newCollection("Norinco_Type56", {
 			--Special Edition that comes with a milled receiver, scope and scope mount
         },		
         Type84 = { -- Type 84
-			Weight = 4.0,
+			weight = 4.0,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56
         },			
         Type84-1 = { -- Type 84-1
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--Icon = "Norinco_AKMS"
 			--5.56 copy of the T56-I
         },		
         Type84-2 = { -- Type 84-2
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--Icon = "Norinco_AKMS"
 			--5.56 copy of the T56-II
         },	
         Type84-3 = { -- Type 84-3
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56
 			--Synthetic Furniture
         },
         Type84-4 = { -- Type 84-4
-			Weight = 3.7,
+			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56-I
@@ -3045,7 +3045,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--Synthetic Furniture, copy of the Type 56-I
         },
         Type84-5 = { -- Type 84-5
-			Weight = 3.9,
+			weight = 3.9,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56-II
@@ -3053,7 +3053,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--Synthetic Furniture, copy of the Type 56-II
         },
         Type84S = { -- Type 84 Sporter
-			Weight = 4.0,
+			weight = 4.0,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
@@ -3103,12 +3103,12 @@ FirearmType:newCollection("DIO_KL-7.62", {
 	
 	}, {
         KLF = { -- KLF-7.62
-			Weight = 3.7,
+			weight = 3.7,
 			--Icon = "Norinco_AKMS"
 			--underfolding metal stock for easy carrying
         },
         KLT = { -- KLT-7.62
-			Weight = 3.9,
+			weight = 3.9,
 			year = 1980,
 			--Icon = "Norinco_AKMS2" (need new icon for this)
 			--sidefolding stock
