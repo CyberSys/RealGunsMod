@@ -428,10 +428,35 @@ Items_EN = {
 	----------------------------------------------------------------------------
     -- Type56 family
     DisplayName_Norinco_Type56             		= "Norinco Type 56",
-    DisplayName_Norinco_Type56_Type56-I    		= "Norinco Type 56 I",
+    DisplayName_Norinco_Type56_Type56-I    		= "Norinco Type 56-I",
     DisplayName_Norinco_Type56_Type56S-I    	= "Norinco Type 56 Sporter I",
-    DisplayName_Norinco_Type56_Type56-II   		= "Norinco Type 56 II",
+    DisplayName_Norinco_Type56_Type56-II   		= "Norinco Type 56-II",
+    DisplayName_Norinco_Type56_Type56-3   		= "Norinco Type 56-3",
+    DisplayName_Norinco_Type56_Type56-4   		= "Norinco Type 56-4",
+    DisplayName_Norinco_Type56_Type56C   		= "Norinco Type 56C",
+    DisplayName_Norinco_Type56_Type56S   		= "Norinco Type 56 Sporter",
+    DisplayName_Norinco_Type56_Type56SGalil		= "Norinco Type 56 Sporter Galil Sidefolder",
+    DisplayName_Norinco_Type56_Type56The Legend	= "Norinco Type 56 The Legend",
+    DisplayName_Norinco_Type56_Type56M			= "Norinco Type 56M",
+    DisplayName_Norinco_Type56_Type87S			= "Norinco Type 87 Sporter",
+    DisplayName_Norinco_Type56_Type87SNM		= "Norinco Type 87 Sporter National Match",
+    DisplayName_Norinco_Type56_Type84      		= "Norinco Type 84",
+    DisplayName_Norinco_Type56_Type84-1    		= "Norinco Type 84-1",
+    DisplayName_Norinco_Type56_Type84-2    		= "Norinco Type 84-2",
+    DisplayName_Norinco_Type56_Type84-3    		= "Norinco Type 84-3",
+    DisplayName_Norinco_Type56_Type84-4    		= "Norinco Type 84-4",
+    DisplayName_Norinco_Type56_Type84-5    		= "Norinco Type 84-5",
+    DisplayName_Norinco_Type56_Type84S    		= "Norinco Type 84 Sporter",
 
+	----------------------------------------------------------------------------
+    -- KL762 family
+    DisplayName_DIO_KL762             			= "DIO KLS-7.62",
+    DisplayName_DIO_KL762_KLF            		= "DIO KLF-7.62",
+    DisplayName_DIO_KL762_KLT            		= "DIO KLT-7.62",
+
+	----------------------------------------------------------------------------
+    -- MAZ family
+    DisplayName_MIC_MAZ             			= "Military Industry Corporation MAZ",
 
 
     -- Magazine Groups

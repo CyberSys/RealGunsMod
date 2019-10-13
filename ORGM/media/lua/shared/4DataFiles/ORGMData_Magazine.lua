@@ -63,6 +63,9 @@ MagazineGroup:new("MagGroup_Uzi_9x19mm",            { Groups = { MagGroup_SubMac
 MagazineGroup:new("MagGroup_Skorpion_vz61_32ACP",   { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_32ACP' })
 
 
+MagazineGroup:new("MagGroup_AK",     			    { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
+MagazineGroup:new("MagGroup_AK556",                 { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_556x45mm' })                 { Groups = { MagGroup_Rifles = 1 } })
+--Still need to make the AK mags
 MagazineGroup:new("MagGroup_ArcticWarfare",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_308Winchester' })
 MagazineGroup:new("MagGroup_AR10",                  { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x51mm' })
 MagazineGroup:new("MagGroup_AR10_762x39mm",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
