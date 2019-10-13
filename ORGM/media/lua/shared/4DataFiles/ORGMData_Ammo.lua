@@ -10,10 +10,11 @@ See the documention there.
 
 ]]
 
-local Ammo = ORGM.Ammo
-local AmmoGroup = Ammo.AmmoGroup
-local AmmoType = Ammo.AmmoType
-local Flags = Ammo.Flags
+
+local AmmoGroup = require(ENV_RFF_PATH .. "ammo/group")
+local AmmoType = require(ENV_RFF_PATH .. "ammo/type")
+local Flags = require(ENV_RFF_PATH .. "ammo/flags")
+local Logger = require(ENV_RFF_PATH .. "interface/logger")
 
 AmmoGroup:new("AmmoGroup_Pistols")
 AmmoGroup:new("AmmoGroup_Rifles")
@@ -436,4 +437,4 @@ register("Ammo_12g_Slug",
     { OptimalBarrel = 60, Range = 12, Recoil = 50, MinDamage = 2.0, MaxDamage = 2.8, MaxHitCount = 1, Penetration = 95, Case = "Case_12g", Groups = {"AmmoGroup_12g"}, BoxCount = 25, CanCount = 250, DisplayName = "12 Gauge Slug", Weight = 0.04, RoundType = "Shell" }
 )
 ]]
-ORGM.log(ORGM.INFO, "All default ammo registered.")
+Logger.info("All default ammo registered.")

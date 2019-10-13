@@ -1,6 +1,5 @@
 --[[- This file contains all default firearm data.
 
-All calls made by this script are to `ORGM.Firearm.register`. See the documention there.
 
 @script ORGMData_Weapons.lua
 @author Fenris_Wolf
@@ -22,6 +21,7 @@ local FirearmGroup =require(ENV_RFF_PATH .. 'firearm/group')
 local FirearmType = require(ENV_RFF_PATH .. 'firearm/type')
 local Flags = require(ENV_RFF_PATH .. 'firearm/flags')
 local Logger = require(ENV_RFF_PATH .. 'interface/logger')
+local Const = require(ENV_RFF_PATH .. 'constants')
 --[[
     FirearmGroups are used to organize weapons. They are a branching tree structure
     (groups can contain groups), where branches and leaves can belong to multiple trees
@@ -263,7 +263,7 @@ FirearmType:newCollection("Colt_Anaconda", {
         -- https://en.wikipedia.org/wiki/Colt_Anaconda
         -- https://www.coltforum.com/forums/colt-revolvers/73849-anaconda-bsts-3-print.html
         -- https://www.coltforum.com/forums/colt-revolvers/46474-fyi-colt-model-numbers.html
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_44Magnum",
@@ -392,7 +392,7 @@ FirearmType:newCollection("Colt_Python", {
         -- https://www.handgunsmag.com/editorial/colt_python_complete_history/138916
         -- https://www.coltforum.com/forums/python/71904-3-python-question-5.html
         -- https://www.coltforum.com/forums/colt-revolvers/46474-fyi-colt-model-numbers.html
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_357Magnum",
@@ -600,7 +600,7 @@ FirearmType:newCollection("Colt_SAA", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Colt_SAA
         -- http://www.coltfever.com/Colt_Single_Action_Army.html
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_45Colt",
@@ -664,7 +664,7 @@ FirearmType:newCollection("Ruger_Blackhawk", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Ruger_Blackhawk
         -- https://www.ruger.com/products/newModelBlackhawk/overview.html
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_357Magnum",
@@ -743,7 +743,7 @@ FirearmType:newCollection("Ruger_GP100", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Ruger_GP100
         -- https://www.ruger.com/products/gp100/overview.html
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_357Magnum",
@@ -816,7 +816,7 @@ FirearmType:newCollection("Ruger_Redhawk", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Ruger_Redhawk
         -- https://ruger.com/products/redhawk/models.html
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_44Magnum",  -- speedLoader = 'SpeedLoader3576',
@@ -907,7 +907,7 @@ FirearmType:newCollection("Ruger_SuperRedhawk", {
         -- https://www.ruger.com/products/superRedhawkStandard/models.html
         -- https://www.taloinc.com/ruger-firearms
         --
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_454Casull",
@@ -999,7 +999,7 @@ FirearmType:newCollection("Ruger_SuperRedhawk", {
 FirearmType:newCollection("Ruger_SecuritySix", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Ruger_Security_Six
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_357Magnum",
@@ -1032,7 +1032,7 @@ FirearmType:newCollection("SmithWesson_Model_10", {
         -- sources:
         -- https://en.wikipedia.org/wiki/S%26W_Model_10
         -- https://en.wikipedia.org/wiki/Smith_%26_Wesson_Model_1905
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_38Special",
@@ -1108,7 +1108,7 @@ FirearmType:newCollection("SmithWesson_Model_10", {
 FirearmType:newCollection("SmithWesson_Model_19", {
         -- sources:
         -- https://en.wikipedia.org/wiki/S%26W_Model_19
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_357Magnum",
@@ -1143,7 +1143,7 @@ FirearmType:newCollection("SmithWesson_Model_19", {
 FirearmType:newCollection("SmithWesson_Model_25", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Smith_%26_Wesson_Model_22
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_45ACP",  -- speedLoader = 'SpeedLoader3576',
@@ -1173,7 +1173,7 @@ FirearmType:newCollection("SmithWesson_Model_25", {
 FirearmType:newCollection("SmithWesson_Model_29", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Smith_%26_Wesson_Model_29
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_44Magnum",
@@ -1213,7 +1213,7 @@ FirearmType:newCollection("SmithWesson_Model_29", {
 FirearmType:newCollection("SmithWesson_Model_36", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Smith_%26_Wesson_Model_36
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_38Special",
@@ -1265,7 +1265,7 @@ FirearmType:newCollection("SmithWesson_Model_610", {
         -- https://en.wikipedia.org/wiki/Smith_%26_Wesson_Model_610
         -- https://www.thetruthaboutguns.com/2017/04/daniel-zimmerman/gun-review-smith-wesson-model-610-10mm-content-contest/
         -- https://www.smith-wesson.com/dealer-resources/sw-product-spec-sheets
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_10x25mm",
@@ -1311,7 +1311,7 @@ FirearmType:newCollection("Taurus_RagingBull", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Taurus_Raging_Bull
         -- https://web.archive.org/web/20041228132350/http://www.taurususa.com/products/gunselector-results.cfm?series=RB2
-        category = ORGM.REVOLVER,
+        category = Const.REVOLVER,
         soundProfile = "Revolver",
 
         ammo_group = "AmmoGroup_454Casull",
@@ -1412,7 +1412,7 @@ FirearmType:newCollection("Taurus_RagingBull", {
 FirearmType:new("AMT_AutomagV", {
     -- sources:
     -- https://en.wikipedia.org/wiki/AMT_AutoMag_V
-    category = ORGM.PISTOL,
+    category = Const.PISTOL,
     soundProfile = "Pistol-Large",
 
     ammo_group = "AmmoGroup_50AE",
@@ -1439,7 +1439,7 @@ FirearmType:newCollection("Beretta_92", {
         -- https://en.wikipedia.org/wiki/Beretta_M9
         -- https://en.wikipedia.org/wiki/List_of_Beretta_92_Models
         -- https://modernfirearms.net/en/handguns/handguns-en/italy-semi-automatic-pistols/beretta-92-eng/
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_9x19mm",
@@ -1491,7 +1491,7 @@ FirearmType:newCollection("Beretta_92", {
 })
 FirearmType:new("DornausDixon_BrenTen", {
     -- sources:
-    category = ORGM.PISTOL,
+    category = Const.PISTOL,
     soundProfile = "Pistol",
 
     ammo_group = "AmmoGroup_10x25mm",
@@ -1514,7 +1514,7 @@ FirearmType:new("DornausDixon_BrenTen", {
 })
 FirearmType:newCollection("Browning_HiPower", {
         -- sources:
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_9x19mm",
@@ -1541,7 +1541,7 @@ FirearmType:newCollection("Browning_HiPower", {
 FirearmType:newCollection("Colt_1911", {
         -- sources:
         -- https://en.wikipedia.org/wiki/M1911
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_45ACP",
@@ -1573,7 +1573,7 @@ FirearmType:newCollection("Colt_1911_Officers", {
         -- sources:
         -- https://en.wikipedia.org/wiki/M1911
         -- https://en.wikipedia.org/wiki/Colt_Officer%27s_ACP
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_45ACP",
@@ -1601,7 +1601,7 @@ FirearmType:newCollection("Colt_1911_Officers", {
 FirearmType:newCollection("Colt_1911_Commander", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Colt_Commander
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_38Super",
@@ -1626,7 +1626,7 @@ FirearmType:newCollection("Colt_1911_Commander", {
 FirearmType:newCollection("Colt_1911_DeltaElite", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Colt_Delta_Elite
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_10x25mm",
@@ -1651,7 +1651,7 @@ FirearmType:newCollection("Colt_1911_DeltaElite", {
 FirearmType:newCollection("CZUB_CZ75", {
         -- sources:
         -- https://en.wikipedia.org/wiki/CZ75
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_9x19mm",
@@ -1676,7 +1676,7 @@ FirearmType:newCollection("CZUB_CZ75", {
 FirearmType:newCollection("IMI_DesertEagle", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Desert_eagle
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol-Large",
 
         ammo_group = "AmmoGroup_44Magnum",
@@ -1725,7 +1725,7 @@ FirearmType:newCollection("IMI_DesertEagle", {
 FirearmType:newCollection("FNHerstal_FN57", {
         -- sources:
         --
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_57x28mm",
@@ -1751,7 +1751,7 @@ FirearmType:newCollection("FNHerstal_FN57", {
 FirearmType:newCollection("Glock_17", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Glock
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_9x19mm",
@@ -1780,7 +1780,7 @@ FirearmType:newCollection("Glock_17", {
 FirearmType:newCollection("Glock_20", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Glock
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_10x25mm",
@@ -1809,7 +1809,7 @@ FirearmType:newCollection("Glock_20", {
 FirearmType:newCollection("Glock_21", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Glock
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_45ACP",
@@ -1838,7 +1838,7 @@ FirearmType:newCollection("Glock_21", {
 FirearmType:newCollection("Glock_22", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Glock
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_40SW",
@@ -1867,7 +1867,7 @@ FirearmType:newCollection("Glock_22", {
 FirearmType:newCollection("HecklerKoch_Mark23", {
         -- sources:
         -- https://en.wikipedia.org/wiki/HK_MK23
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         ammo_group = "AmmoGroup_45ACP",
@@ -1895,7 +1895,7 @@ FirearmType:newCollection("HecklerKoch_Mark23", {
 FirearmType:newCollection("Kahr_CT_Series", {
         -- sources:
         -- https://shopkahrfirearmsgroup.com/kahr-arms/pistols/ct-series/
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         --magazine_group = "MagGroup_Kahr_CT_Series",
@@ -1946,7 +1946,7 @@ FirearmType:newCollection("Kahr_P_Series", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Kahr_P_series
         -- https://shopkahrfirearmsgroup.com/kahr-arms/pistols/p-series/
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Kahr_P_Series",
@@ -1973,7 +1973,7 @@ FirearmType:newCollection("Kahr_P_Series", {
 FirearmType:newCollection("KalTec_P32", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Kel-Tec_P-32
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_KalTec_P32",
@@ -2000,7 +2000,7 @@ FirearmType:newCollection("KalTec_P32", {
 FirearmType:newCollection("KalTec_PLR16", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Kel-Tec_PLR-16
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Rifle-AR",
 
         magazine_group = "MagGroup_STANAG",
@@ -2027,7 +2027,7 @@ FirearmType:newCollection("KalTec_PLR16", {
 FirearmType:newCollection("Ruger_MarkII", {
         -- sources:
         --
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Ruger_MarkII",
@@ -2051,7 +2051,7 @@ FirearmType:newCollection("Ruger_MarkII", {
 FirearmType:newCollection("Ruger_SR_Series", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Ruger_SR-Series
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Ruger_SR_Series",
@@ -2078,7 +2078,7 @@ FirearmType:newCollection("Ruger_SR_Series", {
 FirearmType:newCollection("SigSauer_P226", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Sig_226
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_SigSauer_P226",
@@ -2103,7 +2103,7 @@ FirearmType:newCollection("Springfield_XD", {
         -- sources:
         -- https://en.wikipedia.org/wiki/HS2000
         -- https://en.wikipedia.org/wiki/Springfield_Armory_XDM
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Springfield_XD",
@@ -2130,7 +2130,7 @@ FirearmType:newCollection("Springfield_1911", {
         -- sources:
         -- https://www.springfield-armory.com/1911-series/
         -- http://www.imfdb.org/wiki/Springfield_Armory_1911_Series
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_1911",
@@ -2157,7 +2157,7 @@ FirearmType:newCollection("Springfield_1911", {
 FirearmType:newCollection("Taurus_PT38S", {
         -- sources:
         -- https://www.genitron.com/Handgun/Taurus/Pistol/PT-38S/38-Super/Variant-1
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Taurus_PT38S",
@@ -2183,7 +2183,7 @@ FirearmType:newCollection("Taurus_Millennium", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Taurus_Millennium_series
         -- http://www.imfdb.org/wiki/Taurus_Millennium_Pro
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Taurus_Millennium_38Super",
@@ -2210,7 +2210,7 @@ FirearmType:newCollection("Taurus_Millennium", {
 FirearmType:newCollection("Walther_P22", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Walther_P22
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_P22",
@@ -2237,7 +2237,7 @@ FirearmType:newCollection("Walther_P22", {
 FirearmType:newCollection("Walther_PP_Series", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Walther_PP
-        category = ORGM.PISTOL,
+        category = Const.PISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_P22",
@@ -2268,7 +2268,7 @@ FirearmType:new("Beretta_93R", {
     -- sources:
     -- https://en.wikipedia.org/wiki/Beretta_93R
     -- https://modernfirearms.net/en/handguns/handguns-en/italy-semi-automatic-pistols/beretta-92-eng/
-    category = ORGM.MACHINEPISTOL,
+    category = Const.MACHINEPISTOL,
     soundProfile = "Pistol",
 
     magazine_group = "MagGroup_Beretta_92",
@@ -2293,7 +2293,7 @@ FirearmType:newCollection("Glock_18", {
         -- https://en.wikipedia.org/wiki/Glock
         -- https://www.all4shooters.com/en/shooting/pistols/glock-18-full-auto-test-and-video/
         -- http://www.thefullwiki.org/Glock_18
-        category = ORGM.MACHINEPISTOL,
+        category = Const.MACHINEPISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Glock_9x19mm",
@@ -2325,7 +2325,7 @@ FirearmType:newCollection("Glock_18", {
         },
 })
 FirearmType:newCollection("CZUB_Skorpion", {
-        category = ORGM.MACHINEPISTOL,
+        category = Const.MACHINEPISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Skorpion_vz61_32ACP",
@@ -2359,7 +2359,7 @@ FirearmType:newCollection("AmericanArms_AM180", {
         -- https://en.wikipedia.org/wiki/Am180
         -- https://modernfirearms.net/en/submachine-guns/u-s-a-submachine-guns/american-180-eng/
         -- less then 10,000 manufactured
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
         --ejectSound = 'ORGMSMG2Out',
         --insertSound = 'ORGMSMG2In',
@@ -2387,7 +2387,7 @@ FirearmType:newCollection("AmericanArms_AM180", {
 FirearmType:newCollection("FNHerstal_P90", {
         -- sources:
         -- https://en.wikipedia.org/wiki/FN_P90
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_FNP90",
@@ -2416,7 +2416,7 @@ FirearmType:newCollection("FNHerstal_P90", {
 FirearmType:newCollection("HecklerKoch_MP5", {
         -- sources:
         --
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_MP5",
@@ -2440,7 +2440,7 @@ FirearmType:newCollection("HecklerKoch_MP5", {
 FirearmType:newCollection("HecklerKoch_UMP", {
         -- sources:
         --
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_UMP",
@@ -2464,7 +2464,7 @@ FirearmType:newCollection("HecklerKoch_UMP", {
 FirearmType:newCollection("Kriss_Vector", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Kriss_Vector
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_Glock_45ACP",
@@ -2499,7 +2499,7 @@ FirearmType:newCollection("Kriss_Vector", {
 FirearmType:newCollection("AutoOrdnance_Thompson", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Thompson_submachine_gun
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_Thompson",
@@ -2540,7 +2540,7 @@ FirearmType:newCollection("AutoOrdnance_Thompson", {
 FirearmType:newCollection("MAC_Mac10", {
         -- sources:
         -- https://en.wikipedia.org/wiki/MAC-10
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_Mac10_45ACP",
@@ -2570,7 +2570,7 @@ FirearmType:newCollection("MAC_Mac10", {
 FirearmType:newCollection("MAC_Mac11", {
         -- sources:
         -- https://en.wikipedia.org/wiki/MAC-11
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_Mac11_380ACP",
@@ -2597,7 +2597,7 @@ FirearmType:newCollection("IMI_Uzi", {
         -- sources:
         -- https://en.wikipedia.org/wiki/Uzi
         -- https://www.americanrifleman.org/articles/2019/4/29/an-essential-uzi-guide/
-        category = ORGM.SUBMACHINEGUN,
+        category = Const.SUBMACHINEGUN,
         soundProfile = "SMG",
 
         magazine_group = "MagGroup_Uzi_9x19mm",
@@ -2638,7 +2638,7 @@ FirearmType:newCollection("IMI_Uzi", {
 
 FirearmType:newCollection("AccuracyIntl_ArcticWarfare", {
 
-        category = ORGM.RIFLE,
+        category = Const.RIFLE,
         soundProfile = "Rifle-Bolt",
 
         magazine_group = "MagGroup_ArcticWarfare",
@@ -2666,9 +2666,9 @@ register("L96", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 26,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Rifle-Bolt",
 
     classification = "IGUI_Firearm_BoltRifle",
@@ -2683,7 +2683,7 @@ FirearmType:newCollection("Armalite_AR10", {
         -- sources:
         -- https://en.wikipedia.org/wiki/AR-10
         -- https://www.ammoland.com/2011/10/historical-review-of-armalite/
-        category = ORGM.RIFLE,
+        category = Const.RIFLE,
         soundProfile = "Rifle-AR",
 
         magazine_group = "MagGroup_AR10",
@@ -2750,7 +2750,7 @@ FirearmType:newCollection("Colt_CAR15", {
         -- https://en.wikipedia.org/wiki/ArmaLite_AR-15
         -- https://en.wikipedia.org/wiki/Colt_AR-15
         -- https://www.ammoland.com/2016/04/ar-15-rifle-historical-time-line/
-        category = ORGM.RIFLE,
+        category = Const.RIFLE,
         soundProfile = "Rifle-AR",
 
         magazine_group = "MagGroup_STANAG",
@@ -2849,7 +2849,7 @@ FirearmType:newCollection("Colt_CAR15", {
 })
 
 FirearmType:newCollection("Colt_AR15", { -- civilian variants
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     soundProfile = "Rifle-AR",
 
     magazine_group = "MagGroup_STANAG",
@@ -2873,7 +2873,7 @@ FirearmType:newCollection("Colt_AR15", { -- civilian variants
 })
 
 FirearmType:newCollection("Browning_BLR", {
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     soundProfile = "Rifle-Lever",
 
     magazine_group = "MagGroup_BLR",
@@ -2897,7 +2897,7 @@ FirearmType:newCollection("Browning_BLR", {
 FirearmType:newCollection("Norinco_Type56", {
 	--sources:
 	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
-	category = ORGM.RIFLE,
+	category = Const.RIFLE,
 	soundProfile = "Rifle-AR",
 	
 	magazine_group = "MagGroup_AK",
@@ -2929,31 +2929,30 @@ FirearmType:newCollection("Norinco_Type56", {
 	--has a spike bayonet
 	
 	}, {
-        Type56-I = { -- Type 56-I
+        Type56_I = { -- Type 56-I
 			weight = 3.7,
 			--image = "Norinco_AKMS"
 			--no bayonet, underfolding metal stock for easy carrying
         },
-        Type56S-I = { -- Type 56 Sporter I
+        Type56S_I = { -- Type 56 Sporter I
 			weight = 3.7,
 			year = 1990,
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
 			--Icon = "Norinco_AKMS"
 			--no bayonet, underfolding metal stock for easy carrying, semi-auto, civilian
         },
-		{
-        Type56-II = { -- Type 56-II
+        Type56_II = { -- Type 56-II
 			weight = 3.9,
 			year = 1980,
 			--Icon = "Norinco_AKMS2" (need new icon for this)
 			--Bakelite Furniture, sidefolding stock, cleaning kit inside of the stock
         },
-        Type56-3 = { -- Type 56-3
+        Type56_3 = { -- Type 56-3
 			weight = 3.7,
 			year = 1980,
 			--Bakelite Furniture, cleaning kit inside of the stock, copy of type 56
         },
-        Type56-4 = { -- Type 56-4
+        Type56_4 = { -- Type 56-4
 			weight = 3.9,
 			year = 1980,
 			--Icon = "Norinco_AKMS"
@@ -2961,7 +2960,7 @@ FirearmType:newCollection("Norinco_Type56", {
         },
         Type56C = { -- Type 56C
 			weight = 2.9,
-			barrelLength = 11
+			barrelLength = 11,
 			year = 1991,
 			--AKA QBZ-56C
 			--need new icon for very short version, looks like an AKS-74U (Maybe we have one)
@@ -3017,28 +3016,28 @@ FirearmType:newCollection("Norinco_Type56", {
 			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56
         },			
-        Type84-1 = { -- Type 84-1
+        Type84_1 = { -- Type 84-1
 			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--Icon = "Norinco_AKMS"
 			--5.56 copy of the T56-I
         },		
-        Type84-2 = { -- Type 84-2
+        Type84_2 = { -- Type 84-2
 			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--Icon = "Norinco_AKMS"
 			--5.56 copy of the T56-II
         },	
-        Type84-3 = { -- Type 84-3
+        Type84_3 = { -- Type 84-3
 			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
 			--5.56 copy of the T56
 			--Synthetic Furniture
         },
-        Type84-4 = { -- Type 84-4
+        Type84_4 = { -- Type 84-4
 			weight = 3.7,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
@@ -3046,7 +3045,7 @@ FirearmType:newCollection("Norinco_Type56", {
 			--Icon = "Norinco_AKMS"
 			--Synthetic Furniture, copy of the Type 56-I
         },
-        Type84-5 = { -- Type 84-5
+        Type84_5 = { -- Type 84-5
 			weight = 3.9,
 			year = 1984,
 			magazine_group = "MagGroup_AK556",
@@ -3069,7 +3068,7 @@ FirearmType:newCollection("DIO_KL762", {
 	--sources:
 	--https://en.wikipedia.org/wiki/Defense_Industries_Organization
 	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
-	category = ORGM.RIFLE,
+	category = Const.RIFLE,
 	soundProfile = "Rifle-AR",
 	
 	magazine_group = "MagGroup_AK",
@@ -3122,7 +3121,7 @@ FirearmType:newCollection("MIC_MAZ", {
 	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
 	--https://en.wikipedia.org/wiki/Military_Industry_Corporation
 	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
-	category = ORGM.RIFLE,
+	category = Const.RIFLE,
 	soundProfile = "Rifle-AR",
 	
 	ammoType = "MagGroup_AK",
@@ -3154,6 +3153,7 @@ FirearmType:newCollection("MIC_MAZ", {
 	--Wood furniture
 	--ported gas tube
 	--has a spike bayonet
+    }, {
 })
 
 --[[
@@ -3163,7 +3163,7 @@ FirearmType:newCollection("MIC_MAZ", {
 register("AKM", {
 
     lastChanged = 24,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
 
 
 })
@@ -3172,9 +3172,9 @@ register("AKMA", {
     feed_system = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 16.3,
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_AssaultRifle",
@@ -3189,9 +3189,9 @@ register("FNFAL", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 21,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3205,10 +3205,10 @@ register("FNFALA", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 21, -- 17.2, 18, 21
     barrelLengthOpt = { 17.2, 18, 21 },
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_BattleRifle",
@@ -3222,9 +3222,9 @@ register("Garand", {
     feed_system = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Rifle-Auto",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3238,9 +3238,9 @@ register("HenryBB", {
     feed_system = Flags.LEVER,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-Lever",
 
     classification = "IGUI_Firearm_LeverRifle",
@@ -3254,9 +3254,9 @@ register("HK91", {
     feed_system = Flags.AUTO + Flags.DELAYEDBLOWBACK,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 19.7,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3270,9 +3270,9 @@ register("HKG3", {
     feed_system = Flags.AUTO + Flags.DELAYEDBLOWBACK,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 17.7,
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_BattleRifle",
@@ -3286,9 +3286,9 @@ register("HKSL8", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20.08,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3302,9 +3302,9 @@ register("LENo4", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 25.2,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     speedLoader = "LENo4StripperClip",
     soundProfile = "Rifle-Bolt",
 
@@ -3319,10 +3319,10 @@ register("M16", {
     feed_system = Flags.AUTO + Flags.DIRECTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20,
-    isPolice = ORGM.VERYRARE,
-    isMilitary = ORGM.COMMON,
+    isPolice = Const.VERYRARE,
+    isMilitary = Const.COMMON,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_AssaultRifle",
@@ -3336,9 +3336,9 @@ register("M1903", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     speedLoader = 'M1903StripperClip',
     soundProfile = "Rifle-Auto-IM",
 
@@ -3353,10 +3353,10 @@ register("M21", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 22,
-    isPolice = ORGM.RARE,
-    isMilitary = ORGM.RARE,
+    isPolice = Const.RARE,
+    isMilitary = Const.RARE,
     soundProfile = "Rifle-Auto",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3370,10 +3370,10 @@ register("M249", {
     feed_system = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 21, -- 18 or 21
     barrelLengthOpt = { 18, 21 },
-    isMilitary = ORGM.RARE,
+    isMilitary = Const.RARE,
     soundProfile = "Rifle-Auto",
     clickSound = 'ORGMRifleEmpty',
     ejectSound = 'ORGMLMGOut',
@@ -3391,10 +3391,10 @@ register("M4C", {
     feed_system = Flags.AUTO + Flags.DIRECTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 14.5,
-    isPolice = ORGM.VERYRARE,
-    isMilitary = ORGM.COMMON,
+    isPolice = Const.VERYRARE,
+    isMilitary = Const.COMMON,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_AssaultCarbine",
@@ -3408,10 +3408,10 @@ register("Marlin60", {
     feed_system = Flags.AUTO + Flags.BLOWBACK,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 19, -- 19 or 22 (pre-1985)
     barrelLengthOpt = { 19, 22 },
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Rifle-Auto-IM",
     rackSound = 'ORGMRifleRack',
     clickSound = 'ORGMSmallPistolEmpty',
@@ -3428,11 +3428,11 @@ register("Mini14", {
     feed_system = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 18.5, -- 16.12 (tactical), 18.5, 22 (target)
     barrelLengthOpt = { 16.12, 18.5, 22 },
-    isCivilian = ORGM.COMMON,
-    isPolice = ORGM.RARE,
+    isCivilian = Const.COMMON,
+    isPolice = Const.RARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3446,10 +3446,10 @@ register("Mosin", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 29, -- 22.2 carbine, 26.2, 29
     barrelLengthOpt = { 22.2, 26.2, 29 },
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     speedLoader = 'MosinStripperClip',
     soundProfile = "Rifle-Bolt-IM",
 
@@ -3464,9 +3464,9 @@ register("R25", {
     feed_system = Flags.AUTO + Flags.DIRECTGAS,
 
     lastChanged = 27,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3480,11 +3480,11 @@ register("Rem700", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24, -- varies widely from 16.5 to 26 depending on model and caliber. the .30-06's seem mostly in 24"
     barrelLengthOpt = {16.5, 18, 20, 22, 24, 26 },
-    isCivilian = ORGM.COMMON,
-    isPolice = ORGM.RARE,
+    isCivilian = Const.COMMON,
+    isPolice = Const.RARE,
     soundProfile = "Rifle-Bolt-IM",
 
     classification = "IGUI_Firearm_BoltRifle",
@@ -3498,10 +3498,10 @@ register("Rem788", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24, -- 18.5, 22, 24
     barrelLengthOpt = { 18.5, 22, 24 },
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Rifle-Bolt",
 
     classification = "IGUI_Firearm_BoltRifle",
@@ -3515,9 +3515,9 @@ register("Rug1022", {
     feed_system = Flags.AUTO + Flags.BLOWBACK,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 18.5,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Pistol",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3531,10 +3531,10 @@ register("SA80", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20.4, -- 11.2, 20.4, 25.4
     barrelLengthOpt = { 11.2, 20.4, 25.4 },
-    isMilitary = ORGM.RARE,
+    isMilitary = Const.RARE,
     soundProfile = "Rifle-AR",
     isBulpup = true,
 
@@ -3549,9 +3549,9 @@ register("SIG550", {
     feed_system = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20.8,
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_AssaultRifle",
@@ -3565,9 +3565,9 @@ register("SIG551", {
     feed_system = Flags.AUTO + Flags.LONGGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20.8,
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_AssaultCarbine",
@@ -3581,10 +3581,10 @@ register("SKS", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20, -- 20 or 22
     barrelLengthOpt = { 20, 22 },
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     speedLoader = 'SKSStripperClip',
     soundProfile = "Rifle-Auto-IM",
 
@@ -3599,10 +3599,10 @@ register("SR25", {
     feed_system = Flags.AUTO + Flags.DIRECTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24,
-    isPolice = ORGM.RARE,
-    isMilitary = ORGM.COMMON,
+    isPolice = Const.RARE,
+    isMilitary = Const.COMMON,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3616,9 +3616,9 @@ register("SVD", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24.4,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-Auto",
 
     classification = "IGUI_Firearm_SemiRifle",
@@ -3632,11 +3632,11 @@ register("WinM70", {
     feed_system = Flags.BOLT,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 24, -- 22, 24, 26
     barrelLengthOpt = { 22, 24, 26 },
-    isCivilian = ORGM.COMMON,
-    isMilitary = ORGM.RARE,
+    isCivilian = Const.COMMON,
+    isMilitary = Const.RARE,
     soundProfile = "Rifle-Bolt-IM",
 
     classification = "IGUI_Firearm_BoltRifle",
@@ -3650,9 +3650,9 @@ register("WinM94", {
     feed_system = Flags.LEVER,
 
     lastChanged = 24,
-    category = ORGM.RIFLE,
+    category = Const.RIFLE,
     barrel_length = 20,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Rifle-Lever",
 
     classification = "IGUI_Firearm_LeverRifle",
@@ -3670,10 +3670,10 @@ register("BenelliM3", {
     feed_system = Flags.PUMP + Flags.AUTO + Flags.LONGRECOIL,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 22, -- 20 22, 24
     barrelLengthOpt = { 20, 22, 24 },
-    isPolice = ORGM.COMMON,
+    isPolice = Const.COMMON,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_DualShotgun",
@@ -3687,24 +3687,24 @@ register("BenelliM3SO", {
     feed_system = Flags.PUMP + Flags.AUTO + Flags.LONGRECOIL,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18, -- cant saw off much with that magazine tube, the connecting brace is very forward
     soundProfile = "Shotgun",
 
-    classification = ORGM.Firearm.getDesign("BenelliM3").classification,
-    year = ORGM.Firearm.getDesign("BenelliM3").year,
-    country = ORGM.Firearm.getDesign("BenelliM3").country,
-    manufacturer = ORGM.Firearm.getDesign("BenelliM3").manufacturer,
-    description = ORGM.Firearm.getDesign("BenelliM3").description,
+    classification = Firearm.getDesign("BenelliM3").classification,
+    year = Firearm.getDesign("BenelliM3").year,
+    country = Firearm.getDesign("BenelliM3").country,
+    manufacturer = Firearm.getDesign("BenelliM3").manufacturer,
+    description = Firearm.getDesign("BenelliM3").description,
 })
 register("BenelliXM1014", {
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
     feed_system = Flags.AUTO + Flags.LONGRECOIL,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18.5,
-    isMilitary = ORGM.COMMON,
+    isMilitary = Const.COMMON,
     soundProfile = "Shotgun",
     rackSound = 'ORGMARRack',
 
@@ -3719,9 +3719,9 @@ register("Hawk982", {
     feed_system = Flags.PUMP,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18.5,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_PumpShotgun",
@@ -3735,10 +3735,10 @@ register("Ithaca37", {
     feed_system = Flags.PUMP,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 20, -- 18.5, 20, -- all the way up to 30
     barrelLengthOpt = { 18.5, 20, 22, 24, 26, 28, 30 },
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_PumpShotgun",
@@ -3752,25 +3752,25 @@ register("Ithaca37SO", {
     feed_system = Flags.PUMP,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 14, -- sawn off
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
-    classification = ORGM.Firearm.getDesign("Ithaca37").classification,
-    year = ORGM.Firearm.getDesign("Ithaca37").year,
-    country = ORGM.Firearm.getDesign("Ithaca37").country,
-    manufacturer = ORGM.Firearm.getDesign("Ithaca37").manufacturer,
-    description = ORGM.Firearm.getDesign("Ithaca37").description,
+    classification = Firearm.getDesign("Ithaca37").classification,
+    year = Firearm.getDesign("Ithaca37").year,
+    country = Firearm.getDesign("Ithaca37").country,
+    manufacturer = Firearm.getDesign("Ithaca37").manufacturer,
+    description = Firearm.getDesign("Ithaca37").description,
 })
 register("M1216", {
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
     feed_system = Flags.AUTO + Flags.DELAYEDBLOWBACK,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18,
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-AR",
 
     classification = "IGUI_Firearm_SemiShotgun",
@@ -3784,9 +3784,9 @@ register("Moss590", {
     feed_system = Flags.PUMP,
 
     lastChanged = 27,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 20,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_PumpShotgun",
@@ -3800,27 +3800,27 @@ register("Moss590SO", {
     feed_system = Flags.PUMP,
 
     lastChanged = 27,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18.5,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
-    classification = ORGM.Firearm.getDesign("Moss590").classification,
-    year = ORGM.Firearm.getDesign("Moss590").year,
-    country = ORGM.Firearm.getDesign("Moss590").country,
-    manufacturer = ORGM.Firearm.getDesign("Moss590").manufacturer,
-    description = ORGM.Firearm.getDesign("Moss590").description,
+    classification = Firearm.getDesign("Moss590").classification,
+    year = Firearm.getDesign("Moss590").year,
+    country = Firearm.getDesign("Moss590").country,
+    manufacturer = Firearm.getDesign("Moss590").manufacturer,
+    description = Firearm.getDesign("Moss590").description,
 })
 register("Rem870", {
     features = Flags.DOUBLEACTION + Flags.SAFETY,
     feed_system = Flags.PUMP,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 26,
     barrelLengthOpt = {20, 22, 24, 26 },
-    isCivilian = ORGM.COMMON,
-    isPolice = ORGM.COMMON,
+    isCivilian = Const.COMMON,
+    isPolice = Const.COMMON,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_PumpShotgun",
@@ -3834,25 +3834,25 @@ register("Rem870SO", {
     feed_system = Flags.PUMP,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 14,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
-    classification = ORGM.Firearm.getDesign("Rem870").classification,
-    year = ORGM.Firearm.getDesign("Rem870").year,
-    country = ORGM.Firearm.getDesign("Rem870").country,
-    manufacturer = ORGM.Firearm.getDesign("Rem870").manufacturer,
-    description = ORGM.Firearm.getDesign("Rem870").description,
+    classification = Firearm.getDesign("Rem870").classification,
+    year = Firearm.getDesign("Rem870").year,
+    country = Firearm.getDesign("Rem870").country,
+    manufacturer = Firearm.getDesign("Rem870").manufacturer,
+    description = Firearm.getDesign("Rem870").description,
 })
 register("Silverhawk", {
     features = Flags.SINGLEACTION + Flags.SAFETY,
     feed_system = Flags.BREAK,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 28,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun-Break",
 
     classification = "IGUI_Firearm_DoubleShotgun",
@@ -3866,28 +3866,28 @@ register("SilverHawkSO", {
     feed_system = Flags.BREAK,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 10,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun-Break",
 
-    classification = ORGM.Firearm.getDesign("Silverhawk").classification,
-    year = ORGM.Firearm.getDesign("Silverhawk").year,
-    country = ORGM.Firearm.getDesign("Silverhawk").country,
-    manufacturer = ORGM.Firearm.getDesign("Silverhawk").manufacturer,
-    description = ORGM.Firearm.getDesign("Silverhawk").description
+    classification = Firearm.getDesign("Silverhawk").classification,
+    year = Firearm.getDesign("Silverhawk").year,
+    country = Firearm.getDesign("Silverhawk").country,
+    manufacturer = Firearm.getDesign("Silverhawk").manufacturer,
+    description = Firearm.getDesign("Silverhawk").description
 })
 register("Spas12", {
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
     feed_system = Flags.PUMP + Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 21.5, -- 18, 19-7/8,21.5, 24 -- 21.5 is the shortest we can go with our mag tube
     barrelLengthOpt = { 21.5, 24 },
-    isCivilian = ORGM.RARE,
-    isPolice = ORGM.RARE,
-    isMilitary = ORGM.RARE,
+    isCivilian = Const.RARE,
+    isPolice = Const.RARE,
+    isMilitary = Const.RARE,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_DualShotgun",
@@ -3901,9 +3901,9 @@ register("Stevens320", {
     feed_system = Flags.PUMP,
 
     lastChanged = 28,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18.5,
-    isCivilian = ORGM.COMMON,
+    isCivilian = Const.COMMON,
     soundProfile = "Shotgun",
 
     classification = "IGUI_Firearm_PumpShotgun",
@@ -3917,10 +3917,10 @@ register("Striker", {
     feed_system = Flags.ROTARY,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 18.5, -- 7.5, 12, 14, 18.5
     barrelLengthOpt = { 7.5, 12, 14, 18.5 },
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Shotgun",
     rackSound = 'ORGMARRack',
 
@@ -3935,10 +3935,10 @@ register("VEPR12", {
     feed_system = Flags.AUTO + Flags.SHORTGAS,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 22.44, -- 19, 22.44, 26.5
     barrelLengthOpt = { 19, 22.44, 26.5 },
-    isCivilian = ORGM.RARE,
+    isCivilian = Const.RARE,
     soundProfile = "Rifle-AR",
     clickSound = 'ORGMShotgunEmpty',
 
@@ -3953,10 +3953,10 @@ register("Win1887", {
     feed_system = Flags.LEVER,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 30, -- 18, 20, 30
     barrelLengthOpt = { 18, 20, 30 },
-    isCivilian = ORGM.VERYRARE,
+    isCivilian = Const.VERYRARE,
     soundProfile = "Shotgun-Lever",
 
     classification = "IGUI_Firearm_LeverShotgun",
@@ -3970,15 +3970,15 @@ register("Win1887SO", {
     feed_system = Flags.LEVER,
 
     lastChanged = 24,
-    category = ORGM.SHOTGUN,
+    category = Const.SHOTGUN,
     barrel_length = 14,
     soundProfile = "Shotgun-Lever",
 
-    classification = ORGM.Firearm.getDesign("Win1887").classification,
-    year = ORGM.Firearm.getDesign("Win1887").year,
-    country = ORGM.Firearm.getDesign("Win1887").country,
-    manufacturer = ORGM.Firearm.getDesign("Win1887").manufacturer,
-    description = ORGM.Firearm.getDesign("Win1887").description,
+    classification = Firearm.getDesign("Win1887").classification,
+    year = Firearm.getDesign("Win1887").year,
+    country = Firearm.getDesign("Win1887").country,
+    manufacturer = Firearm.getDesign("Win1887").manufacturer,
+    description = Firearm.getDesign("Win1887").description,
 })
 ]]
 -- ORGM[15] = "138363034"

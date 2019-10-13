@@ -8,10 +8,11 @@ All calls made by this script are to `ORGM.Magazine.register`. See the documenti
 @copyright 2018 **File:** shared/4DataFiles/ORGMData_Magazine.lua
 
 ]]
-local Magazine = ORGM.Magazine
-local MagazineGroup = Magazine.MagazineGroup
-local MagazineType = Magazine.MagazineType
-local Flags = Magazine.Flags
+
+local MagazineGroup = require(ENV_RFF_PATH .. "magazine/group")
+local MagazineType = require(ENV_RFF_PATH .. "magazine/type")
+local Flags = require(ENV_RFF_PATH .. "magazine/flags")
+local Logger = require(ENV_RFF_PATH .. "interface/logger")
 
 MagazineGroup:new("MagGroup_Pistols")
 MagazineGroup:new("MagGroup_SubMachineGuns")
@@ -64,7 +65,7 @@ MagazineGroup:new("MagGroup_Skorpion_vz61_32ACP",   { Groups = { MagGroup_SubMac
 
 
 MagazineGroup:new("MagGroup_AK",     			    { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
-MagazineGroup:new("MagGroup_AK556",                 { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_556x45mm' })                 { Groups = { MagGroup_Rifles = 1 } })
+MagazineGroup:new("MagGroup_AK556",                 { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_556x45mm' })
 --Still need to make the AK mags
 MagazineGroup:new("MagGroup_ArcticWarfare",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_308Winchester' })
 MagazineGroup:new("MagGroup_AR10",                  { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x51mm' })
@@ -659,4 +660,4 @@ register("XD40Mag",
 )
 ]]
 -- ORGM[14] = "353134363"
-ORGM.log(ORGM.INFO, "All default magazines registered.")
+Logger.info("All default magazines registered.")
