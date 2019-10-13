@@ -2911,7 +2911,7 @@ FirearmType:newCollection("Norinco_Type56", {
     manufacturer = "IGUI_Firearm_Manuf_NORINCO",
     description = "IGUI_Firearm_Desc_Type56",
 	
-    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
     feed_system = Flags.AUTO + Flags.LONGGAS,
     Groups = { Group_Norinco_Type56 = 1 },
 	
