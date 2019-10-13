@@ -158,6 +158,7 @@ IG_UI_EN = {
     IGUI_Firearm_Country_AR = "Argentina",
     IGUI_Firearm_Country_CH = "Switzerland",
     IGUI_Firearm_Country_ZA = "South Africa",
+    IGUI_Firearm_Country_SU = "Republic of Sudan",
     IGUI_Firearm_Country_RU = "Russia",
     IGUI_Firearm_Country_USIL = "United States, Israel",
     IGUI_Firearm_Country_SU = "Soviet Union",
@@ -171,7 +172,6 @@ IG_UI_EN = {
     IGUI_Firearm_Manuf_AMT = "Arcadia Machine and Tool",
     IGUI_Firearm_Manuf_Daisy = "Daisy Outdoor Products",
     IGUI_Firearm_Manuf_Beretta = "Fabbrica d'Armi Pietro Beretta",
-    IGUI_Firearm_Manuf_DIO = "Defense Industries Organization",
     IGUI_Firearm_Manuf_Dixon = "Dornaus & Dixon Enterprises Inc.",
     IGUI_Firearm_Manuf_FN = "Fabrique Nationale d'Herstal",
     IGUI_Firearm_Manuf_FN2 = "FN Manufacturing LLC",
@@ -214,7 +214,9 @@ IG_UI_EN = {
 
     -- multiple manufacturers listed under a single translation
     IGUI_Firearm_Manuf_ALCOLT = "ArmaLite, Colt's Manufacturing Company",
+    IGUI_Firearm_Manuf_DIO = "Defense Industries Organization",
     IGUI_Firearm_Manuf_LBASS = "Long Branch Arsenal, Savage-Stevens Firearms",
+    IGUI_Firearm_Manuf_MIC = "Military Industry Corporation",
     IGUI_Firearm_Manuf_ASARDI = "Armsel, Sentinel Arms, Reutech Defense Industries",
 
 
@@ -303,6 +305,7 @@ IG_UI_EN = {
     IGUI_Firearm_Desc_M249 = "The M249 light machine gun, formerly designated the M249 Squad Automatic Weapon (SAW), is the American adaptation of the Belgian FN Minimi, a light machine gun manufactured by the Belgian company FN Herstal. The M249 is manufactured in the United States by the local subsidiary FN Manufacturing LLC in South Carolina and is widely used in the U.S. Armed Forces. The weapon was introduced in 1984 after being judged the most effective of a number of candidate weapons to address the lack of automatic firepower in small units. The M249 provides infantry squads with the high rate of fire of a machine gun combined with accuracy and portability approaching that of a rifle.",
     IGUI_Firearm_Desc_M4C = "The M4 carbine is a shorter and lighter variant of the M16A2 assault rifle. The M4 is a 5.56×45mm NATO, air-cooled, direct impingement gas-operated, magazine-fed carbine. It has a 14.5 in (370mm) barrel and a telescoping stock. <LINE> <LINE> The M4 carbine is extensively used by the United States Armed Forces and is largely replacing the M16 rifle in United States Army and United States Marine Corps combat units as the primary infantry weapon.",
     IGUI_Firearm_Desc_Marlin60 = "The Marlin Model 60, also known as the Marlin Glenfield Model 60, is a semi-automatic rifle that fires the .22 LR rimfire cartridge. Produced by Marlin Firearms Company of North Haven, Connecticut, it has been in continuous production since 1960 and the company says it is the most popular rifle of its kind in the world. Major features include a micro-groove barrel, a cross-bolt safety, hardwood stock with Monte Carlo comb, and brass inner magazine tube. The Marlin Model 795 is a very similar rifle and based on the Marlin Model 60, changed only to accept a detachable box magazine.",
+    IGUI_Firearm_Desc_MAZ = "A Sudanese licensed copy of the Chinese Type-56 rifle made by Military Industry Corporation.",
     IGUI_Firearm_Desc_Mini14 = "The Mini-14 is a lightweight .223 caliber (5.56mm) semi-automatic rifle manufactured by Sturm, Ruger & Co. that is popular with law enforcement, security personnel, hunters, ranchers, and target shooters. <LINE> <LINE> The name Mini-14 was coined because it resembles a smaller version of the military M14 rifle. Designed by L. James Sullivan and William B. Ruger, it incorporated numerous innovations and cost-saving engineering changes. The Mini-14 rifle employs an investment cast, heat-treated receiver and is mechanically similar to the M1 Garand rifle, with a self-cleaning, fixed-piston gas system. Initial rifles were produced with a complex, exposed bolt hold open device with no button for manual engagement.<LINE> <LINE> The Ruger Mini-14 was seen extensively in many episodes of The A-Team, an NBC television series that aired from 1983 to 1987. It was chosen because of its reputation for reliably firing blanks, which tend to clog a gun's action.",
     IGUI_Firearm_Desc_Mosin = "The 3-line rifle M1891, colloquially known as Mosin–Nagant is a five-shot, bolt-action, internal magazine–fed, military rifle developed from 1882 to 1891, and used by the armed forces of the Russian Empire, the Soviet Union and various other nations. It is one of the most mass-produced military bolt-action rifles in history with over 37 million units having been made since its inception in 1891, and, in spite of its age, it has been used in various conflicts around the world even up to the modern day.",
     IGUI_Firearm_Desc_R25 = "The Remington Model R-25 is semi-automatic gas-operated rifle manufactured by Remington Arms. The R-25 is Remington's attempt to join the AR market. It features a free-floating Chrom-Moly fluted barrel and is modeled after the classic AR-10. It has no built in iron sights and instead has a Picatinny rail mounted atop the receiver to allow the user to mount their choice of scope or other sighting system. The R-25 is advertised primarily as a hunting rifle, and as such normally comes painted in Mossy Oak camouflage.",

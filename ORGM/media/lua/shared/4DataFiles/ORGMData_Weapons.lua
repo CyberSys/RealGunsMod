@@ -71,6 +71,7 @@ FirearmGroup:new("Group_AmericanArms",      { Groups = { Group_Manufacturers = 1
 FirearmGroup:new("Group_Kriss",             { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_AutoOrdnance",      { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_MAC",               { Groups = { Group_Manufacturers = 1, } })
+FirearmGroup:new("Group_MIC",           	{ Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_AccuracyIntl",      { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Norinco",           { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Kalashnikov",       { Groups = { Group_Manufacturers = 1, } })
@@ -138,6 +139,7 @@ FirearmGroup:new("Group_IMI_SubMachineGuns",            { Groups = { Group_SubMa
 -- Rifles
 FirearmGroup:new("Group_AccuracyIntl_Rifles",   { Groups = { Group_Rifles = 1, Group_AccuracyIntl   = 1 } })
 FirearmGroup:new("Group_DIO_Rifles",    	    { Groups = { Group_Rifles = 1, Group_DIO	        = 1 } })
+FirearmGroup:new("Group_MIC_Rifles",    	    { Groups = { Group_Rifles = 1, Group_MIC	        = 1 } })
 FirearmGroup:new("Group_Norinco_Rifles",        { Groups = { Group_Rifles = 1, Group_Norinco        = 1 } })
 FirearmGroup:new("Group_Kalashnikov_Rifles",    { Groups = { Group_Rifles = 1, Group_Kalashnikov    = 1 } })
 
@@ -246,7 +248,8 @@ FirearmGroup:new("Group_AccuracyIntl_ArcticWarfare",    { Groups = { Group_Accur
 FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armalite_Rifles = 1, } })
 FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles = 1, } })
 FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles = 3, } })
-FirearmGroup:new("Group_DIO_KL-7.62",                   { Groups = { Group_DIO_Rifles = 1, } })
+FirearmGroup:new("Group_DIO_KL762",   	                { Groups = { Group_DIO_Rifles = 1, } })
+FirearmGroup:new("Group_MAZ",   		                { Groups = { Group_MIC_Rifles = 1, } })
 FirearmGroup:new("Group_Norinco_Type56",                { Groups = { Group_Norinco_Rifles = 1, } })
 
 FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles = 1, } })
@@ -3063,7 +3066,7 @@ FirearmType:newCollection("Norinco_Type56", {
         },
 })
 
-FirearmType:newCollection("DIO_KL-7.62", {
+FirearmType:newCollection("DIO_KL762", {
 	--sources:
 	--https://en.wikipedia.org/wiki/Defense_Industries_Organization
 	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
@@ -3113,6 +3116,45 @@ FirearmType:newCollection("DIO_KL-7.62", {
 			--Icon = "Norinco_AKMS2" (need new icon for this)
 			--sidefolding stock
         },
+})
+
+FirearmType:newCollection("MIC_MAZ", {
+	--sources:
+	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
+	--https://en.wikipedia.org/wiki/Military_Industry_Corporation
+	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
+	category = ORGM.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	ammoType = "MagGroup_AK",
+	Weight = 4.0, --per military.wikia.org
+	barrelLength = 16.3,
+	WeaponSprite = "akm",
+	Icon = "Norinco_AKM",
+	maxCapacity = 30,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1993, -- Difficult to pin down but MIC was not established until 1993.
+	country = "IGUI_Firearm_Country_SU",
+    manufacturer = "IGUI_Firearm_Manuf_MIC",
+    description = "IGUI_Firearm_Desc_MAZ",
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+    feedSystem = Flags.AUTO + Flags.LONGGAS,
+    Groups = { Group_MAZ = 1 },
+	
+	--other stats
+	--RoF 650 rpm
+	--Milled receiver, in 1960 switched to stamped
+	--comes with a folding spike bayonet
+	--differentiated from the AKm with the fully enclosed front sight
+	--No threaded barrel, can't use AK compensator (commercial variants might)
+	--Doesn't have a rate reducer so higher Rof than RU AKs
+	--Blued finish, not oxide or parkerized
+	--Most variants lack the side mount plate for the russian style sights
+	--Wood furniture
+	--ported gas tube
+	--has a spike bayonet
 })
 
 --[[

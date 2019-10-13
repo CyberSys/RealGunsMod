@@ -450,10 +450,13 @@ Items_EN = {
 
 	----------------------------------------------------------------------------
     -- KL762 family
-    DisplayName_DIO_KL-7.62             		= "DIO KLS-7.62",
-    DisplayName_DIO_KL-7.62_KLF            		= "DIO KLF-7.62",
-    DisplayName_DIO_KL-7.62_KLT            		= "DIO KLT-7.62",
+    DisplayName_DIO_KL762             			= "DIO KLS-7.62",
+    DisplayName_DIO_KL762_KLF            		= "DIO KLF-7.62",
+    DisplayName_DIO_KL762_KLT            		= "DIO KLT-7.62",
 
+	----------------------------------------------------------------------------
+    -- MAZ family
+    DisplayName_MIC_MAZ             			= "Military Industry Corporation MAZ",
 
 
     -- Magazine Groups
