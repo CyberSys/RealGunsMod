@@ -54,6 +54,7 @@ FirearmGroup:new("Group_SmithWesson",       { Groups = { Group_Manufacturers = 1
 FirearmGroup:new("Group_Taurus",            { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_AMT",               { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Beretta",           { Groups = { Group_Manufacturers = 1, } })
+FirearmGroup:new("Group_DIO",           	{ Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_DornausDixon",      { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_FNHerstal",         { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_CZUB",              { Groups = { Group_Manufacturers = 1, } })
@@ -136,6 +137,7 @@ FirearmGroup:new("Group_IMI_SubMachineGuns",            { Groups = { Group_SubMa
 
 -- Rifles
 FirearmGroup:new("Group_AccuracyIntl_Rifles",   { Groups = { Group_Rifles = 1, Group_AccuracyIntl   = 1 } })
+FirearmGroup:new("Group_DIO_Rifles",    	    { Groups = { Group_Rifles = 1, Group_DIO	        = 1 } })
 FirearmGroup:new("Group_Norinco_Rifles",        { Groups = { Group_Rifles = 1, Group_Norinco        = 1 } })
 FirearmGroup:new("Group_Kalashnikov_Rifles",    { Groups = { Group_Rifles = 1, Group_Kalashnikov    = 1 } })
 
@@ -244,6 +246,7 @@ FirearmGroup:new("Group_AccuracyIntl_ArcticWarfare",    { Groups = { Group_Accur
 FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armalite_Rifles = 1, } })
 FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles = 1, } })
 FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles = 3, } })
+FirearmGroup:new("Group_DIO_KL-7.62",                   { Groups = { Group_DIO_Rifles = 1, } })
 FirearmGroup:new("Group_Norinco_Type56",                { Groups = { Group_Norinco_Rifles = 1, } })
 
 FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles = 1, } })
@@ -2930,16 +2933,186 @@ FirearmType:newCollection("Norinco_Type56", {
 			--no bayonet, underfolding metal stock for easy carrying
         },
         Type56S-I = { -- Type 56 Sporter I
-			weight = 3.7,
-			--image = "Norinco_AKMS"
-			--no bayonet, underfolding metal stock for easy carrying
+			Weight = 3.7,
+			year = 1990,
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--Icon = "Norinco_AKMS"
+			--no bayonet, underfolding metal stock for easy carrying, semi-auto, civilian
         },
 		{
         Type56-II = { -- Type 56-II
-			weight = 3.7,
-			--image = "Norinco_AKMS"
+			Weight = 3.9,
+			year = 1980,
+			--Icon = "Norinco_AKMS2" (need new icon for this)
+			--Bakelite Furniture, sidefolding stock, cleaning kit inside of the stock
         },
-		
+        Type56-3 = { -- Type 56-3
+			Weight = 3.7,
+			year = 1980,
+			--Bakelite Furniture, cleaning kit inside of the stock, copy of type 56
+        },
+        Type56-4 = { -- Type 56-4
+			Weight = 3.9,
+			year = 1980,
+			--Icon = "Norinco_AKMS"
+			--Bakelite Furniture, cleaning kit inside of the stock, copy of type 56-I
+        },
+        Type56C = { -- Type 56C
+			Weight = 2.9,
+			barrelLength = 11
+			year = 1991,
+			--AKA QBZ-56C
+			--need new icon for very short version, looks like an AKS-74U (Maybe we have one)
+			--no bayonet lug
+        },
+        Type56S = { -- Type 56 Sporter
+			Weight = 4.0,
+			year = 1990,
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--semi-auto, civilian
+			--Also known as the AK47S, AKS-762, MAK-90
+			--need new icon for thumbhole stock version
+        },	
+        Type56SGalil = { -- Type 56 Sporter Galil Sidefolder
+			Weight = 3.7,
+			year = 1990, -- can't verify this date definitively
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--semi-auto, civilian
+			--Also known as the AK47S, AKS-762, MAK-90, has Galil sidefolding stock
+			--need new icon
+        },		
+        Type56TheLegend = { -- Type 56 The Legend
+			Weight = 4.0,
+			year = 1990, -- can't verify this date definitively
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--semi-auto, civilian
+			--A Type 56 Sporter made to look like the Type-3 AK-47
+        },		
+        Type56M = { -- Type 56M
+			Weight = 4.8, --weight taken from the RPK it is patterned after
+			year = 1980, -- can't verify this date definitively
+			--comes with a RPD style bipod
+        },		
+        Type87S = { -- Type 87 Sporter
+			Weight = 4.8, --weight taken from the RPK it is patterned after
+			year = 1987,
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--comes with a RPD style bipod
+			--a civilian semi-auto version of the type 56m
+			--AKA Type 86S-7 or NHM91
+        },	
+        Type87SNM = { -- Type 87 Sporter National Match
+			Weight = 4.8, --weight taken from the RPK it is patterned after
+			year = 1991,
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--comes with a RPD style bipod
+			--a civilian semi-auto version of the type 56m
+			--Special Edition that comes with a milled receiver, scope and scope mount
+        },		
+        Type84 = { -- Type 84
+			Weight = 4.0,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			--5.56 copy of the T56
+        },			
+        Type84-1 = { -- Type 84-1
+			Weight = 3.7,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			--Icon = "Norinco_AKMS"
+			--5.56 copy of the T56-I
+        },		
+        Type84-2 = { -- Type 84-2
+			Weight = 3.7,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			--Icon = "Norinco_AKMS"
+			--5.56 copy of the T56-II
+        },	
+        Type84-3 = { -- Type 84-3
+			Weight = 3.7,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			--5.56 copy of the T56
+			--Synthetic Furniture
+        },
+        Type84-4 = { -- Type 84-4
+			Weight = 3.7,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			--5.56 copy of the T56-I
+			--Icon = "Norinco_AKMS"
+			--Synthetic Furniture, copy of the Type 56-I
+        },
+        Type84-5 = { -- Type 84-5
+			Weight = 3.9,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			--5.56 copy of the T56-II
+			--Icon = "Norinco_AKMS"
+			--Synthetic Furniture, copy of the Type 56-II
+        },
+        Type84S = { -- Type 84 Sporter
+			Weight = 4.0,
+			year = 1984,
+			ammoType = "MagGroup_AK556",
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,
+			--5.56 copy of the T56 Sporter
+			--AKA AKS-223
+			--Prefers .223 over 5.56
+        },
+})
+
+FirearmType:newCollection("DIO_KL-7.62", {
+	--sources:
+	--https://en.wikipedia.org/wiki/Defense_Industries_Organization
+	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
+	category = ORGM.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	ammoType = "MagGroup_AK",
+	Weight = 4.0, --per military.wikia.org
+	barrelLength = 16.3,
+	WeaponSprite = "akm",
+	Icon = "Norinco_AKM",
+	maxCapacity = 30,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1990, -- Difficult to pin down but by my research it is after 1988.
+	country = "IGUI_Firearm_Country_IR",
+    manufacturer = "IGUI_Firearm_Manuf_DIO",
+    description = "IGUI_Firearm_Desc_KL762",
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+    feedSystem = Flags.AUTO + Flags.LONGGAS,
+    Groups = { Group_KL_762 = 1 },
+	
+	--other stats
+	--RoF 650 rpm
+	--Milled receiver, in 1960 switched to stamped
+	--comes with a folding spike bayonet
+	--differentiated from the AKm with the fully enclosed front sight
+	--No threaded barrel, can't use AK compensator (commercial variants might)
+	--Doesn't have a rate reducer so higher Rof than RU AKs
+	--Blued finish, not oxide or parkerized
+	--Most variants lack the side mount plate for the russian style sights
+	--Plastic furniture
+	--Pictanny Rails
+	--ported gas tube
+	--has a spike bayonet
+	
+	}, {
+        KLF = { -- KLF-7.62
+			Weight = 3.7,
+			--Icon = "Norinco_AKMS"
+			--underfolding metal stock for easy carrying
+        },
+        KLT = { -- KLT-7.62
+			Weight = 3.9,
+			year = 1980,
+			--Icon = "Norinco_AKMS2" (need new icon for this)
+			--sidefolding stock
+        },
 })
 
 --[[
