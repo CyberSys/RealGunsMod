@@ -1,21 +1,5 @@
---[[- Server Side Functions and tables.
 
-
-@module ORGM.Server
-@author Fenris_Wolf
-@release v3.09
-@copyright 2018 **File:** server/1LoadOrder/ORGMServer.lua
-
-]]
-
---[[- Item Equip Functions
-    @section Equip
-]]
-local ORGM = ORGM
-local Server = ORGM.Server
-local CommandHandler = ORGM.Server.CommandHandler
-
-
+local ItemBinder = {}
 --[[-
 
 Triggerd by Events.OnKeyPressed, this replaces PZ's ItemBindingHandler.onKeyPressed function.
@@ -23,28 +7,28 @@ Triggerd by Events.OnKeyPressed, this replaces PZ's ItemBindingHandler.onKeyPres
 It handles the new pistol/rifle/shotgun hotkeys, and bypasses equipping a light source if a equippedgun has a tactical light.
 
 @tparam integer key key code
-@see ORGM.Server.Callbacks.keyPress
+@see ORGM.ItemBinder.Callbacks.keyPress
 
 ]]
-Server.itemBindingHandler = function(key)
+ItemBinder.itemBindingHandler = function(key)
     local weapon = nil;
     local playerObj = getSpecificPlayer(0)
     if playerObj and not playerObj:IsAiming() then
         -- looking for the better handweapon
         if key == getCore():getKey("Equip/Unequip Handweapon") then
-            Server.equipBestMeleeWeapon(playerObj, "Swinging")
+            ItemBinder.equipBestMeleeWeapon(playerObj, "Swinging")
         elseif key == getCore():getKey("Equip/Unequip Firearm") then -- looking for the better firearm
-            Server.equipBestFirearm(playerObj, nil)
-            --Server.equipBestMeleeWeapon(playerObj, "Firearm")
+            ItemBinder.equipBestFirearm(playerObj, nil)
+            --ItemBinder.equipBestMeleeWeapon(playerObj, "Firearm")
         elseif key == getCore():getKey("Equip/Unequip Stab weapon") then 	-- looking for the better stab weapon
-            Server.equipBestMeleeWeapon(playerObj, "Stab")
+            ItemBinder.equipBestMeleeWeapon(playerObj, "Stab")
 
         elseif key == getCore():getKey("Equip/Unequip Pistol") then
-            Server.equipBestFirearm(playerObj, "Pistol")
+            ItemBinder.equipBestFirearm(playerObj, "Pistol")
         elseif key == getCore():getKey("Equip/Unequip Rifle") then
-            Server.equipBestFirearm(playerObj, "Rifle")
+            ItemBinder.equipBestFirearm(playerObj, "Rifle")
         elseif key == getCore():getKey("Equip/Unequip Shotgun") then
-            Server.equipBestFirearm(playerObj, "Shotgun")
+            ItemBinder.equipBestFirearm(playerObj, "Shotgun")
 
         elseif key == getCore():getKey("Equip/Turn On/Off Light Source") then
             -- vehicle handling
@@ -58,7 +42,8 @@ Server.itemBindingHandler = function(key)
                 end
             end
 
-            if ORGM.Component.toggleLight(playerObj) then return end -- handled by orgm
+            -- TODO: fix flashlight
+            -- if ORGM.Component.toggleLight(playerObj) then return end -- handled by orgm
 
             -- default pz light finding code
             local primary = playerObj:getPrimaryHandItem()
@@ -99,10 +84,10 @@ This bases its choice on a number of factors:
 
 @tparam IsoPlayer playerObj
 @tparam nil|string subCategory "Pistol", "Rifle" or "Shotgun"
-@see ORGM.Server.itemBindingHandler
+@see ORGM.ItemBinder.itemBindingHandler
 
 ]]
-Server.equipBestFirearm = function(playerObj, subCategory)
+ItemBinder.equipBestFirearm = function(playerObj, subCategory)
     if not playerObj or playerObj:isDead() or playerObj:IsAiming() then return end
     local primary = playerObj:getPrimaryHandItem()
 
@@ -163,7 +148,7 @@ Server.equipBestFirearm = function(playerObj, subCategory)
                 if round then current.ammo = true end
             end
         end
-        best = Server.compareFirearms(best, current)
+        best = ItemBinder.compareFirearms(best, current)
     end
 
     if best.item then
@@ -184,7 +169,7 @@ end
 @treturn table either item1 or item2
 
 ]]
-Server.compareFirearms = function(item1, item2)
+ItemBinder.compareFirearms = function(item1, item2)
     if not item1.item then return item2 end
     if item1.loaded == false and item2.loaded == true then return item2 end
     if item2.loaded == false and item1.loaded == true then return item1 end
@@ -201,10 +186,10 @@ Basically PZ's default weapon selection code.
 
 @tparam IsoPlayer playerObj
 @tparam nil|string subCategory subCategory of the InventoryItem
-@see ORGM.Server.itemBindingHandler
+@see ORGM.ItemBinder.itemBindingHandler
 
 ]]
-Server.equipBestMeleeWeapon = function(playerObj, subCategory)
+ItemBinder.equipBestMeleeWeapon = function(playerObj, subCategory)
     if not (playerObj and not playerObj:isDead() and not playerObj:IsAiming()) then return end
 
     local primary = playerObj:getPrimaryHandItem()
@@ -230,4 +215,3 @@ Server.equipBestMeleeWeapon = function(playerObj, subCategory)
     end
 end
 
---- @section end

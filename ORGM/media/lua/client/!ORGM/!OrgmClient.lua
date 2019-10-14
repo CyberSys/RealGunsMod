@@ -9,8 +9,11 @@
 
 local Client = { }
 Client.ModelLoader = require("!ORGM/OrgmModelLoader")
-Client.Callbacks = require("!ORGM/OrgmClientCallbacks")
+Client.ToolTip = require("!ORGM/OrgmToolTip")
 Client.Commands = require("!ORGM/OrgmClientCommands")
+Client.Callbacks = require("!ORGM/OrgmClientCallbacks")
+-- TODO: OrgmClientOptions
+
 --[[-
 
 Called from OnEquipPrimary and OnGameStart in `ORGMClientEvents.lua`

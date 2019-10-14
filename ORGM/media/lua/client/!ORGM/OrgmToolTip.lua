@@ -15,6 +15,8 @@
 
 require 'ISUI/ISToolTipInv'
 
+local ToolTip = {}
+
 
 local getMouseX = getMouseX
 local getMouseY = getMouseY
@@ -582,3 +584,5 @@ function ISToolTipInv:renderORGM()
 end
 ISToolTipInv.render = ISToolTipInv.renderORGM
 ]]
+
+return ToolTip

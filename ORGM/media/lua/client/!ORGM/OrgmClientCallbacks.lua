@@ -1,14 +1,15 @@
 --[[- Callback Functions for various events.
 
-All of these are triggered by various events, defined in `ORGMClientEvents.lua`
+All of these are triggered by various events
 
 @module ORGM.Client.Callbacks
 @author Fenris_Wolf
-@release v3.10
-@copyright 2018 **File:** server/1LoadOrder/ORGMClientCallbacks.lua
+@release v4.0-alpha
+@copyright 2018
 
 ]]
 
+local CommandHandler = require("!ORGM/OrgmClientCommands")
 local Config = require(ENV_RFF_PATH .. "config")
 local Logger = require(ENV_RFF_PATH .. "interface/logger")
 local Callbacks = {}
@@ -17,9 +18,21 @@ local getSpecificPlayer = getSpecificPlayer
 local getCore = getCore
 
 
+
+Callbacks.onServerCommand = function(module, command, args)
+    if not isClient() then return end
+    if module ~= 'orgm' then return end
+    Logger.info("Client got ServerCommand "..tostring(command))
+    if CommandHandler[command] then CommandHandler[command](args) end
+end)
+    
+
+
 --[[- Triggered by the OnGameStart Event.
 ]]
 Callbacks.onStart = function()
+    --[[
+    
     Client.InspectionWindow = ISORGMFirearmWindow:new(35, 250, 375, 455)
     Client.InspectionWindow:addToUIManager()
     Client.InspectionWindow:setVisible(false)
@@ -35,6 +48,7 @@ Callbacks.onStart = function()
     if item:isRequiresEquippedBothHands() then
         player:setSecondaryHandItem(item)
     end
+    ]]
 end
 
 --[[- Triggered by the OnPlayerUpdate Event.
@@ -95,15 +109,6 @@ end
 This restores a clients original ORGM settings.
 
 ]]
-Callbacks.restoreSettings = function()
-    if Client.PreviousSettings then
-        for key, value in pairs(Client.PreviousSettings) do ORGM.Settings[key] = value end
-        Client.PreviousSettings = nil
-    end
-
-    -- remove ourself from the Event
-    Events.OnMainMenuEnter.Remove(Callbacks.restoreSettings)
-end
 
 --[[- Triggered by the OnTick Event.
 
@@ -140,11 +145,11 @@ end
 
 
 --Events.OnGameBoot.Add(Callbacks.onBoot)
+Events.OnServerCommand.Add(Callbacks.onServerCommand)
 Events.OnFillInventoryObjectContextMenu.Add(Callbacks.inventoryMenu)
 Events.OnGameStart.Add(Callbacks.onStart)
 Events.OnKeyPressed.Add(Callbacks.keyPress)
 Events.OnPlayerUpdate.Add(Callbacks.playerUpdate)
---Events.OnServerCommand.Add(Callbacks.serverCommand)
 Events.OnTick.Add(Callbacks.requestSettings)
 
 return Callbacks

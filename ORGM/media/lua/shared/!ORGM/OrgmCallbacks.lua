@@ -61,4 +61,10 @@ Callbacks.loadOverWrites = function()
 --    Events.OnWeaponSwingHitPoint.Add(Manager.fire)
 end
 
+Events.OnGameBoot.Add(Callbacks.loadOverWrites)
+Events.OnGameBoot.Add(Callbacks.loadBackPatches)
+Events.OnGameBoot.Add(Callbacks.loadConfigFile)
+Events.OnGameBoot.Add(Callbacks.loadPatches)
+--Events.OnLoadSoundBanks.Add(Callbacks.loadSoundBanks)
+
 return Callbacks
