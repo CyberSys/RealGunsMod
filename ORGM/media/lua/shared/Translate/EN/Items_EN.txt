@@ -458,6 +458,12 @@ Items_EN = {
     -- MAZ family
     DisplayName_MIC_MAZ             			= "Military Industry Corporation MAZ",
 
+	----------------------------------------------------------------------------
+    -- ASh78 family
+    DisplayName_Albanian_ASh78        			= "Albanian Automatiku Shqiptar 78-1",
+    DisplayName_Albanian_ASh78_ASh78_2     		= "Albanian Automatiku Shqiptar 78-2",
+    DisplayName_Albanian_ASh78_ASh78_3        	= "Albanian Automatiku Shqiptar 78-3",
+    DisplayName_Albanian_ASh78_ASh82        	= "Albanian Automatiku Shqiptar 82",
 
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",
