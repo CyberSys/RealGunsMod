@@ -460,10 +460,10 @@ Items_EN = {
 
 	----------------------------------------------------------------------------
     -- ASh78 family
-    DisplayName_Albanian_ASh78        			= "Albanian Automatiku Shqiptar 78-1",
-    DisplayName_Albanian_ASh78_ASh78_2     		= "Albanian Automatiku Shqiptar 78-2",
-    DisplayName_Albanian_ASh78_ASh78_3        	= "Albanian Automatiku Shqiptar 78-3",
-    DisplayName_Albanian_ASh78_ASh82        	= "Albanian Automatiku Shqiptar 82",
+    DisplayName_PolAr_ASh78        				= "Polican Arsenal Automatiku Shqiptar 78-1",
+    DisplayName_PolAr_ASh78_ASh78_2     		= "Polican Arsenal Automatiku Shqiptar 78-2",
+    DisplayName_PolAr_ASh78_ASh78_3        		= "Polican Arsenal Automatiku Shqiptar 78-3",
+    DisplayName_PolAr_ASh78_ASh82        		= "Polican Arsenal Automatiku Shqiptar 82",
 
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",
