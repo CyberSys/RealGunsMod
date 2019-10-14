@@ -47,7 +47,6 @@ FirearmGroup:new("Group_SubMachineGuns",    { Groups = { Group_Classifications =
 FirearmGroup:new("Group_LightMachineGuns",  { Groups = { Group_Classifications = 1, } })
 
 FirearmGroup:new("Group_Manufacturers",     { Groups = { Group_Main = 1, } })
-FirearmGroup:new("Group_Albania",           { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Colt",              { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Ruger",             { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_SmithWesson",       { Groups = { Group_Manufacturers = 1, } })
@@ -63,6 +62,7 @@ FirearmGroup:new("Group_Glock",             { Groups = { Group_Manufacturers = 1
 FirearmGroup:new("Group_HecklerKoch",       { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Kahr",              { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_KalTec",            { Groups = { Group_Manufacturers = 1, } })
+FirearmGroup:new("Group_PolAr",    	        { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_SigSauer",          { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Springfield",       { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Walther",           { Groups = { Group_Manufacturers = 1, } })
@@ -74,6 +74,7 @@ FirearmGroup:new("Group_MAC",               { Groups = { Group_Manufacturers = 1
 FirearmGroup:new("Group_MIC",           	{ Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_AccuracyIntl",      { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Norinco",           { Groups = { Group_Manufacturers = 1, } })
+FirearmGroup:new("Group_Izhmash",     	    { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Kalashnikov",       { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Armalite",          { Groups = { Group_Manufacturers = 1, } })
 FirearmGroup:new("Group_Browning",          { Groups = { Group_Manufacturers = 1, } })
@@ -138,10 +139,10 @@ FirearmGroup:new("Group_IMI_SubMachineGuns",            { Groups = { Group_SubMa
 
 -- Rifles
 FirearmGroup:new("Group_AccuracyIntl_Rifles",   { Groups = { Group_Rifles = 1, Group_AccuracyIntl   = 1 } })
-FirearmGroup:new("Group_Albanian_Rifles", 	    { Groups = { Group_Rifles = 1, Group_Albania        = 1 } })
 FirearmGroup:new("Group_DIO_Rifles",    	    { Groups = { Group_Rifles = 1, Group_DIO	        = 1 } })
 FirearmGroup:new("Group_MIC_Rifles",    	    { Groups = { Group_Rifles = 1, Group_MIC	        = 1 } })
 FirearmGroup:new("Group_Norinco_Rifles",        { Groups = { Group_Rifles = 1, Group_Norinco        = 1 } })
+FirearmGroup:new("Group_PolAr_Rifles", 	    	{ Groups = { Group_Rifles = 1, Group_PolAr	        = 1 } })
 FirearmGroup:new("Group_Kalashnikov_Rifles",    { Groups = { Group_Rifles = 1, Group_Kalashnikov    = 1 } })
 
 FirearmGroup:new("Group_Armalite_Rifles",       { Groups = { Group_Rifles = 1, Group_Armalite       = 1 } })
@@ -152,6 +153,7 @@ FirearmGroup:new("Group_FNHerstal_Rifles",      { Groups = { Group_Rifles = 1, G
 FirearmGroup:new("Group_Springfield_Rifles",    { Groups = { Group_Rifles = 1, Group_Springfield    = 1 } })
 FirearmGroup:new("Group_Henry_Rifles",          { Groups = { Group_Rifles = 1, Group_Henry          = 1 } })
 FirearmGroup:new("Group_HecklerKoch_Rifles",    { Groups = { Group_Rifles = 1, Group_HecklerKoch    = 1 } })
+FirearmGroup:new("Group_Izhmash_Rifles",    	{ Groups = { Group_Rifles = 1, Group_Izhmash	    = 1 } })
 FirearmGroup:new("Group_LongBranch_Rifles",     { Groups = { Group_Rifles = 1, Group_LongBranch     = 1 } })
 FirearmGroup:new("Group_RockIsland_Rifles",     { Groups = { Group_Rifles = 1, Group_RockIsland     = 1 } })
 FirearmGroup:new("Group_Marlin_Rifles",         { Groups = { Group_Rifles = 1, Group_Marlin         = 1 } })
@@ -245,16 +247,17 @@ FirearmGroup:new("Group_MAC_Mac11",                 { Groups = { Group_MAC_SubMa
 FirearmGroup:new("Group_IMI_Uzi",                   { Groups = { Group_MAC_SubMachineGuns               = 1, } })
 
 -- Rifles
-FirearmGroup:new("Group_AccuracyIntl_ArcticWarfare",    { Groups = { Group_AccuracyIntl_Rifles = 1, } })
-FirearmGroup:new("Group_Albanian_ASh78",                { Groups = { Group_Albanian_Rifles = 1, } })
-FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armalite_Rifles = 1, } })
-FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles = 1, } })
-FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles = 3, } })
-FirearmGroup:new("Group_DIO_KL762",   	                { Groups = { Group_DIO_Rifles = 1, } })
-FirearmGroup:new("Group_MAZ",   		                { Groups = { Group_MIC_Rifles = 1, } })
-FirearmGroup:new("Group_Norinco_Type56",                { Groups = { Group_Norinco_Rifles = 1, } })
+FirearmGroup:new("Group_AccuracyIntl_ArcticWarfare",    { Groups = { Group_AccuracyIntl_Rifles 			= 1, } })
+FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armalite_Rifles 				= 1, } })
+FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles 					= 1, } })
+FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles 					= 3, } })
+FirearmGroup:new("Group_DIO_KL762",   	                { Groups = { Group_DIO_Rifles 					= 1, } })
+FirearmGroup:new("Group_Izhmash_AK_47",   	        	{ Groups = { Group_Izhmash_Rifles 				= 1, } })
+FirearmGroup:new("Group_MAZ",   		                { Groups = { Group_MIC_Rifles 					= 1, } })
+FirearmGroup:new("Group_PolAr_ASh78",                	{ Groups = { Group_PolAr_Rifles 				= 1, } })
+FirearmGroup:new("Group_Norinco_Type56",                { Groups = { Group_Norinco_Rifles 				= 1, } })
 
-FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles = 1, } })
+FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles				= 1, } })
 
 --************************************************************************--
 -- Revolvers
@@ -3089,7 +3092,7 @@ FirearmType:newCollection("DIO_KL762", {
 	
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
     feed_system = Flags.AUTO + Flags.LONGGAS,
-    Groups = { Group_KL_762 = 1 },
+    Groups = { Group_DIO_KL762 = 1 },
 	
 	--other stats
 	--RoF 650 rpm
@@ -3119,7 +3122,7 @@ FirearmType:newCollection("DIO_KL762", {
         },
 })
 
-FirearmType:newCollection("MIC_MAZ", {
+FirearmType:newCollection("Izhmash_AK_47", {
 	--sources:
 	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
 	--https://en.wikipedia.org/wiki/Military_Industry_Corporation
@@ -3128,33 +3131,30 @@ FirearmType:newCollection("MIC_MAZ", {
 	soundProfile = "Rifle-AR",
 	
 	magazine_group = "MagGroup_AK",
-	weight = 4.0, --per military.wikia.org
+	weight = 3.5,
 	barrel_length = 16.3,
 	model = "akm",
 	image = "Norinco_AKM",
 	max_capacity = 30,
 	
 	classification = "IGUI_Firearm_AssaultRifle",
-	year = 1993, -- Difficult to pin down but MIC was not established until 1993.
+	year = 1947,
 	country = "IGUI_Firearm_Country_SU",
-    manufacturer = "IGUI_Firearm_Manuf_MIC",
-    description = "IGUI_Firearm_Desc_MAZ",
+    manufacturer = "IGUI_Firearm_Manuf_Izhmash",
+    description = "IGUI_Firearm_Desc_AK47",
 	
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
     feed_system = Flags.AUTO + Flags.LONGGAS,
-    Groups = { Group_MAZ = 1 },
+    Groups = { Group_Kalashnikov_AK_47 = 1 },
 	
 	--other stats
-	--RoF 650 rpm
-	--Milled receiver, in 1960 switched to stamped
+	--RoF 600 rpm
+	--Rotary Bolt
+	--chrome lined barrel
+	--was originally stamped receiver, but later milled then stamped again for the AKM
 	--comes with a folding spike bayonet
-	--differentiated from the AKm with the fully enclosed front sight
-	--No threaded barrel, can't use AK compensator (commercial variants might)
-	--Doesn't have a rate reducer so higher Rof than RU AKs
-	--Blued finish, not oxide or parkerized
 	--Most variants lack the side mount plate for the russian style sights
 	--Wood furniture
-	--ported gas tube
 	--has a spike bayonet
     }, {
 })
@@ -3163,6 +3163,7 @@ FirearmType:newCollection("Albanian_ASh78", {
 	--sources:
 	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
 	--https://guns.fandom.com/wiki/ASH_78
+	--https://en.wikipedia.org/wiki/AK-47#Production
 	--https://en.wikipedia.org/wiki/List_of_equipment_of_the_Albanian_Armed_Forces
 	--http://aftermathgunclub.com/2015/04/20/albanian-small-arms/
 	category = Const.RIFLE,
@@ -3178,7 +3179,7 @@ FirearmType:newCollection("Albanian_ASh78", {
 	classification = "IGUI_Firearm_AssaultRifle",
 	year = 1978, 
 	country = "IGUI_Firearm_Country_AL",
-    manufacturer = "IGUI_Firearm_Manuf_ALRep",
+    manufacturer = "IGUI_Firearm_Manuf_PolAr",
     description = "IGUI_Firearm_Desc_ASh78",
 	
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
@@ -3217,6 +3218,46 @@ FirearmType:newCollection("Albanian_ASh78", {
 			--underfolding stock
 			--has an optic rail (Ultimak scout rail)
         },
+})
+
+FirearmType:newCollection("MIC_MAZ", {
+	--sources:
+	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
+	--https://en.wikipedia.org/wiki/Military_Industry_Corporation
+	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
+	category = Const.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	magazine_group = "MagGroup_AK",
+	weight = 4.0, --per military.wikia.org
+	barrel_length = 16.3,
+	model = "akm",
+	image = "Norinco_AKM",
+	max_capacity = 30,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1993, -- Difficult to pin down but MIC was not established until 1993.
+	country = "IGUI_Firearm_Country_SUD",
+    manufacturer = "IGUI_Firearm_Manuf_MIC",
+    description = "IGUI_Firearm_Desc_MAZ",
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+    feed_system = Flags.AUTO + Flags.LONGGAS,
+    Groups = { Group_Kalashinkov = 1 },
+	
+	--other stats
+	--RoF 650 rpm
+	--Milled receiver, in 1960 switched to stamped
+	--comes with a folding spike bayonet
+	--differentiated from the AKm with the fully enclosed front sight
+	--No threaded barrel, can't use AK compensator (commercial variants might)
+	--Doesn't have a rate reducer so higher Rof than RU AKs
+	--Blued finish, not oxide or parkerized
+	--Most variants lack the side mount plate for the russian style sights
+	--Wood furniture
+	--ported gas tube
+	--has a spike bayonet
+    }, {
 })
 
 --[[
