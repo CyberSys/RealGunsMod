@@ -2,22 +2,13 @@
 
 @module ORGM.Server.Spawn
 @author Fenris_Wolf
-@release v3.10
-@copyright 2018 **File:** server/1LoadOrder/ORGMServerSpawn.lua
+@release v4.0-alpha
+@copyright 2018
 
 ]]
 
-local ORGM = ORGM
-local Server = ORGM.Server
-local Spawn = ORGM.Server.Spawn
-local Settings = ORGM.Settings
-local Ammo = ORGM.Ammo
-local Component = ORGM.Component
-local Maintance = ORGM.Maintance
-local Firearm = ORGM.Firearm
-local Magazine = ORGM.Magazine
-local Reloadable = ORGM.ReloadableWeapon
-local Status = Reloadable.Status
+local Logger = require(ENV_RFF_PATH .. 'interface/logger')
+local Spawn = { }
 
 -- more namespace pullins for performance
 local ZombRand = ZombRand
@@ -29,35 +20,8 @@ local ZomboidGlobals = ZomboidGlobals
 local ItemPicker = ItemPicker
 local ipairs = ipairs
 
-Server.ReplacementsTable = { -- testing stuff
-    ["Base.Pistol"] = "ORGM.Beretta92",
-    ["Base.Shotgun"] = "ORGM.Rem870",
-    ["Base.Sawnoff"] = "ORGM.Rem870SO",
-    ["Base.VarmintRifle"] = "ORGM.Mini14",
-    ["Base.HuntingRifle"] = "ORGM.LENo4",
-    ["Base.Bullets9mm"] = "ORGM.Ammo_9x19mm_FMJ",
-    ["Base.ShotgunShells"] = "ORGM.Ammo_12g_00Buck",
-    ["Base.223Bullets"] = "ORGM.Ammo_223Remington_FMJ",
-    ["Base.308Bullets"] = "ORGM.Ammo_308Winchester_FMJ",
-    ["Base.BulletsBox"] = "ORGM.Ammo_9x19mm_FMJ_Box",
-    ["Base.ShotgunShellsBox"] = "ORGM.Ammo_12g_00Buck_Box",
-    ["Base.223Box"] = "ORGM.Ammo_223Remington_FMJ_Box",
-    ["Base.308Box"] = "ORGM.Ammo_308Winchester_FMJ_Box",
-    ["Base.HuntingRifleExtraClip"] = "ORGM.LENo4Mag",
-    ["Base.IronSight"] = "ORGM.FibSig",
-    ["Base.x2Scope"] = "ORGM.2xScope",
-    ["Base.x4Scope"] = "ORGM.4xScope",
-    ["Base.x8Scope"] = "ORGM.8xScope",
-    ["Base.AmmoStraps"] = "ORGM.Rifsling",
-    ["Base.Sling"] = "ORGM.Rifsling",
-    ["Base.FiberglassStock"] = "ORGM.CollapsingStock",
-    ["Base.RecoilPad"] = "ORGM.Recoil",
-    ["Base.Laser"] = "ORGM.PistolLas",
-    ["Base.RedDot"] = "ORGM.RDS",
-    ["Base.ChokeTubeFull"] = "ORGM.FullCh",
-    ["Base.ChokeTubeImproved"] = "ORGM.HalfCh",
-}
 
+local random = math.random
 --[[ Rnd(maxValue)
 
 Returns a value between 1 and maxValue (including lower and upper values)
@@ -75,8 +39,10 @@ end
 ]]
 Spawn.attach = function(item)
     -- TODO: tweak this damn function
+    --[[
+    
     local componentList = Component.getValid(item)
-    for i=1, ZombRand(#componentList) do
+    for i=1, random(#componentList) do
         -- TODO: this needs to check civ/police/military
         local compName = componentList[ZombRand(#componentList) + 1]
         local compData = Component.getData(compName)
@@ -90,6 +56,7 @@ Spawn.attach = function(item)
             item:attachWeaponPart(part)
         end
     end
+    ]]
 end
 
 
@@ -718,7 +685,9 @@ The bulk of the other functions in the spawning system are directly or indirectl
 
 Spawn.fillContainer = function(roomName, containerType, container)
     if Spawn.RoomHandlers[roomName] then
-        ORGM.log(ORGM.DEBUG, "Spawn: Checking "..tostring(roomName) ..", ".. tostring(containerType))
+        Logger.debug("Spawn: Checking "..tostring(roomName) ..", ".. tostring(containerType))
         Spawn.RoomHandlers[roomName](roomName, containerType, container)
     end
 end
+
+return Spawn

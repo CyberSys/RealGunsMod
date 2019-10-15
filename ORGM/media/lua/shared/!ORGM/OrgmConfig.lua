@@ -1,7 +1,9 @@
 
+
 local Config = require(ENV_RFF_PATH .. 'config')
 local Logger = require(ENV_RFF_PATH .. 'interface/logger')
 
+local PreviousSettings
 
 Config.add("RemoveBaseFirearms", {type='boolean', default=true})
 Config.add("DamageMultiplier", {type='float', min=0.1, default=0.6})
@@ -14,6 +16,32 @@ Config.add("DisableFullAuto", {type='boolean', default=false})
 Config.add("ToolTipStyle", {type='integer', min=1, max=4, default=1})
 Config.add("Debug", {type='boolean', default=false, show=false})
 
+Config.applyTempSettings = function(settings_data)
+    Logger.debug("Config: Applying temporary settings")
+    if not PreviousSettings then
+        PreviousSettings = {}
+        for key, value in pairs(Config.getSettingsTable()) do PreviousSettings[key] = value end
+    end
+
+    --Config.reset()
+    for key, value in pairs(args) do
+        Config.set(key, value)
+    end
+
+    --Events.OnMainMenuEnter.Remove(Callbacks.restoreSettings)
+    --Events.OnMainMenuEnter.Add(Callbacks.restoreSettings)
+
+end
+Config.removeTempSettings = function()
+    Logger.debug("Config: Removing temporary settings")
+    if PreviousSettings then
+        for key, value in pairs(Client.PreviousSettings) do Config.set(key, value) end
+        PreviousSettings = nil
+    end
+
+    -- remove ourself from the Event
+    --Events.OnMainMenuEnter.Remove(Callbacks.restoreSettings)
+end
 
 
 Config.readConifg = function()

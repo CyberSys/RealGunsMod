@@ -121,7 +121,7 @@ local function addBoolOption(self, splitpoint, width, title, settingKey)
     end
     function gameOption.apply(self)
         Config.set(settingKey, self.control.selected == 1 and true or false)
-        Config.writeFile()
+        Config.writeConfig()
         --ORGM.Settings[settingKey] = self.control.selected == 1 and true or false
         --ORGM.validateSettingKey(settingKey)
         --ORGM.writeSettingsFile()
@@ -170,7 +170,7 @@ local function addNumericOption(self, splitpoint, width, title, settingKey, asFl
     end
     function gameOption.apply(self)
         Config.set(settingKey, tonumber(self.control:getText()))
-        Config.writeFile()
+        Config.writeConfig()
         --ORGM.Settings[settingKey] = tonumber(self.control:getText())
         --ORGM.validateSettingKey(settingKey)
         --ORGM.writeSettingsFile()
@@ -226,7 +226,7 @@ function MainOptions:create()
         Config.set("LogLevel",  self.control.selected - 1)
         --ORGM.Settings.LogLevel = self.control.selected - 1
         --ORGM.validateSettingKey('LogLevel')
-        Config.writeFile()
+        Config.writeConfig()
     end
     self.gameOptions:add(gameOption)
 
@@ -246,7 +246,7 @@ function MainOptions:create()
         Config.set('ToolTipStyle', self.control.selected)
         --ORGM.Settings.ToolTipStyle = self.control.selected
         --ORGM.validateSettingKey('ToolTipStyle')
-        Config.writeFile()
+        Config.writeConfig()
     end
     self.gameOptions:add(gameOption)
 
