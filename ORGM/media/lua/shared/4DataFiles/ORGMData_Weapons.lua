@@ -3122,43 +3122,6 @@ FirearmType:newCollection("DIO_KL762", {
         },
 })
 
-FirearmType:newCollection("Izhmash_AK_47", {
-	--sources:
-	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
-	--https://en.wikipedia.org/wiki/Military_Industry_Corporation
-	--http://tonnel-ufo.ru/eanglish/weapon/automatic-assault-rifle-kl-7-62.php
-	category = Const.RIFLE,
-	soundProfile = "Rifle-AR",
-	
-	magazine_group = "MagGroup_AK",
-	weight = 3.5,
-	barrel_length = 16.3,
-	model = "akm",
-	image = "Norinco_AKM",
-	max_capacity = 30,
-	
-	classification = "IGUI_Firearm_AssaultRifle",
-	year = 1947,
-	country = "IGUI_Firearm_Country_SU",
-    manufacturer = "IGUI_Firearm_Manuf_Izhmash",
-    description = "IGUI_Firearm_Desc_AK47",
-	
-    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
-    feed_system = Flags.AUTO + Flags.LONGGAS,
-    Groups = { Group_Kalashnikov_AK_47 = 1 },
-	
-	--other stats
-	--RoF 600 rpm
-	--Rotary Bolt
-	--chrome lined barrel
-	--was originally stamped receiver, but later milled then stamped again for the AKM
-	--comes with a folding spike bayonet
-	--Most variants lack the side mount plate for the russian style sights
-	--Wood furniture
-	--has a spike bayonet
-    }, {
-})
-
 FirearmType:newCollection("Albanian_ASh78", {
 	--sources:
 	--https://en.wikipedia.org/wiki/Type_56_assault_rifle
@@ -3260,33 +3223,162 @@ FirearmType:newCollection("MIC_MAZ", {
     }, {
 })
 
+FirearmType:newCollection("Izhmash_AK_47", {
+	--sources:
+	--https://en.wikipedia.org/wiki/Kalashnikov_rifle
+	--https://en.wikipedia.org/wiki/AK-47#Production
+	--https://en.wikipedia.org/wiki/Kalashnikov_Concern#Izhmash
+	--https://en.wikipedia.org/wiki/RPK
+	category = Const.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	magazine_group = "MagGroup_AK",
+	weight = 3.6,
+	barrel_length = 16.3,
+	model = "akm",
+	image = "Norinco_AKM",
+	max_capacity = 30,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1947,
+	country = "IGUI_Firearm_Country_SU",
+    manufacturer = "IGUI_Firearm_Manuf_Izhmash",
+    description = "IGUI_Firearm_Desc_AK47",
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+    feed_system = Flags.AUTO + Flags.LONGGAS,
+    Groups = { Group_Izhmash_AK_47 = 1 },
+	
+	--other stats
+	--RoF 600 rpm
+	--Rotary Bolt
+	--chrome lined barrel
+	--stamped receiver
+	--comes with a folding spike bayonet
+	--Most variants lack the side mount plate for the russian style sights
+	--Wood furniture
+	--has a spike bayonet
+    }, {
+        AKS = { -- Izhmash AKS-47 Type 1
+			weight = 3.5,
+			--underfolding steel stock
+        },
+        Type_2 = { -- Izhmash AK-47 Type 2
+			year = 1951,
+			--milled receiver
+        },
+        AKS_Type_2 = { -- Izhmash AKS-47 Type 2
+			weight = 3.5,
+			year = 1951,
+			--milled receiver
+			--underfolding steel stock
+        },
+        Type_3 = { -- Izhmash AK-47 Type 3
+			weight = 3.47,
+			year = 1954,
+			--milled receiver, lightened
+        },
+        AKS_Type_3 = { -- Izhmash AKS-47 Type 3
+			weight = 3.37,
+			year = 1954,
+			--milled receiver, lightened
+			--underfolding steel stock
+        },
+        AKM = { -- Izhmash AKM
+			weight = 3.1,
+			year = 1959,
+			--stamped receiver, lightened, slanted muzzle
+        },
+        AKMS = { -- Izhmash AKMS
+			weight = 3.0,
+			year = 1959,
+			--stamped receiver, lightened, slanted muzzle
+        },
+        AKMN = { -- Izhmash AKMN
+			weight = 3.1,
+			year = 1959,
+			--stamped receiver, lightened, slanted muzzle
+			--Nightscope Rail
+        },
+        AKMSN = { -- Izhmash AKMSN
+			weight = 3.0,
+			year = 1959,
+			--stamped receiver, lightened, slanted muzzle
+			--Nightscope Rail
+        },
+        AKML = { -- Izhmash AKML
+			weight = 3.1,
+			year = 1959,
+			--stamped receiver, lightened, slanted muzzle
+			--Slotted flash suppressor and night scope rail
+        },
+        AKMSL = { -- Izhmash AKMSN
+			weight = 3.0,
+			year = 1959,
+			--stamped receiver, lightened, slanted muzzle
+			--Slotted flash suppressor and night scope rail
+        },
+        RPK = { -- Izhmash RPK
+			weight = 4.8,
+			year = 1961,
+			barrel_length = 23.2,
+			model = "rpk",
+			image = "RPK",
+			--LMG
+        },
+        RPKS = { -- Izhmash RPKS
+			weight = 5.1,
+			year = 1961,
+			barrel_length = 23.2,
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Side folding wood stock
+        },
+        RPKN = { -- Izhmash RPKN
+			weight = 4.8,
+			year = 1961,
+			barrel_length = 23.2,
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Night scope
+        },
+        RPKSN = { -- Izhmash RPKSN
+			weight = 5.1,
+			year = 1961,
+			barrel_length = 23.2,
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Side folding wood stock
+			--Night scope
+        },
+        RPKL = { -- Izhmash RPKL
+			weight = 4.8,
+			year = 1961,
+			barrel_length = 23.2,
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Slotted flash suppressor and night scope rail
+        },
+        RPKSL = { -- Izhmash RPKSL
+			weight = 5.1,
+			year = 1961,
+			barrel_length = 23.2,
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Side folding wood stock
+			--Slotted flash suppressor and night scope rail
+        },
+})
+
 --[[
     --************************************************************************--
     -- rifles
     --************************************************************************--
-register("AKM", {
-
-    lastChanged = 24,
-    isCivilian = Const.RARE,
-
-
-})
-register("AKMA", {
-    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
-    feed_system = Flags.AUTO + Flags.LONGGAS,
-
-    lastChanged = 24,
-    category = Const.RIFLE,
-    barrel_length = 16.3,
-    isCivilian = Const.VERYRARE,
-    soundProfile = "Rifle-AR",
-
-    classification = "IGUI_Firearm_AssaultRifle",
-    year = 1959,
-    country = "IGUI_Firearm_Country_SU",
-    manufacturer = "IGUI_Firearm_Manuf_Kal",
-    description = "IGUI_Firearm_Desc_AKMA",
-})
 
 register("FNFAL", {
     features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY,

@@ -465,6 +465,27 @@ Items_EN = {
     DisplayName_PolAr_ASh78_ASh78_3        		= "Polican Arsenal Automatiku Shqiptar 78-3",
     DisplayName_PolAr_ASh78_ASh82        		= "Polican Arsenal Automatiku Shqiptar 82",
 
+	----------------------------------------------------------------------------
+    -- ASh78 family
+    DisplayName_Izhmash_AK_47      				= "Izhmash AK-47 Type 1",
+    DisplayName_Izhmash_AK_47_AKS  				= "Izhmash AKS-47 Type 1",
+    DisplayName_Izhmash_AK_47_Type_2			= "Izhmash AK-47 Type 2",
+    DisplayName_Izhmash_AK_47_AKS_Type_2		= "Izhmash AKS-47 Type 2",
+    DisplayName_Izhmash_AK_47_Type_3			= "Izhmash AK-47 Type 3",
+    DisplayName_Izhmash_AK_47_AKS_Type_3		= "Izhmash AKS-47 Type 3",
+    DisplayName_Izhmash_AK_47_AKM				= "Izhmash AKM",
+    DisplayName_Izhmash_AK_47_AKMS				= "Izhmash AKMS",
+    DisplayName_Izhmash_AK_47_AKMN				= "Izhmash AKMN",
+    DisplayName_Izhmash_AK_47_AKMSN				= "Izhmash AKMSN",
+    DisplayName_Izhmash_AK_47_AKML				= "Izhmash AKML",
+    DisplayName_Izhmash_AK_47_AKMSL				= "Izhmash AKMSL",
+    DisplayName_Izhmash_AK_47_RPK				= "Izhmash RPK",
+    DisplayName_Izhmash_AK_47_RPKS				= "Izhmash RPKS",
+    DisplayName_Izhmash_AK_47_RPKN				= "Izhmash RPKN",
+    DisplayName_Izhmash_AK_47_RPKSN				= "Izhmash RPKSN",
+    DisplayName_Izhmash_AK_47_RPKL				= "Izhmash RPKL",
+    DisplayName_Izhmash_AK_47_RPKSL				= "Izhmash RPKSL",
+	
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",
     DisplayName_Mag_AutomagV_x5                  = "AutomagV Magazine x5 (.50AE)",
