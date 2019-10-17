@@ -466,7 +466,7 @@ Items_EN = {
     DisplayName_PolAr_ASh78_ASh82        		= "Polican Arsenal Automatiku Shqiptar 82",
 
 	----------------------------------------------------------------------------
-    -- ASh78 family
+    -- AK-47 family
     DisplayName_Izhmash_AK_47      				= "Izhmash AK-47 Type 1",
     DisplayName_Izhmash_AK_47_AKS  				= "Izhmash AKS-47 Type 1",
     DisplayName_Izhmash_AK_47_Type_2			= "Izhmash AK-47 Type 2",
@@ -485,6 +485,20 @@ Items_EN = {
     DisplayName_Izhmash_AK_47_RPKSN				= "Izhmash RPKSN",
     DisplayName_Izhmash_AK_47_RPKL				= "Izhmash RPKL",
     DisplayName_Izhmash_AK_47_RPKSL				= "Izhmash RPKSL",
+    DisplayName_Izhmash_AK_47_AK_74				= "Izhmash AK-74",
+    DisplayName_Izhmash_AK_47_AKS_74			= "Izhmash AKS-74",
+    DisplayName_Izhmash_AK_47_AK_74N			= "Izhmash AK-74N",
+    DisplayName_Izhmash_AK_47_AKS_74N			= "Izhmash AKS-74N",
+    DisplayName_Izhmash_AK_47_AK_74M			= "Izhmash AK-74M",
+    DisplayName_Izhmash_AK_47_AK_74MN			= "Izhmash AK-74MN",
+    DisplayName_Izhmash_AK_47_AKS_74M			= "Izhmash AKS-74M",
+    DisplayName_Izhmash_AK_47_AKS_74MN			= "Izhmash AKS-74MN",
+    DisplayName_Izhmash_AK_47_RPK_74			= "Izhmash RPK-74",
+    DisplayName_Izhmash_AK_47_PRK_74N			= "Izhmash RPK-74N",
+    DisplayName_Izhmash_AK_47_RPKS_74			= "Izhmash RPKS-74",
+    DisplayName_Izhmash_AK_47_PRKS_74N			= "Izhmash RPKS-74N",
+    DisplayName_Izhmash_AK_47_AKS_74U			= "Izhmash AK-74U",
+    DisplayName_Izhmash_AK_47_AKS_74UN			= "Izhmash AK-74UN",
 	
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",

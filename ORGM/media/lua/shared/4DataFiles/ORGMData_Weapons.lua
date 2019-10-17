@@ -3229,6 +3229,7 @@ FirearmType:newCollection("Izhmash_AK_47", {
 	--https://en.wikipedia.org/wiki/AK-47#Production
 	--https://en.wikipedia.org/wiki/Kalashnikov_Concern#Izhmash
 	--https://en.wikipedia.org/wiki/RPK
+	--https://en.wikipedia.org/wiki/AK-74
 	category = Const.RIFLE,
 	soundProfile = "Rifle-AR",
 	
@@ -3372,6 +3373,133 @@ FirearmType:newCollection("Izhmash_AK_47", {
 			--LMG
 			--Side folding wood stock
 			--Slotted flash suppressor and night scope rail
+        },
+        AK_74 = { -- Izhmash AK-74
+			weight = 3.07,
+			year = 1974,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--AKM gas cylinder and receiver
+        },
+        AKS_74 = { -- Izhmash AKS-74
+			weight = 2.97,
+			year = 1974,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--Folding skeletonized stock
+			--AKM gas cylinder and receiver
+        },
+        AK_74N = { -- Izhmash AK-74N
+			weight = 3.07,
+			year = 1974,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--AKM gas cylinder and receiver
+			--night scope version
+        },
+        AKS_74N = { -- Izhmash AKS-74N
+			weight = 2.97,
+			year = 1974,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--Folding skeletonized stock
+			--AKM gas cylinder and receiver
+			--night scope version
+        },
+        AK_74M = { -- Izhmash AK-74M
+			weight = 3.4,
+			year = 1991,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--AKM gas cylinder and receiver
+			--modernized and synthetic furniture
+        },
+        AKS_74M = { -- Izhmash AKS-74MN
+			weight = 3.3,
+			year = 1991,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--Folding skeletonized stock
+			--AKM gas cylinder and receiver
+        },
+        AK_74MN = { -- Izhmash AK-74MN
+			weight = 3.4,
+			year = 1991,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--AKM gas cylinder and receiver
+			--modernized and synthetic furniture
+			--night scope version
+        },
+        AKS_74MN = { -- Izhmash AKS-74MN
+			weight = 3.3,
+			year = 1991,
+			magazine_group = "MagGroup_AK545",
+			--chromelined barrel
+			--Folding skeletonized stock
+			--AKM gas cylinder and receiver
+			--night scope version
+        },
+        RPK_74 = { -- Izhmash RPK-74
+			weight = 4.7,
+			year = 1974,
+			barrel_length = 23.2,
+			magazine_group = "MagGroup_AK545",
+			model = "rpk",
+			image = "RPK",
+			--LMG
+        },
+        RPKS_74 = { -- Izhmash RPKS-74
+			weight = 4.85,
+			year = 1974,
+			barrel_length = 23.2,
+			magazine_group = "MagGroup_AK545",
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Side folding wood stock
+        },
+        RPK_74N = { -- Izhmash RPK-74N
+			weight = 4.7,
+			year = 1974,
+			barrel_length = 23.2,
+			magazine_group = "MagGroup_AK545",
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--night scope version
+        },
+        RPKS_74N = { -- Izhmash RPKS-74N
+			weight = 4.85,
+			year = 1974,
+			barrel_length = 23.2,
+			magazine_group = "MagGroup_AK545",
+			model = "rpk",
+			image = "RPK",
+			--LMG
+			--Side folding wood stock
+			--night scope version
+        },
+        AKS_74U = { -- Izhmash AKS-74U
+			weight = 2.7,
+			year = 1979,
+			barrel_length = 8.1,
+			magazine_group = "MagGroup_AK545",
+			model = "aks74u",
+			image = "AK74u",
+			--Short Carbine
+			--Skeletonized metal folding stock
+        },
+        AKS_74UN = { -- Izhmash AKS-74UN
+			weight = 2.7,
+			year = 1979,
+			barrel_length = 8.1,
+			magazine_group = "MagGroup_AK545",
+			model = "aks74u",
+			image = "AK74u",
+			--Short Carbine
+			--Skeletonized metal folding stock
+			--night scope version
         },
 })
 
