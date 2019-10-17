@@ -3503,6 +3503,54 @@ FirearmType:newCollection("Izhmash_AK_47", {
         },
 })
 
+FirearmType:newCollection("Kalashnikov_AK_102", {
+	--sources:
+	--https://en.wikipedia.org/wiki/Kalashnikov_rifle
+	--https://en.wikipedia.org/wiki/Kalashnikov_Concern#Izhmash
+	--https://en.wikipedia.org/wiki/AK-101
+	--https://en.wikipedia.org/wiki/AK-102
+	--http://www.military-today.com/firearms/rpk_200_series.htm
+	category = Const.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	magazine_group = "MagGroup_AK556",
+	weight = 3.6,
+	barrel_length = 16.3,
+	model = "akm",
+	image = "Norinco_AKM",
+	max_capacity = 30,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1994,
+	country = "IGUI_Firearm_Country_RU",
+    manufacturer = "IGUI_Firearm_Manuf_Kal",
+    description = "IGUI_Firearm_Desc_AK100",
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+    feed_system = Flags.AUTO + Flags.LONGGAS,
+    Groups = { Group_Izhmash_AK_47 = 1 },
+	
+	--other stats
+	--RoF 600 rpm
+	--Rotary Bolt
+	--chrome lined barrel
+	--attachment rail
+	--stamped receiver
+	--Poly furniture, folding stock
+	
+    }, {
+        AK_102 = { -- Kalashnikov AK-102
+			weight = 3.0,
+			barrel_length = 12.4,
+			--carbine version
+        },
+        RPK_201 = { -- Kalashnikov RPK_201
+			weight = 5.2,
+			barrel_length = 23.2,
+			--LMG
+        },
+})
+
 --[[
     --************************************************************************--
     -- rifles

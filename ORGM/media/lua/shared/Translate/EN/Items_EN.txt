@@ -500,6 +500,12 @@ Items_EN = {
     DisplayName_Izhmash_AK_47_AKS_74U			= "Izhmash AK-74U",
     DisplayName_Izhmash_AK_47_AKS_74UN			= "Izhmash AK-74UN",
 	
+	----------------------------------------------------------------------------
+    -- AK-100/200/rest family
+    DisplayName_Kalashnikov_AK_101				= "Kalashnikov AK-101",
+    DisplayName_Kalashnikov_AK_101_AK_102		= "Kalashnikov AK-102",
+    DisplayName_Kalashnikov_AK_101_RPK_201		= "Kalashnikov RPK_201",
+	
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",
     DisplayName_Mag_AutomagV_x5                  = "AutomagV Magazine x5 (.50AE)",
