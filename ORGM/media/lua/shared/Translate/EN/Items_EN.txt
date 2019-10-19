@@ -502,9 +502,32 @@ Items_EN = {
 	
 	----------------------------------------------------------------------------
     -- AK-100/200/rest family
-    DisplayName_Kalashnikov_AK_101				= "Kalashnikov AK-101",
+    DisplayName_Kalashnikov_AK_101				= "Kalashnikov AK-101"
+    DisplayName_Kalashnikov_AK_101_AK_101_1		= "Kalashnikov AK-101-1",
+    DisplayName_Kalashnikov_AK_101_AK_101_2		= "Kalashnikov AK-101-2",
     DisplayName_Kalashnikov_AK_101_AK_102		= "Kalashnikov AK-102",
+    DisplayName_Kalashnikov_AK_101_AK_101_1		= "Kalashnikov AK-102-1",
+    DisplayName_Kalashnikov_AK_101_AK_101_2		= "Kalashnikov AK-102-2",
+    DisplayName_Kalashnikov_AK_101_AK_103		= "Kalashnikov AK-103",
+    DisplayName_Kalashnikov_AK_101_AK_103_1		= "Kalashnikov AK-103-1",
+    DisplayName_Kalashnikov_AK_101_AK_103_2		= "Kalashnikov AK-103-2",
+    DisplayName_Kalashnikov_AK_101_AK_104		= "Kalashnikov AK-104",
+    DisplayName_Kalashnikov_AK_101_AK_104_1		= "Kalashnikov AK-104-1",
+    DisplayName_Kalashnikov_AK_101_AK_104_2		= "Kalashnikov AK-104-2",
+    DisplayName_Kalashnikov_AK_101_AK_100		= "Kalashnikov AK-100",
+    DisplayName_Kalashnikov_AK_101_AK_100_1		= "Kalashnikov AK-100-1",
+    DisplayName_Kalashnikov_AK_101_AK_100_2		= "Kalashnikov AK-100-2",
+    DisplayName_Kalashnikov_AK_101_AK_105		= "Kalashnikov AK-105",
+    DisplayName_Kalashnikov_AK_101_AK_105_1		= "Kalashnikov AK-105-1",
+    DisplayName_Kalashnikov_AK_101_AK_105_2		= "Kalashnikov AK-105-2",
     DisplayName_Kalashnikov_AK_101_RPK_201		= "Kalashnikov RPK_201",
+    DisplayName_Kalashnikov_AK_101_RPK_203		= "Kalashnikov RPK_203",
+    DisplayName_Kalashnikov_AK_101_AK_200		= "Kalashnikov AK-200",
+    DisplayName_Kalashnikov_AK_101_AK_201		= "Kalashnikov AK-201",
+    DisplayName_Kalashnikov_AK_101_AK_202		= "Kalashnikov AK-202",
+    DisplayName_Kalashnikov_AK_101_AK_203		= "Kalashnikov AK-203",
+    DisplayName_Kalashnikov_AK_101_AK_204		= "Kalashnikov AK-204",
+    DisplayName_Kalashnikov_AK_101_AK_205		= "Kalashnikov AK-205",
 	
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",

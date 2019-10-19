@@ -3509,7 +3509,12 @@ FirearmType:newCollection("Kalashnikov_AK_102", {
 	--https://en.wikipedia.org/wiki/Kalashnikov_Concern#Izhmash
 	--https://en.wikipedia.org/wiki/AK-101
 	--https://en.wikipedia.org/wiki/AK-102
+	--https://en.wikipedia.org/wiki/AK-103
+	--https://en.wikipedia.org/wiki/AK-104
+	--https://en.wikipedia.org/wiki/AK-105
 	--http://www.military-today.com/firearms/rpk_200_series.htm
+	--https://en.wikipedia.org/wiki/AK-12
+	--https://firearmcentral.fandom.com/wiki/AK-201
 	category = Const.RIFLE,
 	soundProfile = "Rifle-AR",
 	
@@ -3521,7 +3526,7 @@ FirearmType:newCollection("Kalashnikov_AK_102", {
 	max_capacity = 30,
 	
 	classification = "IGUI_Firearm_AssaultRifle",
-	year = 1994,
+	year = 1995,
 	country = "IGUI_Firearm_Country_RU",
     manufacturer = "IGUI_Firearm_Manuf_Kal",
     description = "IGUI_Firearm_Desc_AK100",
@@ -3536,18 +3541,199 @@ FirearmType:newCollection("Kalashnikov_AK_102", {
 	--chrome lined barrel
 	--attachment rail
 	--stamped receiver
-	--Poly furniture, folding stock
+	--Poly furniture, side-folding stock
 	
     }, {
+        AK_101_1 = { -- Kalashnikov AK-101-1
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			--civilian semi-auto version
+        },
+        AK_101_2 = { -- Kalashnikov AK-101-2
+		    extra_features = Flags.BURST3,
+        	--Adds the three round burst option to the selector
+        },
         AK_102 = { -- Kalashnikov AK-102
 			weight = 3.0,
 			barrel_length = 12.4,
 			--carbine version
         },
+        AK_102_1 = { -- Kalashnikov AK-102-1
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			weight = 3.0,
+			barrel_length = 12.4,
+			--carbine version
+        	--civilian semi-auto version
+        },
+        AK_102_2 = { -- Kalashnikov AK-102-2
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			weight = 3.0,
+			barrel_length = 12.4,
+		    extra_features = Flags.BURST3,
+        	--carbine version
+        	--Adds the three round burst option to the selector
+        },
         RPK_201 = { -- Kalashnikov RPK_201
 			weight = 5.2,
 			barrel_length = 23.2,
 			--LMG
+        },
+        AK_103 = { -- Kalashnikov AK-103
+			weight = 3.4,
+			magazine_group = "MagGroup_AK",
+			year = 2001,
+			--7.62 version
+        },
+        AK_103_1 = { -- Kalashnikov AK-103-1
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			weight = 3.4,
+			magazine_group = "MagGroup_AK",
+			year = 2001,
+			--7.62 version
+			--civilian semi-auto version
+        },
+        AK_103_2 = { -- Kalashnikov AK-103-2
+		    extra_features = Flags.BURST3,
+			weight = 3.4,
+			magazine_group = "MagGroup_AK",
+			year = 2001,
+			--7.62 version
+        	--Adds the three round burst option to the selector
+        },
+        AK_104 = { -- Kalashnikov AK-104
+			weight = 3.0,
+			magazine_group = "MagGroup_AK",
+			barrel_length = 12.4,
+			year = 2001,
+			--carbine version
+			--7.62 version
+        },
+        AK_104_1 = { -- Kalashnikov AK-104-1
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			weight = 3.0,
+			magazine_group = "MagGroup_AK",
+			barrel_length = 12.4,
+			year = 2001,
+			--carbine version
+			--7.62 version
+			--civilian semi-auto version
+        },
+        AK_104_2 = { -- Kalashnikov AK-104-2
+		    extra_features = Flags.BURST3,
+			weight = 3.0,
+			magazine_group = "MagGroup_AK",
+			barrel_length = 12.4,
+			year = 2001,
+			--carbine version
+			--7.62 version
+        	--Adds the three round burst option to the selector
+        },
+        RPK_203 = { -- Kalashnikov RPK_203
+			weight = 5.2,
+			barrel_length = 23.2,
+			year = 2001,
+			--LMG
+        },
+        AK_100 = { -- Kalashnikov AK-100
+			weight = 3.4,
+			magazine_group = "MagGroup_AK545",
+			--5.45 version
+        },
+        AK_100_1 = { -- Kalashnikov AK-100-1
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			weight = 3.4,
+			magazine_group = "MagGroup_AK545",
+			--5.45 version
+			--civilian semi-auto version
+        },
+        AK_100_2 = { -- Kalashnikov AK-100-2
+		    extra_features = Flags.BURST3,
+			weight = 3.4,
+			magazine_group = "MagGroup_AK545",
+			--5.45 version
+        	--Adds the three round burst option to the selector
+        },
+        AK_105 = { -- Kalashnikov AK-105
+			weight = 3.2,
+			magazine_group = "MagGroup_AK545",
+			barrel_length = 12.4,
+			year = 2001,
+			--carbine version
+			--5.45 version
+        },
+        AK_105_1 = { -- Kalashnikov AK-105-1
+			weight = 3.2,
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			magazine_group = "MagGroup_AK545",
+			barrel_length = 12.4,
+			year = 2001,
+			--carbine version
+			--5.45 version
+			--civilian semi-auto version
+        },
+        AK_105_2 = { -- Kalashnikov AK-105-2
+			weight = 3.2,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK545",
+			barrel_length = 12.4,
+			year = 2001,
+			--carbine version
+			--5.45 version
+			--Adds the three round burst option to the selector
+        },
+        AK_200 = { -- Kalashnikov AK-200
+			weight = 3.4,
+			magazine_group = "MagGroup_AK545",
+			year = 2016,
+			--Telescoping and folding stock
+			--has stanag rails
+			--Prototype
+			--5.45 version
+        },
+        AK_205 = { -- Kalashnikov AK-205
+			weight = 3.2,
+			magazine_group = "MagGroup_AK545",
+			barrel_length = 12.4,
+			year = 2016,
+			--Telescoping and folding stock
+			--has stanag rails
+			--Prototype
+			--5.45 version
+        },
+        AK_201 = { -- Kalashnikov AK-201
+			weight = 3.4,
+			year = 2016,
+			--Telescoping and folding stock
+			--has stanag rails
+			--Prototype
+			--5.56 version
+        },
+        AK_202 = { -- Kalashnikov AK-202
+			weight = 3.2,
+			barrel_length = 12.4,
+			year = 2016,
+			--Telescoping and folding stock
+			--has stanag rails
+			--Prototype
+			--5.56 version
+        },
+        AK_203 = { -- Kalashnikov AK-203
+			weight = 3.4,
+			year = 2016,
+			magazine_group = "MagGroup_AK",
+			--Telescoping and folding stock
+			--has stanag rails
+			--Prototype
+			--5.56 version
+        },
+        AK_204 = { -- Kalashnikov AK-204
+			weight = 3.2,
+			barrel_length = 12.4,
+			year = 2016,
+			magazine_group = "MagGroup_AK",
+			--Telescoping and folding stock
+			--has stanag rails
+			--Prototype
+			--5.56 version
         },
 })
 
