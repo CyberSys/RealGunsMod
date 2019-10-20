@@ -528,6 +528,16 @@ Items_EN = {
     DisplayName_Kalashnikov_AK_101_AK_203		= "Kalashnikov AK-203",
     DisplayName_Kalashnikov_AK_101_AK_204		= "Kalashnikov AK-204",
     DisplayName_Kalashnikov_AK_101_AK_205		= "Kalashnikov AK-205",
+    DisplayName_Kalashnikov_AK_101_AK_107		= "Kalashnikov AK-107",
+    DisplayName_Kalashnikov_AK_101_AK_108		= "Kalashnikov AK-108",
+    DisplayName_Kalashnikov_AK_101_AK_109		= "Kalashnikov AK-109",
+    DisplayName_Kalashnikov_AK_101_AK_12		= "Kalashnikov AK-12",
+    DisplayName_Kalashnikov_AK_101_AK_12K		= "Kalashnikov AK-12K",
+    DisplayName_Kalashnikov_AK_101_AK_15		= "Kalashnikov AK-15",
+    DisplayName_Kalashnikov_AK_101_AK_15K		= "Kalashnikov AK-15K",
+    DisplayName_Kalashnikov_AK_101_RPK-16		= "Kalashnikov RPK-16",
+    DisplayName_Kalashnikov_AK_101_RPK-16K		= "Kalashnikov RPK-16K",
+    DisplayName_Kalashnikov_AK_101_AK_308		= "Kalashnikov AK-308",
 	
     -- Magazine Groups
     DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",

@@ -3514,7 +3514,9 @@ FirearmType:newCollection("Kalashnikov_AK_102", {
 	--https://en.wikipedia.org/wiki/AK-105
 	--http://www.military-today.com/firearms/rpk_200_series.htm
 	--https://en.wikipedia.org/wiki/AK-12
+	--https://en.wikipedia.org/wiki/AK-107
 	--https://firearmcentral.fandom.com/wiki/AK-201
+	--https://modernfirearms.net/en/assault-rifles/russia-assault-rifles/ak-308-2/
 	category = Const.RIFLE,
 	soundProfile = "Rifle-AR",
 	
@@ -3735,6 +3737,125 @@ FirearmType:newCollection("Kalashnikov_AK_102", {
 			--Prototype
 			--5.56 version
         },
+        AK_107 = { -- Kalashnikov AK-107
+			weight = 3.8,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK545",
+			year = 2001,
+			--balanced gas system similar to the AEK-971
+			--850 ROF 3rb
+			--comes with 3RB selection
+			--Auto reverts to 3rb whenever the trigger is released even if only 1 or 2 shots fired?
+			--5.45 version
+        },
+        AK_108 = { -- Kalashnikov AK-108
+			weight = 3.8,
+			extra_features = Flags.BURST3,
+			year = 2001,
+			--balanced gas system similar to the AEK-971
+			--900 ROF 5rb
+			--comes with 3RB selection
+			--Auto reverts to 3rb whenever the trigger is released even if only 1 or 2 shots fired?
+			--5.56 version
+        },
+        AK_107 = { -- Kalashnikov AK-107
+			weight = 3.8,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK",
+			year = 2001,
+			--balanced gas system similar to the AEK-971
+			--850 ROF 3rb
+			--comes with 3RB selection
+			--Auto reverts to 3rb whenever the trigger is released even if only 1 or 2 shots fired?
+			--7.62 version
+        },
+        AK_12 = { -- Kalashnikov AK-12
+			weight = 3.3,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK545",
+			year = 2018,
+			--Rotating Bolt
+			--Pictanny rail system on top and handguard
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--5.45 version
+        },
+        AK_12K = { -- Kalashnikov AK-12K
+			weight = 3.1,
+			extra_features = Flags.BURST3,
+			barrel_length = 12.4,
+			magazine_group = "MagGroup_AK545",
+			year = 2018,
+			--Rotating Bolt
+			--Pictanny rail system on top and handguard
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--carbine version, using barrel length from other carbines and weight differential
+			--5.45 version
+        },
+        AK_15 = { -- Kalashnikov AK-15
+			weight = 3.3,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK",
+			year = 2018,
+			--Rotating Bolt
+			--Pictanny rail system on top and handguard
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--7.62 version
+        },
+        AK_15K = { -- Kalashnikov AK-15K
+			weight = 3.1,
+			extra_features = Flags.BURST3,
+			barrel_length = 12.4,
+			magazine_group = "MagGroup_AK",
+			year = 2018,
+			--Rotating Bolt
+			--Pictanny rail system on top and handguard
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--carbine version, using barrel length from other carbines and weight differential
+			--7.62 version
+        },
+        RPK_16 = { -- Kalashnikov RPK-16
+			weight = 5.2,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK545",
+			barrel_length = 21.7,
+			year = 2018,
+			--Rotating Bolt
+			--Pictanny rail system on top and handguard
+			--modernized RPK-74
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--5.45 version
+        },
+        RPK_16K = { -- Kalashnikov RPK-16K
+			weight = 5.0,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK545",
+			barrel_length = 14.6,
+			year = 2018,
+			--Rotating Bolt
+			--Assault barrel length
+			--Pictanny rail system on top and handguard
+			--modernized RPK-74
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--5.45 version
+        },
+        AK_308 = { -- Kalashnikov AK-308
+			weight = 4.1,
+			extra_features = Flags.BURST3,
+			magazine_group = "MagGroup_AK308",
+			year = 2019,
+			--Rotating Bolt
+			--Pictanny rail system on top and handguard
+			--700 ROF cyclic, 1000 3rb
+			--comes with 3RB selection
+			--7.62 version
+        },
+		--NEED TO ADD AK-9 when 9x39 is in there
 })
 
 --[[
