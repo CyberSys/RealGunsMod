@@ -637,6 +637,10 @@ Items_EN = {
     DisplayName_Mag_STANAG_x60                   = "STANAG Casket Magazine x60 (5.56x45mm NATO)",
     DisplayName_Mag_STANAG_x100                  = "STANAG Casket Magazine x100 (5.56x45mm NATO)",
 
+    DisplayName_MagGroup_AK                      = "AK Magazine (7.62x39mm NATO)",
+    DisplayName_Mag_AK_x30                       = "AK Magazine Steel x30 (7.62x39mm NATO)",
+    DisplayName_Mag_AK_x30_B                     = "AK Magazine Bakelite x30 (7.62x39mm NATO)",
+	DisplayName_Mag_AK_x30_P                     = "AK Magazine Plastic x30 (7.62x39mm NATO)",
 
     -- Ammo Groups
     DisplayName_AmmoGroup_22LR                  = ".22 LR",
@@ -661,8 +665,10 @@ Items_EN = {
     DisplayName_AmmoGroup_3030Winchester        = ".30-30 Winchester",
     DisplayName_AmmoGroup_308Winchester         = ".308 Winchester",
     DisplayName_AmmoGroup_57x28mm               = "FN 5.7x28mm",
+    DisplayName_AmmoGroup_9x18mm                = "9x18mm Makarov",
     DisplayName_AmmoGroup_9x19mm                = "9x19mm Parabellum",
     DisplayName_AmmoGroup_10x25mm               = "10x25mm",
+    DisplayName_AmmoGroup_545x39mm              = "5.45x39mm Russian",
     DisplayName_AmmoGroup_556x45mm              = "5.56x45mm NATO",
     DisplayName_AmmoGroup_762x39mm              = "7.62x39mm Russian",
     DisplayName_AmmoGroup_762x51mm              = "7.62x51mm NATO",
@@ -870,6 +876,16 @@ Items_EN = {
     DisplayName_Ammo_57x28mm_HP_Box        = "FN 5.7x28mm HP - 50 Round Box",
     DisplayName_Ammo_57x28mm_HP_Can        = "FN 5.7x28mm HP - 500 Round Canister",
 
+    DisplayName_Case_9x18mm                = "9x18mm Makarov cases",
+    DisplayName_Case_9x18mm_Box            = "9x18mm - 50 Cases Box",
+    DisplayName_Case_9x18mm_Can            = "9x18mm - 500 Cases Canister",
+    DisplayName_Ammo_9x18mm_FMJ            = "9x18mm Makarov FMJ Rounds",
+    DisplayName_Ammo_9x18mm_FMJ_Box        = "9x18mm FMJ - 50 Round Box",
+    DisplayName_Ammo_9x18mm_FMJ_Can        = "9x18mm FMJ - 500 Round Canister",
+    DisplayName_Ammo_9x18mm_HP             = "9x18mm Makarov HP Rounds",
+    DisplayName_Ammo_9x18mm_HP_Box         = "9x18mm HP - 50 Round Box",
+    DisplayName_Ammo_9x18mm_HP_Can         = "9x18mm HP - 500 Round Canister",
+	
     DisplayName_Case_9x19mm                = "9x19mm Parabellum cases",
     DisplayName_Case_9x19mm_Box            = "9x19mm - 50 Cases Box",
     DisplayName_Case_9x19mm_Can            = "9x19mm - 500 Cases Canister",
@@ -891,6 +907,16 @@ Items_EN = {
     DisplayName_Ammo_10x25mm_HP_Can        = "10x25mm HP - 500 Round Canister",
 
 
+    DisplayName_Case_545x39mm              = "5.45x39mm cases",
+    DisplayName_Case_545x39mm_Box          = "5.45x39mm - 20 Cases Box",
+    DisplayName_Case_545x39mm_Can          = "5.45x39mm - 200 Cases Canister",
+    DisplayName_Ammo_545x39mm_FMJ          = "5.45x39mm FMJ Rounds",
+    DisplayName_Ammo_545x39mm_FMJ_Box      = "5.45x39mm FMJ - 20 Round Box",
+    DisplayName_Ammo_545x39mm_FMJ_Can      = "5.45x39mm FMJ - 200 Round Canister",
+    DisplayName_Ammo_545x39mm_HP           = "5.45x39mm HP Rounds",
+    DisplayName_Ammo_545x39mm_HP_Box       = "5.45x39mm HP - 20 Round Box",
+    DisplayName_Ammo_545x39mm_HP_Can       = "5.45x39mm HP - 200 Round Canister",
+	
     DisplayName_Case_762x39mm              = "7.62x39mm cases",
     DisplayName_Case_762x39mm_Box          = "7.62x39mm - 20 Cases Box",
     DisplayName_Case_762x39mm_Can          = "7.62x39mm - 200 Cases Canister",

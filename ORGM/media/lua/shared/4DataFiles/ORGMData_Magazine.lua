@@ -66,7 +66,7 @@ MagazineGroup:new("MagGroup_Skorpion_vz61_32ACP",   { Groups = { MagGroup_SubMac
 
 MagazineGroup:new("MagGroup_AK",     			    { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
 MagazineGroup:new("MagGroup_AK556",                 { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_556x45mm' })
---Still need to make the AK mags
+MagazineGroup:new("MagGroup_AK545",                 { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_545x39mm' })
 MagazineGroup:new("MagGroup_ArcticWarfare",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_308Winchester' })
 MagazineGroup:new("MagGroup_AR10",                  { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x51mm' })
 MagazineGroup:new("MagGroup_AR10_762x39mm",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
@@ -432,7 +432,6 @@ MagazineType:newCollection("Mag_AR10_762x39mm", {
     }
 )
 
-
 MagazineType:newCollection("Mag_STANAG", {
         ammo_group = 'AmmoGroup_556x45mm',
         image = "Mag_STANAG",
@@ -488,11 +487,33 @@ MagazineType:newCollection("Mag_STANAG", {
     }
 )
 
+MagazineType:newCollection("Mag_AK", {
+        ammo_group = 'AmmoGroup_762x39mm',
+        image = "Mag_STANAG",
+    },{
+        x30 = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.32,
+            Groups = { MagGroup_AK = 40 },
+        },
+        x30_B = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.23,
+            Groups = { MagGroup_AK = 40 },
+        },
+        x30_P = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.24,
+            Groups = { MagGroup_AK = 40 },
+        },
+    }
+)
+
 --[[
 
-register("AKMMag",
-    { ammo_group = 'AmmoGroup_762x39mm', max_capacity = 30, }
-)
 register("AM180Mag",
     { ammo_group = 'AmmoGroup_22LR', max_capacity = 177, }
 )

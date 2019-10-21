@@ -43,6 +43,7 @@ AmmoGroup:new("AmmoGroup_454Casull", { Groups = { AmmoGroup_Pistols = 1 }})
 AmmoGroup:new("AmmoGroup_480Ruger", { Groups = { AmmoGroup_Pistols = 1 }})
 AmmoGroup:new("AmmoGroup_50AE", { Groups = { AmmoGroup_Pistols = 1 }})
 AmmoGroup:new("AmmoGroup_57x28mm", { Groups = { AmmoGroup_Pistols = 1 }})
+AmmoGroup:new("AmmoGroup_9x18mm", { Groups = { AmmoGroup_Pistols = 1 }})
 AmmoGroup:new("AmmoGroup_9x19mm", { Groups = { AmmoGroup_Pistols = 1 }})
 AmmoGroup:new("AmmoGroup_10x25mm", { Groups = { AmmoGroup_Pistols = 1 }})
 
@@ -51,6 +52,7 @@ AmmoGroup:new("AmmoGroup_30Carbine", { Groups = { AmmoGroup_Rifles = 1 }})
 AmmoGroup:new("AmmoGroup_3006Springfield", { Groups = { AmmoGroup_Rifles = 1 }})
 AmmoGroup:new("AmmoGroup_3030Winchester", { Groups = { AmmoGroup_Rifles = 1 }})
 AmmoGroup:new("AmmoGroup_308Winchester", { Groups = { AmmoGroup_Rifles = 1 }})
+AmmoGroup:new("AmmoGroup_545x39mm", { Groups = { AmmoGroup_Rifles = 1 }})
 AmmoGroup:new("AmmoGroup_556x45mm", { Groups = { AmmoGroup_Rifles = 1 }})
 AmmoGroup:new("AmmoGroup_762x39mm", { Groups = { AmmoGroup_Rifles = 1 }})
 AmmoGroup:new("AmmoGroup_762x51mm", { Groups = { AmmoGroup_Rifles = 1 }})
@@ -245,8 +247,22 @@ AmmoType:newCollection("Ammo_57x28mm", {
             features = Flags.JACKETED + Flags.HOLLOWPOINT + Flags.FLATPOINT,
         }
 })
+AmmoType:newCollection("Ammo_9x18mm", {
+        Case = "Case_9x18mm",    category = Flags.PISTOL,
+        Range = 20, Recoil = 10, MinDamage = 0.7, MaxDamage = 1.6, Weight = 0.010,
+        Penetration = 50, BoxCount = 50, CanCount = 500,
+        Sound = "Shot_9x18mm_1", Radius = 100, RadiusMod = 70, -- Radius * (((RadiusMod-barrelLength)/RadiusMod)^3) need 9x18mm sound
+        Groups = { AmmoGroup_9x18mm = 1 },
+    }, {
+        FMJ = {
+            features = Flags.JACKETED
+        },
+        HP = {
+            features = Flags.JACKETED + Flags.HOLLOWPOINT + Flags.FLATPOINT,
+        }
+})
 AmmoType:newCollection("Ammo_9x19mm", {
-        Case = "Case_57x28mm",    category = Flags.PISTOL,
+        Case = "Case_9x19mm",    category = Flags.PISTOL,
         Range = 20, Recoil = 10, MinDamage = 0.7, MaxDamage = 1.6, Weight = 0.010,
         Penetration = 50, BoxCount = 50, CanCount = 500,
         Sound = "Shot_9x19mm_1", Radius = 100, RadiusMod = 70, -- Radius * (((RadiusMod-barrelLength)/RadiusMod)^3)
@@ -325,6 +341,21 @@ AmmoType:newCollection("Ammo_308Winchester", {
 
         Sound = "Shot_762x51mm_1", Radius = 180, RadiusMod = 120, -- Radius * (((RadiusMod-barrelLength)/RadiusMod)^3)
         Groups = { AmmoGroup_308Winchester = 1, AmmoGroup_762x51mm = 0.7 },
+    }, {
+        FMJ = {
+            features = Flags.JACKETED + Flags.FLATPOINT
+        },
+        HP = {
+            features = Flags.JACKETED + Flags.HOLLOWPOINT + Flags.FLATPOINT,
+        }
+})
+AmmoType:newCollection("Ammo_545x39mm", {
+        Case = "Case_762x39mm",     category = Flags.RIFLE,
+        Range = 28, Recoil = 20, MinDamage = 1.4, MaxDamage = 2.4, Weight = 0.015,
+        Penetration = 80, BoxCount = 20, CanCount = 200,
+
+        Sound = "Shot_545x39mm_1", Radius = 160, RadiusMod = 120, -- Radius * (((RadiusMod-barrelLength)/RadiusMod)^3) need 545 sound
+        Groups = { AmmoGroup_545x39mm = 1 },
     }, {
         FMJ = {
             features = Flags.JACKETED + Flags.FLATPOINT
