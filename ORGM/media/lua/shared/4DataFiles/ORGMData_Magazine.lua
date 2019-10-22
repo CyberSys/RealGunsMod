@@ -489,8 +489,44 @@ MagazineType:newCollection("Mag_STANAG", {
 
 MagazineType:newCollection("Mag_AK", {
         ammo_group = 'AmmoGroup_762x39mm',
-        image = "Mag_STANAG",
+        image = "Mag_AK",
     },{
+        x10 = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.24,
+            Groups = { MagGroup_AK = 15 },
+        },
+        x10_B = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.15,
+            Groups = { MagGroup_AK = 15 },
+        },
+        x10_P = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.16,
+            Groups = { MagGroup_AK = 15 },
+        },
+        x20 = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.28,
+            Groups = { MagGroup_AK = 20 },
+        },
+        x20_B = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.19,
+            Groups = { MagGroup_AK = 20 },
+        },
+        x20_P = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.20,
+            Groups = { MagGroup_AK = 20 },
+        },
         x30 = {
             features = Flags.BOX,
             max_capacity = 30,
@@ -508,6 +544,236 @@ MagazineType:newCollection("Mag_AK", {
             max_capacity = 30,
             weight = 0.24,
             Groups = { MagGroup_AK = 40 },
+        },
+        x40 = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.37,
+            Groups = { MagGroup_AK = 10 },
+        },
+        x40_B = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.28,
+            Groups = { MagGroup_AK = 10 },
+        },
+        x40_P = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.29,
+            Groups = { MagGroup_AK = 10 },
+        },
+        x75 = {
+            features = Flags.BOX,
+            max_capacity = 75,
+            weight = 0.43,
+            Groups = { MagGroup_AK = 5 },
+        },
+        x75_P = {
+            features = Flags.BOX,
+            max_capacity = 75,
+            weight = 0.34,
+            Groups = { MagGroup_AK = 5 },
+        },
+        x100_P = {
+            features = Flags.BOX,
+            max_capacity = 100,
+            weight = 0.39,
+            Groups = { MagGroup_AK = 2 },
+        },
+    }
+)
+
+MagazineType:newCollection("Mag_AK545", {
+        ammo_group = 'AmmoGroup_545x39mm',
+        image = "Mag_AK",
+    },{
+        x10 = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.23,
+            Groups = { MagGroup_AK545 = 15 },
+        },
+        x10_B = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.14,
+            Groups = { MagGroup_AK545 = 15 },
+        },
+        x10_P = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.15,
+            Groups = { MagGroup_AK545 = 15 },
+        },
+        x20 = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.27,
+            Groups = { MagGroup_AK545 = 20 },
+        },
+        x20_B = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.18,
+            Groups = { MagGroup_AK545 = 20 },
+        },
+        x20_P = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.19,
+            Groups = { MagGroup_AK545 = 20 },
+        },
+        x30 = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.31,
+            Groups = { MagGroup_AK545 = 40 },
+        },
+        x30_B = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.22,
+            Groups = { MagGroup_AK545 = 40 },
+        },
+        x30_P = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.23,
+            Groups = { MagGroup_AK545 = 40 },
+        },
+        x40 = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.36,
+            Groups = { MagGroup_AK545 = 10 },
+        },
+        x40_B = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.27,
+            Groups = { MagGroup_AK545 = 10 },
+        },
+        x40_P = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.28,
+            Groups = { MagGroup_AK545 = 10 },
+        },
+        x75 = {
+            features = Flags.BOX,
+            max_capacity = 75,
+            weight = 0.42,
+            Groups = { MagGroup_AK545 = 5 },
+        },
+        x75_P = {
+            features = Flags.BOX,
+            max_capacity = 75,
+            weight = 0.33,
+            Groups = { MagGroup_AK545 = 5 },
+        },
+        x100_P = {
+            features = Flags.BOX,
+            max_capacity = 100,
+            weight = 0.38,
+            Groups = { MagGroup_AK545 = 2 },
+        },
+    }
+)
+
+MagazineType:newCollection("Mag_AK556", {
+        ammo_group = 'AmmoGroup_556x45mm',
+        image = "Mag_AK",
+    },{
+        x10 = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.23,
+            Groups = { MagGroup_AK556 = 15 },
+        },
+        x10_B = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.14,
+            Groups = { MagGroup_AK556 = 15 },
+        },
+        x10_P = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.15,
+            Groups = { MagGroup_AK556 = 15 },
+        },
+        x20 = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.27,
+            Groups = { MagGroup_AK556 = 20 },
+        },
+        x20_B = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.18,
+            Groups = { MagGroup_AK556 = 20 },
+        },
+        x20_P = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.19,
+            Groups = { MagGroup_AK556 = 20 },
+        },
+        x30 = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.31,
+            Groups = { MagGroup_AK556 = 40 },
+        },
+        x30_B = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.22,
+            Groups = { MagGroup_AK556 = 40 },
+        },
+        x30_P = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.23,
+            Groups = { MagGroup_AK556 = 40 },
+        },
+        x40 = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.36,
+            Groups = { MagGroup_AK556 = 10 },
+        },
+        x40_B = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.27,
+            Groups = { MagGroup_AK556 = 10 },
+        },
+        x40_P = {
+            features = Flags.BOX,
+            max_capacity = 40,
+            weight = 0.28,
+            Groups = { MagGroup_AK556 = 10 },
+        },
+        x75 = {
+            features = Flags.BOX,
+            max_capacity = 75,
+            weight = 0.42,
+            Groups = { MagGroup_AK556 = 5 },
+        },
+        x75_P = {
+            features = Flags.BOX,
+            max_capacity = 75,
+            weight = 0.33,
+            Groups = { MagGroup_AK556 = 5 },
+        },
+        x100_P = {
+            features = Flags.BOX,
+            max_capacity = 100,
+            weight = 0.38,
+            Groups = { MagGroup_AK556 = 2 },
         },
     }
 )
