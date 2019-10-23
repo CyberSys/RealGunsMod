@@ -233,7 +233,7 @@ FirearmGroup:new("Group_Walther_PP_Series",         { Groups = { Group_Walther_P
 -- Machine Pistols
 FirearmGroup:new("Group_Beretta_93R",               { Groups = { Group_Beretta_MachinePistols           = 1, } })
 FirearmGroup:new("Group_Glock_18",                  { Groups = { Group_Glock_MachinePistols             = 1, } })
-FirearmGroup:new("Group_CZUB_Skorpion",             { Groups = { Group_CZUB_MachinePistols               = 1, } })
+FirearmGroup:new("Group_CZUB_Skorpion",             { Groups = { Group_CZUB_MachinePistols              = 1, } })
 
 -- SubMachine Guns
 FirearmGroup:new("Group_AmericanArms_AM180",        { Groups = { Group_AmericanArms_SubMachineGuns      = 1, } })
@@ -2331,7 +2331,11 @@ FirearmType:newCollection("Glock_18", {
         },
 })
 FirearmType:newCollection("CZUB_Skorpion", {
-        category = Const.MACHINEPISTOL,
+		--sources
+		--https://en.wikipedia.org/wiki/%C5%A0korpion
+		--https://cdn.cz-usa.com/hammer/wp-content/uploads/2014/04/A_Legend_Named_Skorpion.pdf
+        --https://www.forgottenweapons.com/submachine-guns/vz61-skorpion/
+		category = Const.MACHINEPISTOL,
         soundProfile = "Pistol",
 
         magazine_group = "MagGroup_Skorpion_vz61_32ACP",
@@ -2340,18 +2344,114 @@ FirearmType:newCollection("CZUB_Skorpion", {
         model = 'skorpion',
         image = 'Item_CZUB_Skorpion',
         max_capacity = 20,
+		display_name = {
+			EN = "Škorpion vz. 61",
+		},
         
         classification = "IGUI_Firearm_MachinePistol",
         year = 1961,
         country = "IGUI_Firearm_Country_CZ",
         --manufacturer = "Česká zbrojovka Uherský Brod",
         manufacturer = "IGUI_Firearm_Manuf_CZUB",
-        description = "IGUI_Firearm_Desc_Skorpion",
+        description = {
+			EN = "The Škorpion vz. 61 is a Czechoslovak machine pistol developed in 1959 by Miroslav Rybář (1924–1970) and produced under the official designation Samopal vzor 61 ('submachine gun model 1961') by the Česká zbrojovka arms factory in Uherský Brod from 1961 to 1979. "
+		},
         
         features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
         feed_system = Flags.AUTO + Flags.BLOWBACK,
         Groups = { Group_CZUB_Skorpion = 1, },
     }, {
+        vz_61_E = {
+			display_name = {
+				EN = "Škorpion vz. 61 E",
+			},
+			--plastic grip
+			weight = 1.28,
+			year = 1990,
+        },
+        vz_68 = {
+			display_name = {
+				EN = "Škorpion vz. 68",
+			},
+			weight = 1.44,
+			magazine_group = "MagGroup_Skorpion_vz61_9x19",
+			year = 1968,
+        },
+        vz_65 = {
+			display_name = {
+				EN = "Škorpion vz. 65",
+			},
+			weight = 1.44,
+			magazine_group = "MagGroup_Skorpion_vz61_9x18",
+			year = 1968,
+        },
+        vz_64 = {
+			display_name = {
+				EN = "Škorpion vz. 64",
+			},
+			weight = 1.44,
+			magazine_group = "MagGroup_Skorpion_vz61_380ACP",
+			year = 1968,
+        },
+        vz_82 = {
+			display_name = {
+				EN = "Škorpion vz. 82",
+			},
+			weight = 1.44,
+			magazine_group = "MagGroup_Skorpion_vz61_9x18",
+			barrel_length = 4.4,
+			year = 1989,
+			--plastic grip
+        },
+        vz_83 = {
+			display_name = {
+				EN = "Škorpion vz. 83",
+			},
+			weight = 1.44,
+			magazine_group = "MagGroup_Skorpion_vz61_380ACP",
+			barrel_length = 4.4,
+			year = 1989,
+			--plastic grip
+        },
+        CZ_91_S_32ACP = {
+			display_name = {
+				EN = "CZ-91S .32 ACP",
+			},
+			weight = 1.14,
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			year = 1989,
+			--plastic grip
+        },
+        CZ_91_S_380ACP = {
+			display_name = {
+				EN = "CZ-91S .380 ACP",
+			},
+			weight = 1.28,
+			magazine_group = "MagGroup_Skorpion_vz61_380ACP",
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			year = 1989,
+			--plastic grip
+        },
+        CZ_91_S_9x18 = {
+			display_name = {
+				EN = "CZ-91S 9x18mm",
+			},
+			weight = 1.28,
+			magazine_group = "MagGroup_Skorpion_vz61_9x18",
+			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
+			year = 1989,
+			--plastic grip
+        },
+        CZ_SKORPION_9x19 = {
+			display_name = {
+				EN = "CZ SKORPION 9x19",
+			},
+			weight = 1.28,
+			magazine_group = "MagGroup_Skorpion_vz61_9x19",
+			year = 2003,
+			--under barrel attachment rail
+			--plastic grip
+        },
 })
 
 
