@@ -62,6 +62,9 @@ MagazineGroup:new("MagGroup_Mac11_380ACP",          { Groups = { MagGroup_SubMac
 MagazineGroup:new("MagGroup_Uzi_45ACP",             { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_45ACP' })
 MagazineGroup:new("MagGroup_Uzi_9x19mm",            { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_9x19mm' })
 MagazineGroup:new("MagGroup_Skorpion_vz61_32ACP",   { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_32ACP' })
+MagazineGroup:new("MagGroup_Skorpion_vz61_380ACP",  { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_380ACP' })
+MagazineGroup:new("MagGroup_Skorpion_vz61_9x19mm",  { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_9x19mm' })
+MagazineGroup:new("MagGroup_Skorpion_vz61_9x18mm",  { Groups = { MagGroup_SubMachineGuns = 1 }, ammo_group = 'AmmoGroup_9x18mm' })
 
 
 MagazineGroup:new("MagGroup_AK",     			    { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
@@ -385,11 +388,96 @@ MagazineType:newCollection("Mag_Skorpion_vz61_32ACP", {
         ammo_group = 'AmmoGroup_32ACP',
         image = "Mag_Skorpion_vz61",
     },{
+        x10 = {
+			display_name = "Skorpion Magazine x10 (.32 ACP)",
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.18,
+            Groups = { MagGroup_Skorpion_vz61_32ACP = 1 },
+        },
         x20 = {
+			display_name = "Skorpion Magazine x20 (.32 ACP)",
             features = Flags.BOX,
             max_capacity = 20,
             weight = 0.2,
             Groups = { MagGroup_Skorpion_vz61_32ACP = 1 },
+        },
+    }
+)
+
+MagazineType:newCollection("Mag_Skorpion_vz61_380ACP", {
+        ammo_group = 'AmmoGroup_380ACP',
+        image = "Mag_Skorpion_vz61",
+    },{
+        x10 = {
+			display_name = "Skorpion Magazine x10 (.380 ACP)",
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.18,
+            Groups = { MagGroup_Skorpion_vz61_380ACP = 1 },
+        },
+        x20 = {
+			display_name = "Skorpion Magazine x20 (.380 ACP)",
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.2,
+            Groups = { MagGroup_Skorpion_vz61_380ACP = 1 },
+        },
+    }
+)
+
+MagazineType:newCollection("Mag_Skorpion_vz61_9x18mm", {
+        ammo_group = 'AmmoGroup_9x18mm',
+        image = "Mag_Skorpion_vz61",
+    },{
+        x10 = {
+			display_name = "Skorpion Magazine x10 (9x18mm)",
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.2,
+            Groups = { MagGroup_Skorpion_vz61_9x18mm = 1 },
+        },
+        x20 = {
+			display_name = "Skorpion Magazine x20 (9x18mm)",
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.22,
+            Groups = { MagGroup_Skorpion_vz61_9x18mm = 1 },
+        },
+        x30 = {
+			display_name = "Skorpion Magazine x30 (9x18mm)",
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.26,
+            Groups = { MagGroup_Skorpion_vz61_9x18mm = 1 },
+        },
+    }
+)
+
+MagazineType:newCollection("Mag_Skorpion_vz61_9x19mm", {
+        ammo_group = 'AmmoGroup_9x19mm',
+        image = "Mag_Skorpion_vz61",
+    },{
+        x10 = {
+			display_name = "Skorpion Magazine x10 (9x19mm)",
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.2,
+            Groups = { MagGroup_Skorpion_vz61_9x19mm = 1 },
+        },
+        x20 = {
+			display_name = "Skorpion Magazine x20 (9x19mm)",
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.22,
+            Groups = { MagGroup_Skorpion_vz61_9x19mm = 1 },
+        },
+        x30 = {
+			display_name = "Skorpion Magazine x30 (9x19mm)",
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.26,
+            Groups = { MagGroup_Skorpion_vz61_9x19mm = 1 },
         },
     }
 )

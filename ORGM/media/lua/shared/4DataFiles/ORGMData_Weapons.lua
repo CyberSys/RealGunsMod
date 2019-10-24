@@ -252,11 +252,11 @@ FirearmGroup:new("Group_Armalite_AR10",                 { Groups = { Group_Armal
 FirearmGroup:new("Group_Colt_CAR15",                    { Groups = { Group_Colt_Rifles 					= 1, } })
 FirearmGroup:new("Group_Colt_AR15",                     { Groups = { Group_Colt_Rifles 					= 3, } })
 FirearmGroup:new("Group_DIO_KL762",   	                { Groups = { Group_DIO_Rifles 					= 1, } })
+FirearmGroup:new("Group_FNHerstal_FAL",	                { Groups = { Group_FNHerstal_Rifles 			= 1, } })
 FirearmGroup:new("Group_Izhmash_AK_47",   	        	{ Groups = { Group_Izhmash_Rifles 				= 1, } })
 FirearmGroup:new("Group_MAZ",   		                { Groups = { Group_MIC_Rifles 					= 1, } })
 FirearmGroup:new("Group_PolAr_ASh78",                	{ Groups = { Group_PolAr_Rifles 				= 1, } })
 FirearmGroup:new("Group_Norinco_Type56",                { Groups = { Group_Norinco_Rifles 				= 1, } })
-
 FirearmGroup:new("Group_Browning_BLR",                  { Groups = { Group_Browning_Rifles				= 1, } })
 
 --************************************************************************--
@@ -2374,7 +2374,7 @@ FirearmType:newCollection("CZUB_Skorpion", {
 				EN = "Škorpion vz. 68",
 			},
 			weight = 1.44,
-			magazine_group = "MagGroup_Skorpion_vz61_9x19",
+			magazine_group = "MagGroup_Skorpion_vz61_9x19mm",
 			year = 1968,
         },
         vz_65 = {
@@ -2382,7 +2382,7 @@ FirearmType:newCollection("CZUB_Skorpion", {
 				EN = "Škorpion vz. 65",
 			},
 			weight = 1.44,
-			magazine_group = "MagGroup_Skorpion_vz61_9x18",
+			magazine_group = "MagGroup_Skorpion_vz61_9x18mm",
 			year = 1968,
         },
         vz_64 = {
@@ -2398,7 +2398,7 @@ FirearmType:newCollection("CZUB_Skorpion", {
 				EN = "Škorpion vz. 82",
 			},
 			weight = 1.44,
-			magazine_group = "MagGroup_Skorpion_vz61_9x18",
+			magazine_group = "MagGroup_Skorpion_vz61_9x18mm",
 			barrel_length = 4.4,
 			year = 1989,
 			--plastic grip
@@ -2437,7 +2437,7 @@ FirearmType:newCollection("CZUB_Skorpion", {
 				EN = "CZ-91S 9x18mm",
 			},
 			weight = 1.28,
-			magazine_group = "MagGroup_Skorpion_vz61_9x18",
+			magazine_group = "MagGroup_Skorpion_vz61_9x18mm",
 			features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SEMIAUTO,
 			year = 1989,
 			--plastic grip
@@ -2447,7 +2447,7 @@ FirearmType:newCollection("CZUB_Skorpion", {
 				EN = "CZ SKORPION 9x19",
 			},
 			weight = 1.28,
-			magazine_group = "MagGroup_Skorpion_vz61_9x19",
+			magazine_group = "MagGroup_Skorpion_vz61_9x19mm",
 			year = 2003,
 			--under barrel attachment rail
 			--plastic grip
@@ -3956,6 +3956,82 @@ FirearmType:newCollection("Kalashnikov_AK_102", {
 			--7.62 version
         },
 		--NEED TO ADD AK-9 when 9x39 is in there
+})
+
+FirearmType:newCollection("FNHerstal_FAL", {
+	--sources:
+	--https://en.wikipedia.org/wiki/FN_FAL
+	category = Const.RIFLE,
+	soundProfile = "Rifle-AR",
+	
+	magazine_group = "MagGroup_FAL_762x51mm",
+	weight = 4.25,
+	barrel_length = 21,
+	model = "fnfal",
+	image = "FNHerstal_FAL",
+	max_capacity = 20,
+	
+	classification = "IGUI_Firearm_AssaultRifle",
+	year = 1953,
+	country = "IGUI_Firearm_Country_BE",
+    manufacturer = "IGUI_Firearm_Manuf_FN",
+    description = "IGUI_Firearm_Desc_FNFALA",
+	display_name = "FN FAL 50.00"
+	
+    features = Flags.DOUBLEACTION + Flags.SLIDELOCK + Flags.SAFETY + Flags.SELECTFIRE + Flags.SEMIAUTO + Flags.FULLAUTO,
+    feed_system = Flags.AUTO + Flags.SHORTGAS,
+    Groups = { Group_FNHertal_FAL = 1 },
+		
+	--other stats
+	--tilting breechblock
+	--RoF 700 rpm
+	--Most come with bipods
+	--wood furniture
+	
+    }, {
+        FAL_5041 = { 
+			display_name = "FN FAL 50.41"
+			--AKA: FALO in France, C2A1 in Canada, L2A1 in Austria
+			weight = 5.1,
+			--synthetic furniture
+			--heavy barrel
+			--is a SAW
+			--typiclly has a 30 round mag
+        },
+        FAL_5042 = { 
+			display_name = "FN FAL 50.42"
+			--AKA: FALO in France, C2A1 in Canada, L2A1 in Austria
+			weight = 6,
+			--wood furniture
+			--heavy barrel
+			--is a SAW
+			--typiclly has a 30 round mag
+        },
+        FAL_5061 = { 
+			display_name = "FN FAL 50.61"
+			weight = 4.45,
+			--folding steel stock
+        },
+        FAL_5062 = { 
+			display_name = "FN FAL 50.62"
+			weight = 4.3,
+			barrel_length = 18,
+			--folding steel stock
+			--paratrooper
+        },
+        FAL_5063 = { 
+			display_name = "FN FAL 50.63"
+			weight = 3.75,
+			barrel_length = 17.2,
+			--folding steel stock
+			--paratrooper
+        },
+        FAL_5064 = { 
+			display_name = "FN FAL 50.64"
+			weight = 3.9,
+			--folding stock
+			--aluminum alloy lower
+        },
 })
 
 --[[
