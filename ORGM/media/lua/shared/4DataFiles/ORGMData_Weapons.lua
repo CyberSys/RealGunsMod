@@ -4032,6 +4032,15 @@ FirearmType:newCollection("FNHerstal_FAL", {
 			--folding stock
 			--aluminum alloy lower
         },
+        Sturmgewehr_58 = { 
+			display_name = "Sturmewehr 58"
+			year = 1956,
+			weight = 4.45,
+			--plastic stock
+			--folding bipod
+        },
+		-- NEED TO ADD 7.92x33mm Kurz version and .280 British variants
+		
 })
 
 --[[

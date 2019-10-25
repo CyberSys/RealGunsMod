@@ -73,6 +73,7 @@ MagazineGroup:new("MagGroup_AK545",                 { Groups = { MagGroup_Rifles
 MagazineGroup:new("MagGroup_ArcticWarfare",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_308Winchester' })
 MagazineGroup:new("MagGroup_AR10",                  { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x51mm' })
 MagazineGroup:new("MagGroup_AR10_762x39mm",         { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x39mm' })
+MagazineGroup:new("MagGroup_FN_FAL",                { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_762x51mm' })
 MagazineGroup:new("MagGroup_STANAG",                { Groups = { MagGroup_Rifles = 1 }, ammo_group = 'AmmoGroup_556x45mm' })
 MagazineGroup:new("MagGroup_BLR",                   { Groups = { MagGroup_Rifles = 1 } })
 
@@ -862,6 +863,43 @@ MagazineType:newCollection("Mag_AK556", {
             max_capacity = 100,
             weight = 0.38,
             Groups = { MagGroup_AK556 = 2 },
+        },
+    }
+)
+
+MagazineType:newCollection("Mag_FN_FAL", {
+        ammo_group = 'AmmoGroup_762x51mm',
+        image = "Mag_FN_FAL",
+    },{
+        x5 = {
+            features = Flags.BOX,
+            max_capacity = 5,
+            weight = 0.13,
+            Groups = { MagGroup_FN_FAL = 1 },
+        },
+        x10 = {
+            features = Flags.BOX,
+            max_capacity = 10,
+            weight = 0.16,
+            Groups = { MagGroup_FN_FAL = 5 },
+        },
+        x20 = {
+            features = Flags.BOX,
+            max_capacity = 20,
+            weight = 0.2,
+            Groups = { MagGroup_FN_FAL = 10 },
+        },
+        x30 = {
+            features = Flags.BOX,
+            max_capacity = 30,
+            weight = 0.24,
+            Groups = { MagGroup_FN_FAL = 5 },
+        },
+        x50 = {
+            features = Flags.BOX,
+            max_capacity = 50,
+            weight = 0.34,
+            Groups = { MagGroup_FN_FAL = 2 },
         },
     }
 )
