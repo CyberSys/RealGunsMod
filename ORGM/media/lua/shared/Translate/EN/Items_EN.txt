@@ -1,1007 +1,270 @@
 Items_EN = {
-
-    -- Firearm Groups
-    DisplayName_Main                            = "All Firearms",
-    DisplayName_Group_Colt                      = "Colt Firearms",
-    DisplayName_Group_Colt_Rifles               = "Colt Rifles",
-    DisplayName_Group_Colt_CAR15                = "Colt CAR15/M16 Rifles",
-
-
-    -- Colt Anaconda
-    DisplayName_GroupColt_Anaconda              = "Colt Anaconda",
-    DisplayName_Colt_Anaconda_MM3040            = "Colt Anaconda Model MM3040",
-    DisplayName_Colt_Anaconda_MM3040DT          = "Colt Anaconda Model MM3040DT",
-    DisplayName_Colt_Anaconda_MM3040MP          = "Colt Anaconda Model MM3040MP",
-    DisplayName_Colt_Anaconda_MM3040KD          = "Colt Kodiak Model MM3040KD",
-    DisplayName_Colt_Anaconda_MM3050            = "Colt Anaconda Model MM3050",
-    DisplayName_Colt_Anaconda_MM3060            = "Colt Anaconda Model MM3060",
-    DisplayName_Colt_Anaconda_MM3060DT          = "Colt Anaconda Model MM3060DT",
-    DisplayName_Colt_Anaconda_MM3060MP          = "Colt Anaconda Model MM3060MP",
-    DisplayName_Colt_Anaconda_MM3060KD          = "Colt Kodiak Model MM3060KD",
-    DisplayName_Colt_Anaconda_MM3061FE          = "Colt Anaconda First Edition Model MM3061FE",
-    DisplayName_Colt_Anaconda_MM3080            = "Colt Anaconda Model MM3080",
-    DisplayName_Colt_Anaconda_MM3080L           = "Colt Limited Edition Anaconda Legacy Model MM3080",
-    DisplayName_Colt_Anaconda_MM3080DT          = "Colt Anaconda Model MM3080DT",
-    DisplayName_Colt_Anaconda_MM3080MP          = "Colt Anaconda Model MM3080MP",
-    DisplayName_Colt_Anaconda_MM3080HT          = "Colt Anaconda Hunter Model MM3080HT",
-    DisplayName_Colt_Anaconda_MM3080PDT         = "Colt Anaconda Custom Ported Model MM3080PDT",
-    DisplayName_Colt_Anaconda_MM3080RT          = "Colt Anaconda Realtree Model MM3080RT",
-    DisplayName_Colt_Anaconda_MM4540            = "Colt Anaconda Model MM4540",
-    DisplayName_Colt_Anaconda_MM4560            = "Colt Anaconda Model MM4560",
-    DisplayName_Colt_Anaconda_MM4580            = "Colt Anaconda Model MM4580",
-
-
-    -- Colt Python
-    DisplayName_GroupColt_Python                = "Colt Python",
-    DisplayName_Colt_Python_I1986               = "Colt Double Diamond Python Model I1986",
-
-    DisplayName_Colt_Python_I3020               = "Colt Python Model I3020",
-    DisplayName_Colt_Python_I3021               = "Colt Python Model I3021",
-    DisplayName_Colt_Python_I3030               = "Colt Combat Python Model I3030",
-    DisplayName_Colt_Python_I3040               = "Colt Python Model I3040",
-    DisplayName_Colt_Python_I3040CS             = "Colt Python Elite Model I3040CS",
-    DisplayName_Colt_Python_I3041               = "Colt Python Model I3041",
-    DisplayName_Colt_Python_I3060               = "Colt Python Model I3060",
-    DisplayName_Colt_Python_I3060CS             = "Colt Python Elite Model I3060CS",
-    DisplayName_Colt_Python_I3060ESS            = "Colt Python Silver Snake Model I3060ESS",
-    DisplayName_Colt_Python_I3061               = "Colt Python Model I3061",
-    DisplayName_Colt_Python_I3080               = "Colt Python Model I3080",
-    DisplayName_Colt_Python_I3081               = "Colt Python Model I3081",
-    DisplayName_Colt_Python_I3620               = "Colt Combat Python Model I3620",
-    DisplayName_Colt_Python_I3620SE             = "Colt Python Snake Eyes Model I3620SE",
-    DisplayName_Colt_Python_I3621SE             = "Colt Python Snake Eyes Model I3621SE",
-    DisplayName_Colt_Python_I3630               = "Colt Combat Python Model I3630",
-    DisplayName_Colt_Python_I3630CP             = "Colt Combat Python Model I3630CP",
-    DisplayName_Colt_Python_I3631               = "Colt Combat Python Model I3631",
-
-    DisplayName_Colt_Python_I3640               = "Colt Python Model I3640",
-    DisplayName_Colt_Python_I3640CS             = "Colt Python Elite Model I3640CS",
-    DisplayName_Colt_Python_I3660               = "Colt Python Model I3660",
-    DisplayName_Colt_Python_I3660CS             = "Colt Python Elite Model I3660CS",
-    DisplayName_Colt_Python_I3660H              = "Colt Custom Python Model I3660H",
-    DisplayName_Colt_Python_I3661               = "Colt Python Model I3661",
-    DisplayName_Colt_Python_I3680               = "Colt Python Hunter Model I3680",
-    DisplayName_Colt_Python_I3681               = "Colt Python Silhouette Model I3681",
-    DisplayName_Colt_Python_I3682               = "Colt Python Target Model I3682",
-    DisplayName_Colt_Python_I3683               = "Colt Python Target Model I3683",
-    DisplayName_Colt_Python_I3840               = "Colt Python Model I3840",
-
-    -- Colt Peacemaker
-    DisplayName_GroupColt_SAA                   = "Colt Peacemaker SAA",
-    DisplayName_Colt_SAA_P1840                  = "Colt Peacemaker SAA Model P1840",
-    DisplayName_Colt_SAA_P1841                  = "Colt Peacemaker SAA Model P1841",
-    DisplayName_Colt_SAA_P1850                  = "Colt Peacemaker SAA Model P1850",
-    DisplayName_Colt_SAA_P1856                  = "Colt Peacemaker SAA Model P1856",
-    DisplayName_Colt_SAA_P1870                  = "Colt Peacemaker SAA Model P1870",
-
-
-    -- Ruger Blackhawk
-    DisplayName_GroupRuger_Blackhawk            = "Ruger Blackhawk",
-    DisplayName_Ruger_Blackhawk_M0306           = "Ruger Blackhawk Model 0306",
-    DisplayName_Ruger_Blackhawk_M0309           = "Ruger Blackhawk Model 0309",
-    DisplayName_Ruger_Blackhawk_M0316           = "Ruger Blackhawk Model 0316",
-    DisplayName_Ruger_Blackhawk_M0319           = "Ruger Blackhawk Model 0319",
-    DisplayName_Ruger_Blackhawk_M0405           = "Ruger Blackhawk Model 0405",
-    DisplayName_Ruger_Blackhawk_M0406           = "Ruger Blackhawk Model 0406",
-    DisplayName_Ruger_Blackhawk_M0445           = "Ruger Blackhawk Model 0445",
-    DisplayName_Ruger_Blackhawk_M0455           = "Ruger Blackhawk Model 0455",
-    DisplayName_Ruger_Blackhawk_M0460           = "Ruger Blackhawk Model 0460",
-    DisplayName_Ruger_Blackhawk_M0465           = "Ruger Blackhawk Model 0465",
-    DisplayName_Ruger_Blackhawk_M0505           = "Ruger Blackhawk Model 0505",
-
-
-
-    -- Ruger GP100
-    DisplayName_GroupRuger_GP100                = "Ruger GP100",
-    DisplayName_Ruger_GP100_M1702               = "Ruger GP100 Model 1702",
-    DisplayName_Ruger_GP100_M1704               = "Ruger GP100 Model 1704",
-    DisplayName_Ruger_GP100_M1705               = "Ruger GP100 Model 1705",
-    DisplayName_Ruger_GP100_M1707               = "Ruger GP100 Model 1707",
-    DisplayName_Ruger_GP100_M1715               = "Ruger GP100 Model 1715",
-
-
-    -- Ruger Redhawk
-    DisplayName_GroupRuger_Redhawk              = "Ruger Redhawk",
-    DisplayName_Ruger_Redhawk_M5041             = "Ruger Redhawk Model 5041",
-    DisplayName_Ruger_Redhawk_M5043             = "Ruger Redhawk Model 5043",
-    DisplayName_Ruger_Redhawk_M5044             = "Ruger Redhawk Model 5044",
-    DisplayName_Ruger_Redhawk_M5050             = "Ruger Redhawk Model 5050",
-    DisplayName_Ruger_Redhawk_M5051             = "Ruger Redhawk Model 5051",
-    DisplayName_Ruger_Redhawk_M5059             = "Ruger Redhawk Model 5059",
-    DisplayName_Ruger_Redhawk_M5060             = "Ruger Redhawk Model 5060",
-    DisplayName_Ruger_Redhawk_M5014             = "Ruger Redhawk Model 5014",
-    DisplayName_Ruger_Redhawk_M5028             = "Ruger Redhawk Model 5028",
-    DisplayName_Ruger_Redhawk_M5030             = "Ruger Redhawk Model 5030",
-    DisplayName_Ruger_Redhawk_M5031             = "Ruger Redhawk Model 5031",
-    DisplayName_Ruger_Redhawk_M5058             = "Ruger Redhawk Model 5058",
-
-
-    -- Ruger Super Redhawk
-    DisplayName_GroupRuger_SuperRedhawk         = "Ruger Super Redhawk",
-    DisplayName_Ruger_SuperRedhawk_M5501        = "Ruger Super Redhawk Model 5501",
-    DisplayName_Ruger_SuperRedhawk_M5502        = "Ruger Super Redhawk Model 5502",
-    DisplayName_Ruger_SuperRedhawk_M5505        = "Ruger Super Redhawk Model 5505",
-    DisplayName_Ruger_SuperRedhawk_M5507        = "Ruger Super Redhawk Model 5507",
-    DisplayName_Ruger_SuperRedhawk_M5525        = "Ruger Super Redhawk Model 5525",
-    DisplayName_Ruger_SuperRedhawk_M5517        = "Ruger Super Redhawk Model 5517",
-    DisplayName_Ruger_SuperRedhawk_M5520        = "Ruger Super Redhawk Hunter Model 5520",
-    DisplayName_Ruger_SuperRedhawk_M5521        = "Ruger Super Redhawk Model 5521",
-    DisplayName_Ruger_SuperRedhawk_M5522        = "Ruger Super Redhawk Model 5522",
-    DisplayName_Ruger_SuperRedhawk_M5301        = "Ruger Super Redhawk Alaskan Model 5301",
-    DisplayName_Ruger_SuperRedhawk_M5302        = "Ruger Super Redhawk Alaskan Model 5302",
-    DisplayName_Ruger_SuperRedhawk_M5303        = "Ruger Super Redhawk Alaskan Model 5303",
-
-
-    -- SmithWesson 10
-    DisplayName_GroupSmithWesson_Model_10           = "S&W Model 10",
-    DisplayName_SmithWesson_Model_10_M101A          = "S&W Model 10-1 Military & Police",
-    DisplayName_SmithWesson_Model_10_OHPC           = "S&W Model 10-6 Ohio Highway Patrol Commemorative",
-    DisplayName_SmithWesson_Model_10_NYSP           = "S&W Model 10-6 New York State Police",
-    DisplayName_SmithWesson_Model_10_MPDC           = "S&W Model 10-8 Washington Metropolitan Police Commemorative",
-    DisplayName_SmithWesson_Model_10_M100104        = "S&W Model 10-8 Military & Police 100104",
-    DisplayName_SmithWesson_Model_10_M100108        = "S&W Model 10-8 Military & Police 100108",
-    DisplayName_SmithWesson_Model_10_M100121        = "S&W Model 10-8 Military & Police 100121",
-    DisplayName_SmithWesson_Model_10_M100123        = "S&W Model 10-8 Military & Police 100123",
-    DisplayName_SmithWesson_Model_10_M100124        = "S&W Model 10-10 Fairfax County Police Commemorative 100124",
-    DisplayName_SmithWesson_Model_10_M100139        = "S&W Model 10-13 1899 Commemorative 100139",
-
-
-    -- SmithWesson 19
-    DisplayName_GroupSmithWesson_Model_19            = "S&W Model 19",
-    DisplayName_SmithWesson_Model_19_KYSP            = "S&W Model 19-4 Kentucky State Police Commemorative",
-    DisplayName_SmithWesson_Model_19_M100730         = "S&W Model 19-6 'Hands off' 100730",
-
-
-    -- SmithWesson 25
-    DisplayName_GroupSmithWesson_Model_25            = "S&W Model 25",
-    DisplayName_SmithWesson_Model_25_M100905         = "S&W Model 25-5 'The Horse Thief' 100905",
-
-
-    -- SmithWesson 29
-    DisplayName_GroupSmithWesson_Model_29            = "S&W Model 29",
-    DisplayName_SmithWesson_Model_29_M101264         = "S&W Model 29-5 Magna Classic 101264",
-    DisplayName_SmithWesson_Model_29_M101207         = "S&W Model 29-5 'The Hostiles' 101207",
-    DisplayName_SmithWesson_Model_29_M101207B         = "S&W Model 29-5 'The Attack' 101207",
-
-
-    -- SmithWesson 36
-    DisplayName_GroupSmithWesson_Model_36            = "S&W Model 36",
-    DisplayName_SmithWesson_Model_36_M361A           = "S&W Model 36-1 Chief's Special",
-    DisplayName_SmithWesson_Model_36_US361           = "S&W Model 36-1 U.S. Marked Chief's Special",
-    DisplayName_SmithWesson_Model_36_M101549         = "S&W Model 36 Target 101549",
-    DisplayName_SmithWesson_Model_36_M161491         = "S&W Model 36-10 Gold 161491",
-    DisplayName_SmithWesson_Model_36_M161492         = "S&W Model 36-10 Texas Hold'Em 161492",
-
-
-
-    -- SmithWesson 610
-    DisplayName_GroupSmithWesson_Model_610            = "S&W Model 610",
-    DisplayName_SmithWesson_Model_610_M103571         = "S&W Model 610-2 103571",
-    DisplayName_SmithWesson_Model_610_M148120         = "S&W Model 610-2 Lew Horton Edition 148120",
-    DisplayName_SmithWesson_Model_610_M12462          = "S&W Model 610-4 12462",
-    DisplayName_SmithWesson_Model_610_M12463          = "S&W Model 610-4 12463",
-    DisplayName_SmithWesson_Model_610_M163426         = "S&W Model 310-4 Nightguard 163426",
-
-
-    -- Taurus Raging Bull
-    DisplayName_GroupTaurus_RagingBull            = "Taurus Raging Bull",
-    DisplayName_Taurus_RagingBull_M22H          = "Taurus Raging Hornet Model 22H",
-    DisplayName_Taurus_RagingBull_M30CSS10      = "Taurus Raging Thirty Model 30CSS10",
-    DisplayName_Taurus_RagingBull_M416SS6       = "Taurus Raging Bull Model 416SS6",
-    DisplayName_Taurus_RagingBull_M444B6        = "Taurus Raging Bull Model 444B6",
-    DisplayName_Taurus_RagingBull_M444B8        = "Taurus Raging Bull Model 444B8",
-    DisplayName_Taurus_RagingBull_M444Mulit     = "Taurus Raging Bull Model 444Mulit",
-    DisplayName_Taurus_RagingBull_M444SS6       = "Taurus Raging Bull Model 444SS6",
-    DisplayName_Taurus_RagingBull_M444SS8       = "Taurus Raging Bull Model 444SS8",
-    DisplayName_Taurus_RagingBull_M454B6        = "Taurus Raging Bull Model 454B6",
-    DisplayName_Taurus_RagingBull_M454B8        = "Taurus Raging Bull Model 454B8",
-    DisplayName_Taurus_RagingBull_M454SS5M      = "Taurus Raging Bull Model 454SS5M",
-    DisplayName_Taurus_RagingBull_M454SS6M      = "Taurus Raging Bull Model 454SS6M",
-    DisplayName_Taurus_RagingBull_M454SS8M      = "Taurus Raging Bull Model 454SS8M",
-    DisplayName_Taurus_RagingBull_M454SS6M      = "Taurus Raging Bull Model 454SS6M",
-    DisplayName_Taurus_RagingBull_M480SS5M      = "Taurus Raging Bull Model 480SS5M",
-    DisplayName_Taurus_RagingBull_M480SS6M      = "Taurus Raging Bull Model 480SS6M",
-    DisplayName_Taurus_RagingBull_M480SS8M      = "Taurus Raging Bull Model 480SS8M",
-
-
-    ----------------------------------------------------------------------------
-    -- AMT AutomagV
-    DisplayName_Group_AMT_Automag               = "AMT Automag",
-    DisplayName_AMT_AutomagV                    = "AMT AutomagV",
-
-
-    -- Beretta 92
-    DisplayName_Group_Beretta_92                = "Beretta 92",
-    DisplayName_Beretta_92_M92                  = "Beretta 92",
-    DisplayName_Beretta_92_M92S                 = "Beretta 92S",
-    DisplayName_Beretta_92_M92SB                = "Beretta 92SB",
-    DisplayName_Beretta_92_M92SBCompact         = "Beretta 92SB Compact",
-    DisplayName_Beretta_92_M92F                 = "Beretta 92F",
-    DisplayName_Beretta_92_M92FS                = "Beretta 92FS",
-    DisplayName_Beretta_92_M9                   = "Beretta M9",
-    DisplayName_Beretta_92_M9A1                 = "Beretta M9A1",
-    DisplayName_Beretta_92_M9A3                 = "Beretta M9A3",
-    DisplayName_Beretta_92_M9_22                = "Beretta M9 .22",
-
-
-    -- BrenTen
-    DisplayName_Group_DornausDixon_BrenTen      = "BrenTen",
-    DisplayName_DornausDixon_BrenTen            = "BrenTen",
-
-
-    -- Browning P-35 HiPower
-    DisplayName_Group_Browning_HiPower          = "Browning P-35 HiPower",
-    DisplayName_Browning_HiPower_Mark1          = "Browning P-35 Mk1 HiPower",
-    DisplayName_Browning_HiPower_P35            = "Browning P-35 HiPower",
-
-
-    -- Colt 1911
-    DisplayName_Group_Colt_1911                 = "Colt M1911",
-    DisplayName_Colt_1911_M1911                 = "Colt M1911",
-    DisplayName_Colt_1911_M1911A1               = "Colt M1911A1",
-
-    DisplayName_Colt_1911_Officers_M01986       = "Colt M1911 Double Diamond Officers Model 01986",
-
-
-    -- Desert Eagle
-    DisplayName_Group_IMI_DesertEagle           = "IMI Desert Eagle",
-    DisplayName_IMI_DesertEagle_VII             = "IMI Desert Eagle VII",
-    DisplayName_IMI_DesertEagle_XIX             = "IMI Desert Eagle XIX",
-
-
-    -- Glock 17
-    DisplayName_Group_Glock_17                  = "Glock-17",
-
-
-    -- Glock 20
-    DisplayName_Group_Glock_20                  = "Glock-20",
-
-
-    -- Glock 21
-    DisplayName_Group_Glock_21                  = "Glock-21",
-
-
-    -- Glock 22
-    DisplayName_Group_Glock_22                  = "Glock-22",
-
-
-    -- HecklerKoch Mark23
-    DisplayName_Group_HecklerKoch_Mark23        = "H&K Mark23",
-
-
-    -- Kahr CT-Series
-    DisplayName_Group_Kahr_CT_Series            = "Kahr CT-Series",
-    DisplayName_Kahr_CT_Series_CT3833           = "Kahr CT380 CT-Series Model CT3833",
-    DisplayName_Kahr_CT_Series_CT9093BCF        = "Kahr CT9 CT-Series Model CT9093BCF",
-    DisplayName_Kahr_CT_Series_CT4043           = "Kahr CT40 CT-Series Model CT4043",
-    DisplayName_Kahr_CT_Series_CT4543           = "Kahr CT45 CT-Series Model CT4543",
-
-
-    -- Kahr P-Series
-    DisplayName_Group_Kahr_P_Series             = "Kahr P-Series",
-
-
-    -- KalTec P32
-    DisplayName_Group_KalTec_P32                = "KalTec P32",
-
-
-    -- Ruger MarkII
-    DisplayName_Group_Ruger_MarkII              = "Ruger MarkII",
-
-
-    -- Ruger SR Series
-    DisplayName_Group_Ruger_SR_Series           = "Ruger SR Series",
-
-
-    -- SigSauer P226
-    DisplayName_Group_SigSauer_P226             = "SigSauer P226",
-
-
-    -- Taurus PT38S
-    DisplayName_Group_Taurus_PT38S              = "Taurus PT38S",
-
-
-    -- Taurus Millennium
-    DisplayName_Group_Taurus_Millennium         = "Taurus Millennium",
-
-
-    -- Walther P22
-    DisplayName_Group_Walther_P22               = "Walther P22",
-
-
-    -- Walther PP Series
-    DisplayName_Group_Walther_PP_Series         = "Walther PP Series",
-
-
-    -- Springfield XD Series (HS2000)
-    DisplayName_Group_Springfield_XD            = "Springfield XD Series",
-
-
-    -- Springfield 1911
-    DisplayName_Group_Springfield_1911          = "Springfield 1911",
-    DisplayName_Springfield_1911_PI9122L        = "Springfield 1911 Range Officer Model PI9122L",
-
-
-    ----------------------------------------------------------------------------
-    -- Beretta 93R
-    DisplayName_Group_Beretta_93R               = "Beretta 93R",
-    DisplayName_Beretta_93R                     = "Beretta 93R",
-
-
-    -- Glock 18
-    DisplayName_Group_Glock_18                  = "Glock-18",
-    DisplayName_Glock_18_Gen1                   = "Glock-18 1st Gen",
-    DisplayName_Glock_18_Gen2C                  = "Glock-18C 2nd Gen",
-    DisplayName_Glock_18_Gen3C                  = "Glock-18C 3rd Gen",
-
-
-    ----------------------------------------------------------------------------
-    -- American-180
-    DisplayName_Group_AmericanArms_AM180        = "American-180",
-    DisplayName_AmericanArms_AM180_M1           = "American-180 M1",
-    DisplayName_AmericanArms_AM180_M2           = "American-180 M2",
-
-
-    ----------------------------------------------------------------------------
-    -- FN P90
-    DisplayName_Group_FNHerstal_P90             = "FN P90",
-    DisplayName_FNHerstal_P90_Ori               = "FN P90",
-    DisplayName_FNHerstal_P90_TR                = "FN P90 FlatTop",
-
-
-    ----------------------------------------------------------------------------
-    -- MP5
-    DisplayName_Group_HecklerKoch_MP5           = "H&K MP5",
-
-
-    ----------------------------------------------------------------------------
-    -- UMP
-    DisplayName_Group_HecklerKoch_UMP           = "H&K UMP",
-
-
-    ----------------------------------------------------------------------------
-    -- Kriss Vector
-    DisplayName_Group_Kriss_Vector              = "Kriss Vector",
-    DisplayName_Kriss_Vector_SMG1               = "Kriss Vector SMG",
-    DisplayName_Kriss_Vector_CRB1               = "Kriss Vector CRB",
-
-
-    ----------------------------------------------------------------------------
-    -- AutoOrdnance Thompson
-    DisplayName_Group_AutoOrdnance_Thompson     = "Thompson",
-    DisplayName_AutoOrdnance_Thompson_M1928A1   = "Thompson M1928A1",
-    DisplayName_AutoOrdnance_Thompson_M1        = "Thompson M1",
-    DisplayName_AutoOrdnance_Thompson_M1A1      = "Thompson M1A1",
-
-
-    ----------------------------------------------------------------------------
-    -- MAC-10
-    DisplayName_Group_MAC_Mac10                 = "MAC-10",
-    DisplayName_MAC_Mac10_M1045                 = "MAC-10/45",
-    DisplayName_MAC_Mac10_M109                  = "MAC-10/9",
-
-
-    ----------------------------------------------------------------------------
-    -- MAC-11
-    DisplayName_Group_MAC_Mac11                 = "MAC-11",
-    DisplayName_MAC_Mac10_M11380                = "MAC-11",
-
-
-    ----------------------------------------------------------------------------
-    -- IMI Uzi
-    DisplayName_Group_IMI_Uzi                   = "IMI Uzi",
-    DisplayName_IMI_Uzi_SMG45                   = "IMI Uzi SMG/45",
-    DisplayName_IMI_Uzi_SMG9                    = "IMI Uzi SMG/9",
-    DisplayName_IMI_Uzi_MODELA9                 = "IMI Uzi Model A",
-
-
-    ----------------------------------------------------------------------------
-    -- Armalite AR-10
-    DisplayName_Group_Armalite_AR10             = "Armalite AR-10",
-    DisplayName_Armalite_AR10_Hollywood         = "Armalite AR-10 Hollywood",
-    DisplayName_Armalite_AR10_Sudanese          = "Armalite AR-10 Sudanese",
-    DisplayName_Armalite_AR10_Sudanese_762x39mm = "Armalite AR-10 Sudanese 7.62x39mm Prototype",
-    DisplayName_Armalite_AR10_Sudanese_Carbine  = "Armalite AR-10 Sudanese Carbine",
-    DisplayName_Armalite_AR10_Portuguese        = "Armalite AR-10 Portuguese",
-    DisplayName_Armalite_AR10_ModelA            = "Armalite AR-10 Model A",
-
-
-
-    ----------------------------------------------------------------------------
-    -- CAR15/M16 family, Military variants
-    DisplayName_Armalite_AR15                   = "Armalite AR-15",
-    DisplayName_Colt_CAR15_M601                 = "Colt AR-15 Model 01",
-    DisplayName_Colt_CAR15_M604                   = "Colt M16 Model 604",
-    DisplayName_Colt_CAR15_M603                   = "Colt M16A1 Model 603",
-    DisplayName_Colt_CAR15_M605A                  = "Colt CAR-15 Carbine Model 605A",
-    DisplayName_Colt_CAR15_M605B                  = "Colt CAR-15 Carbine Model 605B",
-    DisplayName_Colt_CAR15_M607                   = "Colt CAR-15 SMG Model 607",
-    DisplayName_Colt_CAR15_M645                   = "Colt M16A2 Model 645",
-    DisplayName_Colt_CAR15_M646                   = "Colt M16A3 Model 646",
-    DisplayName_Colt_CAR15_M653                   = "Colt M16A2 Carbine Model 653",
-    DisplayName_Colt_CAR15_M945                   = "Colt M16A4 Model 945",
-    DisplayName_Colt_CAR15_M920                   = "Colt M4 Carbine Model 920",
-    DisplayName_Colt_CAR15_M921                   = "Colt M4A1 Carbine Model 921",
-    DisplayName_Colt_CAR15_M933                  = "Colt M4 Commando Model 933",
-    DisplayName_Colt_CAR15_M935                  = "Colt M4 Commando Model 935",
-	
-	----------------------------------------------------------------------------
-    -- Type56 family
-    DisplayName_Norinco_Type56             		= "Norinco Type 56",
-    DisplayName_Norinco_Type56_Type56-I    		= "Norinco Type 56-I",
-    DisplayName_Norinco_Type56_Type56S-I    	= "Norinco Type 56 Sporter I",
-    DisplayName_Norinco_Type56_Type56-II   		= "Norinco Type 56-II",
-    DisplayName_Norinco_Type56_Type56-3   		= "Norinco Type 56-3",
-    DisplayName_Norinco_Type56_Type56-4   		= "Norinco Type 56-4",
-    DisplayName_Norinco_Type56_Type56C   		= "Norinco Type 56C",
-    DisplayName_Norinco_Type56_Type56S   		= "Norinco Type 56 Sporter",
-    DisplayName_Norinco_Type56_Type56SGalil		= "Norinco Type 56 Sporter Galil Sidefolder",
-    DisplayName_Norinco_Type56_Type56The Legend	= "Norinco Type 56 The Legend",
-    DisplayName_Norinco_Type56_Type56M			= "Norinco Type 56M",
-    DisplayName_Norinco_Type56_Type87S			= "Norinco Type 87 Sporter",
-    DisplayName_Norinco_Type56_Type87SNM		= "Norinco Type 87 Sporter National Match",
-    DisplayName_Norinco_Type56_Type84      		= "Norinco Type 84",
-    DisplayName_Norinco_Type56_Type84-1    		= "Norinco Type 84-1",
-    DisplayName_Norinco_Type56_Type84-2    		= "Norinco Type 84-2",
-    DisplayName_Norinco_Type56_Type84-3    		= "Norinco Type 84-3",
-    DisplayName_Norinco_Type56_Type84-4    		= "Norinco Type 84-4",
-    DisplayName_Norinco_Type56_Type84-5    		= "Norinco Type 84-5",
-    DisplayName_Norinco_Type56_Type84S    		= "Norinco Type 84 Sporter",
-
-	----------------------------------------------------------------------------
-    -- KL762 family
-    DisplayName_DIO_KL762             			= "DIO KLS-7.62",
-    DisplayName_DIO_KL762_KLF            		= "DIO KLF-7.62",
-    DisplayName_DIO_KL762_KLT            		= "DIO KLT-7.62",
-
-	----------------------------------------------------------------------------
-    -- MAZ family
-    DisplayName_MIC_MAZ             			= "Military Industry Corporation MAZ",
-
-	----------------------------------------------------------------------------
-    -- ASh78 family
-    DisplayName_PolAr_ASh78        				= "Polican Arsenal Automatiku Shqiptar 78-1",
-    DisplayName_PolAr_ASh78_ASh78_2     		= "Polican Arsenal Automatiku Shqiptar 78-2",
-    DisplayName_PolAr_ASh78_ASh78_3        		= "Polican Arsenal Automatiku Shqiptar 78-3",
-    DisplayName_PolAr_ASh78_ASh82        		= "Polican Arsenal Automatiku Shqiptar 82",
-
-	----------------------------------------------------------------------------
-    -- AK-47 family
-    DisplayName_Izhmash_AK_47      				= "Izhmash AK-47 Type 1",
-    DisplayName_Izhmash_AK_47_AKS  				= "Izhmash AKS-47 Type 1",
-    DisplayName_Izhmash_AK_47_Type_2			= "Izhmash AK-47 Type 2",
-    DisplayName_Izhmash_AK_47_AKS_Type_2		= "Izhmash AKS-47 Type 2",
-    DisplayName_Izhmash_AK_47_Type_3			= "Izhmash AK-47 Type 3",
-    DisplayName_Izhmash_AK_47_AKS_Type_3		= "Izhmash AKS-47 Type 3",
-    DisplayName_Izhmash_AK_47_AKM				= "Izhmash AKM",
-    DisplayName_Izhmash_AK_47_AKMS				= "Izhmash AKMS",
-    DisplayName_Izhmash_AK_47_AKMN				= "Izhmash AKMN",
-    DisplayName_Izhmash_AK_47_AKMSN				= "Izhmash AKMSN",
-    DisplayName_Izhmash_AK_47_AKML				= "Izhmash AKML",
-    DisplayName_Izhmash_AK_47_AKMSL				= "Izhmash AKMSL",
-    DisplayName_Izhmash_AK_47_RPK				= "Izhmash RPK",
-    DisplayName_Izhmash_AK_47_RPKS				= "Izhmash RPKS",
-    DisplayName_Izhmash_AK_47_RPKN				= "Izhmash RPKN",
-    DisplayName_Izhmash_AK_47_RPKSN				= "Izhmash RPKSN",
-    DisplayName_Izhmash_AK_47_RPKL				= "Izhmash RPKL",
-    DisplayName_Izhmash_AK_47_RPKSL				= "Izhmash RPKSL",
-    DisplayName_Izhmash_AK_47_AK_74				= "Izhmash AK-74",
-    DisplayName_Izhmash_AK_47_AKS_74			= "Izhmash AKS-74",
-    DisplayName_Izhmash_AK_47_AK_74N			= "Izhmash AK-74N",
-    DisplayName_Izhmash_AK_47_AKS_74N			= "Izhmash AKS-74N",
-    DisplayName_Izhmash_AK_47_AK_74M			= "Izhmash AK-74M",
-    DisplayName_Izhmash_AK_47_AK_74MN			= "Izhmash AK-74MN",
-    DisplayName_Izhmash_AK_47_AKS_74M			= "Izhmash AKS-74M",
-    DisplayName_Izhmash_AK_47_AKS_74MN			= "Izhmash AKS-74MN",
-    DisplayName_Izhmash_AK_47_RPK_74			= "Izhmash RPK-74",
-    DisplayName_Izhmash_AK_47_PRK_74N			= "Izhmash RPK-74N",
-    DisplayName_Izhmash_AK_47_RPKS_74			= "Izhmash RPKS-74",
-    DisplayName_Izhmash_AK_47_PRKS_74N			= "Izhmash RPKS-74N",
-    DisplayName_Izhmash_AK_47_AKS_74U			= "Izhmash AK-74U",
-    DisplayName_Izhmash_AK_47_AKS_74UN			= "Izhmash AK-74UN",
-	
-	----------------------------------------------------------------------------
-    -- AK-100/200/rest family
-    DisplayName_Kalashnikov_AK_101				= "Kalashnikov AK-101"
-    DisplayName_Kalashnikov_AK_101_AK_101_1		= "Kalashnikov AK-101-1",
-    DisplayName_Kalashnikov_AK_101_AK_101_2		= "Kalashnikov AK-101-2",
-    DisplayName_Kalashnikov_AK_101_AK_102		= "Kalashnikov AK-102",
-    DisplayName_Kalashnikov_AK_101_AK_101_1		= "Kalashnikov AK-102-1",
-    DisplayName_Kalashnikov_AK_101_AK_101_2		= "Kalashnikov AK-102-2",
-    DisplayName_Kalashnikov_AK_101_AK_103		= "Kalashnikov AK-103",
-    DisplayName_Kalashnikov_AK_101_AK_103_1		= "Kalashnikov AK-103-1",
-    DisplayName_Kalashnikov_AK_101_AK_103_2		= "Kalashnikov AK-103-2",
-    DisplayName_Kalashnikov_AK_101_AK_104		= "Kalashnikov AK-104",
-    DisplayName_Kalashnikov_AK_101_AK_104_1		= "Kalashnikov AK-104-1",
-    DisplayName_Kalashnikov_AK_101_AK_104_2		= "Kalashnikov AK-104-2",
-    DisplayName_Kalashnikov_AK_101_AK_100		= "Kalashnikov AK-100",
-    DisplayName_Kalashnikov_AK_101_AK_100_1		= "Kalashnikov AK-100-1",
-    DisplayName_Kalashnikov_AK_101_AK_100_2		= "Kalashnikov AK-100-2",
-    DisplayName_Kalashnikov_AK_101_AK_105		= "Kalashnikov AK-105",
-    DisplayName_Kalashnikov_AK_101_AK_105_1		= "Kalashnikov AK-105-1",
-    DisplayName_Kalashnikov_AK_101_AK_105_2		= "Kalashnikov AK-105-2",
-    DisplayName_Kalashnikov_AK_101_RPK_201		= "Kalashnikov RPK_201",
-    DisplayName_Kalashnikov_AK_101_RPK_203		= "Kalashnikov RPK_203",
-    DisplayName_Kalashnikov_AK_101_AK_200		= "Kalashnikov AK-200",
-    DisplayName_Kalashnikov_AK_101_AK_201		= "Kalashnikov AK-201",
-    DisplayName_Kalashnikov_AK_101_AK_202		= "Kalashnikov AK-202",
-    DisplayName_Kalashnikov_AK_101_AK_203		= "Kalashnikov AK-203",
-    DisplayName_Kalashnikov_AK_101_AK_204		= "Kalashnikov AK-204",
-    DisplayName_Kalashnikov_AK_101_AK_205		= "Kalashnikov AK-205",
-    DisplayName_Kalashnikov_AK_101_AK_107		= "Kalashnikov AK-107",
-    DisplayName_Kalashnikov_AK_101_AK_108		= "Kalashnikov AK-108",
-    DisplayName_Kalashnikov_AK_101_AK_109		= "Kalashnikov AK-109",
-    DisplayName_Kalashnikov_AK_101_AK_12		= "Kalashnikov AK-12",
-    DisplayName_Kalashnikov_AK_101_AK_12K		= "Kalashnikov AK-12K",
-    DisplayName_Kalashnikov_AK_101_AK_15		= "Kalashnikov AK-15",
-    DisplayName_Kalashnikov_AK_101_AK_15K		= "Kalashnikov AK-15K",
-    DisplayName_Kalashnikov_AK_101_RPK-16		= "Kalashnikov RPK-16",
-    DisplayName_Kalashnikov_AK_101_RPK-16K		= "Kalashnikov RPK-16K",
-    DisplayName_Kalashnikov_AK_101_AK_308		= "Kalashnikov AK-308",
-	
-    -- Magazine Groups
-    DisplayName_MagGroup_AutomagV                = "AutomagV Magazine (.50AE)",
-    DisplayName_Mag_AutomagV_x5                  = "AutomagV Magazine x5 (.50AE)",
-
-    DisplayName_MagGroup_Beretta_92_early        = "Beretta 92 Magazine - early model (9x19mm)",
-    DisplayName_Mag_Beretta_92_early_x15         = "Beretta 92 Magazine x15 - early model (9x19mm)",
-
-    DisplayName_MagGroup_Beretta_92              = "Beretta 92 Magazine (9x19mm)",
-    DisplayName_Mag_Beretta_92_x15               = "Beretta 92 Magazine x15 (9x19mm)",
-    DisplayName_Mag_Beretta_92_x32               = "Beretta 92 Magazine x32 (9x19mm)",
-
-    DisplayName_MagGroup_BrenTen                 = "BrenTen Magazine (10x25mm)",
-    DisplayName_Mag_BrenTen_x12                  = "BrenTen Magazine x12 (10x25mm)",
-
-    DisplayName_MagGroup_Browning_HiPower        = "Browning HiPower Magazine (9x19mm)",
-    DisplayName_Mag_Browning_HiPower_x13         = "Browning HiPower Magazine x13 (9x19mm)",
-
-    DisplayName_MagGroup_1911                    = "1911 Magazine (.45ACP)",
-    DisplayName_Mag_1911_x7                      = "1911 Magazine x7 (.45ACP)",
-
-    DisplayName_MagGroup_1911_9x19mm             = "1911 Magazine (9x19mm)",
-    DisplayName_Mag_1911_9x19mm_x9               = "1911 Magazine x9 (9x19mm)",
-
-    DisplayName_MagGroup_1911_10x25mm            = "1911 Magazine (10x25mm)",
-    DisplayName_Mag_1911_10x25mm_x9              = "1911 Magazine x9 (10x25mm)",
-
-    DisplayName_MagGroup_1911_38Super            = "1911 Magazine (.38 Super)",
-    DisplayName_Mag_1911_38Super_x9              = "1911 Magazine x9 (.38 Super)",
-
-
-    DisplayName_MagGroup_CZ75_9x19mm             = "CZ75 Magazine (9x19mm)",
-    DisplayName_Mag_CZ75_9x19mm_x15              = "CZ75 Magazine x15 (9x19mm)",
-
-    DisplayName_MagGroup_DesertEagle_44Magnum    = "Desert Eagle Magazine (.44 Magnum)",
-    DisplayName_Mag_DesertEagle_44Magnum_x8      = "Desert Eagle Magazine x8 (.44 Magnum)",
-
-    DisplayName_MagGroup_DesertEagle_50AE        = "Desert Eagle Magazine (.50AE)",
-    DisplayName_Mag_DesertEagle_50AE_x7           = "Desert Eagle Magazine x7 (.50AE)",
-
-    DisplayName_MagGroup_FN57                    = "FN Magazine (5.7x25mm)",
-    DisplayName_Mag_FN57_x20                       = "FN57 Magazine x20 (5.7x25mm)",
-
-    DisplayName_MagGroup_Glock_9x19mm            = "Glock Magazine (9x19mm)",
-    DisplayName_Mag_Glock_9x19mm_x10             = "Glock Magazine x10 (9x19mm)",
-    DisplayName_Mag_Glock_9x19mm_x17             = "Glock Magazine x17 (9x19mm)",
-    DisplayName_Mag_Glock_9x19mm_Gen1_x17        = "Glock Magazine x17 (9x19mm)",
-    DisplayName_Mag_Glock_9x19mm_x33             = "Glock Magazine x33 (9x19mm)",
-
-    DisplayName_MagGroup_Glock_10x25mm           = "Glock Magazine (10x25mm)",
-    DisplayName_Mag_Glock_10x25mm_x10             = "Glock Magazine x10 (10x25mm)",
-    DisplayName_Mag_Glock_10x25mm_x15             = "Glock Magazine x15 (10x25mm)",
-    DisplayName_Mag_Glock_10x25mm_Gen1_x15        = "Glock Magazine x15 (10x25mm)",
-
-    DisplayName_MagGroup_Glock_45ACP            = "Glock Magazine (.45ACP)",
-    DisplayName_Mag_Glock_45ACP_x10             = "Glock Magazine x10 (.45ACP)",
-    DisplayName_Mag_Glock_45ACP_x13             = "Glock Magazine x13 (.45ACP)",
-    DisplayName_Mag_Glock_45ACP_Gen1_x13        = "Glock Magazine x13 (.45ACP)",
-    DisplayName_Mag_Glock_45ACP_x30             = "Glock Magazine x30 (.45ACP)",
-
-    DisplayName_MagGroup_Glock_40SW            = "Glock Magazine (.40S&W)",
-    DisplayName_Mag_Glock_40SW_x10             = "Glock Magazine x10 (.40S&W)",
-    DisplayName_Mag_Glock_40SW_x15             = "Glock Magazine x15 (.40S&W)",
-    DisplayName_Mag_Glock_40SW_Gen1_x15        = "Glock Magazine x15 (.40S&W)",
-
-    DisplayName_MagGroup_Mark23                 = "Mark23 Magazine (.45ACP)",
-    DisplayName_Mag_Mark23_x12                  = "Mark23 Magazine x12 (.45ACP)",
-
-    DisplayName_MagGroup_Mark23                 = "Mark23 Magazine (.45ACP)",
-    DisplayName_Mag_Mark23_x12                  = "Mark23 Magazine x12 (.45ACP)",
-
-    DisplayName_MagGroup_CT380                  = "CT380 Magazine",
-    DisplayName_Mag_CT380_x7                    = "CT380 Magazine x7 (.380ACP)",
-
-    DisplayName_MagGroup_CT9                    = "CT9 Magazine",
-    DisplayName_Mag_CT9_x8                      = "CT9 Magazine x8 (9x19mm)",
-
-    DisplayName_MagGroup_CT40                   = "CT40 Magazine",
-    DisplayName_Mag_CT40_x7                     = "CT40 Magazine x7 (.40S&W)",
-
-    DisplayName_MagGroup_CT45                   = "CT45 Magazine",
-    DisplayName_Mag_CT45_x7                     = "CT45 Magazine x7 (.45ACP)",
-
-    DisplayName_MagGroup_AR10                   = "AR-10 Magazine (7.62x51mm)",
-    DisplayName_Mag_AR10_x20                    = "AR-10 Magazine x20 (7.62x51mm)",
-
-    DisplayName_MagGroup_AR10_762x39mm          = "AR-10 Magazine (7.62x39mm)",
-    DisplayName_Mag_AR10_762x39mm_x20           = "AR-10 Magazine x20 (7.62x39mm)",
-
-    DisplayName_MagGroup_STANAG                  = "STANAG Magazine (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x5                    = "STANAG Magazine x5 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x10                   = "STANAG Magazine x10 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x20                   = "STANAG Magazine x20 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x30                   = "STANAG Magazine x30 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x40                   = "STANAG Magazine x40 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x50                   = "STANAG Magazine x50 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x60                   = "STANAG Casket Magazine x60 (5.56x45mm NATO)",
-    DisplayName_Mag_STANAG_x100                  = "STANAG Casket Magazine x100 (5.56x45mm NATO)",
-
-    DisplayName_MagGroup_AK                      = "AK Magazine (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x10                       = "AK Magazine Steel x10 (7.62x39mm NATO)",
-    DisplayName_Mag_AK_x10_B                     = "AK Magazine Bakelite x10 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x10_P                     = "AK Magazine Plastic x10 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x20                       = "AK Magazine Steel x20 (7.62x39mm NATO)",
-    DisplayName_Mag_AK_x20_B                     = "AK Magazine Bakelite x20 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x20_P                     = "AK Magazine Plastic x20 (7.62x39mm NATO)",
-    DisplayName_Mag_AK_x30                       = "AK Magazine Steel x30 (7.62x39mm NATO)",
-    DisplayName_Mag_AK_x30_B                     = "AK Magazine Bakelite x30 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x30_P                     = "AK Magazine Plastic x30 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x40                       = "AK Magazine Steel x40 (7.62x39mm NATO)",
-    DisplayName_Mag_AK_x40_B                     = "AK Magazine Bakelite x40 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x40_P                     = "AK Magazine Plastic x40 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x75                       = "AK Magazine Steel x75 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x75_P                     = "AK Magazine Plastic x75 (7.62x39mm NATO)",
-	DisplayName_Mag_AK_x100_P                    = "AK Magazine Plastic x100 (7.62x39mm NATO)",
-
-    DisplayName_MagGroup_AK545                   = "AK Magazine (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x10                    = "AK Magazine Steel x10 (5.45x39mm NATO)",
-    DisplayName_Mag_AK545_x10_B                  = "AK Magazine Bakelite x10 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x10_P                  = "AK Magazine Plastic x10 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x20                    = "AK Magazine Steel x20 (5.45x39mm NATO)",
-    DisplayName_Mag_AK545_x20_B                  = "AK Magazine Bakelite x20 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x20_P                  = "AK Magazine Plastic x20 (5.45x39mm NATO)",
-    DisplayName_Mag_AK545_x30                    = "AK Magazine Steel x30 (5.45x39mm NATO)",
-    DisplayName_Mag_AK545_x30_B                  = "AK Magazine Bakelite x30 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x30_P                  = "AK Magazine Plastic x30 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x40                    = "AK Magazine Steel x40 (5.45x39mm NATO)",
-    DisplayName_Mag_AK545_x40_B                  = "AK Magazine Bakelite x40 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x40_P                  = "AK Magazine Plastic x40 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x75                    = "AK Magazine Steel x75 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x75_P                  = "AK Magazine Plastic x75 (5.45x39mm NATO)",
-	DisplayName_Mag_AK545_x100_P                 = "AK Magazine Plastic x100 (5.45x39mm NATO)",
-	
-    DisplayName_MagGroup_AK556                   = "AK Magazine (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x10                    = "AK Magazine Steel x10 (5.56x45mm NATO)",
-    DisplayName_Mag_AK556_x10_B                  = "AK Magazine Bakelite x10 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x10_P                  = "AK Magazine Plastic x10 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x20                    = "AK Magazine Steel x20 (5.56x45mm NATO)",
-    DisplayName_Mag_AK556_x20_B                  = "AK Magazine Bakelite x20 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x20_P                  = "AK Magazine Plastic x20 (5.56x45mm NATO)",
-    DisplayName_Mag_AK556_x30                    = "AK Magazine Steel x30 (5.56x45mm NATO)",
-    DisplayName_Mag_AK556_x30_B                  = "AK Magazine Bakelite x30 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x30_P                  = "AK Magazine Plastic x30 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x40                    = "AK Magazine Steel x40 (5.56x45mm NATO)",
-    DisplayName_Mag_AK556_x40_B                  = "AK Magazine Bakelite x40 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x40_P                  = "AK Magazine Plastic x40 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x75                    = "AK Magazine Steel x75 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x75_P                  = "AK Magazine Plastic x75 (5.56x45mm NATO)",
-	DisplayName_Mag_AK556_x100_P                 = "AK Magazine Plastic x100 (5.56x45mm NATO)",
-	
-    -- Ammo Groups
-    DisplayName_AmmoGroup_22LR                  = ".22 LR",
-    DisplayName_AmmoGroup_22Hornet              = ".22 Hornet",
-    DisplayName_AmmoGroup_32ACP                 = ".32 ACP",
-    DisplayName_AmmoGroup_357Magnum             = ".357 Magnum",
-    DisplayName_AmmoGroup_38Special             = ".38 Special",
-    DisplayName_AmmoGroup_38Super               = ".38 Super",
-    DisplayName_AmmoGroup_380ACP                = ".380 ACP",
-    DisplayName_AmmoGroup_40SW                  = ".40 S&W",
-    DisplayName_AmmoGroup_41Magnum              = ".44 Magnum",
-    DisplayName_AmmoGroup_44Special             = ".41 Special",
-    DisplayName_AmmoGroup_44Magnum              = ".44 Magnum",
-    DisplayName_AmmoGroup_45ACP                 = ".45 ACP",
-    DisplayName_AmmoGroup_45Colt                = ".45 Long Colt",
-    DisplayName_AmmoGroup_454Casull             = ".454 Casull",
-    DisplayName_AmmoGroup_480Ruger              = ".480 Ruger",
-    DisplayName_AmmoGroup_50AE                  = ".50 AE",
-    DisplayName_AmmoGroup_223Remington          = ".223 Remington",
-    DisplayName_AmmoGroup_30Carbine             = ".30 Carbine",
-    DisplayName_AmmoGroup_3006Springfield       = ".30-06 Springfield",
-    DisplayName_AmmoGroup_3030Winchester        = ".30-30 Winchester",
-    DisplayName_AmmoGroup_308Winchester         = ".308 Winchester",
-    DisplayName_AmmoGroup_57x28mm               = "FN 5.7x28mm",
-    DisplayName_AmmoGroup_9x18mm                = "9x18mm Makarov",
-    DisplayName_AmmoGroup_9x19mm                = "9x19mm Parabellum",
-    DisplayName_AmmoGroup_10x25mm               = "10x25mm",
-    DisplayName_AmmoGroup_545x39mm              = "5.45x39mm Russian",
-    DisplayName_AmmoGroup_556x45mm              = "5.56x45mm NATO",
-    DisplayName_AmmoGroup_762x39mm              = "7.62x39mm Russian",
-    DisplayName_AmmoGroup_762x51mm              = "7.62x51mm NATO",
-    DisplayName_AmmoGroup_762x54mm              = "7.62x54R Russian",
-    DisplayName_AmmoGroup_10g                   = "10 Gauge",
-    DisplayName_AmmoGroup_12g                   = "12 Gauge",
-    DisplayName_AmmoGroup_20g                   = "20 Gauge",
-    DisplayName_AmmoGroup_410                   = ".410 Bore",
-
-
-    -- 5.56x45mm
-    DisplayName_Case_556x45mm              = "5.56x45mm cases",
-    DisplayName_Case_556x45mm_Box          = "5.56x45mm - 25 Cases Box",
-    DisplayName_Case_556x45mm_Can          = "5.56x45mm - 250 Cases Canister",
-    DisplayName_Ammo_556x45mm_FMJ          = "5.56x45mm FMJ Rounds",
-    DisplayName_Ammo_556x45mm_FMJ_Box      = "5.56x45mm FMJ - 20 Round Box",
-    DisplayName_Ammo_556x45mm_FMJ_Can      = "5.56x45mm FMJ - 200 Round Canister",
-    DisplayName_Ammo_556x45mm_HP           = "5.56x45mm HP Rounds",
-    DisplayName_Ammo_556x45mm_HP_Box       = "5.56x45mm HP - 20 Round Box",
-    DisplayName_Ammo_556x45mm_HP_Can       = "5.56x45mm HP - 200 Round Canister",
-    DisplayName_Ammo_556x45mm_M193         = "5.56x45mm NATO M193 Rounds",
-    DisplayName_Ammo_556x45mm_M855         = "5.56x45mm NATO M855 Rounds",
-
-
-
-
-
-
-
-
-
-
-
     -- Ammo.txt
-    DisplayName_Ammo_177BB                 = ".177 BBs",
-    DisplayName_Ammo_177BB_Box             = ".177 BBs - 250 Count Can",
-    DisplayName_Case_22LR                  = ".22 LR cases",
-    DisplayName_Case_22LR_Box              = ".22LR - 100 Cases Box",
-    DisplayName_Case_22LR_Can              = ".22LR - 1000 Cases Canister",
+    DisplayName_ORGM_Ammo_117BB                 = ".117 BBs",
+    DisplayName_ORGM_Ammo_117BB_Box             = ".117 BBs - 250 Count Can",
+    DisplayName_ORGM_Case_22LR                  = ".22 LR cases",
+    DisplayName_ORGM_Case_22LR_Box              = ".22LR - 100 Cases Box",
+    DisplayName_ORGM_Case_22LR_Can              = ".22LR - 1000 Cases Canister",
+    DisplayName_ORGM_Ammo_22LR                  = ".22 LR rounds",
+    DisplayName_ORGM_Ammo_22LR_FMJ              = ".22LR FMJ rounds",
+    DisplayName_ORGM_Ammo_22LR_FMJ_Box          = ".22LR FMJ - 100 Round Box",
+    DisplayName_ORGM_Ammo_22LR_FMJ_Can          = ".22LR FMJ - 1000 Round Canister",
+    DisplayName_ORGM_Ammo_22LR_HP               = ".22LR HP rounds",
+    DisplayName_ORGM_Ammo_22LR_HP_Box           = ".22LR HP - 100 Round Box",
+    DisplayName_ORGM_Ammo_22LR_HP_Can           = ".22LR HP - 1000 Round Canister",
 
-    DisplayName_Ammo_22LR_FMJ              = ".22LR FMJ rounds",
-    DisplayName_Ammo_22LR_FMJ_Box          = ".22LR FMJ - 100 Round Box",
-    DisplayName_Ammo_22LR_FMJ_Can          = ".22LR FMJ - 1000 Round Canister",
-    DisplayName_Ammo_22LR_HP               = ".22LR HP rounds",
-    DisplayName_Ammo_22LR_HP_Box           = ".22LR HP - 100 Round Box",
-    DisplayName_Ammo_22LR_HP_Can           = ".22LR HP - 1000 Round Canister",
+    DisplayName_ORGM_Case_32ACP                 = ".32 ACP cases",
+    DisplayName_ORGM_Case_32ACP_Box             = ".32 ACP - 50 Cases Box",
+    DisplayName_ORGM_Case_32ACP_Can             = ".32 ACP - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_32ACP                 = ".32 ACP rounds",
+    DisplayName_ORGM_Ammo_32ACP_FMJ             = ".32 ACP FMJ Rounds",
+    DisplayName_ORGM_Ammo_32ACP_FMJ_Box         = ".32 ACP FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_32ACP_FMJ_Can         = ".32 ACP FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_32ACP_HP              = ".32 ACP HP Rounds",
+    DisplayName_ORGM_Ammo_32ACP_HP_Box          = ".32 ACP HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_32ACP_HP_Can          = ".32 ACP HP - 500 Round Canister",
 
-    DisplayName_Case_32ACP                 = ".32 ACP cases",
-    DisplayName_Case_32ACP_Box             = ".32 ACP - 50 Cases Box",
-    DisplayName_Case_32ACP_Can             = ".32 ACP - 500 Cases Canister",
-    DisplayName_Ammo_32ACP_FMJ             = ".32 ACP FMJ Rounds",
-    DisplayName_Ammo_32ACP_FMJ_Box         = ".32 ACP FMJ - 50 Round Box",
-    DisplayName_Ammo_32ACP_FMJ_Can         = ".32 ACP FMJ - 500 Round Canister",
-    DisplayName_Ammo_32ACP_HP              = ".32 ACP HP Rounds",
-    DisplayName_Ammo_32ACP_HP_Box          = ".32 ACP HP - 50 Round Box",
-    DisplayName_Ammo_32ACP_HP_Can          = ".32 ACP HP - 500 Round Canister",
+    DisplayName_ORGM_Case_357Magnum             = ".357 Magnum cases",
+    DisplayName_ORGM_Case_357Magnum_Box         = ".357 Magnum - 50 Cases Box",
+    DisplayName_ORGM_Case_357Magnum_Can         = ".357 Magnum - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_357Magnum             = ".357 Magnum rounds",
+    DisplayName_ORGM_Ammo_357Magnum_FMJ         = ".357 Magnum FMJ Rounds",
+    DisplayName_ORGM_Ammo_357Magnum_FMJ_Box     = ".357 Magnum FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_357Magnum_FMJ_Can     = ".357 Magnum FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_357Magnum_HP          = ".357 Magnum HP Rounds",
+    DisplayName_ORGM_Ammo_357Magnum_HP_Box      = ".357 Magnum HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_357Magnum_HP_Can      = ".357 Magnum HP - 500 Round Canister",
 
-    DisplayName_Case_357Magnum             = ".357 Magnum cases",
-    DisplayName_Case_357Magnum_Box         = ".357 Magnum - 50 Cases Box",
-    DisplayName_Case_357Magnum_Can         = ".357 Magnum - 500 Cases Canister",
-    DisplayName_Ammo_357Magnum_FMJ         = ".357 Magnum FMJ Rounds",
-    DisplayName_Ammo_357Magnum_FMJ_Box     = ".357 Magnum FMJ - 50 Round Box",
-    DisplayName_Ammo_357Magnum_FMJ_Can     = ".357 Magnum FMJ - 500 Round Canister",
-    DisplayName_Ammo_357Magnum_HP          = ".357 Magnum HP Rounds",
-    DisplayName_Ammo_357Magnum_HP_Box      = ".357 Magnum HP - 50 Round Box",
-    DisplayName_Ammo_357Magnum_HP_Can      = ".357 Magnum HP - 500 Round Canister",
+    DisplayName_ORGM_Case_38Special             = ".38 Special cases",
+    DisplayName_ORGM_Case_38Special_Box         = ".38 Special - 50 Cases Box",
+    DisplayName_ORGM_Case_38Special_Can         = ".38 Special - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_38Special             = ".38 Special rounds",
+    DisplayName_ORGM_Ammo_38Special_FMJ         = ".38 Special FMJ Rounds",
+    DisplayName_ORGM_Ammo_38Special_FMJ_Box     = ".38 Special FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_38Special_FMJ_Can     = ".38 Special FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_38Special_HP          = ".38 Special HP Rounds",
+    DisplayName_ORGM_Ammo_38Special_HP_Box      = ".38 Special HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_38Special_HP_Can      = ".38 Special HP - 500 Round Canister",
 
-    DisplayName_Case_38Special             = ".38 Special cases",
-    DisplayName_Case_38Special_Box         = ".38 Special - 50 Cases Box",
-    DisplayName_Case_38Special_Can         = ".38 Special - 500 Cases Canister",
-    DisplayName_Ammo_38Special_FMJ         = ".38 Special FMJ Rounds",
-    DisplayName_Ammo_38Special_FMJ_Box     = ".38 Special FMJ - 50 Round Box",
-    DisplayName_Ammo_38Special_FMJ_Can     = ".38 Special FMJ - 500 Round Canister",
-    DisplayName_Ammo_38Special_HP          = ".38 Special HP Rounds",
-    DisplayName_Ammo_38Special_HP_Box      = ".38 Special HP - 50 Round Box",
-    DisplayName_Ammo_38Special_HP_Can      = ".38 Special HP - 500 Round Canister",
+    DisplayName_ORGM_Case_38Super               = ".38 Super cases",
+    DisplayName_ORGM_Case_38Super_Box           = ".38 Super - 50 Cases Box",
+    DisplayName_ORGM_Case_38Super_Can           = ".38 Super - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_38Super               = ".38 Super rounds",
+    DisplayName_ORGM_Ammo_38Super_FMJ           = ".38 Super FMJ Rounds",
+    DisplayName_ORGM_Ammo_38Super_FMJ_Box       = ".38 Super FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_38Super_FMJ_Can       = ".38 Super FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_38Super_HP            = ".38 Super HP Rounds",
+    DisplayName_ORGM_Ammo_38Super_HP_Box        = ".38 Super HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_38Super_HP_Can        = ".38 Super HP - 500 Round Canister",
 
-    DisplayName_Case_38Super               = ".38 Super cases",
-    DisplayName_Case_38Super_Box           = ".38 Super - 50 Cases Box",
-    DisplayName_Case_38Super_Can           = ".38 Super - 500 Cases Canister",
-    DisplayName_Ammo_38Super_FMJ           = ".38 Super FMJ Rounds",
-    DisplayName_Ammo_38Super_FMJ_Box       = ".38 Super FMJ - 50 Round Box",
-    DisplayName_Ammo_38Super_FMJ_Can       = ".38 Super FMJ - 500 Round Canister",
-    DisplayName_Ammo_38Super_HP            = ".38 Super HP Rounds",
-    DisplayName_Ammo_38Super_HP_Box        = ".38 Super HP - 50 Round Box",
-    DisplayName_Ammo_38Super_HP_Can        = ".38 Super HP - 500 Round Canister",
+    DisplayName_ORGM_Case_380ACP                = ".380 ACP cases",
+    DisplayName_ORGM_Case_380ACP_Box            = ".380 ACP - 50 Cases Box",
+    DisplayName_ORGM_Case_380ACP_Can            = ".380 ACP - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_380ACP                = ".380 ACP rounds",
+    DisplayName_ORGM_Ammo_380ACP_FMJ            = ".380 ACP FMJ Rounds",
+    DisplayName_ORGM_Ammo_380ACP_FMJ_Box        = ".380 ACP FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_380ACP_FMJ_Can        = ".380 ACP FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_380ACP_HP             = ".380 ACP HP Rounds",
+    DisplayName_ORGM_Ammo_380ACP_HP_Box         = ".380 ACP HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_380ACP_HP_Can         = ".380 ACP HP - 500 Round Canister",
 
-    DisplayName_Case_380ACP                = ".380 ACP cases",
-    DisplayName_Case_380ACP_Box            = ".380 ACP - 50 Cases Box",
-    DisplayName_Case_380ACP_Can            = ".380 ACP - 500 Cases Canister",
-    DisplayName_Ammo_380ACP_FMJ            = ".380 ACP FMJ Rounds",
-    DisplayName_Ammo_380ACP_FMJ_Box        = ".380 ACP FMJ - 50 Round Box",
-    DisplayName_Ammo_380ACP_FMJ_Can        = ".380 ACP FMJ - 500 Round Canister",
-    DisplayName_Ammo_380ACP_HP             = ".380 ACP HP Rounds",
-    DisplayName_Ammo_380ACP_HP_Box         = ".380 ACP HP - 50 Round Box",
-    DisplayName_Ammo_380ACP_HP_Can         = ".380 ACP HP - 500 Round Canister",
+    DisplayName_ORGM_Case_40SW                  = ".40 S&W cases",
+    DisplayName_ORGM_Case_40SW_Box              = ".40 S&W - 50 Cases Box",
+    DisplayName_ORGM_Case_40SW_Can              = ".40 S&W - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_40SW                  = ".40 S&W rounds",
+    DisplayName_ORGM_Ammo_40SW_FMJ              = ".40 S&W FMJ Rounds",
+    DisplayName_ORGM_Ammo_40SW_FMJ_Box          = ".40 S&W FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_40SW_FMJ_Can          = ".40 S&W FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_40SW_HP               = ".40 S&W HP Rounds",
+    DisplayName_ORGM_Ammo_40SW_HP_Box           = ".40 S&W HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_40SW_HP_Can           = ".40 S&W HP - 500 Round Canister",
 
-    DisplayName_Case_40SW                  = ".40 S&W cases",
-    DisplayName_Case_40SW_Box              = ".40 S&W - 50 Cases Box",
-    DisplayName_Case_40SW_Can              = ".40 S&W - 500 Cases Canister",
-    DisplayName_Ammo_40SW_FMJ              = ".40 S&W FMJ Rounds",
-    DisplayName_Ammo_40SW_FMJ_Box          = ".40 S&W FMJ - 50 Round Box",
-    DisplayName_Ammo_40SW_FMJ_Can          = ".40 S&W FMJ - 500 Round Canister",
-    DisplayName_Ammo_40SW_HP               = ".40 S&W HP Rounds",
-    DisplayName_Ammo_40SW_HP_Box           = ".40 S&W HP - 50 Round Box",
-    DisplayName_Ammo_40SW_HP_Can           = ".40 S&W HP - 500 Round Canister",
+    DisplayName_ORGM_Case_44Magnum              = ".44 Magnum cases",
+    DisplayName_ORGM_Case_44Magnum_Box          = ".44 Magnum - 50 Cases Box",
+    DisplayName_ORGM_Case_44Magnum_Can          = ".44 Magnum - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_44Magnum              = ".44 Magnum rounds",
+    DisplayName_ORGM_Ammo_44Magnum_FMJ          = ".44 Magnum FMJ Rounds",
+    DisplayName_ORGM_Ammo_44Magnum_FMJ_Box      = ".44 Magnum FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_44Magnum_FMJ_Can      = ".44 Magnum FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_44Magnum_HP           = ".44 Magnum HP Rounds",
+    DisplayName_ORGM_Ammo_44Magnum_HP_Box       = ".44 Magnum HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_44Magnum_HP_Can       = ".44 Magnum HP - 500 Round Canister",
 
-    DisplayName_Case_44Magnum              = ".44 Magnum cases",
-    DisplayName_Case_44Magnum_Box          = ".44 Magnum - 50 Cases Box",
-    DisplayName_Case_44Magnum_Can          = ".44 Magnum - 500 Cases Canister",
-    DisplayName_Ammo_44Magnum_FMJ          = ".44 Magnum FMJ Rounds",
-    DisplayName_Ammo_44Magnum_FMJ_Box      = ".44 Magnum FMJ - 50 Round Box",
-    DisplayName_Ammo_44Magnum_FMJ_Can      = ".44 Magnum FMJ - 500 Round Canister",
-    DisplayName_Ammo_44Magnum_HP           = ".44 Magnum HP Rounds",
-    DisplayName_Ammo_44Magnum_HP_Box       = ".44 Magnum HP - 50 Round Box",
-    DisplayName_Ammo_44Magnum_HP_Can       = ".44 Magnum HP - 500 Round Canister",
+    DisplayName_ORGM_Case_45ACP                 = ".45 ACP cases",
+    DisplayName_ORGM_Case_45ACP_Box             = ".45 ACP - 50 Cases Box",
+    DisplayName_ORGM_Case_45ACP_Can             = ".45 ACP - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_45ACP                 = ".45 ACP rounds",
+    DisplayName_ORGM_Ammo_45ACP_FMJ             = ".45 ACP FMJ Rounds",
+    DisplayName_ORGM_Ammo_45ACP_FMJ_Box         = ".45 ACP FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_45ACP_FMJ_Can         = ".45 ACP FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_45ACP_HP              = ".45 ACP HP Rounds",
+    DisplayName_ORGM_Ammo_45ACP_HP_Box          = ".45 ACP HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_45ACP_HP_Can          = ".45 ACP HP - 500 Round Canister",
 
-    DisplayName_Case_45ACP                 = ".45 ACP cases",
-    DisplayName_Case_45ACP_Box             = ".45 ACP - 50 Cases Box",
-    DisplayName_Case_45ACP_Can             = ".45 ACP - 500 Cases Canister",
-    DisplayName_Ammo_45ACP_FMJ             = ".45 ACP FMJ Rounds",
-    DisplayName_Ammo_45ACP_FMJ_Box         = ".45 ACP FMJ - 50 Round Box",
-    DisplayName_Ammo_45ACP_FMJ_Can         = ".45 ACP FMJ - 500 Round Canister",
-    DisplayName_Ammo_45ACP_HP              = ".45 ACP HP Rounds",
-    DisplayName_Ammo_45ACP_HP_Box          = ".45 ACP HP - 50 Round Box",
-    DisplayName_Ammo_45ACP_HP_Can          = ".45 ACP HP - 500 Round Canister",
+    DisplayName_ORGM_Case_45Colt                = ".45 Long Colt cases",
+    DisplayName_ORGM_Case_45Colt_Box            = ".45 Long Colt - 50 Cases Box",
+    DisplayName_ORGM_Case_45Colt_Can            = ".45 Long Colt - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_45Colt                = ".45 Long Colt rounds",
+    DisplayName_ORGM_Ammo_45Colt_FMJ            = ".45 Long Colt FMJ Rounds",
+    DisplayName_ORGM_Ammo_45Colt_FMJ_Box        = ".45 Long Colt FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_45Colt_FMJ_Can        = ".45 Long Colt FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_45Colt_HP             = ".45 Long Colt HP Rounds",
+    DisplayName_ORGM_Ammo_45Colt_HP_Box         = ".45 Long Colt HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_45Colt_HP_Can         = ".45 Long Colt HP - 500 Round Canister",
 
-    DisplayName_Case_45Colt                = ".45 Long Colt cases",
-    DisplayName_Case_45Colt_Box            = ".45 Long Colt - 50 Cases Box",
-    DisplayName_Case_45Colt_Can            = ".45 Long Colt - 500 Cases Canister",
-    DisplayName_Ammo_45Colt_FMJ            = ".45 Long Colt FMJ Rounds",
-    DisplayName_Ammo_45Colt_FMJ_Box        = ".45 Long Colt FMJ - 50 Round Box",
-    DisplayName_Ammo_45Colt_FMJ_Can        = ".45 Long Colt FMJ - 500 Round Canister",
-    DisplayName_Ammo_45Colt_HP             = ".45 Long Colt HP Rounds",
-    DisplayName_Ammo_45Colt_HP_Box         = ".45 Long Colt HP - 50 Round Box",
-    DisplayName_Ammo_45Colt_HP_Can         = ".45 Long Colt HP - 500 Round Canister",
+    DisplayName_ORGM_Case_454Casull             = ".454 Casull cases",
+    DisplayName_ORGM_Case_454Casull_Box         = ".454 Casull - 50 Cases Box",
+    DisplayName_ORGM_Case_454Casull_Can         = ".454 Casull - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_454Casull             = ".454 Casull rounds",
+    DisplayName_ORGM_Ammo_454Casull_FMJ         = ".454 Casull FMJ Rounds",
+    DisplayName_ORGM_Ammo_454Casull_FMJ_Box     = ".454 Casull FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_454Casull_FMJ_Can     = ".454 Casull FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_454Casull_HP          = ".454 Casull HP Rounds",
+    DisplayName_ORGM_Ammo_454Casull_HP_Box      = ".454 Casull HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_454Casull_HP_Can      = ".454 Casull HP - 500 Round Canister",
 
-    DisplayName_Case_454Casull             = ".454 Casull cases",
-    DisplayName_Case_454Casull_Box         = ".454 Casull - 50 Cases Box",
-    DisplayName_Case_454Casull_Can         = ".454 Casull - 500 Cases Canister",
-    DisplayName_Ammo_454Casull_FMJ         = ".454 Casull FMJ Rounds",
-    DisplayName_Ammo_454Casull_FMJ_Box     = ".454 Casull FMJ - 50 Round Box",
-    DisplayName_Ammo_454Casull_FMJ_Can     = ".454 Casull FMJ - 500 Round Canister",
-    DisplayName_Ammo_454Casull_HP          = ".454 Casull HP Rounds",
-    DisplayName_Ammo_454Casull_HP_Box      = ".454 Casull HP - 50 Round Box",
-    DisplayName_Ammo_454Casull_HP_Can      = ".454 Casull HP - 500 Round Canister",
+    DisplayName_ORGM_Case_50AE                  = ".50 AE cases",
+    DisplayName_ORGM_Case_50AE_Box              = ".50 AE - 50 Cases Box",
+    DisplayName_ORGM_Case_50AE_Can              = ".50 AE - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_50AE                  = ".50 AE rounds",
+    DisplayName_ORGM_Ammo_50AE_FMJ              = ".50 AE FMJ Rounds",
+    DisplayName_ORGM_Ammo_50AE_FMJ_Box          = ".50 AE FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_50AE_FMJ_Can          = ".50 AE FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_50AE_HP               = ".50 AE HP Rounds",
+    DisplayName_ORGM_Ammo_50AE_HP_Box           = ".50 AE HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_50AE_HP_Can           = ".50 AE HP - 500 Round Canister",
 
-    DisplayName_Case_50AE                  = ".50 AE cases",
-    DisplayName_Case_50AE_Box              = ".50 AE - 50 Cases Box",
-    DisplayName_Case_50AE_Can              = ".50 AE - 500 Cases Canister",
-    DisplayName_Ammo_50AE_FMJ              = ".50 AE FMJ Rounds",
-    DisplayName_Ammo_50AE_FMJ_Box          = ".50 AE FMJ - 50 Round Box",
-    DisplayName_Ammo_50AE_FMJ_Can          = ".50 AE FMJ - 500 Round Canister",
-    DisplayName_Ammo_50AE_HP               = ".50 AE HP Rounds",
-    DisplayName_Ammo_50AE_HP_Box           = ".50 AE HP - 50 Round Box",
-    DisplayName_Ammo_50AE_HP_Can           = ".50 AE HP - 500 Round Canister",
+    DisplayName_ORGM_Case_223Remington          = ".223 Remington cases",
+    DisplayName_ORGM_Case_223Remington_Box      = ".223 Remington - 25 Cases Box",
+    DisplayName_ORGM_Case_223Remington_Can      = ".223 Remington - 250 Cases Canister",
+    DisplayName_ORGM_Ammo_223Remington          = ".223 Remington rounds",
+    DisplayName_ORGM_Ammo_223Remington_FMJ      = ".223 Remington FMJ Rounds",
+    DisplayName_ORGM_Ammo_223Remington_FMJ_Box  = ".223 Remington FMJ - 25 Round Box",
+    DisplayName_ORGM_Ammo_223Remington_FMJ_Can  = ".223 Remington FMJ - 250 Round Canister",
+    DisplayName_ORGM_Ammo_223Remington_HP       = ".223 Remington HP Rounds",
+    DisplayName_ORGM_Ammo_223Remington_HP_Box   = ".223 Remington HP - 25 Round Box",
+    DisplayName_ORGM_Ammo_223Remington_HP_Can   = ".223 Remington HP - 250 Round Canister",
 
-    DisplayName_Case_223Remington          = ".223 Remington cases",
-    DisplayName_Case_223Remington_Box      = ".223 Remington - 25 Cases Box",
-    DisplayName_Case_223Remington_Can      = ".223 Remington - 250 Cases Canister",
-    DisplayName_Ammo_223Remington_FMJ      = ".223 Remington FMJ Rounds",
-    DisplayName_Ammo_223Remington_FMJ_Box  = ".223 Remington FMJ - 25 Round Box",
-    DisplayName_Ammo_223Remington_FMJ_Can  = ".223 Remington FMJ - 250 Round Canister",
-    DisplayName_Ammo_223Remington_HP       = ".223 Remington HP Rounds",
-    DisplayName_Ammo_223Remington_HP_Box   = ".223 Remington HP - 25 Round Box",
-    DisplayName_Ammo_223Remington_HP_Can   = ".223 Remington HP - 250 Round Canister",
+    DisplayName_ORGM_Case_3006Springfield           = ".30-06 Springfield cases",
+    DisplayName_ORGM_Case_3006Springfield_Box       = ".30-06 Springfield - 20 Cases Box",
+    DisplayName_ORGM_Case_3006Springfield_Can       = ".30-06 Springfield - 200 Cases Canister",
+    DisplayName_ORGM_Ammo_3006Springfield           = ".30-06 Springfield rounds",
+    DisplayName_ORGM_Ammo_3006Springfield_FMJ       = ".30-06 Springfield FMJ Rounds",
+    DisplayName_ORGM_Ammo_3006Springfield_FMJ_Box   = ".30-06 Springfield FMJ - 20 Round Box",
+    DisplayName_ORGM_Ammo_3006Springfield_FMJ_Can   = ".30-06 Springfield FMJ - 200 Round Canister",
+    DisplayName_ORGM_Ammo_3006Springfield_HP        = ".30-06 Springfield HP Rounds",
+    DisplayName_ORGM_Ammo_3006Springfield_HP_Box    = ".30-06 Springfield HP - 20 Round Box",
+    DisplayName_ORGM_Ammo_3006Springfield_HP_Can    = ".30-06 Springfield HP - 200 Round Canister",
 
-    DisplayName_Case_3006Springfield           = ".30-06 Springfield cases",
-    DisplayName_Case_3006Springfield_Box       = ".30-06 Springfield - 20 Cases Box",
-    DisplayName_Case_3006Springfield_Can       = ".30-06 Springfield - 200 Cases Canister",
-    DisplayName_Ammo_3006Springfield_FMJ       = ".30-06 Springfield FMJ Rounds",
-    DisplayName_Ammo_3006Springfield_FMJ_Box   = ".30-06 Springfield FMJ - 20 Round Box",
-    DisplayName_Ammo_3006Springfield_FMJ_Can   = ".30-06 Springfield FMJ - 200 Round Canister",
-    DisplayName_Ammo_3006Springfield_HP        = ".30-06 Springfield HP Rounds",
-    DisplayName_Ammo_3006Springfield_HP_Box    = ".30-06 Springfield HP - 20 Round Box",
-    DisplayName_Ammo_3006Springfield_HP_Can    = ".30-06 Springfield HP - 200 Round Canister",
+    DisplayName_ORGM_Case_3030Winchester            = ".30-30 Winchester cases",
+    DisplayName_ORGM_Case_3030Winchester_Box        = ".30-30 Winchester - 20 Cases Box",
+    DisplayName_ORGM_Case_3030Winchester_Can        = ".30-30 Winchester - 200 Cases Canister",
+    DisplayName_ORGM_Ammo_3030Winchester            = ".30-30 Winchester rounds",
+    DisplayName_ORGM_Ammo_3030Winchester_FMJ        = ".30-30 Winchester FMJ Rounds",
+    DisplayName_ORGM_Ammo_3030Winchester_FMJ_Box    = ".30-30 Winchester FMJ - 20 Round Box",
+    DisplayName_ORGM_Ammo_3030Winchester_FMJ_Can    = ".30-30 Winchester FMJ - 200 Round Canister",
+    DisplayName_ORGM_Ammo_3030Winchester_HP         = ".30-30 Winchester HP Rounds",
+    DisplayName_ORGM_Ammo_3030Winchester_HP_Box     = ".30-30 Winchester HP - 20 Round Box",
+    DisplayName_ORGM_Ammo_3030Winchester_HP_Can     = ".30-30 Winchester HP - 200 Round Canister",
 
-    DisplayName_Case_3030Winchester            = ".30-30 Winchester cases",
-    DisplayName_Case_3030Winchester_Box        = ".30-30 Winchester - 20 Cases Box",
-    DisplayName_Case_3030Winchester_Can        = ".30-30 Winchester - 200 Cases Canister",
-    DisplayName_Ammo_3030Winchester_FMJ        = ".30-30 Winchester FMJ Rounds",
-    DisplayName_Ammo_3030Winchester_FMJ_Box    = ".30-30 Winchester FMJ - 20 Round Box",
-    DisplayName_Ammo_3030Winchester_FMJ_Can    = ".30-30 Winchester FMJ - 200 Round Canister",
-    DisplayName_Ammo_3030Winchester_HP         = ".30-30 Winchester HP Rounds",
-    DisplayName_Ammo_3030Winchester_HP_Box     = ".30-30 Winchester HP - 20 Round Box",
-    DisplayName_Ammo_3030Winchester_HP_Can     = ".30-30 Winchester HP - 200 Round Canister",
+    DisplayName_ORGM_Case_308Winchester             = ".308 Winchester cases",
+    DisplayName_ORGM_Case_308Winchester_Box         = ".308 Winchester - 20 Cases Box",
+    DisplayName_ORGM_Case_308Winchester_Can         = ".308 Winchester - 200 Cases Canister",
+    DisplayName_ORGM_Ammo_308Winchester             = ".308 Winchester rounds",
+    DisplayName_ORGM_Ammo_308Winchester_FMJ         = ".308 Winchester FMJ Rounds",
+    DisplayName_ORGM_Ammo_308Winchester_FMJ_Box     = ".308 Winchester FMJ - 20 Round Box",
+    DisplayName_ORGM_Ammo_308Winchester_FMJ_Can     = ".308 Winchester FMJ - 200 Round Canister",
+    DisplayName_ORGM_Ammo_308Winchester_HP          = ".308 Winchester HP Rounds",
+    DisplayName_ORGM_Ammo_308Winchester_HP_Box      = ".308 Winchester HP - 20 Round Box",
+    DisplayName_ORGM_Ammo_308Winchester_HP_Can      = ".308 Winchester HP - 200 Round Canister",
 
-    DisplayName_Case_308Winchester             = ".308 Winchester cases",
-    DisplayName_Case_308Winchester_Box         = ".308 Winchester - 20 Cases Box",
-    DisplayName_Case_308Winchester_Can         = ".308 Winchester - 200 Cases Canister",
-    DisplayName_Ammo_308Winchester_FMJ         = ".308 Winchester FMJ Rounds",
-    DisplayName_Ammo_308Winchester_FMJ_Box     = ".308 Winchester FMJ - 20 Round Box",
-    DisplayName_Ammo_308Winchester_FMJ_Can     = ".308 Winchester FMJ - 200 Round Canister",
-    DisplayName_Ammo_308Winchester_HP          = ".308 Winchester HP Rounds",
-    DisplayName_Ammo_308Winchester_HP_Box      = ".308 Winchester HP - 20 Round Box",
-    DisplayName_Ammo_308Winchester_HP_Can      = ".308 Winchester HP - 200 Round Canister",
+    DisplayName_ORGM_Case_57x28mm               = "FN 5.7x28mm cases",
+    DisplayName_ORGM_Case_57x28mm_Box           = "FN 5.7x28mm - 50 Cases Box",
+    DisplayName_ORGM_Case_57x28mm_Can           = "FN 5.7x28mm - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_57x28mm               = "FN 5.7x28mm rounds",
+    DisplayName_ORGM_Ammo_57x28mm_FMJ           = "FN 5.7x28mm FMJ Rounds",
+    DisplayName_ORGM_Ammo_57x28mm_FMJ_Box       = "FN 5.7x28mm FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_57x28mm_FMJ_Can       = "FN 5.7x28mm FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_57x28mm_HP            = "FN 5.7x28mm HP Rounds",
+    DisplayName_ORGM_Ammo_57x28mm_HP_Box        = "FN 5.7x28mm HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_57x28mm_HP_Can        = "FN 5.7x28mm HP - 500 Round Canister",
 
-    DisplayName_Case_57x28mm               = "FN 5.7x28mm cases",
-    DisplayName_Case_57x28mm_Box           = "FN 5.7x28mm - 50 Cases Box",
-    DisplayName_Case_57x28mm_Can           = "FN 5.7x28mm - 500 Cases Canister",
-    DisplayName_Ammo_57x28mm_FMJ           = "FN 5.7x28mm FMJ Rounds",
-    DisplayName_Ammo_57x28mm_FMJ_Box       = "FN 5.7x28mm FMJ - 50 Round Box",
-    DisplayName_Ammo_57x28mm_FMJ_Can       = "FN 5.7x28mm FMJ - 500 Round Canister",
-    DisplayName_Ammo_57x28mm_HP            = "FN 5.7x28mm HP Rounds",
-    DisplayName_Ammo_57x28mm_HP_Box        = "FN 5.7x28mm HP - 50 Round Box",
-    DisplayName_Ammo_57x28mm_HP_Can        = "FN 5.7x28mm HP - 500 Round Canister",
+    DisplayName_ORGM_Case_9x19mm                = "9x19mm Parabellum cases",
+    DisplayName_ORGM_Case_9x19mm_Box            = "9x19mm - 50 Cases Box",
+    DisplayName_ORGM_Case_9x19mm_Can            = "9x19mm - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_9x19mm                = "9x19mm Parabellum",
+    DisplayName_ORGM_Ammo_9x19mm_FMJ            = "9x19mm Parabellum FMJ Rounds",
+    DisplayName_ORGM_Ammo_9x19mm_FMJ_Box        = "9x19mm FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_9x19mm_FMJ_Can        = "9x19mm FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_9x19mm_HP             = "9x19mm Parabellum HP Rounds",
+    DisplayName_ORGM_Ammo_9x19mm_HP_Box         = "9x19mm HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_9x19mm_HP_Can         = "9x19mm HP - 500 Round Canister",
 
-    DisplayName_Case_9x18mm                = "9x18mm Makarov cases",
-    DisplayName_Case_9x18mm_Box            = "9x18mm - 50 Cases Box",
-    DisplayName_Case_9x18mm_Can            = "9x18mm - 500 Cases Canister",
-    DisplayName_Ammo_9x18mm_FMJ            = "9x18mm Makarov FMJ Rounds",
-    DisplayName_Ammo_9x18mm_FMJ_Box        = "9x18mm FMJ - 50 Round Box",
-    DisplayName_Ammo_9x18mm_FMJ_Can        = "9x18mm FMJ - 500 Round Canister",
-    DisplayName_Ammo_9x18mm_HP             = "9x18mm Makarov HP Rounds",
-    DisplayName_Ammo_9x18mm_HP_Box         = "9x18mm HP - 50 Round Box",
-    DisplayName_Ammo_9x18mm_HP_Can         = "9x18mm HP - 500 Round Canister",
-	
-    DisplayName_Case_9x19mm                = "9x19mm Parabellum cases",
-    DisplayName_Case_9x19mm_Box            = "9x19mm - 50 Cases Box",
-    DisplayName_Case_9x19mm_Can            = "9x19mm - 500 Cases Canister",
-    DisplayName_Ammo_9x19mm_FMJ            = "9x19mm Parabellum FMJ Rounds",
-    DisplayName_Ammo_9x19mm_FMJ_Box        = "9x19mm FMJ - 50 Round Box",
-    DisplayName_Ammo_9x19mm_FMJ_Can        = "9x19mm FMJ - 500 Round Canister",
-    DisplayName_Ammo_9x19mm_HP             = "9x19mm Parabellum HP Rounds",
-    DisplayName_Ammo_9x19mm_HP_Box         = "9x19mm HP - 50 Round Box",
-    DisplayName_Ammo_9x19mm_HP_Can         = "9x19mm HP - 500 Round Canister",
+    DisplayName_ORGM_Case_10x25mm               = "10x25mm cases",
+    DisplayName_ORGM_Case_10x25mm_Box           = "10x25mm - 50 Cases Box",
+    DisplayName_ORGM_Case_10x25mm_Can           = "10x25mm - 500 Cases Canister",
+    DisplayName_ORGM_Ammo_10x25mm               = "10x25mm rounds",
+    DisplayName_ORGM_Ammo_10x25mm_FMJ           = "10x25mm FMJ Rounds",
+    DisplayName_ORGM_Ammo_10x25mm_FMJ_Box       = "10x25mm FMJ - 50 Round Box",
+    DisplayName_ORGM_Ammo_10x25mm_FMJ_Can       = "10x25mm FMJ - 500 Round Canister",
+    DisplayName_ORGM_Ammo_10x25mm_HP            = "10x25mm HP Rounds",
+    DisplayName_ORGM_Ammo_10x25mm_HP_Box        = "10x25mm HP - 50 Round Box",
+    DisplayName_ORGM_Ammo_10x25mm_HP_Can        = "10x25mm HP - 500 Round Canister",
 
-    DisplayName_Case_10x25mm               = "10x25mm cases",
-    DisplayName_Case_10x25mm_Box           = "10x25mm - 50 Cases Box",
-    DisplayName_Case_10x25mm_Can           = "10x25mm - 500 Cases Canister",
-    DisplayName_Ammo_10x25mm_FMJ           = "10x25mm FMJ Rounds",
-    DisplayName_Ammo_10x25mm_FMJ_Box       = "10x25mm FMJ - 50 Round Box",
-    DisplayName_Ammo_10x25mm_FMJ_Can       = "10x25mm FMJ - 500 Round Canister",
-    DisplayName_Ammo_10x25mm_HP            = "10x25mm HP Rounds",
-    DisplayName_Ammo_10x25mm_HP_Box        = "10x25mm HP - 50 Round Box",
-    DisplayName_Ammo_10x25mm_HP_Can        = "10x25mm HP - 500 Round Canister",
+    DisplayName_ORGM_Case_556x45mm              = "5.56x45mm cases",
+    DisplayName_ORGM_Case_556x45mm_Box          = "5.56x45mm - 25 Cases Box",
+    DisplayName_ORGM_Case_556x45mm_Can          = "5.56x45mm - 250 Cases Canister",
+    DisplayName_ORGM_Ammo_556x45mm              = "5.56x45mm rounds",
+    DisplayName_ORGM_Ammo_556x45mm_FMJ          = "5.56x45mm FMJ Rounds",
+    DisplayName_ORGM_Ammo_556x45mm_FMJ_Box      = "5.56x45mm FMJ - 25 Round Box",
+    DisplayName_ORGM_Ammo_556x45mm_FMJ_Can      = "5.56x45mm FMJ - 250 Round Canister",
+    DisplayName_ORGM_Ammo_556x45mm_HP           = "5.56x45mm HP Rounds",
+    DisplayName_ORGM_Ammo_556x45mm_HP_Box       = "5.56x45mm HP - 25 Round Box",
+    DisplayName_ORGM_Ammo_556x45mm_HP_Can       = "5.56x45mm HP - 250 Round Canister",
 
+    DisplayName_ORGM_Case_762x39mm              = "7.62x39mm cases",
+    DisplayName_ORGM_Case_762x39mm_Box          = "7.62x39mm - 20 Cases Box",
+    DisplayName_ORGM_Case_762x39mm_Can          = "7.62x39mm - 200 Cases Canister",
+    DisplayName_ORGM_Ammo_762x39mm              = "7.62x39mm rounds",
+    DisplayName_ORGM_Ammo_762x39mm_FMJ          = "7.62x39mm FMJ Rounds",
+    DisplayName_ORGM_Ammo_762x39mm_FMJ_Box      = "7.62x39mm FMJ - 20 Round Box",
+    DisplayName_ORGM_Ammo_762x39mm_FMJ_Can      = "7.62x39mm FMJ - 200 Round Canister",
+    DisplayName_ORGM_Ammo_762x39mm_HP           = "7.62x39mm HP Rounds",
+    DisplayName_ORGM_Ammo_762x39mm_HP_Box       = "7.62x39mm HP - 20 Round Box",
+    DisplayName_ORGM_Ammo_762x39mm_HP_Can       = "7.62x39mm HP - 200 Round Canister",
 
-    DisplayName_Case_545x39mm              = "5.45x39mm cases",
-    DisplayName_Case_545x39mm_Box          = "5.45x39mm - 20 Cases Box",
-    DisplayName_Case_545x39mm_Can          = "5.45x39mm - 200 Cases Canister",
-    DisplayName_Ammo_545x39mm_FMJ          = "5.45x39mm FMJ Rounds",
-    DisplayName_Ammo_545x39mm_FMJ_Box      = "5.45x39mm FMJ - 20 Round Box",
-    DisplayName_Ammo_545x39mm_FMJ_Can      = "5.45x39mm FMJ - 200 Round Canister",
-    DisplayName_Ammo_545x39mm_HP           = "5.45x39mm HP Rounds",
-    DisplayName_Ammo_545x39mm_HP_Box       = "5.45x39mm HP - 20 Round Box",
-    DisplayName_Ammo_545x39mm_HP_Can       = "5.45x39mm HP - 200 Round Canister",
-	
-    DisplayName_Case_762x39mm              = "7.62x39mm cases",
-    DisplayName_Case_762x39mm_Box          = "7.62x39mm - 20 Cases Box",
-    DisplayName_Case_762x39mm_Can          = "7.62x39mm - 200 Cases Canister",
-    DisplayName_Ammo_762x39mm_FMJ          = "7.62x39mm FMJ Rounds",
-    DisplayName_Ammo_762x39mm_FMJ_Box      = "7.62x39mm FMJ - 20 Round Box",
-    DisplayName_Ammo_762x39mm_FMJ_Can      = "7.62x39mm FMJ - 200 Round Canister",
-    DisplayName_Ammo_762x39mm_HP           = "7.62x39mm HP Rounds",
-    DisplayName_Ammo_762x39mm_HP_Box       = "7.62x39mm HP - 20 Round Box",
-    DisplayName_Ammo_762x39mm_HP_Can       = "7.62x39mm HP - 200 Round Canister",
+    DisplayName_ORGM_Case_762x51mm              = "7.62x51mm cases",
+    DisplayName_ORGM_Case_762x51mm_Box          = "7.62x51mm - 20 Cases Box",
+    DisplayName_ORGM_Case_762x51mm_Can          = "7.62x51mm - 200 Cases Canister",
+    DisplayName_ORGM_Ammo_762x51mm              = "7.62x51mm rounds",
+    DisplayName_ORGM_Ammo_762x51mm_FMJ          = "7.62x51mm FMJ Rounds",
+    DisplayName_ORGM_Ammo_762x51mm_FMJ_Box      = "7.62x51mm FMJ - 20 Round Box",
+    DisplayName_ORGM_Ammo_762x51mm_FMJ_Can      = "7.62x51mm FMJ - 200 Round Canister",
+    DisplayName_ORGM_Ammo_762x51mm_HP           = "7.62x51mm HP Rounds",
+    DisplayName_ORGM_Ammo_762x51mm_HP_Box       = "7.62x51mm HP - 20 Round Box",
+    DisplayName_ORGM_Ammo_762x51mm_HP_Can       = "7.62x51mm HP - 200 Round Canister",
 
-    DisplayName_Case_762x51mm              = "7.62x51mm cases",
-    DisplayName_Case_762x51mm_Box          = "7.62x51mm - 20 Cases Box",
-    DisplayName_Case_762x51mm_Can          = "7.62x51mm - 200 Cases Canister",
-    DisplayName_Ammo_762x51mm_FMJ          = "7.62x51mm FMJ Rounds",
-    DisplayName_Ammo_762x51mm_FMJ_Box      = "7.62x51mm FMJ - 20 Round Box",
-    DisplayName_Ammo_762x51mm_FMJ_Can      = "7.62x51mm FMJ - 200 Round Canister",
-    DisplayName_Ammo_762x51mm_HP           = "7.62x51mm HP Rounds",
-    DisplayName_Ammo_762x51mm_HP_Box       = "7.62x51mm HP - 20 Round Box",
-    DisplayName_Ammo_762x51mm_HP_Can       = "7.62x51mm HP - 200 Round Canister",
+    DisplayName_ORGM_Case_762x54mm              = "7.62x54R cases",
+    DisplayName_ORGM_Case_762x54mm_Box          = "7.62x54R - 20 Cases Box",
+    DisplayName_ORGM_Case_762x54mm_Can          = "7.62x54R - 200 Cases Canister",
+    DisplayName_ORGM_Ammo_762x54mm              = "7.62x54R rounds",
+    DisplayName_ORGM_Ammo_762x54mm_FMJ          = "7.62x54R FMJ rounds",
+    DisplayName_ORGM_Ammo_762x54mm_FMJ_Box      = "7.62x54R FMJ - 20 Round Box",
+    DisplayName_ORGM_Ammo_762x54mm_FMJ_Can      = "7.62x54R FMJ - 200 Round Canister",
+    DisplayName_ORGM_Ammo_762x54mm_HP           = "7.62x54R HP rounds",
+    DisplayName_ORGM_Ammo_762x54mm_HP_Box       = "7.62x54R HP - 20 Round Box",
+    DisplayName_ORGM_Ammo_762x54mm_HP_Can       = "7.62x54R HP - 200 Round Canister",
 
-    DisplayName_Case_762x54mm              = "7.62x54R cases",
-    DisplayName_Case_762x54mm_Box          = "7.62x54R - 20 Cases Box",
-    DisplayName_Case_762x54mm_Can          = "7.62x54R - 200 Cases Canister",
-    DisplayName_Ammo_762x54mm_FMJ          = "7.62x54R FMJ rounds",
-    DisplayName_Ammo_762x54mm_FMJ_Box      = "7.62x54R FMJ - 20 Round Box",
-    DisplayName_Ammo_762x54mm_FMJ_Can      = "7.62x54R FMJ - 200 Round Canister",
-    DisplayName_Ammo_762x54mm_HP           = "7.62x54R HP rounds",
-    DisplayName_Ammo_762x54mm_HP_Box       = "7.62x54R HP - 20 Round Box",
-    DisplayName_Ammo_762x54mm_HP_Can       = "7.62x54R HP - 200 Round Canister",
-
-    DisplayName_Case_12g               = "12 Gauge cases",
-    DisplayName_Case_12g_Box           = "12 Gauge - 25 Cases Box",
-    DisplayName_Case_12g_Can           = "12 Gauge - 250 Cases Canister",
-    DisplayName_Ammo_12g_00Buck        = "00 Buck 12 Gauge shells",
-    DisplayName_Ammo_12g_00Buck_Box    = "00 Buck 12 Gauge - 25 Shell Box",
-    DisplayName_Ammo_12g_00Buck_Can    = "00 Buck 12 Gauge - 250 Round Canister",
-    DisplayName_Ammo_12g_Slug          = "Slug 12 Gauge shells",
-    DisplayName_Ammo_12g_Slug_Box      = "Slug 12 Gauge - 25 Shell Box",
-    DisplayName_Ammo_12g_Slug_Can      = "Slug 12 Gauge - 250 Round Canister",
+    DisplayName_ORGM_Case_12g               = "12 Gauge cases",
+    DisplayName_ORGM_Case_12g_Box           = "12 Gauge - 25 Cases Box",
+    DisplayName_ORGM_Case_12g_Can           = "12 Gauge - 250 Cases Canister",
+    DisplayName_ORGM_Ammo_12g               = "12 Gauge shells",
+    DisplayName_ORGM_Ammo_12g_00Buck        = "00 Buck 12 Gauge shells",
+    DisplayName_ORGM_Ammo_12g_00Buck_Box    = "00 Buck 12 Gauge - 25 Shell Box",
+    DisplayName_ORGM_Ammo_12g_00Buck_Can    = "00 Buck 12 Gauge - 250 Round Canister",
+    DisplayName_ORGM_Ammo_12g_Slug          = "Slug 12 Gauge shells",
+    DisplayName_ORGM_Ammo_12g_Slug_Box      = "Slug 12 Gauge - 25 Shell Box",
+    DisplayName_ORGM_Ammo_12g_Slug_Can      = "Slug 12 Gauge - 250 Round Canister",
 
 
 

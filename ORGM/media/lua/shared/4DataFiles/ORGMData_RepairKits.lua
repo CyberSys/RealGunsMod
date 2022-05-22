@@ -8,7 +8,6 @@ All calls made by this script are to `ORGM.Maintance.register`. See the document
 @copyright 2018 **File:** shared/4DataFiles/ORGMData_RepairKits.lua
 
 ]]
---[[
 
 local register = ORGM.Maintance.register
 
@@ -17,5 +16,3 @@ register('Brushkit', {} )
 register('Maintkit', {} )
 
 ORGM.log(ORGM.INFO, "All default Repairkits registered.")
-
-]]
