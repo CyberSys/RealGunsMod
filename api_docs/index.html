@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="modules/ORGM.html">ORGM</a></li>
+  <li><a href="modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="manual/README.html">README</a></li>
+  <li><a href="manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+
+  <h2>A framework for realistic firearm behavior in Project Zomboid</h2>
+
+<h2>Modules</h2>
+<table class="module_list">
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Client.html">ORGM.Client</a></td>
+		<td class="summary">Various Client Fuctions</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></td>
+		<td class="summary">Callback Functions for various events.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></td>
+		<td class="summary">Command Handler Functions.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></td>
+		<td class="summary">This file handles all ORGM item context menus.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Server.html">ORGM.Server</a></td>
+		<td class="summary">Server Side Functions and tables.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></td>
+		<td class="summary">Callback Functions.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></td>
+		<td class="summary">Command Handler Functions.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></td>
+		<td class="summary">Spawning Functions.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.html">ORGM</a></td>
+		<td class="summary">ORGM Rechambered</p>
+
+<p>The core ORGM table of ORGM Rechambered.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Sounds.html">ORGM.Sounds</a></td>
+		<td class="summary"></td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Ammo.html">ORGM.Ammo</a></td>
+		<td class="summary">Functions for dealing with ammo.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Callbacks.html">ORGM.Callbacks</a></td>
+		<td class="summary">Callback functions for various shared events.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Component.html">ORGM.Component</a></td>
+		<td class="summary">Component Functions</p>
+
+<p>This file handles functions dealing with components and attachments.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Firearm.html">ORGM.Firearm</a></td>
+		<td class="summary">Firearm Functions.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Magazine.html">ORGM.Magazine</a></td>
+		<td class="summary">Magazine Functions</p>
+
+<p>This file contains functions for dealing with magazines and their data.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.Maintance.html">ORGM.Maintance</a></td>
+		<td class="summary">Maintance Functions.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></td>
+		<td class="summary">This module serves as a lower level API to the ISORGMWeapon class.</td>
+	</tr>
+</table>
+<h2>Scripts</h2>
+<table class="module_list">
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></td>
+		<td class="summary">All client-side calls to Events.*.Add() are defined within this file.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></td>
+		<td class="summary">All server-side calls to Events.*.Add() are defined within this file.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></td>
+		<td class="summary">This file contains all default ammo data.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></td>
+		<td class="summary">This file contains all default components/attachment data.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></td>
+		<td class="summary">This file contains all default magazine data.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></td>
+		<td class="summary">This file contains all default maintance kit data.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></td>
+		<td class="summary">This file contains all default firearm data.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></td>
+		<td class="summary">Everything in here exists for compatibility.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></td>
+		<td class="summary">All client-side calls to Events.*.Add() are defined within this file.</td>
+	</tr>
+</table>
+<h2>Classes</h2>
+<table class="module_list">
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></td>
+		<td class="summary">Override for ISRemoveWeaponUpgrade.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISToolTipInv.html">ISToolTipInv</a></td>
+		<td class="summary">Override for ISToolTipInv.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></td>
+		<td class="summary">Override for ISUpgradeWeapon.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/MainOptions.html">MainOptions</a></td>
+		<td class="summary">Contains the code for adding options to the PZ options screen.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></td>
+		<td class="summary"></td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></td>
+		<td class="summary">Timed Action for cleaning firearms and magazines.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISORGMMagazine.html">ISORGMMagazine</a></td>
+		<td class="summary">This serves as a wrapper between PZ&rsquo;s Reloadable system and `ORGM.ReloadableWeapon.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISReloadManager.html">ISReloadManager</a></td>
+		<td class="summary">Injects new methods and overrides into PZ&rsquo;s ISReloadManager</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></td>
+		<td class="summary">Timed Action for unloading firearms and magazines.</td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="classes/ISORGMWeapon.html">ISORGMWeapon</a></td>
+		<td class="summary">This serves as a wrapper between PZ&rsquo;s Reloadable system and the <a href="modules/ORGM.ReloadableWeapon.html#">ORGM.ReloadableWeapon</a>.</td>
+	</tr>
+</table>
+<h2>Manual</h2>
+<table class="module_list">
+	<tr>
+		<td class="name"  nowrap><a href="manual/README.html">README</a></td>
+		<td class="summary"></td>
+	</tr>
+	<tr>
+		<td class="name"  nowrap><a href="manual/changelog.txt.html">changelog.txt</a></td>
+		<td class="summary"></td>
+	</tr>
+</table>
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

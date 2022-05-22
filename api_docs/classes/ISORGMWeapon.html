@@ -1,0 +1,1695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Attacking_Methods">Attacking Methods </a></li>
+<li><a href="#Reload_Action_Methods">Reload Action Methods </a></li>
+<li><a href="#Unload_Action_Methods">Unload Action Methods </a></li>
+<li><a href="#Rack_Action_Methods">Rack Action Methods </a></li>
+<li><a href="#Magazine_Methods">Magazine Methods </a></li>
+<li><a href="#Depreciated_Methods">Depreciated Methods </a></li>
+<li><a href="#Setup_and_Sync_Methods">Setup and Sync Methods </a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><strong>ISORGMWeapon</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>ISORGMWeapon</code></h1>
+<p>This serves as a wrapper between PZ&rsquo;s Reloadable system and the <a href="../modules/ORGM.ReloadableWeapon.html#">ORGM.ReloadableWeapon</a>.</p>
+<p>Most functions have been moved there, as it allows for the same functions on both
+ISORGMWeapon objects and a HandWeapon/InventoryItem&rsquo;s modData. As such method calls in here are
+depreciated, as they are no longer called for by anywhere else in this file,
+and should be removed at a later date.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/3LoadOrder/ISORGMWeapon.lua</li>
+        <li><strong>Release</strong>: 3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Attacking_Methods">Attacking Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:isLoaded">ISORGMWeapon:isLoaded (difficulty)</a></td>
+	<td class="summary">Called to determine if ISORGMWeapon:fireShot should be called in <a href="../classes/ISReloadManager.html#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:preFireShot">ISORGMWeapon:preFireShot (difficulty, playerObj, weaponItem)</a></td>
+	<td class="summary">Called before the IsoPlayer.DoAttack in <a href="../classes/ISReloadManager.html#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:fireShot">ISORGMWeapon:fireShot (weaponItem, difficulty)</a></td>
+	<td class="summary">Called after the IsoPlayer.DoAttack in ISReloadManager:checkLoaded`.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:fireEmpty">ISORGMWeapon:fireEmpty (playerObj, weaponItem)</a></td>
+	<td class="summary">Called when the trigger is pulled on a empty chamber in <a href="../classes/ISReloadManager.html#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded</a>.</td>
+	</tr>
+</table>
+<h2><a href="#Reload_Action_Methods">Reload Action Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:canReload">ISORGMWeapon:canReload (playerObj)</a></td>
+	<td class="summary">Called at the start of a reload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:isReloadValid">ISORGMWeapon:isReloadValid (playerObj, square, difficulty)</a></td>
+	<td class="summary">Checks if the reload timed action is still valid.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:reloadStart">ISORGMWeapon:reloadStart (playerObj, square, difficulty)</a></td>
+	<td class="summary">Called at the start of the reload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:reloadPerform">ISORGMWeapon:reloadPerform (playerObj, square, difficulty, weaponItem)</a></td>
+	<td class="summary">Called at completion of the reload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:getReloadTime">ISORGMWeapon:getReloadTime ()</a></td>
+	<td class="summary">Returns the time it takes to perform the reload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:getReloadText">ISORGMWeapon:getReloadText ()</a></td>
+	<td class="summary">Gets the translated context menu text for reloading.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:isChainReloading">ISORGMWeapon:isChainReloading ()</a></td>
+	<td class="summary">Checks if a reload action should be performed immediately after this one.</td>
+	</tr>
+</table>
+<h2><a href="#Unload_Action_Methods">Unload Action Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:canUnload">ISORGMWeapon:canUnload (playerObj)</a></td>
+	<td class="summary">Called at the start of a unload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:isUnloadValid">ISORGMWeapon:isUnloadValid (playerObj, square, difficulty)</a></td>
+	<td class="summary">Checks if the unload timed action is still valid.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:unloadStart">ISORGMWeapon:unloadStart (playerObj, square, difficulty)</a></td>
+	<td class="summary">Called at the start of the unload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:unloadPerform">ISORGMWeapon:unloadPerform (playerObj, square, difficulty, weaponItem)</a></td>
+	<td class="summary">Called at completion of the unload timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:isChainUnloading">ISORGMWeapon:isChainUnloading ()</a></td>
+	<td class="summary">Checks if a unload action should be performed immediately after this one.</td>
+	</tr>
+</table>
+<h2><a href="#Rack_Action_Methods">Rack Action Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:canRack">ISORGMWeapon:canRack (playerObj)</a></td>
+	<td class="summary">Called at the start of a reack timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:rackingStart">ISORGMWeapon:rackingStart (playerObj, square, weaponItem)</a></td>
+	<td class="summary">Called at the start of the rack timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:rackingPerform">ISORGMWeapon:rackingPerform (playerObj, square, weaponItem)</a></td>
+	<td class="summary">Called at completion of the rack timed action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:getRackTime">ISORGMWeapon:getRackTime ()</a></td>
+	<td class="summary">Returns the time it takes to perform the reload timed action.</td>
+	</tr>
+</table>
+<h2><a href="#Magazine_Methods">Magazine Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:ejectMagazine">ISORGMWeapon:ejectMagazine (playerObj[, playSound])</a></td>
+	<td class="summary">Ejects the current magazine and adds it to the players inventory.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:insertMagazine">ISORGMWeapon:insertMagazine (playerObj[, playSound])</a></td>
+	<td class="summary">Inserts the best magazine from the players inventory into the firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:setupMagazine">ISORGMWeapon:setupMagazine (magItem)</a></td>
+	<td class="summary">Sets up the ISReloadableMagazine on the InventoryItem</td>
+	</tr>
+</table>
+<h2><a href="#Depreciated_Methods">Depreciated Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:createMagazine">ISORGMWeapon:createMagazine ()</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:loadRoundIntoMagazine">ISORGMWeapon:loadRoundIntoMagazine (ammoType, weaponItem, position)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:convertAmmoGroupRound">ISORGMWeapon:convertAmmoGroupRound (ammoType)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:findBestMagazine">ISORGMWeapon:findBestMagazine (playerObj, ammoType)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:findBestAmmo">ISORGMWeapon:findBestAmmo (playerObj)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:getMagazineAtPosition">ISORGMWeapon:getMagazineAtPosition (position)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:getMagazineAtNextPosition">ISORGMWeapon:getMagazineAtNextPosition (wrap)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:emptyMagazineAtOnce">ISORGMWeapon:emptyMagazineAtOnce (playerObj, playSound)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:hasEmptyCasesInMagazine">ISORGMWeapon:hasEmptyCasesInMagazine ()</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:feedNextRound">ISORGMWeapon:feedNextRound (playerObj, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:setCurrentRound">ISORGMWeapon:setCurrentRound (ammoType, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:cockHammer">ISORGMWeapon:cockHammer (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:releaseHammer">ISORGMWeapon:releaseHammer (playerObj, playSound)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:openSlide">ISORGMWeapon:openSlide (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:closeSlide">ISORGMWeapon:closeSlide (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:rotateCylinder">ISORGMWeapon:rotateCylinder (count, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:openCylinder">ISORGMWeapon:openCylinder (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:closeCylinder">ISORGMWeapon:closeCylinder (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:openBreak">ISORGMWeapon:openBreak (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:closeBreak">ISORGMWeapon:closeBreak (playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">DEPRECIATED.</td>
+	</tr>
+</table>
+<h2><a href="#Setup_and_Sync_Methods">Setup and Sync Methods </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:syncItemToReloadable">ISORGMWeapon:syncItemToReloadable (weaponItem)</a></td>
+	<td class="summary">Copies modData from the weaponItem to the reloadable object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISORGMWeapon:syncReloadableToItem">ISORGMWeapon:syncReloadableToItem (weaponItem)</a></td>
+	<td class="summary">Copies properties of the reloadable object to the weaponItem&rsquo;s modData.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Attacking_Methods"></a>Attacking Methods </h2>
+
+         These are called from ISReloadManager:checkLoaded()
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:isLoaded"></a>
+    <strong>ISORGMWeapon:isLoaded (difficulty)</strong>
+    </dt>
+    <dd>
+    Called to determine if ISORGMWeapon:fireShot should be called in <a href="../classes/ISReloadManager.html#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:preFireShot"></a>
+    <strong>ISORGMWeapon:preFireShot (difficulty, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called before the IsoPlayer.DoAttack in <a href="../classes/ISReloadManager.html#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the attack can continue.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:preFireShot(<span class="number">3</span>, playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:fireShot"></a>
+    <strong>ISORGMWeapon:fireShot (weaponItem, difficulty)</strong>
+    </dt>
+    <dd>
+    Called after the IsoPlayer.DoAttack in ISReloadManager:checkLoaded`.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:fireShot(weaponItem, <span class="number">3</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:fireEmpty"></a>
+    <strong>ISORGMWeapon:fireEmpty (playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called when the trigger is pulled on a empty chamber in <a href="../classes/ISReloadManager.html#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:fireShot(playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Reload_Action_Methods"></a>Reload Action Methods </h2>
+
+         Methods relating to the reload timed action.
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:canReload"></a>
+    <strong>ISORGMWeapon:canReload (playerObj)</strong>
+    </dt>
+    <dd>
+    Called at the start of a reload timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the timed action can start.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:canReload(playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:isReloadValid"></a>
+    <strong>ISORGMWeapon:isReloadValid (playerObj, square, difficulty)</strong>
+    </dt>
+    <dd>
+    Checks if the reload timed action is still valid.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true to continue, false to halt.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:isReloadValid(playerObj, square, <span class="number">3</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:reloadStart"></a>
+    <strong>ISORGMWeapon:reloadStart (playerObj, square, difficulty)</strong>
+    </dt>
+    <dd>
+    Called at the start of the reload timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:reloadStart(playerObj, square, <span class="number">3</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:reloadPerform"></a>
+    <strong>ISORGMWeapon:reloadPerform (playerObj, square, difficulty, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at completion of the reload timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:reloadPerform(playerObj, square, <span class="number">3</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:getReloadTime"></a>
+    <strong>ISORGMWeapon:getReloadTime ()</strong>
+    </dt>
+    <dd>
+    Returns the time it takes to perform the reload timed action.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">integer</span></span>
+        the reload time.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> time = reloadable:getReloadTime()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:getReloadText"></a>
+    <strong>ISORGMWeapon:getReloadText ()</strong>
+    </dt>
+    <dd>
+    Gets the translated context menu text for reloading.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the translated text
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> text = reloadable:getReloadText()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:isChainReloading"></a>
+    <strong>ISORGMWeapon:isChainReloading ()</strong>
+    </dt>
+    <dd>
+    Checks if a reload action should be performed immediately after this one.</p>
+
+<p>Does not take into account ammunition availability.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the reloading should continue.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:isChainReloading()</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Unload_Action_Methods"></a>Unload Action Methods </h2>
+
+         Methods relating to the unload timed action.
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:canUnload"></a>
+    <strong>ISORGMWeapon:canUnload (playerObj)</strong>
+    </dt>
+    <dd>
+    Called at the start of a unload timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the timed action can start.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:canUnload(playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:isUnloadValid"></a>
+    <strong>ISORGMWeapon:isUnloadValid (playerObj, square, difficulty)</strong>
+    </dt>
+    <dd>
+    Checks if the unload timed action is still valid.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true to continue, false to halt.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:isUnloadValid(playerObj, square, <span class="number">3</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:unloadStart"></a>
+    <strong>ISORGMWeapon:unloadStart (playerObj, square, difficulty)</strong>
+    </dt>
+    <dd>
+    Called at the start of the unload timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:unloadStart(playerObj, square, <span class="number">3</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:unloadPerform"></a>
+    <strong>ISORGMWeapon:unloadPerform (playerObj, square, difficulty, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at completion of the unload timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">difficulty</span>
+            <span class="types"><span class="type">int</span></span>
+         players reloading difficulty, not used
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:unloadPerform(playerObj, square, <span class="number">3</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:isChainUnloading"></a>
+    <strong>ISORGMWeapon:isChainUnloading ()</strong>
+    </dt>
+    <dd>
+    Checks if a unload action should be performed immediately after this one.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the unloading should continue.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:isChainUnloading()</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Rack_Action_Methods"></a>Rack Action Methods </h2>
+
+         Methods relating to the racking timed action.
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:canRack"></a>
+    <strong>ISORGMWeapon:canRack (playerObj)</strong>
+    </dt>
+    <dd>
+    Called at the start of a reack timed action.</p>
+
+<p>On Easy/Normal this returns false if there is already a round chambered.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the timed action can start.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:canRack(playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:rackingStart"></a>
+    <strong>ISORGMWeapon:rackingStart (playerObj, square, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at the start of the rack timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:rackingStart(playerObj, square, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:rackingPerform"></a>
+    <strong>ISORGMWeapon:rackingPerform (playerObj, square, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at completion of the rack timed action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">square</span>
+            <span class="types"><span class="type">IsoGridSquare</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:rackingPerform(playerObj, square, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:getRackTime"></a>
+    <strong>ISORGMWeapon:getRackTime ()</strong>
+    </dt>
+    <dd>
+    Returns the time it takes to perform the reload timed action.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        the reload time.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> time = reloadable:getReloadTime()</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Magazine_Methods"></a>Magazine Methods </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:ejectMagazine"></a>
+    <strong>ISORGMWeapon:ejectMagazine (playerObj[, playSound])</strong>
+    </dt>
+    <dd>
+    Ejects the current magazine and adds it to the players inventory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true plays the ejectSound
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:ejectMagazine(playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:insertMagazine"></a>
+    <strong>ISORGMWeapon:insertMagazine (playerObj[, playSound])</strong>
+    </dt>
+    <dd>
+    Inserts the best magazine from the players inventory into the firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true plays the insertSound
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:insertMagazine(playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:setupMagazine"></a>
+    <strong>ISORGMWeapon:setupMagazine (magItem)</strong>
+    </dt>
+    <dd>
+    Sets up the ISReloadableMagazine on the InventoryItem
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">magItem</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+         to add ISReloadableMagazine to.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Depreciated_Methods"></a>Depreciated Methods </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:createMagazine"></a>
+    <strong>ISORGMWeapon:createMagazine ()</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.
+Creates a new magazine for this weapon type and transfers some modData
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> magItem = reloadable:createMagazine()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:loadRoundIntoMagazine"></a>
+    <strong>ISORGMWeapon:loadRoundIntoMagazine (ammoType, weaponItem, position)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Loads a round into a internal magazine or cylinder.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ammoType</span>
+         a string name of a registered ORGM ammo
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+        <li><span class="parameter">position</span>
+         integer (or nil) of position to insert the round at. If nil it is appended to the list.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:loadRoundIntoMagazine(<span class="string">'Ammo_9x19mm_FMJ'</span>, weaponItem, <span class="keyword">nil</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:convertAmmoGroupRound"></a>
+    <strong>ISORGMWeapon:convertAmmoGroupRound (ammoType)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Converts a AmmoGroup round to a real round if required.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ammoType</span>
+         a string name of a AmmoGroup or registered ORGM ammo
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string, the name of the first ammo in the group or ammoType if a real ammo was already passed in.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = reloadable:convertAmmoGroupRound(<span class="string">'Ammo_9x19mm'</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:findBestMagazine"></a>
+    <strong>ISORGMWeapon:findBestMagazine (playerObj, ammoType)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Finds and returns the best magazine available in the players inventory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">ammoType</span>
+         nil (auto detected), or string name of a registered ORGM magazine
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        InventoryItem, the best suited magazine, or nil.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> magItem = reloadable:findBestMagazine(playerObj, <span class="keyword">nil</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:findBestAmmo"></a>
+    <strong>ISORGMWeapon:findBestAmmo (playerObj)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Finds and returns the best ammo available in the players inventory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        InventoryItem, the best suited ammo, or nil.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> magItem = reloadable:findBestAmmo(playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:getMagazineAtPosition"></a>
+    <strong>ISORGMWeapon:getMagazineAtPosition (position)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Gets the ammo at specified position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">position</span>
+         integer, the index position to get.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string, the ammo (or case) name at the position, or nil.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> ammoType = reloadable:getMagazineAtPosition(position)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:getMagazineAtNextPosition"></a>
+    <strong>ISORGMWeapon:getMagazineAtNextPosition (wrap)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Gets the ammo at the next position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">wrap</span>
+         boolean, if we should wrap around back to the begining past maxCapacity. true for rotary actions.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        string, the ammo (or case) name at the next position, or nil.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> ammoType = reloadable:getMagazineAtNextPosition(<span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:emptyMagazineAtOnce"></a>
+    <strong>ISORGMWeapon:emptyMagazineAtOnce (playerObj, playSound)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Ejects all shells (live and spent) onto the ground.</p>
+
+<p>Used primarly with revolvers and break barrels on opening.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the ejectSound if true
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:emptyMagazineAtOnce(playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:hasEmptyCasesInMagazine"></a>
+    <strong>ISORGMWeapon:hasEmptyCasesInMagazine ()</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Gets the number of empty cases in the magazine/cylinder.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        integer, number of spent cases
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> count = reloadabe:hasEmptyCasesInMagazine()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:feedNextRound"></a>
+    <strong>ISORGMWeapon:feedNextRound (playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Loads the next round into the chamber
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadabe:feedNextRound(playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:setCurrentRound"></a>
+    <strong>ISORGMWeapon:setCurrentRound (ammoType, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Triggers a recalcuation of firearm stats on ammo changes.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ammoType</span>
+         a string, the name of the ammo
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:setCurrentRound(ammoType, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:cockHammer"></a>
+    <strong>ISORGMWeapon:cockHammer (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Cocks the hammer and rotates the cylinder for Rotary actionType.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the cockSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:cockHammer(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:releaseHammer"></a>
+    <strong>ISORGMWeapon:releaseHammer (playerObj, playSound)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Releases a cocked hammer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, not used
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:releaseHammer(playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:openSlide"></a>
+    <strong>ISORGMWeapon:openSlide (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Opens the bolt, ejecting whatever is currently in the chamber onto the ground.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:openSlide(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:closeSlide"></a>
+    <strong>ISORGMWeapon:closeSlide (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Closes the bolt and chambers the next round.</p>
+
+<p>Single and Double actions this also cocks the hammer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:closeSlide(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:rotateCylinder"></a>
+    <strong>ISORGMWeapon:rotateCylinder (count, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Rotates the cylinder by the specified amount.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">count</span>
+         a integer, the number of positions to rotate. If nil or 0, randomly selects (chamber spin)
+        </li>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:rotateCylinder(<span class="number">1</span>, playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:openCylinder"></a>
+    <strong>ISORGMWeapon:openCylinder (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Opens the cylinder.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:openCylinder(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:closeCylinder"></a>
+    <strong>ISORGMWeapon:closeCylinder (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Closes the cylinder and sets the current round.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:closeCylinder(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:openBreak"></a>
+    <strong>ISORGMWeapon:openBreak (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Opens the breech and ejects any shells.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:openBreak(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:closeBreak"></a>
+    <strong>ISORGMWeapon:closeBreak (playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    DEPRECIATED.  Closes the breech and sets the current round.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+         a IsoPlayer object
+        </li>
+        <li><span class="parameter">playSound</span>
+         boolean, plays the openSound if true
+        </li>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:closeBreak(playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Setup_and_Sync_Methods"></a>Setup and Sync Methods </h2>
+
+         These are used in intial setup of the reloadable, and keeping data synced between the
+ HandWeapon&rsquo;s mod data and the reloadable object.
+    <dl class="function">
+    <dt>
+    <a name = "ISORGMWeapon:syncItemToReloadable"></a>
+    <strong>ISORGMWeapon:syncItemToReloadable (weaponItem)</strong>
+    </dt>
+    <dd>
+    Copies modData from the weaponItem to the reloadable object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:syncItemToReloadable(weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "ISORGMWeapon:syncReloadableToItem"></a>
+    <strong>ISORGMWeapon:syncReloadableToItem (weaponItem)</strong>
+    </dt>
+    <dd>
+    Copies properties of the reloadable object to the weaponItem&rsquo;s modData.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+         a HandWeapon/InventoryItem
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">reloadable:syncItemToReloadable(weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

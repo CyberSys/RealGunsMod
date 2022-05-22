@@ -1,0 +1,1643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Firing_Functions">Firing Functions </a></li>
+<li><a href="#Reloading_Functions">Reloading Functions </a></li>
+<li><a href="#Unloading_Functions">Unloading Functions </a></li>
+<li><a href="#Magazine_Functions">Magazine Functions </a></li>
+<li><a href="#Ammo_Functions">Ammo Functions </a></li>
+<li><a href="#Racking_Functions">Racking Functions </a></li>
+<li><a href="#Hammer_Functions">Hammer Functions </a></li>
+<li><a href="#Bolt_Functions">Bolt Functions </a></li>
+<li><a href="#Cylinder_Functions">Cylinder Functions </a></li>
+<li><a href="#Break_Barrel_Functions">Break Barrel Functions </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><strong>ORGM.ReloadableWeapon</strong></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM.ReloadableWeapon</code></h1>
+<p>This module serves as a lower level API to the ISORGMWeapon class.</p>
+<p>It allows for the data its operating on be either a ISReloadableWeapon class object,
+or a HandWeapon/InventoryItem&rsquo;s modData.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/2LoadOrder/ORGMReloadableWeapon.lua</li>
+        <li><strong>Release</strong>: v3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Firing_Functions">Firing Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Fire.valid">Fire.valid (this)</a></td>
+	<td class="summary">Called when checking if a shot will attempt to fire when the trigger is pulled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Fire.pre">Fire.pre (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called as just as the trigger is pulled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Fire.post">Fire.post (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called after the trigger is pulled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Fire.dry">Fire.dry (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called when the trigger is pulled on a empty chamber.</td>
+	</tr>
+</table>
+<h2><a href="#Reloading_Functions">Reloading Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Reload.valid">Reload.valid (this, playerObj)</a></td>
+	<td class="summary">Checks if a reload action can be performed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Reload.start">Reload.start (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called at the start of a reload action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Reload.perform">Reload.perform (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called at successful completion of the reload action.</td>
+	</tr>
+</table>
+<h2><a href="#Unloading_Functions">Unloading Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Unload.valid">Unload.valid (this, playerObj)</a></td>
+	<td class="summary">Checks if a unload action can be performed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Unload.start">Unload.start (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called at the start of a unload action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Unload.perform">Unload.perform (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called at successful completion of the unload action.</td>
+	</tr>
+</table>
+<h2><a href="#Magazine_Functions">Magazine Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Magazine.eject">Magazine.eject (this, playerObj[, playSound])</a></td>
+	<td class="summary">Ejects the current magazine and adds it to the players inventory.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Magazine.insert">Magazine.insert (this, playerObj[, playSound])</a></td>
+	<td class="summary">Inserts the best magazine from the players inventory into the firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Magazine.create">Magazine.create (this, playerObj)</a></td>
+	<td class="summary">Creates a new magazine InventoryItem with modData.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Magazine.setup">Magazine.setup (this, magItem, playerObj)</a></td>
+	<td class="summary">Sets up the ISReloadableMagazine on the InventoryItem</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Magazine.findBest">Magazine.findBest (this, playerObj, ammoType)</a></td>
+	<td class="summary">Finds and returns the best magazine available in the players inventory.</td>
+	</tr>
+</table>
+<h2><a href="#Ammo_Functions">Ammo Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.load">Ammo.load (this, ammoType, weaponItem[, position])</a></td>
+	<td class="summary">Loads a round into the firearm (internal magazine or cylinder).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.convert">Ammo.convert (this, ammoType)</a></td>
+	<td class="summary">Converts a AmmoGroup round to a real round if required.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.findBest">Ammo.findBest (this, playerObj)</a></td>
+	<td class="summary">Finds and returns the best ammo available in the players inventory.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.get">Ammo.get (this, position)</a></td>
+	<td class="summary">Gets the ammo at specified position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.peek">Ammo.peek (this[, wrap])</a></td>
+	<td class="summary">Gets the ammo at the next position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.ejectAll">Ammo.ejectAll (this, playerObj[, playSound])</a></td>
+	<td class="summary">Ejects all shells (live and spent) onto the ground.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.hasCases">Ammo.hasCases (this)</a></td>
+	<td class="summary">Gets the number of empty cases in the magazine/cylinder.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.next">Ammo.next (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Loads the next round into the chamber</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo.setCurrent">Ammo.setCurrent (this, ammoType, weaponItem)</a></td>
+	<td class="summary">Triggers a recalcuation of firearm stats on ammo changes.</td>
+	</tr>
+</table>
+<h2><a href="#Racking_Functions">Racking Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Rack.valid">Rack.valid (this, playerObj)</a></td>
+	<td class="summary">Checks if the weapon can be racked.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rack.start">Rack.start (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called at the start of a rack action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Rack.perform">Rack.perform (this, playerObj, weaponItem)</a></td>
+	<td class="summary">Called at successful completion of a rack action.</td>
+	</tr>
+</table>
+<h2><a href="#Hammer_Functions">Hammer Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.cock">Hammer.cock (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Cocks the hammer and rotates the cylinder for Rotary actionType.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.release">Hammer.release (this, playerObj, playSound)</a></td>
+	<td class="summary">Releases a cocked hammer.</td>
+	</tr>
+</table>
+<h2><a href="#Bolt_Functions">Bolt Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Bolt.open">Bolt.open (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Opens the bolt, ejecting whatever is currently in the chamber onto the ground.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Bolt.close">Bolt.close (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Closes the bolt and chambers the next round.</td>
+	</tr>
+</table>
+<h2><a href="#Cylinder_Functions">Cylinder Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Cylinder.rotate">Cylinder.rotate (this, count, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Rotates the cylinder by the specified amount.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Cylinder.open">Cylinder.open (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Opens the cylinder.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Cylinder.close">Cylinder.close (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Closes the cylinder and sets the current round.</td>
+	</tr>
+</table>
+<h2><a href="#Break_Barrel_Functions">Break Barrel Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Break.open">Break.open (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Opens the breech and ejects any shells.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Break.close">Break.close (this, playerObj, playSound, weaponItem)</a></td>
+	<td class="summary">Closes the breech and sets the current round.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Firing_Functions"></a>Firing Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Fire.valid"></a>
+    <strong>Fire.valid (this)</strong>
+    </dt>
+    <dd>
+    Called when checking if a shot will attempt to fire when the trigger is pulled.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if pulling the trigger &lsquo;should&rsquo; fire the gun.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Fire.valid(weaponItem:getModData())</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Fire.pre"></a>
+    <strong>Fire.pre (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called as just as the trigger is pulled.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Fire.pre(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Fire.post"></a>
+    <strong>Fire.post (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called after the trigger is pulled.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Fire.post(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Fire.dry"></a>
+    <strong>Fire.dry (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called when the trigger is pulled on a empty chamber.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Fire.dry(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Reloading_Functions"></a>Reloading Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Reload.valid"></a>
+    <strong>Reload.valid (this, playerObj)</strong>
+    </dt>
+    <dd>
+    Checks if a reload action can be performed.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean, true if a reload action can be performed, otherwise false.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Reload.valid(weaponItem:getModData(), playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Reload.start"></a>
+    <strong>Reload.start (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at the start of a reload action.</p>
+
+<p>This mostly just plays sounds, and opens the break barrel (for shotguns)
+or revolver cylinder.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Reload.start(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Reload.perform"></a>
+    <strong>Reload.perform (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at successful completion of the reload action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        false if the reloading should stop
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Reload.perform(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Unloading_Functions"></a>Unloading Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Unload.valid"></a>
+    <strong>Unload.valid (this, playerObj)</strong>
+    </dt>
+    <dd>
+    Checks if a unload action can be performed.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if a unload action can be performed
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Unload.valid(weaponItem:getModData(), playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Unload.start"></a>
+    <strong>Unload.start (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at the start of a unload action.</p>
+
+<p>This mostly just plays sounds, and opens the break barrel (for shotguns)
+or revolver cylinder.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Unload.start(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Unload.perform"></a>
+    <strong>Unload.perform (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at successful completion of the unload action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        false if the unloading should stop
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Unload.perform(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Magazine_Functions"></a>Magazine Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Magazine.eject"></a>
+    <strong>Magazine.eject (this, playerObj[, playSound])</strong>
+    </dt>
+    <dd>
+    Ejects the current magazine and adds it to the players inventory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true plays the ejectSound
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Magazine.eject(weaponItem:getModData(), playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Magazine.insert"></a>
+    <strong>Magazine.insert (this, playerObj[, playSound])</strong>
+    </dt>
+    <dd>
+    Inserts the best magazine from the players inventory into the firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true plays the insertSound
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Magazine.insert(weaponItem:getModData(), playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Magazine.create"></a>
+    <strong>Magazine.create (this, playerObj)</strong>
+    </dt>
+    <dd>
+    Creates a new magazine InventoryItem with modData.</p>
+
+<p>This is called on Reloadable.Magazine.eject()
+Copies some data from the firearm into the magazines modData, setting up the ammo count.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">InventoryItem</span></span>
+        the magazine with setup modData.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> magItem = ORGM.Reloadable.Magazine.create(weaponItem:getModData(), playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Magazine.setup"></a>
+    <strong>Magazine.setup (this, magItem, playerObj)</strong>
+    </dt>
+    <dd>
+    Sets up the ISReloadableMagazine on the InventoryItem
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">magItem</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+         the magazine to setup
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Magazine.setup(weaponItem:getModData(), magItem, playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Magazine.findBest"></a>
+    <strong>Magazine.findBest (this, playerObj, ammoType)</strong>
+    </dt>
+    <dd>
+    Finds and returns the best magazine available in the players inventory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of a registered ORGM magazine, auto detected if nil
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">InventoryItem</span></span>
+        the best suited magazine
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Magazine.html#findIn">ORGM.Magazine.findIn</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> magItem = ORGM.Reloadable.Magazine.findBest(weaponItem:getModData(), playerObj, <span class="keyword">nil</span>)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Ammo_Functions"></a>Ammo Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Ammo.load"></a>
+    <strong>Ammo.load (this, ammoType, weaponItem[, position])</strong>
+    </dt>
+    <dd>
+    Loads a round into the firearm (internal magazine or cylinder).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of a registered ORGM ammo
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">int</span></span>
+         to insert the round at. If nil it is appended to the list.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Ammo.<span class="global">load</span>(weaponItem:getModData(), <span class="string">"Ammo_9x19mm_FMJ"</span>, weaponItem, <span class="keyword">nil</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.convert"></a>
+    <strong>Ammo.convert (this, ammoType)</strong>
+    </dt>
+    <dd>
+    Converts a AmmoGroup round to a real round if required.</p>
+
+<p>This is a safety check performed to ensure we can properly get the ammo stats.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of a AmmoGroup or a registered ammo.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        name of the first ammo in the group or ammoType if a real ammo was already passed in.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> ammoType = ORGM.Reloadable.Ammo.convert(weaponItem:getModData(), <span class="string">"Ammo_9x19mm"</span>,)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.findBest"></a>
+    <strong>Ammo.findBest (this, playerObj)</strong>
+    </dt>
+    <dd>
+    Finds and returns the best ammo available in the players inventory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">InventoryItem</span></span>
+        the best suited ammo
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Ammo.html#findIn">ORGM.Ammo.findIn</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Ammo.findBest(weaponItem:getModData(), playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.get"></a>
+    <strong>Ammo.get (this, position)</strong>
+    </dt>
+    <dd>
+    Gets the ammo at specified position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">int</span></span>
+         the index position to get
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the ammo (or case) name at the position
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> ammoType = ORGM.Reloadable.Ammo.get(weaponItem:getModData(), position)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.peek"></a>
+    <strong>Ammo.peek (this[, wrap])</strong>
+    </dt>
+    <dd>
+    Gets the ammo at the next position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">wrap</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true wraps around the end of the list to the begining past maxCapacity. true for rotary actions.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        ammo (or case) name at the next position
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> ammoType = ORGM.Reloadable.Ammo.peek(weaponItem:getModData(), <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.ejectAll"></a>
+    <strong>Ammo.ejectAll (this, playerObj[, playSound])</strong>
+    </dt>
+    <dd>
+    Ejects all shells (live and spent) onto the ground.</p>
+
+<p>Used primarly with revolvers and break barrels on opening.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true plays the ejectSound
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Ammo.ejectAll(weaponItem:getModData(), playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.hasCases"></a>
+    <strong>Ammo.hasCases (this)</strong>
+    </dt>
+    <dd>
+    Gets the number of empty cases in the magazine/cylinder.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        number of spent cases
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> count = ORGM.Reloadable.Ammo.hasCases(weaponItem:getModData())</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.next"></a>
+    <strong>Ammo.next (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Loads the next round into the chamber
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Ammo.<span class="global">next</span>(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Ammo.setCurrent"></a>
+    <strong>Ammo.setCurrent (this, ammoType, weaponItem)</strong>
+    </dt>
+    <dd>
+    Triggers a recalcuation of firearm stats on ammo changes.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the ammo in use
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Ammo.setCurrent(weaponItem:getModData(), ammoType, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Racking_Functions"></a>Racking Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Rack.valid"></a>
+    <strong>Rack.valid (this, playerObj)</strong>
+    </dt>
+    <dd>
+    Checks if the weapon can be racked.</p>
+
+<p>On Easy/Normal reloading, this returns false if there is already a round chambered.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the gun can be racked.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = ORGM.Reloadable.rack.setCurrent(weaponItem:getModData(), playerObj)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Rack.start"></a>
+    <strong>Rack.start (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at the start of a rack action.</p>
+
+<p>This mostly just plays sounds.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Rack.start(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Rack.perform"></a>
+    <strong>Rack.perform (this, playerObj, weaponItem)</strong>
+    </dt>
+    <dd>
+    Called at successful completion of a rack action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Rack.perform(weaponItem:getModData(), playerObj, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Hammer_Functions"></a>Hammer Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Hammer.cock"></a>
+    <strong>Hammer.cock (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Cocks the hammer and rotates the cylinder for Rotary actionType.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the cockSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Hammer.cock(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Hammer.release"></a>
+    <strong>Hammer.release (this, playerObj, playSound)</strong>
+    </dt>
+    <dd>
+    Releases a cocked hammer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         not used atm
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Hammer.release(weaponItem:getModData(), playerObj, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Bolt_Functions"></a>Bolt Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Bolt.open"></a>
+    <strong>Bolt.open (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Opens the bolt, ejecting whatever is currently in the chamber onto the ground.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the openSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Bolt.open(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Bolt.close"></a>
+    <strong>Bolt.close (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Closes the bolt and chambers the next round.</p>
+
+<p>Single and Double actions this also cocks the hammer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the closeSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Bolt.close(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Cylinder_Functions"></a>Cylinder Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Cylinder.rotate"></a>
+    <strong>Cylinder.rotate (this, count, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Rotates the cylinder by the specified amount.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">count</span>
+            <span class="types"><span class="type">int</span></span>
+         Number of positions to rotate. If nil or 0, randomly selects (chamber spin)
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         not used atm
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Cylinder.rotate(weaponItem:getModData(), <span class="number">1</span>, playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Cylinder.open"></a>
+    <strong>Cylinder.open (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Opens the cylinder.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the openSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Cylinder.open(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Cylinder.close"></a>
+    <strong>Cylinder.close (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Closes the cylinder and sets the current round.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the closeSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Cylinder.close(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Break_Barrel_Functions"></a>Break Barrel Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Break.open"></a>
+    <strong>Break.open (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Opens the breech and ejects any shells.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the openSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Break.open(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Break.close"></a>
+    <strong>Break.close (this, playerObj, playSound, weaponItem)</strong>
+    </dt>
+    <dd>
+    Closes the breech and sets the current round.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this</span>
+            <span class="types"><span class="type">ISReloadableWeapon</span> or <span class="type">HandWeapon:getModData()</span></span>
+
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">playSound</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         if true plays the closeSound
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Reloadable.Break.close(weaponItem:getModData(), playerObj, <span class="keyword">true</span>, weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

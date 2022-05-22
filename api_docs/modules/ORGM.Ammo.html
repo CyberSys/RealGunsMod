@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><strong>ORGM.Ammo</strong></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM.Ammo</code></h1>
+<p>Functions for dealing with ammo.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/2LoadOrder/ORGMAmmo.lua</li>
+        <li><strong>Release</strong>: 3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#register">register (name, ammoData)</a></td>
+	<td class="summary">Registers a ammo type with ORGM.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#deregister">deregister (name)</a></td>
+	<td class="summary">Deregisters Ammo from ORGM.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#random">random ([thisTable])</a></td>
+	<td class="summary">Returns the name of a random ammo item.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTable">getTable ()</a></td>
+	<td class="summary">Gets the table of registered ammo.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getData">getData (itemType[, moduleName])</a></td>
+	<td class="summary">Gets a value from the AmmoTable, supports module checking.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isAmmo">isAmmo (itemType[, moduleName])</a></td>
+	<td class="summary">Checks if a item is ORGM ammo.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isCase">isCase (itemType)</a></td>
+	<td class="summary">Checks if a item is ORGM spent casing.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getGroupTable">getGroupTable ()</a></td>
+	<td class="summary">Gets the table of ammo groups.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getGroup">getGroup (groupName)</a></td>
+	<td class="summary">Returns the ammo group table for the specified groupName.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#itemGroup">itemGroup (item[, asTable])</a></td>
+	<td class="summary">Gets the ammoGroup string name or table of valid ammo for this item.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#findIn">findIn (ammoGroup, ammoType, container[, mode])</a></td>
+	<td class="summary">Finds the best matching ammo (bullets only) in a container.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#findAllIn">findAllIn (ammoGroup, containerItem)</a></td>
+	<td class="summary">Finds and returns all ammo for the ammoGroup in the container,
+including boxes and canisters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#convertAllIn">convertAllIn (groupName, containerItem)</a></td>
+	<td class="summary">Converts all AmmoGroup rounds of the given name to real ammo.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#boxType">boxType (item)</a></td>
+	<td class="summary">Returns the type of ammo opening a box (or can) will yeild.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#unbox">unbox (item)</a></td>
+	<td class="summary">Unboxes a box (or canister), placing all rounds in the container.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "register"></a>
+    <strong>register (name, ammoData)</strong>
+    </dt>
+    <dd>
+    Registers a ammo type with ORGM.</p>
+
+<p>This must be called before any registerMagazine or registerFirearm that plans to use that ammo.</p>
+
+<p>NOTE: this should only be called with real ammo (ie: Ammo_9x19mm_FMJ) and not AmmoGroup (ie: Ammo_9x19mm)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name without module prefix.
+        </li>
+        <li><span class="parameter">ammoData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        <p>Valid table keys/value pairs for the ammoData are:</p>
+
+<ul>
+<li><p>moduleName = string, module name this item is from. If nil, ORGM is used</p></li>
+<li><p>MinDamage = float, (>= 0) the min damage of the bullet. This overrides the firearm item MinDamage</p></li>
+<li><p>MaxDamage = float, (>= MinDamage) the max damage of the bullet. This overrides the firearm item MaxDamage</p></li>
+<li><p>Penetration = bool|int, (% chance) This overrides the firearm item PiercingBullets</p></li>
+<li><p>PiercingBullets = bool|int, (% chance) This overrides the firearm item PiercingBullets (DEPRECIATED, use Penetration)</p></li>
+<li><p>MaxHitCount = nil|int, This overrides the firearm item MaxHitCount. Only valid for firearms with multiple projectiles (ie: shotguns)</p></li>
+<li><p>Case = nil|string, the empty case to eject</p></li>
+<li><p>UseWith = nil|table, the AmmoGroup names this ammo can be used for. if nil, the name parameter is used</p></li>
+<li><p>BoxCount = int, the number of rounds that come in a box.</p></li>
+<li><p>CanCount = int, the number of rounds that come in a canister.</p></li>
+<li><p>OptimalBarrel = int, the length of the barrel required to reach &lsquo;full powder burn&rsquo;. This should generally be 30 for pistol calibers, 80 for rifle rounds, and 60 for shotguns.</p></li>
+<li><p>Recoil = int, the recoil factor applied to this round. Increased by shorter barrels.</p></li>
+<li><p>Range = int, the max effective range for this round, Reduced from shorter barrels.</p></li>
+</ul>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true on success.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "deregister"></a>
+    <strong>deregister (name)</strong>
+    </dt>
+    <dd>
+    Deregisters Ammo from ORGM.</p>
+
+<p>WARNING: Incomplete code, do not use.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name without module prefix
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true on success
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "random"></a>
+    <strong>random ([thisTable])</strong>
+    </dt>
+    <dd>
+    Returns the name of a random ammo item.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">thisTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to select from.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the random ammo name.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTable"></a>
+    <strong>getTable ()</strong>
+    </dt>
+    <dd>
+    Gets the table of registered ammo.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        all registered ammo setup by <a href="../modules/ORGM.Ammo.html#register">ORGM.Ammo.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getData"></a>
+    <strong>getData (itemType[, moduleName])</strong>
+    </dt>
+    <dd>
+    Gets a value from the AmmoTable, supports module checking.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         module to compare
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        data of a registered ammo setup by <a href="../modules/ORGM.Ammo.html#register">ORGM.Ammo.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isAmmo"></a>
+    <strong>isAmmo (itemType[, moduleName])</strong>
+    </dt>
+    <dd>
+    Checks if a item is ORGM ammo.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         module to compare
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if registered ammo setup by <a href="../modules/ORGM.Ammo.html#register">ORGM.Ammo.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isCase"></a>
+    <strong>isCase (itemType)</strong>
+    </dt>
+    <dd>
+    Checks if a item is ORGM spent casing.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getGroupTable"></a>
+    <strong>getGroupTable ()</strong>
+    </dt>
+    <dd>
+    Gets the table of ammo groups.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        keys are group names, values are table arrays of ammo names.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getGroup"></a>
+    <strong>getGroup (groupName)</strong>
+    </dt>
+    <dd>
+    Returns the ammo group table for the specified groupName.</p>
+
+<p>The table contains all the ammo types that can be used for this group.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">groupName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of a ammo group
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of real ammo names
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "itemGroup"></a>
+    <strong>itemGroup (item[, asTable])</strong>
+    </dt>
+    <dd>
+    Gets the ammoGroup string name or table of valid ammo for this item.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">asTable</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+         true if the results returned should be a table
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        ammo group name, or a table list of strings
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "findIn"></a>
+    <strong>findIn (ammoGroup, ammoType, container[, mode])</strong>
+    </dt>
+    <dd>
+    Finds the best matching ammo (bullets only) in a container.</p>
+
+<p>Finds loose bullets, boxes and canisters of ammo.
+Search is based on the given ammoGroup name and preferred type.
+(can be specific round name, nil/any, or mixed)</p>
+
+<p>This is called when reloading some guns and all magazines.</p>
+
+<p>Note ammoGroup and ammoType should NOT have the &ldquo;ORGM.&rdquo; prefix.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ammoGroup</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of a AmmoGroup.
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         &lsquo;any&rsquo;, &lsquo;mixed&rsquo; or a specific ammo name
+        </li>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">mode</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">int</span></span>
+         0 = rounds, 1 = box, 2 = can
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">InventoryItem</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "findAllIn"></a>
+    <strong>findAllIn (ammoGroup, containerItem)</strong>
+    </dt>
+    <dd>
+    Finds and returns all ammo for the ammoGroup in the container,
+including boxes and canisters.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">ammoGroup</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         the name of a AmmoGroup
+        </li>
+        <li><span class="parameter">containerItem</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        keys are &lsquo;rounds&rsquo;, &lsquo;boxes&rsquo; and &lsquo;cans&rsquo;, values are java ArrayList objects of InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "convertAllIn"></a>
+    <strong>convertAllIn (groupName, containerItem)</strong>
+    </dt>
+    <dd>
+    Converts all AmmoGroup rounds of the given name to real ammo.</p>
+
+<p>The first entry in the AmmoGroupTable for this name will be used
+Note groupName and preferredType should NOT have the &ldquo;ORGM.&rdquo; prefix.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">groupName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         the name of a AmmoGroup
+        </li>
+        <li><span class="parameter">containerItem</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">int</span></span>
+        number of rounds converted (nil on error)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "boxType"></a>
+    <strong>boxType (item)</strong>
+    </dt>
+    <dd>
+    Returns the type of ammo opening a box (or can) will yeild.</p>
+
+<p>This assumes a strict naming convention was used for the ammo and Unboxes.</p>
+
+<p>ie: ORGM standard names: Ammo_9x19mm_FMJ and Ammo_9x19mm_FMJ_Box
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+         the box or canister.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        name of ammo inside the container.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "unbox"></a>
+    <strong>unbox (item)</strong>
+    </dt>
+    <dd>
+    Unboxes a box (or canister), placing all rounds in the container.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+         the item to be unboxed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

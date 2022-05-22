@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><strong>ORGM.Server.Spawn</strong></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM.Server.Spawn</code></h1>
+<p>Spawning Functions.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> server/1LoadOrder/ORGMServerSpawn.lua</li>
+        <li><strong>Release</strong>: v3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#generateSerialNumber">generateSerialNumber (item)</a></td>
+	<td class="summary">Generates a serial number for the item.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#attach">attach (item)</a></td>
+	<td class="summary">Attaches random components on a newly spawned firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#reloadable">reloadable (container, itemType, ammoType, chance, max, isLoaded)</a></td>
+	<td class="summary">Attempts to spawns reloadable weapon or magazine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#firearm">firearm (container, gunType, ammoType, chance, max, isLoaded)</a></td>
+	<td class="summary">A wrapper function for <a href="../modules/ORGM.Server.Spawn.html#reloadable">Spawn.reloadable</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#magazine">magazine (container, gunType, ammoType, chance, max, isLoaded)</a></td>
+	<td class="summary">A wrapper function for <a href="../modules/ORGM.Server.Spawn.html#reloadable">Spawn.reloadable</a></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#item">item (container, itemType, chance, max)</a></td>
+	<td class="summary">Generic spawn function for non-reloadable items (ie: ammo or repair stuff).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ammo">ammo (container, ammoType, chance, max)</a></td>
+	<td class="summary">Attempts to spawn loose ammo in the container.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ammoBox">ammoBox (container, ammoType, chance, max)</a></td>
+	<td class="summary">Attempts to spawn ammo boxes in the container.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ammoCan">ammoCan (container, ammoType, chance, max)</a></td>
+	<td class="summary">Attempts to spawn ammo canisters in the container.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#maintance">maintance (container, chance, max)</a></td>
+	<td class="summary">Attempts to spawns a random maintance item.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#component">component (container, chance, max)</a></td>
+	<td class="summary">Attempts to spawns a firearm component.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#select">select (civilian, police, military)</a></td>
+	<td class="summary">Chooses a gun from the rarity tables and appropriate ammo type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#addToCorpse">addToCorpse (container)</a></td>
+	<td class="summary">Generic spawn function for corpses.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#addToCivRoom">addToCivRoom (container)</a></td>
+	<td class="summary">Generic spawn function for Civilian rooms.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#fillContainer">fillContainer (roomName, containerType, container)</a></td>
+	<td class="summary">Triggered by the OnFillContainer Event.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "generateSerialNumber"></a>
+    <strong>generateSerialNumber (item)</strong>
+    </dt>
+    <dd>
+    Generates a serial number for the item.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "attach"></a>
+    <strong>attach (item)</strong>
+    </dt>
+    <dd>
+    Attaches random components on a newly spawned firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "reloadable"></a>
+    <strong>reloadable (container, itemType, ammoType, chance, max, isLoaded)</strong>
+    </dt>
+    <dd>
+    Attempts to spawns reloadable weapon or magazine.</p>
+
+<p>It called by <a href="../modules/ORGM.Server.Spawn.html#firearm">Spawn.firearm</a> and <a href="../modules/ORGM.Server.Spawn.html#magazine">Spawn.magazine</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the gun or magazine without the ORGM. prefix.
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         ammo name to load into the gun if isLoaded = true.
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         max number of items to spawn. A random # is chosen between 1 and max
+        </li>
+        <li><span class="parameter">isLoaded</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true the gun/magazine is loaded with ammoType
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the reloadable spawned
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "firearm"></a>
+    <strong>firearm (container, gunType, ammoType, chance, max, isLoaded)</strong>
+    </dt>
+    <dd>
+    A wrapper function for <a href="../modules/ORGM.Server.Spawn.html#reloadable">Spawn.reloadable</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">gunType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the gun without the ORGM. prefix.
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         ammo name to load into the gun if isLoaded = true.
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         max number of items to spawn. A random # is chosen between 1 and max
+        </li>
+        <li><span class="parameter">isLoaded</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true the gun/magazine is loaded with ammoType
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the reloadable spawned
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "magazine"></a>
+    <strong>magazine (container, gunType, ammoType, chance, max, isLoaded)</strong>
+    </dt>
+    <dd>
+    A wrapper function for <a href="../modules/ORGM.Server.Spawn.html#reloadable">Spawn.reloadable</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">gunType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the gun to spawn magazines for without the ORGM. prefix.
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         ammo name to load into the gun if isLoaded = true.
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         max number of items to spawn. A random # is chosen between 1 and max
+        </li>
+        <li><span class="parameter">isLoaded</span>
+            <span class="types"><span class="type">bool</span></span>
+         if true the gun/magazine is loaded with ammoType
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "item"></a>
+    <strong>item (container, itemType, chance, max)</strong>
+    </dt>
+    <dd>
+    Generic spawn function for non-reloadable items (ie: ammo or repair stuff).</p>
+
+<p>This does not factor in Sandbox Loot Rarity or ORGM Spawn Settings. It is advised you use
+one of the wrapper functions to spawn items.</p>
+
+<p><strong>Note</strong> the itemType argument <strong>must</strong> have the module prefix, unlike the wrapper functions.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         between 1 and max number of items may spawn.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of spawned InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ammo"></a>
+    <strong>ammo (container, ammoType, chance, max)</strong>
+    </dt>
+    <dd>
+    Attempts to spawn loose ammo in the container.</p>
+
+<p>Wrapper function for <a href="../modules/ORGM.Server.Spawn.html#item">Spawn.item</a>, modifying the <code>chance</code> argument by Sandbox Weapon
+Loot and ORGM Ammo Spawn Settings.</p>
+
+<p>The ammoType argument must <strong>not</strong> contain the moduleName prefix
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the ammo, randomly chosen if nil.
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         base % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         between 1 and max number of items may spawn.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of spawned InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ammoBox"></a>
+    <strong>ammoBox (container, ammoType, chance, max)</strong>
+    </dt>
+    <dd>
+    Attempts to spawn ammo boxes in the container.</p>
+
+<p>Wrapper function for <a href="../modules/ORGM.Server.Spawn.html#item">Spawn.item</a>, modifying the <code>chance</code> argument by Sandbox Weapon
+Loot and ORGM Ammo Spawn Settings.</p>
+
+<p>The ammoType argument must <strong>not</strong> contain the moduleName prefix, or <code>_Box</code> suffex.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the ammo, randomly chosen if nil.
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         base % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         between 1 and max number of items may spawn.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of spawned InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ammoCan"></a>
+    <strong>ammoCan (container, ammoType, chance, max)</strong>
+    </dt>
+    <dd>
+    Attempts to spawn ammo canisters in the container.</p>
+
+<p>Wrapper function for <a href="../modules/ORGM.Server.Spawn.html#item">Spawn.item</a>, modifying the <code>chance</code> argument by Sandbox Weapon
+Loot and ORGM Ammo Spawn Settings.</p>
+
+<p>The ammoType argument must <strong>not</strong> contain the moduleName prefix, or <code>_Can</code> suffex.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">ammoType</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the ammo, randomly chosen if nil.
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         base % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         between 1 and max number of items may spawn.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of spawned InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "maintance"></a>
+    <strong>maintance (container, chance, max)</strong>
+    </dt>
+    <dd>
+    Attempts to spawns a random maintance item.</p>
+
+<p>Wrapper function for <a href="../modules/ORGM.Server.Spawn.html#item">Spawn.item</a>, modifying the <code>chance</code> argument by Sandbox Weapon
+Loot and ORGM Repair Kit Spawn Settings.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         base % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         between 1 and max number of items may spawn.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of spawned InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "component"></a>
+    <strong>component (container, chance, max)</strong>
+    </dt>
+    <dd>
+    Attempts to spawns a firearm component.</p>
+
+<p>Wrapper function for <a href="../modules/ORGM.Server.Spawn.html#item">Spawn.item</a>, modifying the <code>chance</code> argument by Sandbox Weapon
+Loot and ORGM Component Spawn Settings.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+        <li><span class="parameter">chance</span>
+            <span class="types"><span class="type">float</span></span>
+         base % chance to spawn the item.
+        </li>
+        <li><span class="parameter">max</span>
+            <span class="types"><span class="type">int</span></span>
+         between 1 and max number of items may spawn.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        list of spawned InventoryItem objects
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "select"></a>
+    <strong>select (civilian, police, military)</strong>
+    </dt>
+    <dd>
+    Chooses a gun from the rarity tables and appropriate ammo type.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">civilian</span>
+            <span class="types"><span class="type">int</span></span>
+         chance of using the civilian table (weight value)
+        </li>
+        <li><span class="parameter">police</span>
+            <span class="types"><span class="type">int</span></span>
+         chance of using the police table (weight value)
+        </li>
+        <li><span class="parameter">military</span>
+            <span class="types"><span class="type">int</span></span>
+         chance of using the military table (weight value)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        table with 2 keys: .gun and .ammo
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Firearm.html#randomRarity">ORGM.Firearm.randomRarity</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "addToCorpse"></a>
+    <strong>addToCorpse (container)</strong>
+    </dt>
+    <dd>
+    Generic spawn function for corpses.</p>
+
+<p>Attempts to spawn items on the corpse.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "addToCivRoom"></a>
+    <strong>addToCivRoom (container)</strong>
+    </dt>
+    <dd>
+    Generic spawn function for Civilian rooms.</p>
+
+<p>Attempts to spawn items in the room.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "fillContainer"></a>
+    <strong>fillContainer (roomName, containerType, container)</strong>
+    </dt>
+    <dd>
+    Triggered by the OnFillContainer Event.</p>
+
+<p>The bulk of the other functions in the spawning system are directly or indirectly called from this.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">roomName</span>
+
+        </li>
+        <li><span class="parameter">containerType</span>
+
+        </li>
+        <li><span class="parameter">container</span>
+        pull functions into local namespace
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

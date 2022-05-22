@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><strong>ISReloadManager</strong></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>ISReloadManager</code></h1>
+<p>Injects new methods and overrides into PZ&rsquo;s ISReloadManager</p>
+<p>The reason for this is to handle the unloading timed actions, and finer control over the firing sequence.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/3LoadOrder/ISORGMReloadManager.lua</li>
+        <li><strong>Release</strong>: v3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:isWeaponUnloadable">ISReloadManager:isWeaponUnloadable ()</a></td>
+	<td class="summary">Checks if the the players weapon can be unloaded.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:unloadStarted">ISReloadManager:unloadStarted ()</a></td>
+	<td class="summary">Checks if the player has started a unload action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:stopUnloadSuccess">ISReloadManager:stopUnloadSuccess ()</a></td>
+	<td class="summary">Triggered at the end of a successful unload action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:stopUnload">ISReloadManager:stopUnload ()</a></td>
+	<td class="summary">Triggered at the end of chain unloading.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:startUnloading">ISReloadManager:startUnloading ()</a></td>
+	<td class="summary">Triggered at the start of the unloading action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:startUnloadFromUi">ISReloadManager:startUnloadFromUi (item)</a></td>
+	<td class="summary">Starts the unload timed action when triggered from the UI context menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:startReloadFromUi">ISReloadManager:startReloadFromUi (item)</a></td>
+	<td class="summary">Starts the reload timed action when triggered from the UI context menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ISReloadManager:checkLoaded">ISReloadManager:checkLoaded (character, chargeDelta)</a></td>
+	<td class="summary">Called when the player attempts to attack.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "ISReloadManager:isWeaponUnloadable"></a>
+    <strong>ISReloadManager:isWeaponUnloadable ()</strong>
+    </dt>
+    <dd>
+    Checks if the the players weapon can be unloaded.</p>
+
+<p><em>This is a new injected method.</em>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:unloadStarted"></a>
+    <strong>ISReloadManager:unloadStarted ()</strong>
+    </dt>
+    <dd>
+    Checks if the player has started a unload action.</p>
+
+<p><em>This is a new injected method.</em>
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:stopUnloadSuccess"></a>
+    <strong>ISReloadManager:stopUnloadSuccess ()</strong>
+    </dt>
+    <dd>
+    Triggered at the end of a successful unload action.</p>
+
+<p>Starts the next one if chain unloading.</p>
+
+<p><em>This is a new injected method.</em>
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:stopUnload"></a>
+    <strong>ISReloadManager:stopUnload ()</strong>
+    </dt>
+    <dd>
+    Triggered at the end of chain unloading.</p>
+
+<p><em>This is a new injected method.</em>
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:startUnloading"></a>
+    <strong>ISReloadManager:startUnloading ()</strong>
+    </dt>
+    <dd>
+    Triggered at the start of the unloading action.</p>
+
+<p><em>This is a new injected method.</em>
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:startUnloadFromUi"></a>
+    <strong>ISReloadManager:startUnloadFromUi (item)</strong>
+    </dt>
+    <dd>
+    Starts the unload timed action when triggered from the UI context menu.</p>
+
+<p><em>This is a new injected method.</em>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:startReloadFromUi"></a>
+    <strong>ISReloadManager:startReloadFromUi (item)</strong>
+    </dt>
+    <dd>
+    Starts the reload timed action when triggered from the UI context menu.</p>
+
+<h3>This is a method override.</h3>
+
+<p>This method is changed to allow it to check :unloadStarted() as well
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ISReloadManager:checkLoaded"></a>
+    <strong>ISReloadManager:checkLoaded (character, chargeDelta)</strong>
+    </dt>
+    <dd>
+    Called when the player attempts to attack.</p>
+
+<h3>This is a method override.</h3>
+
+<p>This critical function checks if a weapon has a round loaded.</p>
+
+<p>It calls the DoAttack method triggering the actual attack, or playing the
+&lsquo;click&rsquo; sound on a empty chamber.</p>
+
+<p>This method is changed inject several checks and additional method calls.</p>
+
+<p>It calls reloadable:fireEmpty() when dry firing if the function exists in
+the reloadable class. This allows us to drop the hammer if its cocked, or
+rotate the revolver cylinder properly when the shot fails.</p>
+
+<p>It also calls reloadable:preFireShot() and checks the return value if it should
+halt the attack. Unlike reloadable:isLoaded() which is called even when the gun
+is still in recoil, reloadable:preFireShot() only calls before the actual shot.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">character</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">chargeDelta</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">float</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

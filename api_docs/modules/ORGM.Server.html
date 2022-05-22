@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Item_Equip_Functions">Item Equip Functions </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><strong>ORGM.Server</strong></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM.Server</code></h1>
+<p>Server Side Functions and tables.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> server/1LoadOrder/ORGMServer.lua</li>
+        <li><strong>Release</strong>: v3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Item_Equip_Functions">Item Equip Functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#itemBindingHandler">itemBindingHandler (key)</a></td>
+	<td class="summary">Triggerd by Events.OnKeyPressed, this replaces PZ&rsquo;s ItemBindingHandler.onKeyPressed function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#equipBestFirearm">equipBestFirearm (playerObj, subCategory)</a></td>
+	<td class="summary">Equips the best firearm overriding the default PZ system that always finds the weapon with highest damage.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#compareFirearms">compareFirearms (item1, item2)</a></td>
+	<td class="summary">Compares 2 firearms and returns the better choice.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#equipBestMeleeWeapon">equipBestMeleeWeapon (playerObj, subCategory)</a></td>
+	<td class="summary">Used for selecting melee weapons.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Item_Equip_Functions"></a>Item Equip Functions </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "itemBindingHandler"></a>
+    <strong>itemBindingHandler (key)</strong>
+    </dt>
+    <dd>
+    Triggerd by Events.OnKeyPressed, this replaces PZ&rsquo;s ItemBindingHandler.onKeyPressed function.</p>
+
+<p>It handles the new pistol/rifle/shotgun hotkeys, and bypasses equipping a light source if a equippedgun has a tactical light.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><span class="type">integer</span></span>
+         key code
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Server.Callbacks.html#keyPress">ORGM.Server.Callbacks.keyPress</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "equipBestFirearm"></a>
+    <strong>equipBestFirearm (playerObj, subCategory)</strong>
+    </dt>
+    <dd>
+    Equips the best firearm overriding the default PZ system that always finds the weapon with highest damage.</p>
+
+<p>This bases its choice on a number of factors:</p>
+
+<p>1) is it currently loaded.
+2) does the player have ammo (loaded magazines only if the gun uses magazines).
+3) damage.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">subCategory</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         &ldquo;Pistol&rdquo;, &ldquo;Rifle&rdquo; or &ldquo;Shotgun&rdquo;
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Server.html#itemBindingHandler">ORGM.Server.itemBindingHandler</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "compareFirearms"></a>
+    <strong>compareFirearms (item1, item2)</strong>
+    </dt>
+    <dd>
+    Compares 2 firearms and returns the better choice.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item1</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         {item=HandWeapon, loaded=boolean, ammo=boolean, dmg=float}
+        </li>
+        <li><span class="parameter">item2</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         {item=HandWeapon, loaded=boolean, ammo=boolean, dmg=float}
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        either item1 or item2
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "equipBestMeleeWeapon"></a>
+    <strong>equipBestMeleeWeapon (playerObj, subCategory)</strong>
+    </dt>
+    <dd>
+    Used for selecting melee weapons.</p>
+
+<p>Basically PZ&rsquo;s default weapon selection code.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+        <li><span class="parameter">subCategory</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         subCategory of the InventoryItem
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Server.html#itemBindingHandler">ORGM.Server.itemBindingHandler</a>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

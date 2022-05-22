@@ -1,0 +1,1575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Modules">Modules </a></li>
+<li><a href="#Constants">Constants </a></li>
+<li><a href="#Logging_Constants">Logging Constants </a></li>
+<li><a href="#Trigger_Constants">Trigger Constants </a></li>
+<li><a href="#Feed_System_Constants">Feed System Constants </a></li>
+<li><a href="#Auto_Feed_Constants">Auto Feed Constants </a></li>
+<li><a href="#Category_Constants">Category Constants </a></li>
+<li><a href="#Select_Fire_Constants">Select Fire Constants </a></li>
+<li><a href="#Rarity_Constants">Rarity Constants </a></li>
+<li><a href="#String_Tables">String Tables </a></li>
+<li><a href="#Settings">Settings </a></li>
+<li><a href="#Utility_functions">Utility functions </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><strong>ORGM</strong></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM</code></h1>
+<p>ORGM Rechambered</p>
+
+<p>The core ORGM table of ORGM Rechambered.</p>
+<p><p>All functions and tables can be accessed via the global table named ORGM.
+This mod&rsquo;s core philosophy is to place as little as possible in the global
+namespace for performance reasons as Zomboid&rsquo;s lua global namespace is already
+heavily polluted.
+Because of this, you should always pull the ORGM table (or it&rsquo;s sub-tables)
+into the local namespace.</p>
+
+<pre>
+<span class="keyword">local</span> ORGM = ORGM
+</pre>
+
+
+<h2>Example</h2>
+
+<pre>
+<span class="comment">-- pull tables into local namespace
+</span><span class="keyword">local</span> ORGM = ORGM
+<span class="keyword">local</span> Firearm = ORGM.Firearm
+<span class="keyword">local</span> Cylinder = ORGM.ReloadableWeapon.Cylinder
+<span class="keyword">local</span> Hammer = ORGM.ReloadableWeapon.Hammer
+
+<span class="comment">-- Spin the cylinder and cock the hammer for a IsoPlayer.
+</span><span class="keyword">local</span> <span class="keyword">function</span> spinAndCock(playerObj)
+    <span class="keyword">local</span> item = Firearm.getFirearm(playerObj)
+    <span class="keyword">if</span> <span class="keyword">not</span> item <span class="keyword">return</span> <span class="keyword">end</span>
+    <span class="comment">-- check if its rotary fed
+</span>    <span class="keyword">if</span> <span class="keyword">not</span> Firearm.isRotary(item) <span class="keyword">then</span> <span class="keyword">return</span> <span class="keyword">end</span>
+    <span class="comment">-- rotate the cylinder
+</span>    Cylinder.rotate(item:getModData(), <span class="keyword">nil</span>, playerObj, <span class="keyword">true</span>, item)
+    <span class="comment">-- Can't cock a double action only
+</span>    <span class="keyword">if</span> Firearm.Hammer.isDAO() <span class="keyword">then</span> <span class="keyword">return</span> <span class="keyword">end</span>
+    Hammer.cock(item:getModData(), playerObj, <span class="keyword">true</span>, item)
+<span class="keyword">end</span>
+</pre>
+</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/1LoadOrder/ORGMCore.lua</li>
+        <li><strong>Release</strong>: 3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf.</li>
+    </ul>
+
+
+<h2><a href="#Modules">Modules </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Server">Server</a></td>
+	<td class="summary">Contains all ORGM server-side functions, see: <a href="../modules/ORGM.Server.html#">ORGM.Server</a></td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Client">Client</a></td>
+	<td class="summary">Contains all ORGM client-side functions, see: <a href="../modules/ORGM.Client.html#">ORGM.Client</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ReloadableWeapon">ReloadableWeapon</a></td>
+	<td class="summary">Functions for controlling and performing actions with firearms, see: <a href="../modules/ORGM.ReloadableWeapon.html#">ORGM.ReloadableWeapon</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Firearm">Firearm</a></td>
+	<td class="summary">Contains all firearm functions, see: <a href="../modules/ORGM.Firearm.html#">ORGM.Firearm</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Ammo">Ammo</a></td>
+	<td class="summary">Contains all ammo functions, see: <a href="../modules/ORGM.Ammo.html#">ORGM.Ammo</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Component">Component</a></td>
+	<td class="summary">Contains all component functions, see: <a href="../modules/ORGM.Component.html#">ORGM.Component</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Magazine">Magazine</a></td>
+	<td class="summary">Contains all magazine functions, see: <a href="../modules/ORGM.Magazine.html#">ORGM.Magazine</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Maintance">Maintance</a></td>
+	<td class="summary">Contains all maintance functions, see: <a href="../modules/ORGM.Maintance.html#">ORGM.Maintance</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Callbacks">Callbacks</a></td>
+	<td class="summary">Contains all callback functions, see: <a href="../modules/ORGM.Callbacks.html#">ORGM.Callbacks</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Sounds">Sounds</a></td>
+	<td class="summary">Contains all sound setup functions, see: <a href="../modules/ORGM.Sounds.html#">ORGM.Sounds</a>.</td>
+	</tr>
+</table>
+<h2><a href="#Constants">Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#AUTHOR">AUTHOR</a></td>
+	<td class="summary">Author of the mod.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#BUILD_HISTORY">BUILD_HISTORY</a></td>
+	<td class="summary">this table is used to track build #&rsquo;s for backwards compatibility.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#BUILD_ID">BUILD_ID</a></td>
+	<td class="summary">Set automatically.</td>
+	</tr>
+</table>
+<h2><a href="#Logging_Constants">Logging Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ERROR">ERROR</a></td>
+	<td class="summary">integer 0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#WARN">WARN</a></td>
+	<td class="summary">integer 1</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#INFO">INFO</a></td>
+	<td class="summary">integer 2</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DEBUG">DEBUG</a></td>
+	<td class="summary">integer 3</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#VERBOSE">VERBOSE</a></td>
+	<td class="summary">integer 4</td>
+	</tr>
+</table>
+<h2><a href="#Trigger_Constants">Trigger Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SINGLEACTION">SINGLEACTION</a></td>
+	<td class="summary">integer 1</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DOUBLEACTION">DOUBLEACTION</a></td>
+	<td class="summary">integer 2</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DOUBLEACTIONONLY">DOUBLEACTIONONLY</a></td>
+	<td class="summary">integer 3</td>
+	</tr>
+</table>
+<h2><a href="#Feed_System_Constants">Feed System Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#AUTO">AUTO</a></td>
+	<td class="summary">integer 1</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#BOLT">BOLT</a></td>
+	<td class="summary">integer 2</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LEVER">LEVER</a></td>
+	<td class="summary">integer 3</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PUMP">PUMP</a></td>
+	<td class="summary">integer 4</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#BREAK">BREAK</a></td>
+	<td class="summary">integer 5</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ROTARY">ROTARY</a></td>
+	<td class="summary">integer 6</td>
+	</tr>
+</table>
+<h2><a href="#Auto_Feed_Constants">Auto Feed Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#BLOWBACK">BLOWBACK</a></td>
+	<td class="summary">integer 1</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DELAYEDBLOWBACK">DELAYEDBLOWBACK</a></td>
+	<td class="summary">integer 2</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SHORTGAS">SHORTGAS</a></td>
+	<td class="summary">integer 3</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LONGGAS">LONGGAS</a></td>
+	<td class="summary">integer 4</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DIRECTGAS">DIRECTGAS</a></td>
+	<td class="summary">integer 5</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LONGRECOIL">LONGRECOIL</a></td>
+	<td class="summary">integer 6</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SHORTRECOIL">SHORTRECOIL</a></td>
+	<td class="summary">integer 7</td>
+	</tr>
+</table>
+<h2><a href="#Category_Constants">Category Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#PISTOL">PISTOL</a></td>
+	<td class="summary">integer 1</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#REVOLVER">REVOLVER</a></td>
+	<td class="summary">integer 2</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUBMACHINEGUN">SUBMACHINEGUN</a></td>
+	<td class="summary">integer 3</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RIFLE">RIFLE</a></td>
+	<td class="summary">integer 4</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SHOTGUN">SHOTGUN</a></td>
+	<td class="summary">integer 5</td>
+	</tr>
+</table>
+<h2><a href="#Select_Fire_Constants">Select Fire Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SEMIAUTOMODE">SEMIAUTOMODE</a></td>
+	<td class="summary">integer 0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#FULLAUTOMODE">FULLAUTOMODE</a></td>
+	<td class="summary">integer 1</td>
+	</tr>
+</table>
+<h2><a href="#Rarity_Constants">Rarity Constants </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#COMMON">COMMON</a></td>
+	<td class="summary">Common</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RARE">RARE</a></td>
+	<td class="summary">Rare</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#VERYRARE">VERYRARE</a></td>
+	<td class="summary">VeryRare</td>
+	</tr>
+</table>
+<h2><a href="#String_Tables">String Tables </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#ActionTypeStrings">ActionTypeStrings</a></td>
+	<td class="summary">Contains string names for actionType constants.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TriggerTypeStrings">TriggerTypeStrings</a></td>
+	<td class="summary">Contains string names for triggerType constants.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#AutoActionTypeStrings">AutoActionTypeStrings</a></td>
+	<td class="summary">Contains string names for autoType constants.</td>
+	</tr>
+</table>
+<h2><a href="#Settings">Settings </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Settings">Settings</a></td>
+	<td class="summary">table containing all ORGM settings
+ these are all defined below in the ORGM.SettingsValidator table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SettingsValidator">SettingsValidator</a></td>
+	<td class="summary">This table handles all the settings to be defined in ORGM.Settings, expected
+ value types, default values, min/max (for integers and floats) and any Functions
+ to run when updating this setting.</td>
+	</tr>
+</table>
+<h2><a href="#Utility_functions">Utility functions </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#log">log (level, text)</a></td>
+	<td class="summary">Basic logging function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tableContains">tableContains (thisTable, value)</a></td>
+	<td class="summary">Checks if a value is in the specified table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tableRemove">tableRemove (thisTable, value)</a></td>
+	<td class="summary">Removes a entry by value in a table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isModLoaded">isModLoaded (mod)</a></td>
+	<td class="summary">Checks if a mod has been loaded or not.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTableData">getTableData (itemType, moduleName, instance, thisTable)</a></td>
+	<td class="summary">Fetches data from the specified table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#validateRegister">validateRegister (name, dataTable, modTable)</a></td>
+	<td class="summary">Generic item register validation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#validateSettingKey">validateSettingKey (key)</a></td>
+	<td class="summary">Runs error checks on new values passed into the ORGM.Settings table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#readSettingsFile">readSettingsFile ()</a></td>
+	<td class="summary">Reads the file located at Zomboid/Lua/ORGM.ini, and loads those settings
+into the ORGM.Settings table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#writeSettingsFile">writeSettingsFile ()</a></td>
+	<td class="summary">Writes the key/value pairs in the ORGM.Settings table to the Zomboid/Lua/ORGM.ini file.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getFirearm">getFirearm (playerObj)</a></td>
+	<td class="summary">Gets the equipped firearm for a player</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Modules"></a>Modules </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Server"></a>
+    <strong>Server</strong>
+    </dt>
+    <dd>
+    Contains all ORGM server-side functions, see: <a href="../modules/ORGM.Server.html#">ORGM.Server</a>
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Client"></a>
+    <strong>Client</strong>
+    </dt>
+    <dd>
+    Contains all ORGM client-side functions, see: <a href="../modules/ORGM.Client.html#">ORGM.Client</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ReloadableWeapon"></a>
+    <strong>ReloadableWeapon</strong>
+    </dt>
+    <dd>
+    Functions for controlling and performing actions with firearms, see: <a href="../modules/ORGM.ReloadableWeapon.html#">ORGM.ReloadableWeapon</a>.</p>
+
+<p> These work on both ISReloadableWeapon objects, and a InventoryItem&rsquo;s modData.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Firearm"></a>
+    <strong>Firearm</strong>
+    </dt>
+    <dd>
+    Contains all firearm functions, see: <a href="../modules/ORGM.Firearm.html#">ORGM.Firearm</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Ammo"></a>
+    <strong>Ammo</strong>
+    </dt>
+    <dd>
+    Contains all ammo functions, see: <a href="../modules/ORGM.Ammo.html#">ORGM.Ammo</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Component"></a>
+    <strong>Component</strong>
+    </dt>
+    <dd>
+    Contains all component functions, see: <a href="../modules/ORGM.Component.html#">ORGM.Component</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Magazine"></a>
+    <strong>Magazine</strong>
+    </dt>
+    <dd>
+    Contains all magazine functions, see: <a href="../modules/ORGM.Magazine.html#">ORGM.Magazine</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Maintance"></a>
+    <strong>Maintance</strong>
+    </dt>
+    <dd>
+    Contains all maintance functions, see: <a href="../modules/ORGM.Maintance.html#">ORGM.Maintance</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Callbacks"></a>
+    <strong>Callbacks</strong>
+    </dt>
+    <dd>
+    Contains all callback functions, see: <a href="../modules/ORGM.Callbacks.html#">ORGM.Callbacks</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Sounds"></a>
+    <strong>Sounds</strong>
+    </dt>
+    <dd>
+    Contains all sound setup functions, see: <a href="../modules/ORGM.Sounds.html#">ORGM.Sounds</a>.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Constants"></a>Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "AUTHOR"></a>
+    <strong>AUTHOR</strong>
+    </dt>
+    <dd>
+    Author of the mod.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "BUILD_HISTORY"></a>
+    <strong>BUILD_HISTORY</strong>
+    </dt>
+    <dd>
+    this table is used to track build #&rsquo;s for backwards compatibility.  All guns will be stamped with a index
+ number - the build it was last used in. A table exists changes to firearms (name = buildnumber). If the
+ gun build id &lt; lastChanged build id then the gun needs to be reset to default values (fixed for the
+ new version.)
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "BUILD_ID"></a>
+    <strong>BUILD_ID</strong>
+    </dt>
+    <dd>
+    Set automatically.  The current version number.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Logging_Constants"></a>Logging Constants </h2>
+
+        These are passed to and checked when making calls to <a href="../modules/ORGM.html#log">ORGM.log</a>.
+    <dl class="function">
+    <dt>
+    <a name = "ERROR"></a>
+    <strong>ERROR</strong>
+    </dt>
+    <dd>
+    integer 0
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "WARN"></a>
+    <strong>WARN</strong>
+    </dt>
+    <dd>
+    integer 1
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "INFO"></a>
+    <strong>INFO</strong>
+    </dt>
+    <dd>
+    integer 2
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DEBUG"></a>
+    <strong>DEBUG</strong>
+    </dt>
+    <dd>
+    integer 3
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "VERBOSE"></a>
+    <strong>VERBOSE</strong>
+    </dt>
+    <dd>
+    integer 4
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Trigger_Constants"></a>Trigger Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "SINGLEACTION"></a>
+    <strong>SINGLEACTION</strong>
+    </dt>
+    <dd>
+    integer 1
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DOUBLEACTION"></a>
+    <strong>DOUBLEACTION</strong>
+    </dt>
+    <dd>
+    integer 2
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DOUBLEACTIONONLY"></a>
+    <strong>DOUBLEACTIONONLY</strong>
+    </dt>
+    <dd>
+    integer 3
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Feed_System_Constants"></a>Feed System Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "AUTO"></a>
+    <strong>AUTO</strong>
+    </dt>
+    <dd>
+    integer 1
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "BOLT"></a>
+    <strong>BOLT</strong>
+    </dt>
+    <dd>
+    integer 2
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LEVER"></a>
+    <strong>LEVER</strong>
+    </dt>
+    <dd>
+    integer 3
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "PUMP"></a>
+    <strong>PUMP</strong>
+    </dt>
+    <dd>
+    integer 4
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "BREAK"></a>
+    <strong>BREAK</strong>
+    </dt>
+    <dd>
+    integer 5
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ROTARY"></a>
+    <strong>ROTARY</strong>
+    </dt>
+    <dd>
+    integer 6
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Auto_Feed_Constants"></a>Auto Feed Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "BLOWBACK"></a>
+    <strong>BLOWBACK</strong>
+    </dt>
+    <dd>
+    integer 1
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DELAYEDBLOWBACK"></a>
+    <strong>DELAYEDBLOWBACK</strong>
+    </dt>
+    <dd>
+    integer 2
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SHORTGAS"></a>
+    <strong>SHORTGAS</strong>
+    </dt>
+    <dd>
+    integer 3
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LONGGAS"></a>
+    <strong>LONGGAS</strong>
+    </dt>
+    <dd>
+    integer 4
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DIRECTGAS"></a>
+    <strong>DIRECTGAS</strong>
+    </dt>
+    <dd>
+    integer 5
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LONGRECOIL"></a>
+    <strong>LONGRECOIL</strong>
+    </dt>
+    <dd>
+    integer 6
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SHORTRECOIL"></a>
+    <strong>SHORTRECOIL</strong>
+    </dt>
+    <dd>
+    integer 7
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Category_Constants"></a>Category Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "PISTOL"></a>
+    <strong>PISTOL</strong>
+    </dt>
+    <dd>
+    integer 1
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "REVOLVER"></a>
+    <strong>REVOLVER</strong>
+    </dt>
+    <dd>
+    integer 2
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SUBMACHINEGUN"></a>
+    <strong>SUBMACHINEGUN</strong>
+    </dt>
+    <dd>
+    integer 3
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RIFLE"></a>
+    <strong>RIFLE</strong>
+    </dt>
+    <dd>
+    integer 4
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SHOTGUN"></a>
+    <strong>SHOTGUN</strong>
+    </dt>
+    <dd>
+    integer 5
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Select_Fire_Constants"></a>Select Fire Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "SEMIAUTOMODE"></a>
+    <strong>SEMIAUTOMODE</strong>
+    </dt>
+    <dd>
+    integer 0
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FULLAUTOMODE"></a>
+    <strong>FULLAUTOMODE</strong>
+    </dt>
+    <dd>
+    integer 1
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Rarity_Constants"></a>Rarity Constants </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "COMMON"></a>
+    <strong>COMMON</strong>
+    </dt>
+    <dd>
+    Common
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RARE"></a>
+    <strong>RARE</strong>
+    </dt>
+    <dd>
+    Rare
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "VERYRARE"></a>
+    <strong>VERYRARE</strong>
+    </dt>
+    <dd>
+    VeryRare
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="String_Tables"></a>String Tables </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "ActionTypeStrings"></a>
+    <strong>ActionTypeStrings</strong>
+    </dt>
+    <dd>
+    Contains string names for actionType constants.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">Auto</span>
+
+        </li>
+        <li><span class="parameter">Bolt</span>
+
+        </li>
+        <li><span class="parameter">Lever</span>
+
+        </li>
+        <li><span class="parameter">Pump</span>
+
+        </li>
+        <li><span class="parameter">Break</span>
+
+        </li>
+        <li><span class="parameter">Rotary</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TriggerTypeStrings"></a>
+    <strong>TriggerTypeStrings</strong>
+    </dt>
+    <dd>
+    Contains string names for triggerType constants.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">SingleAction</span>
+
+        </li>
+        <li><span class="parameter">DoubleAction</span>
+
+        </li>
+        <li><span class="parameter">DoubleActionOnly</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "AutoActionTypeStrings"></a>
+    <strong>AutoActionTypeStrings</strong>
+    </dt>
+    <dd>
+    Contains string names for autoType constants.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">Blowback</span>
+
+        </li>
+        <li><span class="parameter">Delayed Blowback</span>
+
+        </li>
+        <li><span class="parameter">Short Gas Piston</span>
+
+        </li>
+        <li><span class="parameter">Long Gas Piston</span>
+
+        </li>
+        <li><span class="parameter">Direct Impingement Gas</span>
+
+        </li>
+        <li><span class="parameter">Long Recoil</span>
+
+        </li>
+        <li><span class="parameter">Short Recoil</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Settings"></a>Settings </h2>
+
+
+    <dl class="function">
+    <dt>
+    <a name = "Settings"></a>
+    <strong>Settings</strong>
+    </dt>
+    <dd>
+    table containing all ORGM settings
+ these are all defined below in the ORGM.SettingsValidator table
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SettingsValidator"></a>
+    <strong>SettingsValidator</strong>
+    </dt>
+    <dd>
+    This table handles all the settings to be defined in ORGM.Settings, expected
+ value types, default values, min/max (for integers and floats) and any Functions
+ to run when updating this setting.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Utility_functions"></a>Utility functions </h2>
+
+        These are important core functions, utility functions, and functions for
+manuplating the ORGM.Settings table.</p>
+
+<p><strong>File:</strong> shared/1LoadOrder/ORGMUtil.lua
+    <dl class="function">
+    <dt>
+    <a name = "log"></a>
+    <strong>log (level, text)</strong>
+    </dt>
+    <dd>
+    Basic logging function.</p>
+
+<p>Prints a message to the console and console.txt log, if ORGM.Settings.LogLevel is equal or less then the level arguement.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">level</span>
+            <span class="types"><span class="type">int</span></span>
+         logging level constant
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         text message to log.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.log(ORGM.WARN, <span class="string">"this is a warning log message"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "tableContains"></a>
+    <strong>tableContains (thisTable, value)</strong>
+    </dt>
+    <dd>
+    Checks if a value is in the specified table.</p>
+
+<p>This is for scanning unsorted lists/dictionary tables by using a pairs() loop.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">thisTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to check
+        </li>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">any</span></span>
+         data value to look for
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = ORGM.tableContains({<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>}, <span class="string">"b"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "tableRemove"></a>
+    <strong>tableRemove (thisTable, value)</strong>
+    </dt>
+    <dd>
+    Removes a entry by value in a table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">thisTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to check
+        </li>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">any</span></span>
+         data value to remove
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if removed
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.tableRemove({<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>}, <span class="string">"b"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "isModLoaded"></a>
+    <strong>isModLoaded (mod)</strong>
+    </dt>
+    <dd>
+    Checks if a mod has been loaded or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mod</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         mod id
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = ORGM.isModLoaded(<span class="string">"Hydrocraft"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "getTableData"></a>
+    <strong>getTableData (itemType, moduleName, instance, thisTable)</strong>
+    </dt>
+    <dd>
+    Fetches data from the specified table.</p>
+
+<h3>Internal function.</h3>
+
+<p>Used by the various ORGM.*.getData() (ie: <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, <a href="../modules/ORGM.Ammo.html#getData">ORGM.Ammo.getData</a>, etc) functions.</p>
+
+<p>It is not advised to call directly, use one of the wrapper functions.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         automatically set if itemType is a InventoryItem
+        </li>
+        <li><span class="parameter">instance</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         (ie: &ldquo;HandWeapon&rdquo;, &ldquo;InventoryItem&rdquo;) to compare with the InventoryItem
+        </li>
+        <li><span class="parameter">thisTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to check in (ie: <a href="../modules/ORGM.Firearm.html#getTable">ORGM.Firearm.getTable</a>, <a href="../modules/ORGM.Ammo.html#getTable">ORGM.Ammo.getTable</a>, etc)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "validateRegister"></a>
+    <strong>validateRegister (name, dataTable, modTable)</strong>
+    </dt>
+    <dd>
+    Generic item register validation.</p>
+
+<h3>Internal function.</h3>
+
+<p>Used by the various ORGM.*.register() (ie: <a href="../modules/ORGM.Firearm.html#register">ORGM.Firearm.register</a>, <a href="../modules/ORGM.Ammo.html#register">ORGM.Ammo.register</a>, etc) functions.</p>
+
+<p>Ensures the item hasn&rsquo;t previously been registered, and that the item is in the scripts/*.txt files.
+This is called automatically when registering ORGM items.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the item without module name
+        </li>
+        <li><span class="parameter">dataTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         data passed to the register function
+        </li>
+        <li><span class="parameter">modTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to register into (ie: <a href="../modules/ORGM.Firearm.html#getTable">ORGM.Firearm.getTable</a>, <a href="../modules/ORGM.Ammo.html#getTable">ORGM.Ammo.getTable</a>, etc)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        false if this item should not be registered.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "validateSettingKey"></a>
+    <strong>validateSettingKey (key)</strong>
+    </dt>
+    <dd>
+    Runs error checks on new values passed into the ORGM.Settings table.</p>
+
+<p>Ensures they conform to expected type, values and ranges, sets them to default
+if they fail. It also runs any onUpdate() functions defined for that setting in
+the SettingsValidator.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         the setting name
+        </li>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Callbacks.html#validateSettings">ORGM.Callbacks.validateSettings</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ORGM.Setting.CasesEnabled = <span class="keyword">false</span>
+ORGM.validateSettingKey(<span class="string">'CasesEnabled'</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "readSettingsFile"></a>
+    <strong>readSettingsFile ()</strong>
+    </dt>
+    <dd>
+    Reads the file located at Zomboid/Lua/ORGM.ini, and loads those settings
+into the ORGM.Settings table.
+
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Callbacks.html#validateSettings">ORGM.Callbacks.validateSettings</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "writeSettingsFile"></a>
+    <strong>writeSettingsFile ()</strong>
+    </dt>
+    <dd>
+    Writes the key/value pairs in the ORGM.Settings table to the Zomboid/Lua/ORGM.ini file.</p>
+
+<p>This is disabled for MP clients.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getFirearm"></a>
+    <strong>getFirearm (playerObj)</strong>
+    </dt>
+    <dd>
+    Gets the equipped firearm for a player
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">HandWeapon</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

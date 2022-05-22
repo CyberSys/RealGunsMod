@@ -1,0 +1,1425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+<li><a href="#Barrel_Table">Barrel Table </a></li>
+<li><a href="#Stats_Table">Stats Table </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Component.html">ORGM.Component</a></li>
+  <li><strong>ORGM.Firearm</strong></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM.Firearm</code></h1>
+<p>Firearm Functions.</p>
+<p>This file handles functions dealing with firearms data, and manipulating
+HandWeapon/InventoryItem methods. Dynamic stat settings, reloadable
+setup and ORGM version updates are contained.</p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/2LoadOrder/ORGMFirearms.lua</li>
+        <li><strong>Release</strong>: 3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#applyRarity">applyRarity (gunType, gunData[, safe])</a></td>
+	<td class="summary">Applies rarity settings for the firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#removeRarity">removeRarity (gunType)</a></td>
+	<td class="summary">Removes the firearm from the RarityTable and subtables.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#randomRarity">randomRarity (civilian, police, military)</a></td>
+	<td class="summary">Gets a list of firearms from a random RarityTable.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getRarityTable">getRarityTable (name, rarity)</a></td>
+	<td class="summary">Returns the specified RarityTable.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#register">register (name, gunData)</a></td>
+	<td class="summary">Registers a firearm type with ORGM.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#deregister">deregister (name)</a></td>
+	<td class="summary">Deregisters a firearm with ORGM.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#random">random ([thisTable])</a></td>
+	<td class="summary">Returns the name of a random firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTable">getTable ()</a></td>
+	<td class="summary">Gets the table of registered firearms.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getData">getData (itemType[, moduleName])</a></td>
+	<td class="summary">Gets the data of a registered firearm, supports module checking.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isFirearm">isFirearm (itemType[, moduleName])</a></td>
+	<td class="summary">Checks if itemType is a ORGM Firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#filter">filter (compareFunction, gunTable)</a></td>
+	<td class="summary">Filters results from ORGM.Firearm.getTable() based on the supplied function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setup">setup (gunData, weaponItem)</a></td>
+	<td class="summary">Sets up a gun, applying key/values into the items modData.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#needsUpdate">needsUpdate (weaponItem)</a></td>
+	<td class="summary">Checks if the InventoryItem needs updating/replacing.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#replace">replace (weaponItem, container)</a></td>
+	<td class="summary">Replaces a HandWeapon/InventoryItem a new version of itself.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isFullAuto">isFullAuto (weaponItem[, gunData])</a></td>
+	<td class="summary">Returns if the firearm is currently in full auto mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#toggleFireMode">toggleFireMode (item[, mode[, playerObj]])</a></td>
+	<td class="summary">Toggles the position of the Select Fire switchon a firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isSelectFire">isSelectFire (item[, itemData])</a></td>
+	<td class="summary">Checks if a firearm is select fire.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isLoaded">isLoaded (item)</a></td>
+	<td class="summary">Checks if a firearm is loaded.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.type">Hammer.type (item[, itemData])</a></td>
+	<td class="summary">Returns the hammer/trigger type of the firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.isSA">Hammer.isSA (item[, itemData])</a></td>
+	<td class="summary">Checks if the hammer/trigger is single-action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.isDA">Hammer.isDA (item[, itemData])</a></td>
+	<td class="summary">Checks if the hammer/trigger is double-action.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.isDAO">Hammer.isDAO (item[, itemData])</a></td>
+	<td class="summary">Checks if the hammer/trigger is double-action-only.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Hammer.isCocked">Hammer.isCocked (item)</a></td>
+	<td class="summary">Checks if the hammer is cocekd.</td>
+	</tr>
+</table>
+<h2><a href="#Barrel_Table">Barrel Table </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Barrel.getLength">Barrel.getLength (weaponItem[, gunData])</a></td>
+	<td class="summary">Gets the barrel length for the firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Barrel.getWeight">Barrel.getWeight (weaponItem[, gunData])</a></td>
+	<td class="summary">Gets the weight modifier for the firearm based on its barrel length.</td>
+	</tr>
+</table>
+<h2><a href="#Stats_Table">Stats Table </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Stats.set">Stats.set (weaponItem)</a></td>
+	<td class="summary">Sets the HandWeapon/InventoryItem properties dynamically.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.initial">Stats.initial (gunData, ammoData)</a></td>
+	<td class="summary">Gets the initial stats table for the firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.adjustByCategory">Stats.adjustByCategory (category, statsTable, effectiveWgt)</a></td>
+	<td class="summary">Adjusts the values in the statsTable for HitChance and AimingTime based on values in the ORGM.Settings table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.adjustByComponents">Stats.adjustByComponents (compTable, statsTable)</a></td>
+	<td class="summary">Adjusts the values in the statsTable based on the items in the compTable.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.adjustByBarrel">Stats.adjustByBarrel (weaponItem, gunData, ammoData, statsTable, effectiveWgt)</a></td>
+	<td class="summary">Adjusts the values in the statsTable based on the firearms barrel length.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.adjustByFeed">Stats.adjustByFeed (weaponItem, gunData, statsTable)</a></td>
+	<td class="summary">Makes adjustments to SwingTime, applying limits and setting up full auto.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.setPenetration">Stats.setPenetration (weaponItem, value)</a></td>
+	<td class="summary">Sets the PiercingBullets flag on a gun, dependent on the round.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Stats.setPenetration_DEPRECIATED">Stats.setPenetration_DEPRECIATED (weaponItem, ammoData)</a></td>
+	<td class="summary">Sets the PiercingBullets flag on a gun, dependent on the round.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "applyRarity"></a>
+    <strong>applyRarity (gunType, gunData[, safe])</strong>
+    </dt>
+    <dd>
+    Applies rarity settings for the firearm.</p>
+
+<p>This is required after editing the spawn rarity settings of a firearm that has already been
+registered with <a href="../modules/ORGM.Firearm.html#register">ORGM.Firearm.register</a>. It is called automatically when registering.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gunType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>
+        </li>
+        <li><span class="parameter">safe</span>
+            <span class="types"><span class="type">bool</span></span>
+         calls <a href="../modules/ORGM.Firearm.html#removeRarity">ORGM.Firearm.removeRarity</a> first, unless explictly set to false
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+<span class="keyword">local</span> gunData = ORGM.Firearm.getData(<span class="string">'Ber92'</span>)
+gunData.isPolice = ORGM.RARE
+ORGM.Firearm.applyRarity(<span class="string">'Ber92'</span>, gunData)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "removeRarity"></a>
+    <strong>removeRarity (gunType)</strong>
+    </dt>
+    <dd>
+    Removes the firearm from the RarityTable and subtables.</p>
+
+<p>This is a handy way of removing a gun from spawning.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gunType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "randomRarity"></a>
+    <strong>randomRarity (civilian, police, military)</strong>
+    </dt>
+    <dd>
+    Gets a list of firearms from a random RarityTable.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">civilian</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+        <li><span class="parameter">police</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+        <li><span class="parameter">military</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/ORGM.Server.Spawn.html#select">ORGM.Server.Spawn.select</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "getRarityTable"></a>
+    <strong>getRarityTable (name, rarity)</strong>
+    </dt>
+    <dd>
+    Returns the specified RarityTable.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         the name of the table
+        </li>
+        <li><span class="parameter">rarity</span>
+            <span class="types"><span class="type">int</span></span>
+         <a href="../modules/ORGM.html#COMMON">ORGM.COMMON</a> | <a href="../modules/ORGM.html#RARE">ORGM.RARE</a> | <a href="../modules/ORGM.html#VERYRARE">ORGM.VERYRARE</a>
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "register"></a>
+    <strong>register (name, gunData)</strong>
+    </dt>
+    <dd>
+    Registers a firearm type with ORGM.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the firearm without module prefix
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        <p>Valid table keys/value pairs are:</p>
+
+<ul>
+<li><p>lastChanged = nil| integer > 0 &lt;= ORGM.BUILD_ID, used to indicate a update is required for a orgm version change.</p></li>
+<li><p>moduleName = nil, or string module name this item is from. If nil, ORGM is used</p></li>
+<li><p>actionType = <a href="../modules/ORGM.html#AUTO">ORGM.AUTO</a> | <a href="../modules/ORGM.html#BOLT">ORGM.BOLT</a> | <a href="../modules/ORGM.html#LEVER">ORGM.LEVER</a> | <a href="../modules/ORGM.html#PUMP">ORGM.PUMP</a> | <a href="../modules/ORGM.html#BREAK">ORGM.BREAK</a> | <a href="../modules/ORGM.html#ROTARY">ORGM.ROTARY</a></p></li>
+<li><p>triggerType = <a href="../modules/ORGM.html#SINGLEACTION">ORGM.SINGLEACTION</a> | <a href="../modules/ORGM.html#DOUBLEACTION">ORGM.DOUBLEACTION</a> | <a href="../modules/ORGM.html#DOUBLEACTIONONLY">ORGM.DOUBLEACTIONONLY</a></p></li>
+<li><p>category = <a href="../modules/ORGM.html#REVOLVER">ORGM.REVOLVER</a> | <a href="../modules/ORGM.html#PISTOL">ORGM.PISTOL</a> | <a href="../modules/ORGM.html#SUBMACHINEGUN">ORGM.SUBMACHINEGUN</a> | <a href="../modules/ORGM.html#RIFLE">ORGM.RIFLE</a> | <a href="../modules/ORGM.html#SHOTGUN">ORGM.SHOTGUN</a></p></li>
+<li><p>rackTime = nil | integer > 0, if nil then ORGM.Settings.DefaultRackTime is used</p></li>
+<li><p>reloadTime = nil | integer > 0, if nil then ORGM.Settings.DefaultReloadTime is used</p></li>
+<li><p>selectFire = nil | <a href="../modules/ORGM.html#SEMIAUTOMODE">ORGM.SEMIAUTOMODE</a> | <a href="../modules/ORGM.html#FULLAUTOMODE">ORGM.FULLAUTOMODE</a></p></li>
+<li><p>speedLoader = nil | string name of registered magazine</p></li>
+<li><p>isCivilian = nil | <a href="../modules/ORGM.html#COMMON">ORGM.COMMON</a> | <a href="../modules/ORGM.html#RARE">ORGM.RARE</a> | <a href="../modules/ORGM.html#VERYRARE">ORGM.VERYRARE</a></p></li>
+<li><p>isPolice = nil | <a href="../modules/ORGM.html#COMMON">ORGM.COMMON</a> | <a href="../modules/ORGM.html#RARE">ORGM.RARE</a> | <a href="../modules/ORGM.html#VERYRARE">ORGM.VERYRARE</a></p></li>
+<li><p>isMilitary = nil | <a href="../modules/ORGM.html#COMMON">ORGM.COMMON</a> | <a href="../modules/ORGM.html#RARE">ORGM.RARE</a> | <a href="../modules/ORGM.html#VERYRARE">ORGM.VERYRARE</a></p></li>
+</ul>
+
+
+<p><em>Sound options:</em></p>
+
+<ul>
+<li>soundProfile = string name of a key in <a href="../modules/ORGM.Sounds.html#Profiles">ORGM.Sounds.Profiles</a></li>
+</ul>
+
+
+<p><em>These sound keys are automatically set by the soundProfile, but can be over written.
+They are all nil, or the string name of a sound file in media/sound/*.ogg.</em></p>
+
+<ul>
+<li><p>clickSound = nil | filename</p></li>
+<li><p>insertSound = nil | filename</p></li>
+<li><p>ejectSound = nil | filename</p></li>
+<li><p>rackSound = nil | filename</p></li>
+<li><p>openSound = nil | filename</p></li>
+<li><p>closeSound = nil | filename</p></li>
+<li><p>cockSound = nil | filename</p></li>
+</ul>
+
+
+<p><em>Firearm details, these string fill out the &lsquo;Inspection&rsquo; window.</em></p>
+
+<ul>
+<li><p>classification = nil | string, the &lsquo;type&rsquo; of weapon (Revolver, Assault Rifle, etc)</p></li>
+<li><p>country = nil | string, the initial country of manufacture</p></li>
+<li><p>manufacturer = nil | string, the initial company (or factory) of manufacture</p></li>
+<li><p>year = nil | integer, the initial year of manufacture, this is used by ORGM.Settings.LimitYear</p></li>
+<li><p>description = nil | string, background information</p></li>
+</ul>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true on success.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "deregister"></a>
+    <strong>deregister (name)</strong>
+    </dt>
+    <dd>
+    Deregisters a firearm with ORGM.</p>
+
+<p>WARNING: Incomplete code, do not use.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the firearm to deregister.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true on success
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "random"></a>
+    <strong>random ([thisTable])</strong>
+    </dt>
+    <dd>
+    Returns the name of a random firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">thisTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to select from.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the random firearm name.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTable"></a>
+    <strong>getTable ()</strong>
+    </dt>
+    <dd>
+    Gets the table of registered firearms.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        all registered firearms setup by <a href="../modules/ORGM.Firearm.html#register">ORGM.Firearm.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getData"></a>
+    <strong>getData (itemType[, moduleName])</strong>
+    </dt>
+    <dd>
+    Gets the data of a registered firearm, supports module checking.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         module to compare
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        data of a registered firearm setup by <a href="../modules/ORGM.Firearm.html#register">ORGM.Firearm.register</a>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> gunData = ORGM.Firearm.getData(<span class="string">'Ber92'</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "isFirearm"></a>
+    <strong>isFirearm (itemType[, moduleName])</strong>
+    </dt>
+    <dd>
+    Checks if itemType is a ORGM Firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         module to compare
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if it is a ORGM registered firearm
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = ORGM.Firearm.isFirearm(<span class="string">'Ber92'</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "filter"></a>
+    <strong>filter (compareFunction, gunTable)</strong>
+    </dt>
+    <dd>
+    Filters results from ORGM.Firearm.getTable() based on the supplied function.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">compareFunction</span>
+            <span class="types"><span class="type">function</span></span>
+        , a function that takes 2 arguments: gunType and gunData, and returns a boolean
+        </li>
+        <li><span class="parameter">gunTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setup"></a>
+    <strong>setup (gunData, weaponItem)</strong>
+    </dt>
+    <dd>
+    Sets up a gun, applying key/values into the items modData.
+This should be called whenever a firearm is spawned.
+Basically the same as ReloadUtil:setupGun and ISORGMWeapon:setupReloadable but
+called without needing a player or reloadable object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>
+        </li>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">ORGM.Firearm.setup(Firearm.getData(weaponItem), weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "needsUpdate"></a>
+    <strong>needsUpdate (weaponItem)</strong>
+    </dt>
+    <dd>
+    Checks if the InventoryItem needs updating/replacing.</p>
+
+<p>Returns true/false if the firearm needs to be updated due to ORGM version
+changes. This compares the mods BUILD_ID with the weaponItem&rsquo;s mod data BUILD_ID
+and the definitions lastChanged property.</p>
+
+<p>This nomally called OnEquipPrimary event.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+        true if update is needed, or nil if not a ORGM firearm.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> result = ORGM.Firearm.needsUpdate(weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "replace"></a>
+    <strong>replace (weaponItem, container)</strong>
+    </dt>
+    <dd>
+    Replaces a HandWeapon/InventoryItem a new version of itself.</p>
+
+<p>This is primarily for backwards compatibility with older versions of ORGM when the guns stats
+have changed.  The new gun will be in the same condition as the old, and have the same upgrades
+attached. Any ammo loaded will be returned to the container.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+         item to replace
+        </li>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">ItemContainer</span></span>
+         container the weaponItem exists in (usually player inventory)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">HandWeapon</span></span>
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> newItem = ORGM.Firearm.replace(weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "isFullAuto"></a>
+    <strong>isFullAuto (weaponItem[, gunData])</strong>
+    </dt>
+    <dd>
+    Returns if the firearm is currently in full auto mode.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        boolean or nil
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> isFull = ORGM.Firearm.isFullAuto(weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "toggleFireMode"></a>
+    <strong>toggleFireMode (item[, mode[, playerObj]])</strong>
+    </dt>
+    <dd>
+    Toggles the position of the Select Fire switchon a firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">mode</span>
+            <span class="types"><span class="type">nil</span> or <span class="type">int</span></span>
+         If nil, toggles. Otherwise sets to <a href="../modules/ORGM.html#SEMIAUTOMODE">ORGM.SEMIAUTOMODE</a> or <a href="../modules/ORGM.html#FULLAUTOMODE">ORGM.FULLAUTOMODE</a>
+         (<em>optional</em>)
+        </li>
+        <li><span class="parameter">playerObj</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isSelectFire"></a>
+    <strong>isSelectFire (item[, itemData])</strong>
+    </dt>
+    <dd>
+    Checks if a firearm is select fire.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">itemData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+        nil if not a firearm, else true or false.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isLoaded"></a>
+    <strong>isLoaded (item)</strong>
+    </dt>
+    <dd>
+    Checks if a firearm is loaded.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the firearm has any ammo in it.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Hammer.type"></a>
+    <strong>Hammer.type (item[, itemData])</strong>
+    </dt>
+    <dd>
+    Returns the hammer/trigger type of the firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">itemData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+        nil if not a firearm, else true or false.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Hammer.isSA"></a>
+    <strong>Hammer.isSA (item[, itemData])</strong>
+    </dt>
+    <dd>
+    Checks if the hammer/trigger is single-action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">itemData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Hammer.isDA"></a>
+    <strong>Hammer.isDA (item[, itemData])</strong>
+    </dt>
+    <dd>
+    Checks if the hammer/trigger is double-action.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">itemData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Hammer.isDAO"></a>
+    <strong>Hammer.isDAO (item[, itemData])</strong>
+    </dt>
+    <dd>
+    Checks if the hammer/trigger is double-action-only.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">itemData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Hammer.isCocked"></a>
+    <strong>Hammer.isCocked (item)</strong>
+    </dt>
+    <dd>
+    Checks if the hammer is cocekd.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+        nil if not a firearm, else true or false.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2><a name="Barrel_Table"></a>Barrel Table </h2>
+
+         These functions pimarly return info on the barrel.
+    <dl class="function">
+    <dt>
+    <a name = "Barrel.getLength"></a>
+    <strong>Barrel.getLength (weaponItem[, gunData])</strong>
+    </dt>
+    <dd>
+    Gets the barrel length for the firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">number</span></span>
+        length of the barrel
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> length = ORGM.Firearm.Barrel.getLength(weaponItem)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "Barrel.getWeight"></a>
+    <strong>Barrel.getWeight (weaponItem[, gunData])</strong>
+    </dt>
+    <dd>
+    Gets the weight modifier for the firearm based on its barrel length.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>, auto detected if nil.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">number</span></span>
+
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> wgtAdj = ORGM.Firearm.Barrel.getWeight(weaponItem)</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2><a name="Stats_Table"></a>Stats Table </h2>
+
+        This table Contains functions for modifing the stats on a HandWeapon/InventoryItem.
+It calculates the weight and ammo used, attachment bonuses, barrel length effects
+and every thing else that needs to be changed dynamically.</p>
+
+<p>Note &lsquo;optimal barrel length&rsquo; is a completely subjective term. In this I&rsquo;m referring to the length required to
+achieve full powder burn, where the bullet reaches maximum velocity. Also note &lsquo;full powder burn&rsquo; is completely
+relative, different powders burn at different rates. While one might reach max velocity from a 26" barrel, another
+might require a 28". Bullet weight also plays a important factor here, but for the sake of simplicity should not
+be factored in (yet).</p>
+
+<ol>
+<li><p>action type has a effect, especially in automatics. Pressure is lost in blowback designs, gas feed systems etc.
+This means a shorter barrel will have the same effect as a longer one in bolt actions and such.
+These action types should have a lower &lsquo;optimal barrel&rsquo; length.</p></li>
+<li><p>Barrel length has a effect on damage, below optimal length the bullet does not reach its intended velocity,
+above optimal it starts to slow down due to friction.</p></li>
+<li><p>Length of barrels has a effect on noise. A longer barrel is quieter then a shorter one, as less gas escapes.</p></li>
+<li><p>Barrel lengths effect on accuracy is a mixed bag when it comes to long range. While longer barrels are generally
+more accurate when the barrel is resting, it also means the bullet has longer &lsquo;barrel time&rsquo; which means more
+chance to waiver off target. Above/below optimal length and velocity causes additional bullet drop. Luckly long
+range shooting isn&rsquo;t really a thing in PZ, so this isn&rsquo;t much of a problem.</p></li>
+<li><p>Below optimal length, the extra gas escaping causes additional recoil.</p></li>
+<li><p>Action type effect on recoil: some action types absorb recoil more then others, but this is also a mixed bag. Take
+the AK for example. It uses a long gas piston feed system, the gas chamber absorbs some recoil effect from the
+gas that escapes the muzzle, but causes additional recoil due to the design of the long piston above the barrel
+and the center of weight changes while cycling.</p></li>
+<li><p>The effect on velocity from a barrel above/below is a definite curve. The closer we are to optimal length the less
+the effect is.</p></li>
+</ol>
+
+
+<p>fps-fps*((((o-b)/o)<strong>3)</strong>2) this is pretty damn close to matching the curve.
+After tons of pissing around with handloading simulation software, it looks like &lsquo;o&rsquo; needs to be 80 for rifles,
+30 for pistols, 60 for shotguns to find a close match.</p>
+
+<p>These are defined in the calls to <a href="../modules/ORGM.Ammo.html#register">ORGM.Ammo.register</a>.
+    <dl class="function">
+    <dt>
+    <a name = "Stats.set"></a>
+    <strong>Stats.set (weaponItem)</strong>
+    </dt>
+    <dd>
+    Sets the HandWeapon/InventoryItem properties dynamically.</p>
+
+<p>This is crucial to the ORGM Framework&rsquo;s dynamic stats for guns. It calculates the
+stats for firearms based on:</p>
+
+<p>ammo, weight, accessories attached, barrel length, action type, select fire type (and other modData)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.initial"></a>
+    <strong>Stats.initial (gunData, ammoData)</strong>
+    </dt>
+    <dd>
+    Gets the initial stats table for the firearm.</p>
+
+<p>This function is called by <a href="../modules/ORGM.Firearm.html#Stats.set">Stats.set</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>
+        </li>
+        <li><span class="parameter">ammoData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Ammo.html#getData">ORGM.Ammo.getData</a>
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        initial values
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.adjustByCategory"></a>
+    <strong>Stats.adjustByCategory (category, statsTable, effectiveWgt)</strong>
+    </dt>
+    <dd>
+    Adjusts the values in the statsTable for HitChance and AimingTime based on values in the ORGM.Settings table.</p>
+
+<p>This function is called by <a href="../modules/ORGM.Firearm.html#Stats.set">Stats.set</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">category</span>
+            <span class="types"><span class="type">int</span></span>
+         constant defined in ORGMCore.lua
+        </li>
+        <li><span class="parameter">statsTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table of the firearm stats.
+        </li>
+        <li><span class="parameter">effectiveWgt</span>
+            <span class="types"><span class="type">number</span></span>
+         the weight of the firearm and all attachments excluding slings.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.adjustByComponents"></a>
+    <strong>Stats.adjustByComponents (compTable, statsTable)</strong>
+    </dt>
+    <dd>
+    Adjusts the values in the statsTable based on the items in the compTable.</p>
+
+<p>Note only specific key/values defined by components can be changed here.</p>
+
+<p>This function is called by <a href="../modules/ORGM.Firearm.html#Stats.set">Stats.set</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">compTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of {ORGM.Component.getAttached}
+        </li>
+        <li><span class="parameter">statsTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table of the firearm stats.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.adjustByBarrel"></a>
+    <strong>Stats.adjustByBarrel (weaponItem, gunData, ammoData, statsTable, effectiveWgt)</strong>
+    </dt>
+    <dd>
+    Adjusts the values in the statsTable based on the firearms barrel length.</p>
+
+<p>Adjustments to compensate for automatic feed systems are also done here.</p>
+
+<p>This function is called by <a href="../modules/ORGM.Firearm.html#Stats.set">Stats.set</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>
+        </li>
+        <li><span class="parameter">ammoData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Ammo.html#getData">ORGM.Ammo.getData</a>
+        </li>
+        <li><span class="parameter">statsTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table of the firearm stats
+        </li>
+        <li><span class="parameter">effectiveWgt</span>
+            <span class="types"><span class="type">number</span></span>
+         weight of the firearm and all attachments excluding slings.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.adjustByFeed"></a>
+    <strong>Stats.adjustByFeed (weaponItem, gunData, statsTable)</strong>
+    </dt>
+    <dd>
+    Makes adjustments to SwingTime, applying limits and setting up full auto.</p>
+
+<p>The bulk of full auto behavior is defined in the function.</p>
+
+<p>This function is called by <a href="../modules/ORGM.Firearm.html#Stats.set">Stats.set</a>
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">gunData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Firearm.html#getData">ORGM.Firearm.getData</a>
+        </li>
+        <li><span class="parameter">statsTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table of the firearm stats
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.setPenetration"></a>
+    <strong>Stats.setPenetration (weaponItem, value)</strong>
+    </dt>
+    <dd>
+    Sets the PiercingBullets flag on a gun, dependent on the round.</p>
+
+<p>This is called when pulling the trigger.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">int</span></span>
+         percentge chance of penetration
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the flag is set
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Stats.setPenetration_DEPRECIATED"></a>
+    <strong>Stats.setPenetration_DEPRECIATED (weaponItem, ammoData)</strong>
+    </dt>
+    <dd>
+    Sets the PiercingBullets flag on a gun, dependent on the round.</p>
+
+<p>This is called when loading a new round into the chamber.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">weaponItem</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+        <li><span class="parameter">ammoData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         return value of <a href="../modules/ORGM.Ammo.html#getData">ORGM.Ammo.getData</a>
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if the flag is set
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

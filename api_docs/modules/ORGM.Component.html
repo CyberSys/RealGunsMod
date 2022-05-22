@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>OrMntMans Real Gun Mod</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ORGM</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ORGM.Client.html">ORGM.Client</a></li>
+  <li><a href="../modules/ORGM.Client.Callbacks.html">ORGM.Client.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Client.CommandHandler.html">ORGM.Client.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Client.Menu.html">ORGM.Client.Menu</a></li>
+  <li><a href="../modules/ORGM.Server.html">ORGM.Server</a></li>
+  <li><a href="../modules/ORGM.Server.Callbacks.html">ORGM.Server.Callbacks</a></li>
+  <li><a href="../modules/ORGM.Server.CommandHandler.html">ORGM.Server.CommandHandler</a></li>
+  <li><a href="../modules/ORGM.Server.Spawn.html">ORGM.Server.Spawn</a></li>
+  <li><a href="../modules/ORGM.html">ORGM</a></li>
+  <li><a href="../modules/ORGM.Sounds.html">ORGM.Sounds</a></li>
+  <li><a href="../modules/ORGM.Ammo.html">ORGM.Ammo</a></li>
+  <li><a href="../modules/ORGM.Callbacks.html">ORGM.Callbacks</a></li>
+  <li><strong>ORGM.Component</strong></li>
+  <li><a href="../modules/ORGM.Firearm.html">ORGM.Firearm</a></li>
+  <li><a href="../modules/ORGM.Magazine.html">ORGM.Magazine</a></li>
+  <li><a href="../modules/ORGM.Maintance.html">ORGM.Maintance</a></li>
+  <li><a href="../modules/ORGM.ReloadableWeapon.html">ORGM.ReloadableWeapon</a></li>
+</ul>
+<h2>Scripts</h2>
+<ul class="nowrap">
+  <li><a href="../scripts/ORGMClientEvents.lua.html">ORGMClientEvents.lua</a></li>
+  <li><a href="../scripts/ORGMServerEvents.lua.html">ORGMServerEvents.lua</a></li>
+  <li><a href="../scripts/ORGMData_Ammo.lua.html">ORGMData_Ammo.lua</a></li>
+  <li><a href="../scripts/ORGMData_Components.lua.html">ORGMData_Components.lua</a></li>
+  <li><a href="../scripts/ORGMData_Magazine.lua.html">ORGMData_Magazine.lua</a></li>
+  <li><a href="../scripts/ORGMData_RepairKits.lua.html">ORGMData_RepairKits.lua</a></li>
+  <li><a href="../scripts/ORGMData_Weapons.lua.html">ORGMData_Weapons.lua</a></li>
+  <li><a href="../scripts/ORGMCompatibility.lua.html">ORGMCompatibility.lua</a></li>
+  <li><a href="../scripts/ORGMEvents.lua.html">ORGMEvents.lua</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/ISRemoveWeaponUpgrade.html">ISRemoveWeaponUpgrade</a></li>
+  <li><a href="../classes/ISToolTipInv.html">ISToolTipInv</a></li>
+  <li><a href="../classes/ISUpgradeWeapon.html">ISUpgradeWeapon</a></li>
+  <li><a href="../classes/MainOptions.html">MainOptions</a></li>
+  <li><a href="../classes/ISORGMInspectionWindow.html">ISORGMInspectionWindow</a></li>
+  <li><a href="../classes/ISORGCleanFirarmAction.html">ISORGCleanFirarmAction</a></li>
+  <li><a href="../classes/ISORGMMagazine.html">ISORGMMagazine</a></li>
+  <li><a href="../classes/ISReloadManager.html">ISReloadManager</a></li>
+  <li><a href="../classes/ISORGMUnloadAction.html">ISORGMUnloadAction</a></li>
+  <li><a href="../classes/ISORGMWeapon.html">ISORGMWeapon</a></li>
+</ul>
+<h2>Manual</h2>
+<ul class="nowrap">
+  <li><a href="../manual/README.html">README</a></li>
+  <li><a href="../manual/changelog.txt.html">changelog</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>ORGM.Component</code></h1>
+<p>Component Functions</p>
+
+<p>This file handles functions dealing with components and attachments.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2018 <strong>File:</strong> shared/2LoadOrder/ORGMComponents.lua</li>
+        <li><strong>Release</strong>: 3.09</li>
+        <li><strong>Author</strong>: Fenris_Wolf</li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#register">register (name, compData)</a></td>
+	<td class="summary">Registers a component/attachment type with ORGM.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#deregister">deregister (name)</a></td>
+	<td class="summary">Deregisters a component with ORGM.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#random">random ([thisTable])</a></td>
+	<td class="summary">Returns the name of a random component item.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getTable">getTable ()</a></td>
+	<td class="summary">Gets the table of registered componennts.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getData">getData (itemType[, moduleName])</a></td>
+	<td class="summary">Gets a value from the ComponentTable, supports module checking.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#isComponent">isComponent (itemType[, moduleName])</a></td>
+	<td class="summary">Checks if a item is a ORGM component.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getValid">getValid (item)</a></td>
+	<td class="summary">Gets a list of all valid component names for a firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#getAttached">getAttached (item)</a></td>
+	<td class="summary">Gets all components attached to a firearm.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#copy">copy (item)</a></td>
+	<td class="summary">Copies a WeaponPart item and returns a new copy with updated script item stats and current BUILD_ID.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#toggleLight">toggleLight (player)</a></td>
+	<td class="summary">Toggles the tactical light on a players primary hand item.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+    Methods
+    <dl class="function">
+    <dt>
+    <a name = "register"></a>
+    <strong>register (name, compData)</strong>
+    </dt>
+    <dd>
+    Registers a component/attachment type with ORGM.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name without module prefix.
+        </li>
+        <li><span class="parameter">compData</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        Valid table keys/value pairs are:
+* moduleName = nil|string, module name this item is from. If nil, ORGM is used
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true on success.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "deregister"></a>
+    <strong>deregister (name)</strong>
+    </dt>
+    <dd>
+    Deregisters a component with ORGM.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         name of the component.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true on success
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "random"></a>
+    <strong>random ([thisTable])</strong>
+    </dt>
+    <dd>
+    Returns the name of a random component item.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">thisTable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+         table to select from.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+        the random component name.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getTable"></a>
+    <strong>getTable ()</strong>
+    </dt>
+    <dd>
+    Gets the table of registered componennts.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        all registered components setup by <a href="../modules/ORGM.Component.html#register">ORGM.Component.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getData"></a>
+    <strong>getData (itemType[, moduleName])</strong>
+    </dt>
+    <dd>
+    Gets a value from the ComponentTable, supports module checking.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         module to compare
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+        data of a registered component setup by <a href="../modules/ORGM.Component.html#register">ORGM.Component.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "isComponent"></a>
+    <strong>isComponent (itemType[, moduleName])</strong>
+    </dt>
+    <dd>
+    Checks if a item is a ORGM component.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">itemType</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">InventoryItem</span></span>
+
+        </li>
+        <li><span class="parameter">moduleName</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+         module to compare
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        true if registered component setup by <a href="../modules/ORGM.Component.html#register">ORGM.Component.register</a>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getValid"></a>
+    <strong>getValid (item)</strong>
+    </dt>
+    <dd>
+    Gets a list of all valid component names for a firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "getAttached"></a>
+    <strong>getAttached (item)</strong>
+    </dt>
+    <dd>
+    Gets all components attached to a firearm.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">HandWeapon</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "copy"></a>
+    <strong>copy (item)</strong>
+    </dt>
+    <dd>
+    Copies a WeaponPart item and returns a new copy with updated script item stats and current BUILD_ID.</p>
+
+<p>This preserves existing mod data, this is used when updating components.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+            <span class="types"><span class="type">WeaponPart</span></span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">WeaponPart</span></span>
+
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../classes/ISRemoveWeaponUpgrade.html#ISRemoveWeaponUpgrade:perform">ISRemoveWeaponUpgrade:perform</a></li>
+         <li><a href="../classes/ISUpgradeWeapon.html#ISUpgradeWeapon:perform">ISUpgradeWeapon:perform</a></li>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "toggleLight"></a>
+    <strong>toggleLight (player)</strong>
+    </dt>
+    <dd>
+    Toggles the tactical light on a players primary hand item.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player</span>
+            <span class="types"><span class="type">IsoPlayer</span></span>
+        , or true
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">nil</span> or <span class="type">bool</span></span>
+        true if light is toggled
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2019-04-11 18:37:45 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
